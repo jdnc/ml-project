@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{latexsym}
+\usepackage{algorithm,fullpage}
+\usepackage{algpseudocode}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{enumerate}
+\usepackage{hyperref}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\hypersetup{colorlinks,breaklinks,
+   linkcolor=BrickRed,urlcolor=Purple,
+   anchorcolor=Blue,citecolor=NavyBlue,
+  }
+
+\title{\bf Predicting mental functions from brain activations}
+\author{ Madhura Parikh \and Subhashini Venugopalan}
+
+\begin{document}
+\date{}
+\maketitle
+
+\section{Introduction}
+
+Advances in neuroimaging techniques and rapid growth of scientific literature in neuroscience have made large improvements  in our understanding of human brain functions. 
+Over the past few decades neuroscientists have studied brain images from EEG/MEG, fMRI and other sources to identify associations between psychological tasks and activity in brain regions [cite plos].
+Although these studies have led to large amounts of literature and several discoveries of bodily functions associated with certain brain regions (or networks) the mapping between functions to brain regions and vice-versa still remains largely unclear. In particular, different studies have associated the same regions to a wide range of functions [cite plos] and scientists believe that there could exist unique underlying functions that brain regions specialize in. 
+%Another aspect of the study is to identify brain regions and networks that are get activated for a specific function.
+
+\section{Problem Definition}
+For the purposes of this project, we look at a new automated framework NeuroSynth [citation] that combines text-mining and machine learning techniques to generate probabilistic mappings between cognitive and neural states. The framework addresses the following problems:
+\subsection{Forward Inference}
+  In simple terms, given a psychological function or concept, the forward inference answers what regions of the brain are activated during that function. e.g. Pain ...
+\subsection{Reverse Inference}
+  The reverse inference looks at the reverse mapping. i.e. Given a signature of neural activity, reverse inference identifies the cognitive state(s) and functions that the activations correspond to. e.g.
+
+Both forward and reverse inference problems are quite challenging. However, forward inference has been studied well in medical literature and appears to not be of as much interest to the medical community since, neuroimaging techniques provide an easy way to verify the associtions. On the other hand, reverse inference, which seems to be of greater interest to the community is also a more challenging (difficult) problem since multiple cognitive states could have very similar neural signatures. [cite]
+
+\subsection{Related Work}
+Explain bits from Neurosynth paper and Sanmi's other paper here.
+
+[Insert these in between appropriately or keep it as a para in itself]
+%While Neurosynth addresses both the forward and reverse inference, . 
+[Explain forward inference Pr()]. Address removal of domain specific stopwords. For the reverse inference, they leverage the forward inference study and use a Naive Bayes classifier to infer the probability of the cognitive state given the activation. 
+
+\section{Proposed Work}
+
+Our project aims to primarily address the reverse inference task. We propose to more sophisticated algorithms to solve the classification problem currently addressed by the Naive Bayes classifier. Additionally, we plan to use techniques from transfer learning to determine the concept from the brain activations (and images) collectively. In addition, time permitting, we propose ``zero-shot" forward inference for unseen concepts. i.e. Given a new concept for which we have not seen brain activation points, we hope to predict the activation network. A rough outline of our ideas to achieve this goal are mentioned below:
+
+\begin{enumerate}
+
+    \item {\bf Reverse Inference sophisticated classification techniques.}
+
+    \item {\bf Reverse inference transfer learning.}
+
+    \item {\bf Zero-shot forward inference.}
+ (Time permitting)  Given a new concept we would like to predict the brain activation points for this unseen concept. In order to do this, we plan to leverage contextual meaning of the context from text documents. We plan to represent each context in a distributional vector space constructed based on word co-occurence statistics in neuroscience literature. These vectors give us a way of measuring similarity between two concepts in literature. ow, given a new concept, we can then identify the concepts/functions that are most similar and report the activation points that lie in their intersection.
+
+\end{enumerate}
+
+\section{Data Source}
+Short concise source of where we will get data from. We can directly provide links to neurosynth, cognitiveatlas and whatever else we plan to use.
+
+\small
+%\bibliographystyle{alpha}
+%\bibliography{}
+
+\end{document}
+
+

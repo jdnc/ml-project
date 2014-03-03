@@ -1,0 +1,56 @@
+\begin{thebibliography}{1}
+
+\bibitem{dai2008self}
+Wenyuan Dai, Qiang Yang, Gui-Rong Xue, and Yong Yu.
+\newblock Self-taught clustering.
+\newblock In {\em Proceedings of the 25th international conference on Machine
+  learning}, pages 200--207. ACM, 2008.
+
+\bibitem{jiang2012transfer}
+Wenhao Jiang and Fu-lai Chung.
+\newblock Transfer spectral clustering.
+\newblock In {\em Machine Learning and Knowledge Discovery in Databases}, pages
+  789--803. Springer, 2012.
+
+\bibitem{sanmi2013multi}
+Koyejo Oluwasanmi and Russell~A Poldrack.
+\newblock Decoding cognitive processes from functional mri.
+
+\bibitem{pan2010survey}
+Sinno~Jialin Pan and Qiang Yang.
+\newblock A survey on transfer learning.
+\newblock {\em Knowledge and Data Engineering, IEEE Transactions on},
+  22(10):1345--1359, 2010.
+
+\bibitem{poldrack2013toward}
+Russell~A Poldrack, Deanna~M Barch, Jason~P Mitchell, Tor~D Wager, Anthony~D
+  Wagner, Joseph~T Devlin, Chad Cumba, Oluwasanmi Koyejo, and Michael~P Milham.
+\newblock Toward open sharing of task-based fmri data: the openfmri project.
+\newblock {\em Frontiers in neuroinformatics}, 7, 2013.
+
+\bibitem{PMSKBY12}
+Russell~A. Poldrack, Jeanette~A. Mumford, Tom Schonberg, Donald Kalar, Bishal
+  Barman, and Tal Yarkoni.
+\newblock Discovering relations between mind, brain, and mental disorders using
+  topic mapping.
+\newblock {\em PLoS Comput Biol}, 8(10):e1002707, 10 2012.
+
+\bibitem{schwartz2013mapping}
+Yannick Schwartz, Bertrand Thirion, Gael Varoquaux, Parietal Team, and
+  Inria~Saclay Ile-de France.
+\newblock Mapping cognitive ontologies to and from the brain.
+\newblock {\em Advances in Neural Information Processing Systems (NIPS)}, 2013.
+
+\bibitem{taylor2009transfer}
+Matthew~E Taylor and Peter Stone.
+\newblock Transfer learning for reinforcement learning domains: A survey.
+\newblock {\em The Journal of Machine Learning Research}, 10:1633--1685, 2009.
+
+\bibitem{yarkoni2011large}
+Tal Yarkoni, Russell~A Poldrack, Thomas~E Nichols, David~C Van~Essen, and Tor~D
+  Wager.
+\newblock Large-scale automated synthesis of human functional neuroimaging
+  data.
+\newblock {\em Nature methods}, 8(8):665--670, 2011.
+
+\end{thebibliography}

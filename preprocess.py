@@ -64,7 +64,7 @@ def is_valid(coordinates, mask='2mm_brain_mask.npy'):
 
 def peaks_to_vector(coordinates, mask=
                     'neurosynth/neurosynth/resources/MNI152_T1_2mm_brain.nii.gz', 
-                    radius=6):
+                    radius=4):
     """
     Takes in a list of valid peak coordinates and 
     returns a vector of the corresponding image
@@ -83,12 +83,12 @@ def peaks_to_vector(coordinates, mask=
     img_vector : 1D `numpy.array` object
         vectorized image to be used as a feature
     """
-    # first get the denser image, expanding via spheres
+    # transform the coordinates to matrix space
+    coordinates = nbt.xyz_to_mat(np.asarray(coordinates))
+    # now  get the denser image, expanding via spheres
     dense_img  = nbi.map_peaks_to_image(coordinates, r=radius)
-
-    # now vectorize it to yield the 1D numpy array
-    mask_obj = nbm.Mask(mask)
-    img_vector = mask_obj.mask(dense_img)
+    # now vectorize the image
+    img_vector = dense_img.get_data().ravel()
     return img_vector
 
 

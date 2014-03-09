@@ -1,9 +1,10 @@
 from __future__ import print_function
 
 import pandas
+import numpy as np
 from collections import defaultdict
 
-from neurosynth.base.dataset import Dataset:
+from neurosynth.base.dataset import Dataset
 import neurosynth.base.imageutils as nbi
 import neurosynth.base.mask as nbm
 import neurosynth.base.transformations as nbt
@@ -52,10 +53,13 @@ def is_valid(coordinates, mask='2mm_brain_mask.npy'):
     -------
     bool : whether it is a valid coordinate or not
     """
-    mat = np.load(mask)
-    idx = nbt.xyz_to_mat(np.asarray([coordinates]))
-    idx_t = tuple(idx.reshape(1, -1)[0])
-    return mat[idx_t] == 1
+    try:
+        mat = np.load(mask)
+        idx = nbt.xyz_to_mat(np.asarray([coordinates]))
+        idx_t = tuple(idx.reshape(1, -1)[0])
+        return mat[idx_t] == 1
+    except IndexError as e:
+        return False
 
 
 def peaks_to_vector(coordinates, mask=

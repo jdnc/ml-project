@@ -63,7 +63,7 @@ def is_valid(coordinates, mask='2mm_brain_mask.npy'):
 
 
 def peaks_to_vector(coordinates, mask=
-                    'neurosynth/neurosynth/resourcesneurosynth/neurosynth/resources', 
+                    'neurosynth/neurosynth/resources/MNI152_T1_2mm_brain.nii.gz', 
                     radius=6):
     """
     Takes in a list of valid peak coordinates and 
@@ -89,7 +89,7 @@ def peaks_to_vector(coordinates, mask=
     # now vectorize it to yield the 1D numpy array
     mask_obj = nbm.Mask(mask)
     img_vector = mask_obj.mask(dense_img)
-    return mask_obj
+    return img_vector
 
 
     

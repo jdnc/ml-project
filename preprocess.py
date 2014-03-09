@@ -4,8 +4,8 @@ import pandas
 from collections import defaultdict
 
 from neurosynth.base.dataset import Dataset:
-import neurosynth.base.imageutils as iu
-
+import neurosynth.base.imageutils as nbi
+import neurosynth.base.mask as nbm
 
 def extract_coordinates(filename):
     """
@@ -50,6 +50,35 @@ def validate_coordinates(coordinates, mask):
     bool : whether it is a valid coordinate or not
     """
     pass
+
+
+def peaks_to_vector(coordinates, mask, radius=6):
+    """
+    Takes in a list of valid peak coordinates and 
+    returns a vector of the corresponding image
+    Parameters
+    ----------
+    coordinates : list of lists
+        list of x/y/z coordinates
+    mask : mask object in nifti fomat
+        used to vectorize the image
+    radius : int, optional
+        the radius of sphere to expand around the peaks in mm.
+        defaults to 6mm.
+
+    Returns
+    -------
+    img_vector : 1D `numpy.array` object
+        vectorized image to be used as a feature
+    """
+    # first get the denser image, expanding via spheres
+    dense_img  = nbi.map_peaks_to_image(coordinates, r=radius)
+
+    # now vectorize it to yield the 1D numpy array
+    mask_obj = nbm.Mask(mask)
+    img_vector = mask_obj.mask(dense_img)
+    return mask_obj
+
 
     
 def set_targets(filename, threshold=0):

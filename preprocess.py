@@ -121,5 +121,37 @@ def set_targets(filename, threshold=0):
     return (target_dict, target_names)
 
 
-def get_features_targets():
-    pass
+def get_features_targets(coordinate_dict, target_dict):
+    """
+    Given the dicts that have the list of coordinates and the list of targets
+    corresponding to each study, returns the numpy arrays as expected by
+    scikit-learn classifier functions.
+
+    Parameters
+    ----------
+    coordinate_dict : dict
+        a dict having the studies as the keys and the list of coordinates for
+        that study as the values. The coordinates are the raw coordinates from
+        the text without any transformation to the matrix space
+    target_dict : dict
+        the dict that has the study as the key and the presence absence of
+        terms as values
+
+    Returns
+    -------
+    (X, y) : X is the n_samples x n_features array for the data input to
+        scikit-learn. y is the n_samples x n_classes array of targets.
+    """
+
+    n_samples = len(coordinate_dict)
+    n_features = 902629 # 91 * 109 * 91
+    n_classes = len(target_dict.values()[0])
+    X = np.zeros((n_samples, n_features))
+    y = np.zeros((n_samples, n_classes))
+    for idx, key in enumerate(coordinate_dict):
+        X[idx] = peaks_to_vector(coordinate_dict[key])
+        y[idx] = target_dict[key]
+    return X, y
+
+    
+    

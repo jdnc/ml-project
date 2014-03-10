@@ -175,7 +175,7 @@ def features_targets_from_file(db_file, feature_file, threshold=0):
 
     coordinate_dict = extract_coordinates(db_file)
     target_dict, target_names = set_targets(feature_file, threshold=threshold)
-    X, y = get_feature_targets(coordinate_dict, target_dict)
+    X, y = get_features_targets(coordinate_dict, target_dict)
     return (X, y)
 
 

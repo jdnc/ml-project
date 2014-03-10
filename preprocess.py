@@ -88,9 +88,10 @@ def peaks_to_vector(coordinates, mask=
         vectorized image to be used as a feature
     """
     # transform the coordinates to matrix space
-    coordinates = nbt.xyz_to_mat(np.asarray(coordinates))
+    #print(coordinates)
+    new_coordinates = nbt.xyz_to_mat(np.array(coordinates))
     # now  get the denser image, expanding via spheres
-    dense_img  = nbi.map_peaks_to_image(coordinates, r=radius)
+    dense_img  = nbi.map_peaks_to_image(new_coordinates, r=radius)
     # now vectorize the image
     img_vector = dense_img.get_data().ravel()
     return img_vector

@@ -153,5 +153,30 @@ def get_features_targets(coordinate_dict, target_dict):
         y[idx] = target_dict[key]
     return X, y
 
-    
-    
+def features_targets_from_file(db_file, feature_file, threshold=0):
+    """
+    Takes the absolute filenames of the data and feature files and returns the
+    numpy arrays expected by scikit learn algorithms
+
+    Parameters
+    ----------
+    db_file : str
+        absoulte path to the file that has the raw coordinates data
+    feature_file : str
+        absolute path to the file that has the features and term frequencies
+        corresponding to each study
+    threshold : real, optional
+        term present only if frequency > threshold, defaults to 0
+    Returns
+    -------
+    (X, y) : X is the n_samples x n_features array for the data input to
+        scikit-learn. y is the n_samples x n_classes array of targets.
+    """
+
+    coordinate_dict = extract_coordinates(db_file)
+    target_dict, target_names = set_targets(feature_file, threshold=threshold)
+    X, y = get_feature_targets(coordinate_dict, target_dict)
+    return (X, y)
+
+
+

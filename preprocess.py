@@ -68,7 +68,7 @@ def is_valid(coordinates, mask='data/2mm_brain_mask.npy'):
 
 def peaks_to_vector(coordinates, mask=
                     'neurosynth/neurosynth/resources/MNI152_T1_2mm_brain.nii.gz', 
-                    radius=4):
+                    radius=10):
     """
     Takes in a list of valid peak coordinates and 
     returns a vector of the corresponding image
@@ -80,7 +80,7 @@ def peaks_to_vector(coordinates, mask=
         used to vectorize the image
     radius : int, optional
         the radius of sphere to expand around the peaks in mm.
-        defaults to 6mm.
+        defaults to 10mm.
 
     Returns
     -------

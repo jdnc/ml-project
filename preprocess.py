@@ -109,7 +109,7 @@ def set_targets(filename, threshold=0):
         complete path to file that has the raw data
     threshold : real, optional
         mark term only if its frequency > threshold. Defaults
-        to 0
+        to 0. If -1 then simply returns the raw count.
 
     Returns
     -------
@@ -121,8 +121,12 @@ def set_targets(filename, threshold=0):
     target_dict = defaultdict(list)
     feature_table =  pandas.read_table('neurosynth/data/features.txt')
     target_names = feature_table.columns[1:]
-    for idx, row in feature_table.iterrows():
-        target_dict[row['Doi']] = [int(x > threshold) for x in row[1:]]
+    if threshold == -1:
+        for idx, row in feature_table.iterrows():
+            target_dict[row['Doi']] = [x  for x in row[1:]]
+    else:
+        for idx, row in feature_table.iterrows():
+            target_dict[row['Doi']] = [int(x > threshold) for x in row[1:]]
     return (target_dict, target_names)
 
 

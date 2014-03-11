@@ -39,4 +39,64 @@ def filter_studies_active_voxels(study_dict=None, threshold=5000):
                 del(study_dict[key])
     return study_dict
 
+def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001):
+    """
+    Given the frequency of terms corresponding to each study, as well as the
+    tems to consider, eliminates all studies that have more than one term
+    occuring at frequency >= threshold
 
+    Parameters
+    ----------
+    study_dict : dict, optional
+        the dictionary with studies as keys and frequency corresponding to each
+        term as values. If not specified, loads the precomputed dictionary from
+        the data/ folder.
+    terms : list of str, optional 
+        the terms that are being considered as labels. If not specified,
+        uses the 25 terms from the original study.
+    threshold : real, optional
+        the frequency of the term for it to be considered, as significant with
+        respect to the study. If not specified, uses 0.001 as by the original
+        paper.
+
+    Returns
+    -------
+    feature_dict : dict
+        the dict such that all studies with conflicting labels are eliminated.
+    """
+    if terms is None:
+        terms = ['Semantic',
+                'Encoding',
+                'Executive',
+                'Language',
+                'Verbal',
+                'Phonological',
+                'Visual',
+                'Inference',
+                'Working Memory',
+                'Conflict',
+                'Spatial',
+                'Attention',
+                'Imagery',
+                'Action',
+                'Sensory',
+                'Perception',
+                'Auditory',
+                'Pain',
+                'Reward',
+                'Arousal',
+                'Emotion',
+                'Social',
+                'Episodic',
+                'Retrieval',
+                'Recognition'
+                ]
+    if feature_dict is None:
+        feature_dict = pp.set_targets('data/features.txt', threshold=-1,
+                                       terms=terms)
+    for key in list(feature_dict.keys()):
+        if len(feature_dict[key][feature_dict[key] > threshold]) > 1:
+            del(feature_dict[key])
+    return feature_dict
+    
+ 

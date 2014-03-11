@@ -92,7 +92,7 @@ def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001):
                 'Recognition'
                 ]
     if feature_dict is None:
-        feature_dict = pp.set_targets('data/features.txt', threshold=-1,
+        feature_dict, target_names = pp.set_targets('data/features.txt', threshold=-1,
                                        terms=terms)
     for key in list(feature_dict.keys()):
         if len(feature_dict[key][feature_dict[key] > threshold]) > 1:

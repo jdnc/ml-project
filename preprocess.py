@@ -122,8 +122,9 @@ def set_targets(filename, threshold=0):
     feature_table =  pandas.read_table('neurosynth/data/features.txt')
     target_names = feature_table.columns[1:]
     if threshold == -1:
+        target_dict = {}
         for idx, row in feature_table.iterrows():
-            target_dict[row['Doi']] = [x  for x in row[1:]]
+            target_dict[row['Doi']] = feature_table.loc[idx, feature_table.columns[1:]]
     else:
         for idx, row in feature_table.iterrows():
             target_dict[row['Doi']] = [int(x > threshold) for x in row[1:]]

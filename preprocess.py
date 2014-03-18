@@ -121,8 +121,6 @@ def set_targets(filename, threshold=0):
     target_dict = defaultdict(list)
     feature_table =  pandas.read_table('neurosynth/data/features.txt')
     target_names = feature_table.columns[1:]
-    if  terms is None:
-        terms =  feature_table.columns[1:]
     if threshold == -1:
         target_dict = {}
         for idx, row in feature_table.iterrows():

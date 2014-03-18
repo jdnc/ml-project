@@ -98,9 +98,9 @@ def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001):
     new_terms = [x.lower() for x in terms if x.lower in target_names]
     for key in list(feature_dict.keys()):
             # remove all studies that have more than one major term
-            if len([x for x in new_terms if feature_dict[key][x] > threshold])
-            > 1:
-            del(feature_dict[key])
+            if len([x for x in new_terms if feature_dict[key][x] >
+            threshold])>1:
+                del(feature_dict[key])
     return feature_dict
     
  

@@ -2,6 +2,7 @@ from __future__ import print_function
 
 import pandas
 import numpy as np
+from nilearn import input_data
 from collections import defaultdict
 
 from neurosynth.base.dataset import Dataset
@@ -131,7 +132,8 @@ def set_targets(filename, threshold=0):
     return (target_dict, target_names)
 
 
-def get_features_targets(coordinate_dict, target_dict):
+def get_features_targets(coordinate_dict, target_dict,
+                         mask='neurosynth/neurosynth/resources/MNI152_T1_2mm_brain.nii.gz'):
     """
     Given the dicts that have the list of coordinates and the list of targets
     corresponding to each study, returns the numpy arrays as expected by
@@ -146,6 +148,8 @@ def get_features_targets(coordinate_dict, target_dict):
     target_dict : dict
         the dict that has the study as the key and the presence absence of
         terms as values
+    mask: mask in Nifti format, optional
+        fits the X array to be within the bounds of the mask.
 
     Returns
     -------
@@ -161,6 +165,9 @@ def get_features_targets(coordinate_dict, target_dict):
     for idx, key in enumerate(coordinate_dict):
         X[idx] = peaks_to_vector(coordinate_dict[key])
         y[idx] = target_dict[key]
+    nifti_masker = input_data.NiftiMasker(mask=mask, memory_level=1,
+                                          standardize=False)
+    X = nifti_masker.fit_transform(X)
     return X, y
 
 def features_targets_from_file(db_file, feature_file, threshold=0):

@@ -98,7 +98,7 @@ def peaks_to_vector(coordinates, mask=
 
 
     
-def set_targets(filename, threshold=0, terms=None):
+def set_targets(filename, threshold=0):
     """
     Given the feature file, return the target vector showing 
     the presence/absence of terms for a document
@@ -110,9 +110,6 @@ def set_targets(filename, threshold=0, terms=None):
     threshold : real, optional
         mark term only if its frequency > threshold. Defaults
         to 0. If -1 then simply returns the raw count.
-    terms : list of str
-        list of terms that must be returned, if empty returns for all the
-        terms.
 
     Returns
     -------
@@ -129,7 +126,7 @@ def set_targets(filename, threshold=0, terms=None):
     if threshold == -1:
         target_dict = {}
         for idx, row in feature_table.iterrows():
-            target_dict[row['Doi']] = feature_table.loc[idx, terms]
+            target_dict[row['Doi']] = row[1:]
     else:
         for idx, row in feature_table.iterrows():
             target_dict[row['Doi']] = [int(x > threshold) for x in row[1:]]

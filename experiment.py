@@ -92,10 +92,14 @@ def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001):
                 'Recognition'
                 ]
     if feature_dict is None:
-        feature_dict, target_names = pp.set_targets('data/features.txt', threshold=-1,
-                                       terms=terms)
+        feature_dict, target_names = pp.set_targets('data/features.txt',
+                                                    threshold=-1)   
+    # validate that the terms are actual features and convert to lower case
+    new_terms = [x.lower() for x in terms if x.lower in target_names]
     for key in list(feature_dict.keys()):
-        if len(feature_dict[key][feature_dict[key] > threshold]) > 1:
+            # remove all studies that have more than one major term
+            if len([x for x in new_terms if feature_dict[key][x] > threshold])
+            > 1:
             del(feature_dict[key])
     return feature_dict
     

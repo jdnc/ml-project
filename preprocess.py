@@ -167,7 +167,7 @@ def get_features_targets(coordinate_dict, target_dict,
         y[idx] = target_dict[key]
     nifti_masker = input_data.NiftiMasker(mask=mask, memory_level=1,
                                           standardize=False)
-    X = nifti_masker.fit_transform(X)
+    X = nifti_masker.fit_transform(np.array(X))
     return X, y
 
 def features_targets_from_file(db_file, feature_file, threshold=0):

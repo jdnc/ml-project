@@ -93,10 +93,10 @@ def peaks_to_vector(coordinates, mask=
     new_coordinates = nbt.xyz_to_mat(np.array(coordinates))
     # now  get the denser image, expanding via spheres
     dense_img  = nbi.map_peaks_to_image(new_coordinates, r=radius)
-    return dense_img
+    img_vector = dense_img.get_data().ravel()
+    return img_vector
 
 
-    
 def set_targets(filename, threshold=0):
     """
     Given the feature file, return the target vector showing 
@@ -157,21 +157,13 @@ def get_features_targets(coordinate_dict, target_dict,
     mask1 = nbm.Mask(mask)  
     n_samples = len(coordinate_dict)
     n_classes = len(target_dict.values()[0])
+    X = np.zeros((n_samples, n_features))
     y = np.zeros((n_samples, n_classes))
     dir_name = os.path.join(os.path.dirname(__file__), 'images')
     list_of_files = []
     for idx, key in enumerate(coordinate_dict):
         y[idx] = target_dict[key]
-        dense_img = peaks_to_vector(coordinate_dict[key])
-        key_name = re.sub("/", "_", key)
-        file_name = os.path.join(dir_name, key_name+".nii")
-        vector_img = dense_img.get_data()
-        nbi.save_img(vector_img, file_name, mask1)
-        list_of_files.append(file_name)
-     = nbi.load_imgs(list_of_files, mask1)
-    #nifti_masker = input_data.NiftiMasker(mask=mask, memory_level=1,
-    #                                          standardize=False)
-    #X = nifti_masker.fit_transform(X)
+        X[idx] = peaks_to_vector(coordinate_dict[key])
     return X, y
 
 def features_targets_from_file(db_file, feature_file, threshold=0):

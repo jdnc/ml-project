@@ -103,4 +103,30 @@ def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001):
                 del(feature_dict[key])
     return feature_dict
     
- 
+def get_intersecting_dicts(coordinate_dict, target_dict):
+    """
+    Given dicts with studies, filtered on diffierent criteria, convenience
+    function that returns dicts having only the studies that pass all the
+    criteria
+    
+    Parameters
+    ----------
+    coordinate_dict :  dict
+        dict with studies - activation points pairs
+    target_dict : dict
+        dict with studies - terms pairs
+
+    Returns
+    -------
+    new_coordinate_dict, new_target_dict :  tuple
+        dicts with only the studies that appear in both the input dicts
+    """
+
+    intersection = [key for key in coordinate_dict if key in target_dict]
+    for key in intersection:
+        new_coordinate_dict[key] = coordinate_dict[key]
+        new_target_dict[key] = target_dict[key]
+        # much simpler to directly use dict comprehensions
+        # not using to remain python 2.x compatible.
+    return new_coordinate_dict, new_target_dict
+

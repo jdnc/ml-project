@@ -93,7 +93,7 @@ def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001,
                 'Social',
                 'Episodic',
                 'Retrieval',
-                #'Recognition'
+                'Recognition'
                 ]
     if feature_dict is None:
         feature_dict, target_names = pp.set_targets('data/features.txt',
@@ -113,7 +113,7 @@ def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001,
                 if feature_dict[key][x] > vmax:
                     vmax = feature_dict[key][x]
                     label = x
-            feature_dict[key] = x                    
+            feature_dict[key] = label                    
     return feature_dict
     
 def get_intersecting_dicts(coordinate_dict, target_dict):

@@ -168,7 +168,7 @@ def get_features_targets(coordinate_dict, target_dict,
         vector_img = dense_img.get_data()
         nbi.save_img(vector_img, file_name, mask1)
         list_of_files.append(file_name)
-    X = nbi.load_imgs(list_of_files, mask1)
+     = nbi.load_imgs(list_of_files, mask1)
     #nifti_masker = input_data.NiftiMasker(mask=mask, memory_level=1,
     #                                          standardize=False)
     #X = nifti_masker.fit_transform(X)

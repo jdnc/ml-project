@@ -1,4 +1,6 @@
 from __future__ import print_function
+import os
+import re
 
 import pandas
 import numpy as np
@@ -38,8 +40,6 @@ def extract_coordinates(filename):
         for key in list(doc_dict.keys()):
             if not doc_dict[key]:
                 del(doc_dict[key])
-                
-
     return doc_dict
 
 
@@ -85,17 +85,15 @@ def peaks_to_vector(coordinates, mask=
 
     Returns
     -------
-    img_vector : 1D `numpy.array` object
-        vectorized image to be used as a feature
+    dense_img : nifti image
+        image in the nifti format.
     """
     # transform the coordinates to matrix space
     #print(coordinates)
     new_coordinates = nbt.xyz_to_mat(np.array(coordinates))
     # now  get the denser image, expanding via spheres
     dense_img  = nbi.map_peaks_to_image(new_coordinates, r=radius)
-    # now vectorize the image
-    img_vector = dense_img.get_data().ravel()
-    return img_vector
+    return dense_img
 
 
     
@@ -156,18 +154,24 @@ def get_features_targets(coordinate_dict, target_dict,
     (X, y) : X is the n_samples x n_features array for the data input to
         scikit-learn. y is the n_samples x n_classes array of targets.
     """
-
+    mask1 = nbm.Mask(mask)  
     n_samples = len(coordinate_dict)
-    n_features = 902629 # 91 * 109 * 91
     n_classes = len(target_dict.values()[0])
-    X = np.zeros((n_samples, n_features))
     y = np.zeros((n_samples, n_classes))
+    dir_name = os.path.join(os.path.dirname(__file__), 'images')
+    list_of_files = []
     for idx, key in enumerate(coordinate_dict):
-        X[idx] = peaks_to_vector(coordinate_dict[key])
         y[idx] = target_dict[key]
-    nifti_masker = input_data.NiftiMasker(mask=mask, memory_level=1,
-                                          standardize=False)
-    X = nifti_masker.fit_transform(np.array(X))
+        dense_img = peaks_to_vector(coordinate_dict[key])
+        key_name = re.sub("/", "_", key)
+        file_name = os.path.join(dir_name, key_name+".nii")
+        vector_img = dense_img.get_data()
+        nbi.save_img(vector_img, file_name, mask1)
+        list_of_files.append(file_name)
+    X = nbi.load_imgs(list_of_files, mask1)
+    #nifti_masker = input_data.NiftiMasker(mask=mask, memory_level=1,
+    #                                          standardize=False)
+    #X = nifti_masker.fit_transform(X)
     return X, y
 
 def features_targets_from_file(db_file, feature_file, threshold=0):

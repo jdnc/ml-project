@@ -39,7 +39,8 @@ def filter_studies_active_voxels(study_dict=None, threshold=5000):
                 del(study_dict[key])
     return study_dict
 
-def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001):
+def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001,
+                         set_unique_label=False):
     """
     Given the frequency of terms corresponding to each study, as well as the
     tems to consider, eliminates all studies that have more than one term
@@ -58,6 +59,9 @@ def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001):
         the frequency of the term for it to be considered, as significant with
         respect to the study. If not specified, uses 0.001 as by the original
         paper.
+    set_unique_label : bool, optional
+        defaults to false, when true returns only a single label corresponding
+        to each study
 
     Returns
     -------
@@ -89,7 +93,7 @@ def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001):
                 'Social',
                 'Episodic',
                 'Retrieval',
-                'Recognition'
+                #'Recognition'
                 ]
     if feature_dict is None:
         feature_dict, target_names = pp.set_targets('data/features.txt',
@@ -101,6 +105,15 @@ def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001):
             if len([x for x in new_terms if feature_dict[key][x] >
             threshold])>1:
                 del(feature_dict[key])
+    if set_unique_label:
+        for key in list(feature_dict):
+            vmax = 0
+            label = None
+            for x in new_terms:
+                if feature_dict[key][x] > vmax:
+                    vmax = feature_dict[key][x]
+                    label = x
+            feature_dict[key] = x                    
     return feature_dict
     
 def get_intersecting_dicts(coordinate_dict, target_dict):

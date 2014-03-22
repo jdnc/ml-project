@@ -99,7 +99,7 @@ def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001,
         feature_dict, target_names = pp.set_targets('data/features.txt',
                                                     threshold=-1)   
     # validate that the terms are actual features and convert to lower case
-    new_terms = [x.lower() for x in terms if x.lower in target_names]
+    new_terms = [x.lower() for x in terms if x.lower() in target_names]
     for key in list(feature_dict.keys()):
             # remove all studies that have more than one major term
             if len([x for x in new_terms if feature_dict[key][x] >

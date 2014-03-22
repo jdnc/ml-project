@@ -113,7 +113,10 @@ def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001,
                 if feature_dict[key][x] > vmax:
                     vmax = feature_dict[key][x]
                     label = x
-            feature_dict[key] = label                    
+            if label is not None:
+                feature_dict[key] = label
+            else:
+                del(feature_dict[key])
     return feature_dict
     
 def get_intersecting_dicts(coordinate_dict, target_dict):

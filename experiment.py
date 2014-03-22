@@ -134,7 +134,8 @@ def get_intersecting_dicts(coordinate_dict, target_dict):
     new_coordinate_dict, new_target_dict :  tuple
         dicts with only the studies that appear in both the input dicts
     """
-
+    new_coordinate_dict = {}
+    new_target_dict = {}
     intersection = [key for key in coordinate_dict if key in target_dict]
     for key in intersection:
         new_coordinate_dict[key] = coordinate_dict[key]

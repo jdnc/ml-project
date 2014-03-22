@@ -159,7 +159,7 @@ def get_features_targets(coordinate_dict, target_dict,
     n_classes = len(target_dict.values()[0])
     n_features = 902629 # 91 * 109 * 91
     X = np.zeros((n_samples, n_features))
-    y = np.zeros((n_samples, n_classes))
+    y = np.empty(n_samples, dtype=string)
     dir_name = os.path.join(os.path.dirname(__file__), 'images')
     list_of_files = []
     for idx, key in enumerate(coordinate_dict):

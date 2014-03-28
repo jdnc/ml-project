@@ -4,7 +4,6 @@ import re
 
 import pandas
 import numpy as np
-from nilearn import input_data
 from collections import defaultdict
 
 from neurosynth.base.dataset import Dataset

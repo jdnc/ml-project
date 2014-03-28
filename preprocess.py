@@ -86,15 +86,19 @@ def peaks_to_vector(coordinates, mask=
     Returns
     -------
     dense_img : nifti image
-        image in the nifti format.
+        1D Numpy array of in-mask voxels
     """
     # transform the coordinates to matrix space
     #print(coordinates)
     new_coordinates = nbt.xyz_to_mat(np.array(coordinates))
     # now  get the denser image, expanding via spheres
     dense_img  = nbi.map_peaks_to_image(new_coordinates, r=radius)
-    img_vector = dense_img.get_data().ravel()
-    return img_vector
+    # Create a mask object for the image
+    niftiMask = nbm.Mask(mask)
+    # mask the image formed
+    return niftiMask.mask(dense_img)
+    #img_vector = dense_img.get_data().ravel()
+    #return img_vector
 
 
 def set_targets(filename, threshold=0):
@@ -158,7 +162,7 @@ def get_features_targets(coordinate_dict, target_dict,
     n_samples = len(coordinate_dict)
     n_classes = len(target_dict.values()[0])
     n_features = 902629 # 91 * 109 * 91
-    X = np.zeros((n_samples, n_features))
+    X = np.zeros((n_samples, n_features), dtype=int)
     y = np.empty(n_samples, dtype=object)
     dir_name = os.path.join(os.path.dirname(__file__), 'images')
     list_of_files = []

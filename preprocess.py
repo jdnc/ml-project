@@ -121,7 +121,7 @@ def set_targets(filename, threshold=0):
         the name of the target labels used
     """
     target_dict = defaultdict(list)
-    feature_table =  pandas.read_table('neurosynth/data/features.txt')
+    feature_table =  pandas.read_table('data/features.txt')
     target_names = feature_table.columns[1:]
     if threshold == -1:
         target_dict = {}

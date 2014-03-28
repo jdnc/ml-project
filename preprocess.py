@@ -157,15 +157,13 @@ def get_features_targets(coordinate_dict, target_dict,
     -------
     (X, y) : X is the n_samples x n_features array for the data input to
         scikit-learn. y is the n_samples x n_classes array of targets.
-    """
-    mask1 = nbm.Mask(mask)  
+    """  
     n_samples = len(coordinate_dict)
     n_classes = len(target_dict.values()[0])
-    n_features = 902629 # 91 * 109 * 91
+    n_features = 228453 # 91 * 109 * 91 now reduced!
     X = np.zeros((n_samples, n_features), dtype=int)
     y = np.empty(n_samples, dtype=object)
     dir_name = os.path.join(os.path.dirname(__file__), 'images')
-    list_of_files = []
     for idx, key in enumerate(coordinate_dict):
         y[idx] = target_dict[key]
         X[idx] = peaks_to_vector(coordinate_dict[key])

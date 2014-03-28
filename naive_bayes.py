@@ -43,6 +43,9 @@ def main():
     # print the scores
     print("Scores")
     print(scores)
+    np.save("/scratch/02863/mparikh/data/scores.npy", scores)
+
+
 
 
 if __name__ == "__main__":

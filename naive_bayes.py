@@ -15,6 +15,7 @@ import numpy as np
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.multiclass import OneVsOneClassifier
 from sklearn import cross_validation
+from sklearn import preprocessing
 
 
 import preprocess as pp
@@ -30,7 +31,19 @@ def get_X_y():
 
 
 def main():
-    pass
+    x, y = get_X_y()
+    # Since y has string labels encode them to numerical values
+    le = preprocessing.LabelEncoder()
+    # now encode y so that it has numerical classes rather than string
+    y_enc = le.transform(y)
+    # since study assumes uniform prior for each term, set fit_prior to false
+    clf = MultinomialNB(fit_prior=False)
+    scores = cross_validation.cross_val_score(OneVsOneClassifier(clf), X,
+                                              y_enc, cv=10)
+    # print the scores
+    print("Scores")
+    print(scores)
+
 
 if __name__ == "__main__":
     main()

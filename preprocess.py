@@ -94,7 +94,7 @@ def peaks_to_vector(coordinates, mask=
     # now  get the denser image, expanding via spheres
     dense_img  = nbi.map_peaks_to_image(new_coordinates, r=radius)
     # Create a mask object for the image
-    niftiMask = nbm.Mask(mask)
+    niftiMask = nbm.Mask('neurosynth/neurosynth/resources/MNI152_T1_2mm_brain.nii.gz')
     # mask the image formed
     return niftiMask.mask(dense_img)
     #img_vector = dense_img.get_data().ravel()

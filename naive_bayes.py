@@ -1,3 +1,5 @@
+from __future__ import print_function
+#!/usr/bin/env python
 """
 Python code to replicate the Naive Bayes classifier from the Large Scale Image
 segmentation paper
@@ -7,7 +9,6 @@ Uses 10-fold cross validation
 Uses a uniform prior for all terms
 """
 
-from __future__ import print_function
 
 import os
 
@@ -34,11 +35,12 @@ def main():
     x, y = get_X_y()
     # Since y has string labels encode them to numerical values
     le = preprocessing.LabelEncoder()
+    le.fit(y)
     # now encode y so that it has numerical classes rather than string
     y_enc = le.transform(y)
     # since study assumes uniform prior for each term, set fit_prior to false
     clf = MultinomialNB(fit_prior=False)
-    scores = cross_validation.cross_val_score(OneVsOneClassifier(clf), X,
+    scores = cross_validation.cross_val_score(OneVsOneClassifier(clf), x,
                                               y_enc, cv=10)
     # print the scores
     print("Scores")

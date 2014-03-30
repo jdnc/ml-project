@@ -17,7 +17,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.multiclass import OneVsOneClassifier
 from sklearn import cross_validation
 from sklearn import preprocessing
-
+from sklearn.metrics import confusion_matrix
 
 import preprocess as pp
 import experiment as ex
@@ -40,14 +40,12 @@ def main():
     y_enc = le.transform(y)
     # since study assumes uniform prior for each term, set fit_prior to false
     clf = MultinomialNB(fit_prior=False)
-    scores = cross_validation.cross_val_score(OneVsOneClassifier(clf), x,
-                                              y_enc, cv=10)
-    # print the scores
-    print("Scores")
-    print(scores)
-    np.save("/scratch/02863/mparikh/data/scores.npy", scores)
-
-
+    kf = cross_validation.KFold(len(y_enc), n_folds=10)
+    conf_mat = np.zeros((len(le.classes_),len(le.classes_)))
+    for train, test in kf:
+        predicted = OneVsOneClassifier(clf).fit(x[train],y_enc[train]).predict(x[test])
+        conf_mat += confusion_matrix(y_enc[test], predicted)
+    np.save("/scratch/02863/mparikh/data/scores.npy", conf_mat)
 
 
 if __name__ == "__main__":

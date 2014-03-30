@@ -48,7 +48,7 @@ def main():
     for train, test in kf:
         predicted = OneVsOneClassifier(clf).fit(x[train],y_enc[train]).predict(x[test])
         conf_mat += confusion_matrix(y_enc[test], predicted, labels=np.arange(22))
-    np.save("/scratch/02863/mparikh/data/scores1.npy", conf_mat)
+    np.save("/scratch/02863/mparikh/data/scores_nofilter.npy", conf_mat)
 
 
 if __name__ == "__main__":

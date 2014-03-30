@@ -29,7 +29,7 @@ def extract_coordinates(filename):
     """
 
     doc_dict = defaultdict(list)
-    data_table =  pandas.read_table('/scratch/02863/mparikh/data/database.txt')
+    data_table =  pandas.read_table(filename)
     for idx, row in data_table.iterrows():
         x = row['x']
         y = row['y']

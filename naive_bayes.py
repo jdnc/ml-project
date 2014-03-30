@@ -22,8 +22,11 @@ from sklearn.metrics import confusion_matrix
 import preprocess as pp
 import experiment as ex
 
-def get_X_y():
-    coordinate_dict = ex.filter_studies_active_voxels()
+def get_X_y(filter=True):
+    if filter:
+        coordinate_dict = ex.filter_studies_active_voxels()
+    else:
+	coordinate_dict = pp.extract_coordinates('/scratch/02863/mparikh/data/database.txt')
     target_dict = ex.filter_studies_terms(set_unique_label=True)
     coordinate_dict, target_dict = ex.get_intersecting_dicts(coordinate_dict,
                                                           target_dict)
@@ -39,13 +42,13 @@ def main():
     # now encode y so that it has numerical classes rather than string
     y_enc = le.transform(y)
     # since study assumes uniform prior for each term, set fit_prior to false
-    clf = MultinomialNB(fit_prior=False)
+    clf = MultinomialNB()
     kf = cross_validation.KFold(len(y_enc), n_folds=10)
     conf_mat = np.zeros((len(le.classes_),len(le.classes_)))
     for train, test in kf:
         predicted = OneVsOneClassifier(clf).fit(x[train],y_enc[train]).predict(x[test])
         conf_mat += confusion_matrix(y_enc[test], predicted, labels=np.arange(22))
-    np.save("/scratch/02863/mparikh/data/scores.npy", conf_mat)
+    np.save("/scratch/02863/mparikh/data/scores1.npy", conf_mat)
 
 
 if __name__ == "__main__":

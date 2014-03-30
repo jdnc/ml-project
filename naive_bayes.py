@@ -35,7 +35,7 @@ def get_X_y(filter=True):
 
 
 def main():
-    x, y = get_X_y()
+    x, y = get_X_y(filter=False)
     # Since y has string labels encode them to numerical values
     le = preprocessing.LabelEncoder()
     le.fit(y)

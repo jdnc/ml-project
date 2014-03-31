@@ -9,7 +9,7 @@ Uses 10-fold cross validation
 Uses a uniform prior for all terms
 """
 
-
+import json
 import os
 
 import numpy as np
@@ -26,7 +26,10 @@ def get_X_y(filter=True):
     if filter:
         coordinate_dict = ex.filter_studies_active_voxels()
     else:
-	coordinate_dict = pp.extract_coordinates('/scratch/02863/mparikh/data/database.txt')
+    	with open('/scratch/02863/mparikh/data/docdict.txt') as f:
+    		coordinate_dict = json.load(f)
+	//coordinate_dict = pp.extract_coordinates('/scratch/02863/mparikh/data/database.txt')
+	
     target_dict = ex.filter_studies_terms(set_unique_label=True)
     coordinate_dict, target_dict = ex.get_intersecting_dicts(coordinate_dict,
                                                           target_dict)

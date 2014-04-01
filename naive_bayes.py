@@ -22,11 +22,11 @@ from sklearn.metrics import confusion_matrix
 import preprocess as pp
 import experiment as ex
 
-def get_X_y(filter=True):
+def get_X_y(filter=True, coordinate_file):
     if filter:
         coordinate_dict = ex.filter_studies_active_voxels()
     else:
-    	with open('/scratch/02863/mparikh/data/docdict.txt') as f:
+    	with open(coordinate_file) as f:
     		coordinate_dict = json.load(f)
 	#coordinate_dict = pp.extract_coordinates('/scratch/02863/mparikh/data/database.txt')
 	
@@ -51,7 +51,7 @@ def main():
     for train, test in kf:
         predicted = OneVsRestClassifier(clf).fit(x[train],y_enc[train]).predict(x[test])
         conf_mat += confusion_matrix(y_enc[test], predicted, labels=np.arange(22))
-    np.save("/scratch/02863/mparikh/data/scores_nofilter.npy", conf_mat)
+    np.save("/scratch/02863/mparikh/data/confmat.npy", conf_mat)
 
 
 if __name__ == "__main__":

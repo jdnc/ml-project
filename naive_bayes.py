@@ -28,7 +28,7 @@ def get_X_y(filter=True):
     else:
     	with open('/scratch/02863/mparikh/data/docdict.txt') as f:
     		coordinate_dict = json.load(f)
-	//coordinate_dict = pp.extract_coordinates('/scratch/02863/mparikh/data/database.txt')
+	#coordinate_dict = pp.extract_coordinates('/scratch/02863/mparikh/data/database.txt')
 	
     target_dict = ex.filter_studies_terms(set_unique_label=True)
     coordinate_dict, target_dict = ex.get_intersecting_dicts(coordinate_dict,

@@ -14,7 +14,7 @@ import os
 
 import numpy as np
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.multiclass import OneVsOneClassifier
+from sklearn.multiclass import OneVsRestClassifier
 from sklearn import cross_validation
 from sklearn import preprocessing
 from sklearn.metrics import confusion_matrix
@@ -49,7 +49,7 @@ def main():
     kf = cross_validation.KFold(len(y_enc), n_folds=10)
     conf_mat = np.zeros((len(le.classes_),len(le.classes_)))
     for train, test in kf:
-        predicted = OneVsOneClassifier(clf).fit(x[train],y_enc[train]).predict(x[test])
+        predicted = OneVsRestClassifier(clf).fit(x[train],y_enc[train]).predict(x[test])
         conf_mat += confusion_matrix(y_enc[test], predicted, labels=np.arange(22))
     np.save("/scratch/02863/mparikh/data/scores_nofilter.npy", conf_mat)
 

@@ -8,7 +8,8 @@ Uses Naive Bayes for multi-class OvO classification given 24 labels
 Uses 10-fold cross validation
 Uses a uniform prior for all terms
 """
-
+import argparse
+import sys
 import json
 import os
 

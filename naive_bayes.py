@@ -38,6 +38,9 @@ def get_X_y(filter=True, coordinate_file):
 
 
 def main():
+    parser = argparse.ArgumentParser(prog=sys.argv[0])
+    parser.add_argument("-s",required=True, help="name of file to save the confusion matrix numpy array")
+    args = parser.parse_args()
     x, y = get_X_y(filter=False)
     # Since y has string labels encode them to numerical values
     le = preprocessing.LabelEncoder()
@@ -51,7 +54,8 @@ def main():
     for train, test in kf:
         predicted = OneVsRestClassifier(clf).fit(x[train],y_enc[train]).predict(x[test])
         conf_mat += confusion_matrix(y_enc[test], predicted, labels=np.arange(22))
-    np.save("/scratch/02863/mparikh/data/confmat.npy", conf_mat)
+    print(conf_mat) # just for debugging 
+    np.save(args.s, conf_mat)
 
 
 if __name__ == "__main__":

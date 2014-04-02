@@ -23,15 +23,13 @@ from sklearn.metrics import confusion_matrix
 import preprocess as pp
 import experiment as ex
 
-def get_X_y(coordinate_file, filter=True):
+def get_X_y(coordinate_file, feature_file, filter=True):
     if filter:
-        coordinate_dict = ex.filter_studies_active_voxels()
+        coordinate_dict = ex.filter_studies_active_voxels(coordinate_file)
     else:
     	with open(coordinate_file) as f:
     		coordinate_dict = json.load(f)
-	#coordinate_dict = pp.extract_coordinates('/scratch/02863/mparikh/data/database.txt')
-	
-    target_dict = ex.filter_studies_terms(set_unique_label=True)
+    target_dict = ex.filter_studies_terms(feature_file, set_unique_label=True)
     coordinate_dict, target_dict = ex.get_intersecting_dicts(coordinate_dict,
                                                           target_dict)
     X, y = pp.get_features_targets(coordinate_dict, target_dict)
@@ -41,8 +39,10 @@ def get_X_y(coordinate_file, filter=True):
 def main():
     parser = argparse.ArgumentParser(prog=sys.argv[0])
     parser.add_argument("-s",required=True, help="name of file to save the confusion matrix numpy array")
+    parser.add_argument("-c",required=True, help="name of file having the jsonized coordinate dict")
+    parser.add_argument("-f",required=True, help="name of file with the raw features")
     args = parser.parse_args()
-    x, y = get_X_y('/scratch/02863/mparikh/data/docdict.txt', filter=False)
+    x, y = get_X_y(args.c, args.f, filter=False)
     # Since y has string labels encode them to numerical values
     le = preprocessing.LabelEncoder()
     le.fit(y)

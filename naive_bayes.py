@@ -42,7 +42,7 @@ def main():
     parser.add_argument("-c",required=True, help="name of file having the jsonized coordinate dict")
     parser.add_argument("-f",required=True, help="name of file with the raw features")
     args = parser.parse_args()
-    x, y = get_X_y(args.c, args.f, filter=False)
+    x, y = get_X_y(args.c, args.f)
     # Since y has string labels encode them to numerical values
     le = preprocessing.LabelEncoder()
     le.fit(y)

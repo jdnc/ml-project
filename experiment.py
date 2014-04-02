@@ -13,10 +13,9 @@ def filter_studies_active_voxels(study_dict=None, threshold=5000):
 
     Parameters
     ----------
-    study_dict  :  dict, optional
-        the dict of all the studies with coordinates. Optionally may directly
-        load the precomputed dict from the data folder.
-
+    study_dict  :  dict/str 
+	filename  to json stored dict or the dict of all the studies with 
+	coordinates.     
     threshold : int, optional
         the number of activated voxels in the study, for it to be included.
         Defaults to 5000, as was used in the original study.
@@ -26,8 +25,8 @@ def filter_studies_active_voxels(study_dict=None, threshold=5000):
     study_dict : dict
         dict that includes only studies matching the criteria.
     """
-    if study_dict is None:
-        with open('/scratch/02863/mparikh/data/docdict.txt', 'rb') as f:
+    if isinstance(study_dict, basestring):
+        with open(study_dict, 'rb') as f:
             study_dict = json.load(f)
     for key in list(study_dict.keys()):
         if len(study_dict[key]) < 4: # study has fewer than 4 reported foci
@@ -48,10 +47,9 @@ def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001,
 
     Parameters
     ----------
-    study_dict : dict, optional
+    study_dict : dict/ str 
         the dictionary with studies as keys and frequency corresponding to each
-        term as values. If not specified, loads the precomputed dictionary from
-        the data/ folder.
+        term as values or the filename to the pre-stored json dictionary
     terms : list of str, optional 
         the terms that are being considered as labels. If not specified,
         uses the 25 terms from the original study.
@@ -95,8 +93,8 @@ def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001,
                 'Retrieval',
                 'Recognition'
                 ]
-    if feature_dict is None:
-        feature_dict, target_names = pp.set_targets('/scratch/02863/mparikh/data/features.txt',
+    if isinstance(feature_dict, basestring):
+        feature_dict, target_names = pp.set_targets(feature_dict,
                                                     threshold=-1)   
     # validate that the terms are actual features and convert to lower case
     new_terms = [x.lower() for x in terms if x.lower() in target_names]

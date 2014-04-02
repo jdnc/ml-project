@@ -41,7 +41,7 @@ def main():
     parser = argparse.ArgumentParser(prog=sys.argv[0])
     parser.add_argument("-s",required=True, help="name of file to save the confusion matrix numpy array")
     args = parser.parse_args()
-    x, y = get_X_y(filter=False)
+    x, y = get_X_y('/scratch/02863/mparikh/data/docdict.txt', filter=False)
     # Since y has string labels encode them to numerical values
     le = preprocessing.LabelEncoder()
     le.fit(y)

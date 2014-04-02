@@ -22,7 +22,7 @@ from sklearn.metrics import confusion_matrix
 import preprocess as pp
 import experiment as ex
 
-def get_X_y(filter=True, coordinate_file):
+def get_X_y(coordinate_file, filter=True):
     if filter:
         coordinate_dict = ex.filter_studies_active_voxels()
     else:

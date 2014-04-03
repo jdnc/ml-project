@@ -32,7 +32,7 @@ def filter_studies_active_voxels(study_dict, threshold=5000):
         if len(study_dict[key]) < 4: # study has fewer than 4 reported foci
             del(study_dict[key])
         else:  # study has less than 5000 activated foci 
-            voxels = pp.peaks_to_vector(study_dict[key], radius=4)
+            voxels = pp.peaks_to_vector(study_dict[key], radius=10)
             num_activated = (voxels > 0).sum()
             if num_activated < 5000:
                 del(study_dict[key])

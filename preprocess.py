@@ -42,7 +42,7 @@ def extract_coordinates(filename):
     return doc_dict
 
 
-def is_valid(coordinates, mask='/scratch/02863/mparikh/data/2mm_brain_mask.npy'):
+def is_valid(coordinates, mask='/scratch/02869/vsub/data/2mm_brain_mask.npy'):
     """
     Validates that the given x/y/z tuple is valid
     for the given mask
@@ -67,7 +67,7 @@ def is_valid(coordinates, mask='/scratch/02863/mparikh/data/2mm_brain_mask.npy')
 
 
 def peaks_to_vector(coordinates, mask=
-                    '/scratch/02863/mparikh/data/MNI152_T1_2mm_brain.nii.gz', 
+                    '/scratch/02869/vsub/data/MNI152_T1_2mm_brain.nii.gz', 
                     radius=10):
     """
     Takes in a list of valid peak coordinates and 
@@ -93,7 +93,7 @@ def peaks_to_vector(coordinates, mask=
     # now  get the denser image, expanding via spheres
     dense_img  = nbi.map_peaks_to_image(new_coordinates, r=radius)
     # Create a mask object for the image
-    niftiMask = nbm.Mask('/scratch/02863/mparikh/data/MNI152_T1_2mm_brain.nii.gz')
+    niftiMask = nbm.Mask('/scratch/02869/vsub/data/MNI152_T1_2mm_brain.nii.gz')
     # mask the image formed
     return niftiMask.mask(dense_img)
     #img_vector = dense_img.get_data().ravel()
@@ -121,7 +121,7 @@ def set_targets(filename, threshold=0):
         the name of the target labels used
     """
     target_dict = defaultdict(list)
-    feature_table =  pandas.read_table('/scratch/02863/mparikh/data/features.txt')
+    feature_table =  pandas.read_table('/scratch/02869/vsub/data/features.txt')
     target_names = feature_table.columns[1:]
     if threshold == -1:
         target_dict = {}
@@ -134,7 +134,7 @@ def set_targets(filename, threshold=0):
 
 
 def get_features_targets(coordinate_dict, target_dict,
-                         mask='/scratch/02863/mparikh/data/MNI152_T1_2mm_brain.nii.gz'):
+                         mask='/scratch/02869/vsub/data/MNI152_T1_2mm_brain.nii.gz'):
     """
     Given the dicts that have the list of coordinates and the list of targets
     corresponding to each study, returns the numpy arrays as expected by

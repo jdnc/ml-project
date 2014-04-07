@@ -27,7 +27,7 @@ def filter_studies_active_voxels(study_dict=None, threshold=5000):
         dict that includes only studies matching the criteria.
     """
     if study_dict is None:
-        with open('/scratch/02863/mparikh/data/docdict.txt', 'rb') as f:
+        with open('/scratch/02869/vsub/data/docdict.txt', 'rb') as f:
             study_dict = json.load(f)
     for key in list(study_dict.keys()):
         if len(study_dict[key]) < 4: # study has fewer than 4 reported foci
@@ -96,7 +96,7 @@ def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001,
                 'Recognition'
                 ]
     if feature_dict is None:
-        feature_dict, target_names = pp.set_targets('/scratch/02863/mparikh/data/features.txt',
+        feature_dict, target_names = pp.set_targets('/scratch/02869/vsub/data/features.txt',
                                                     threshold=-1)   
     # validate that the terms are actual features and convert to lower case
     new_terms = [x.lower() for x in terms if x.lower() in target_names]

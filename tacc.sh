@@ -2,4 +2,4 @@
 #$-n naiveBayes 
 #$-m mparikh@cs.utexas.edu
 module load pylauncher
-python /home1/02863/mparikh/ml-project/naive_bayes.py
+python /home1/02869/vsub/ml-project/naive_bayes.py

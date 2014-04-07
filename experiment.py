@@ -5,7 +5,7 @@ import json
 
 import preprocess as pp
 
-def filter_studies_active_voxels(study_dict, threshold=5000):
+def filter_studies_active_voxels(study_dict, threshold=5000, radius=10):
     """
     Takes the studies with coordinates, and considers only those studies that
     have number of activated voxels >= threshold. Returns the dict containing
@@ -19,6 +19,9 @@ def filter_studies_active_voxels(study_dict, threshold=5000):
     threshold : int, optional
         the number of activated voxels in the study, for it to be included.
         Defaults to 5000, as was used in the original study.
+    radius : int, optional
+	the radius of the sphere in mm to expand around the actual coordinates. Defaults
+	to 10 mm.
 
     Returns
     -------
@@ -32,7 +35,7 @@ def filter_studies_active_voxels(study_dict, threshold=5000):
         if len(study_dict[key]) < 4: # study has fewer than 4 reported foci
             del(study_dict[key])
         else:  # study has less than 5000 activated foci 
-            voxels = pp.peaks_to_vector(study_dict[key], radius=10)
+            voxels = pp.peaks_to_vector(study_dict[key], radius=4)
             num_activated = (voxels > 0).sum()
             if num_activated < 5000:
                 del(study_dict[key])

@@ -38,7 +38,7 @@ def get_X_y(coordinate_file, feature_file, filter=True):
 
 def main():
     parser = argparse.ArgumentParser(prog=sys.argv[0])
-    parser.add_argument("-s",required=True, help="name of file to save the confusion matrix numpy array")
+    parser.add_argument("-s",required=True, help="name of folder to save the confusion matrix numpy array")
     parser.add_argument("-c",required=True, help="name of file having the jsonized coordinate dict")
     parser.add_argument("-f",required=True, help="name of file with the raw features")
     args = parser.parse_args()
@@ -52,12 +52,17 @@ def main():
     clf = MultinomialNB()
     kf = cross_validation.KFold(len(y_enc), n_folds=10)
     conf_mat = np.zeros((len(le.classes_),len(le.classes_)))
+    std_dev_fold = []
     for train, test in kf:
         predicted = OneVsRestClassifier(clf).fit(x[train],y_enc[train]).predict(x[test])
         conf_mat += confusion_matrix(y_enc[test], predicted, labels=np.arange(22))
-    print(conf_mat) # just for debugging 
-    np.save(args.s, conf_mat)
-
+	std_dev_fold.append(np.std(predicted))
+    print(conf_mat) # just for debugging
+    print("Saving...") 
+    print (std_dev_fold) # debugging
+    np.save(os.path.join(args.s, "conf_mat.npy"), conf_mat)
+    np.save(os.path.join(args.s, "std_dev.npy"), np.array(std_dev_fold))
+    np.save(args.)
 
 if __name__ == "__main__":
     main()

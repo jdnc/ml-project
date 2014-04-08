@@ -1,0 +1,57 @@
+TACC: Setting memory limits for job 1856315 to unlimited KB
+TACC: /home1/02869/vsub/.mpd.conf not found! Creating it...done.
+TACC: Dumping job script:
+--------------------------------------------------------------------------------
+#!/bin/csh
+#
+# SGE control file automatically created by launch
+# Using parametric launcher with control file: tacc.sh
+#$ -V                    #Inherit the submission environment
+#$ -cwd                  # Start job in submission directory
+#$ -j y                  # Combine stderr and stdout
+#$ -N launch       # Job Name
+#$ -A Analysis_Lonestar
+#$ -o $JOB_NAME.o$JOB_ID # Name of the output file (eg. myMPI.oJobID)
+#$ -pe 12way 12
+#$ -q normal
+#$ -l h_rt=01:00:00
+#----------------
+# Job Submission
+#----------------
+umask 2
+
+module load launcher
+module swap gcc intel
+setenv EXECUTABLE     $TACC_LAUNCHER_DIR/init_launcher
+setenv CONTROL_FILE tacc.sh
+setenv WORKDIR .
+cd $WORKDIR/
+echo " WORKING DIR:   $WORKDIR/"
+$TACC_LAUNCHER_DIR/paramrun $EXECUTABLE $CONTROL_FILE
+echo " "
+echo " Parameteric Job Complete"
+echo " "
+--------------------------------------------------------------------------------
+TACC: Done.
+
+Lmod Error: Swap failed: "gcc" is not loaded.
+
+ WORKING DIR:   ./
+TACC: Starting up job 1856315
+TACC: Setup complete. Running job script.
+TACC: starting parallel tasks...
+Warning: Permanently added 'c314-105.ls4.tacc.utexas.edu,206.76.194.216' (RSA) to the list of known hosts.
+--------------------------------------------------
+TACC Launcher -> 12 processors allocated.
+TACC Launcher -> 5 total tasks to complete.
+--------------------------------------------------
+ 
+TACC Launcher -> Iniating task 1 on c314-105.ls4.tacc.utexas.edu (#!/bin/bash	  )
+TACC Launcher -> Iniating task 5 on c314-105.ls4.tacc.utexas.edu (python /home1/02869/vsub/ml-project/naive_bayes.py)
+TACC Launcher -> Iniating task 2 on c314-105.ls4.tacc.utexas.edu (#$-n naiveBayes )
+TACC Launcher -> Iniating task 4 on c314-105.ls4.tacc.utexas.edu (module load pylauncher)
+TACC Launcher -> Iniating task 3 on c314-105.ls4.tacc.utexas.edu (#$-m vsub@cs.utexas.edu)
+/opt/apps/python/epd/7.2.2/lib/python2.7/site-packages/nose/util.py:14: DeprecationWarning: The compiler package is deprecated and removed in Python 3.x.
+  from compiler.consts import CO_GENERATOR
+TACC: Cleaning up after job: 1856315
+TACC: Done.

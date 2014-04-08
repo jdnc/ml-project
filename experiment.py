@@ -32,7 +32,7 @@ def filter_studies_active_voxels(study_dict, threshold=5000, radius=10):
         with open(study_dict, 'rb') as f:
             study_dict = json.load(f)
     for key in list(study_dict.keys()):
-        if len(study_dict[key]) < 4: # study has fewer than 4 reported foci
+        if len(study_dict[key]) < 0: # study has fewer than 4 reported foci
             del(study_dict[key])
         else:  # study has less than 5000 activated foci 
             voxels = pp.peaks_to_vector(study_dict[key], radius=radius)

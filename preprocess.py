@@ -93,7 +93,7 @@ def peaks_to_vector(coordinates, mask=
     # now  get the denser image, expanding via spheres
     dense_img  = nbi.map_peaks_to_image(new_coordinates, r=radius)
     # Create a mask object for the image
-    niftiMask = nbm.Mask('/scratch/02869/vsub/data/MNI152_T1_2mm_brain.nii.gz')
+    niftiMask = nbm.Mask(mask)
     # mask the image formed
     return niftiMask.mask(dense_img)
     #img_vector = dense_img.get_data().ravel()
@@ -121,7 +121,7 @@ def set_targets(filename, threshold=0):
         the name of the target labels used
     """
     target_dict = defaultdict(list)
-    feature_table =  pandas.read_table('/scratch/02869/vsub/data/features.txt')
+    feature_table =  pandas.read_table(filename)
     target_names = feature_table.columns[1:]
     if threshold == -1:
         target_dict = {}

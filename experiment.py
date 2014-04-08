@@ -5,7 +5,7 @@ import json
 
 import preprocess as pp
 
-def filter_studies_active_voxels(study_dict=None, threshold=5000):
+def filter_studies_active_voxels(study_dict, threshold=5000):
     """
     Takes the studies with coordinates, and considers only those studies that
     have number of activated voxels >= threshold. Returns the dict containing
@@ -13,10 +13,9 @@ def filter_studies_active_voxels(study_dict=None, threshold=5000):
 
     Parameters
     ----------
-    study_dict  :  dict, optional
-        the dict of all the studies with coordinates. Optionally may directly
-        load the precomputed dict from the data folder.
-
+    study_dict  :  dict/str 
+	filename  to json stored dict or the dict of all the studies with 
+	coordinates.     
     threshold : int, optional
         the number of activated voxels in the study, for it to be included.
         Defaults to 5000, as was used in the original study.
@@ -26,20 +25,20 @@ def filter_studies_active_voxels(study_dict=None, threshold=5000):
     study_dict : dict
         dict that includes only studies matching the criteria.
     """
-    if study_dict is None:
-        with open('/scratch/02869/vsub/data/docdict.txt', 'rb') as f:
+    if isinstance(study_dict, basestring):
+        with open(study_dict, 'rb') as f:
             study_dict = json.load(f)
     for key in list(study_dict.keys()):
         if len(study_dict[key]) < 4: # study has fewer than 4 reported foci
             del(study_dict[key])
         else:  # study has less than 5000 activated foci 
-            voxels = pp.peaks_to_vector(study_dict[key], 4)
+            voxels = pp.peaks_to_vector(study_dict[key], radius=10)
             num_activated = (voxels > 0).sum()
             if num_activated < 5000:
                 del(study_dict[key])
     return study_dict
 
-def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001,
+def filter_studies_terms(feature_file, terms=None, threshold=0.001,
                          set_unique_label=False):
     """
     Given the frequency of terms corresponding to each study, as well as the
@@ -48,10 +47,8 @@ def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001,
 
     Parameters
     ----------
-    study_dict : dict, optional
-        the dictionary with studies as keys and frequency corresponding to each
-        term as values. If not specified, loads the precomputed dictionary from
-        the data/ folder.
+    feature_dict : str
+        the file with the raw features.
     terms : list of str, optional 
         the terms that are being considered as labels. If not specified,
         uses the 25 terms from the original study.
@@ -95,8 +92,7 @@ def filter_studies_terms(feature_dict=None, terms=None, threshold=0.001,
                 'Retrieval',
                 'Recognition'
                 ]
-    if feature_dict is None:
-        feature_dict, target_names = pp.set_targets('/scratch/02869/vsub/data/features.txt',
+    feature_dict, target_names = pp.set_targets(feature_file,
                                                     threshold=-1)   
     # validate that the terms are actual features and convert to lower case
     new_terms = [x.lower() for x in terms if x.lower() in target_names]

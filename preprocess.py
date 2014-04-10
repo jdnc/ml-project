@@ -133,8 +133,7 @@ def set_targets(filename, threshold=0):
     return (target_dict, target_names)
 
 
-def get_features_targets(coordinate_dict, target_dict,
-                         mask='/scratch/02863/mparikh/data/MNI152_T1_2mm_brain.nii.gz'):
+def get_features_targets(coordinate_dict, target_dict):
     """
     Given the dicts that have the list of coordinates and the list of targets
     corresponding to each study, returns the numpy arrays as expected by
@@ -162,7 +161,6 @@ def get_features_targets(coordinate_dict, target_dict,
     n_features = 228453 # 91 * 109 * 91 now reduced!
     X = np.zeros((n_samples, n_features), dtype=int)
     y = np.empty(n_samples, dtype=object)
-    dir_name = os.path.join(os.path.dirname(__file__), 'images')
     for idx, key in enumerate(coordinate_dict):
         y[idx] = target_dict[key]
         X[idx] = peaks_to_vector(coordinate_dict[key])

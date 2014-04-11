@@ -35,7 +35,6 @@ def map_peaks_to_image(peaks, r=4, vox_dims=(2, 2, 2), dims=(91, 109, 91), heade
         valid = get_sphere(p, r, vox_dims, dims)
         valid = valid[:, ::-1]
         data[tuple(valid.T)] = 1
-    # affine = header.get_sform() if header else None
     return nifti1.Nifti1Image(data, None, header=header)
 
 
@@ -63,20 +62,12 @@ def convolve_image(img, r=4, header=None, method='mean', save=None):
         img.to_filename(save)
 
 
-# def disjunction(images):
-#   """ Returns a binary disjunction of all passed images, i.e., value=1
-#   at any voxel that's non-zero in at least one image."""
-#   pass
-# def conjunction(images):
-#   """ Returns a binary conjunction of all passed images, i.e., value=1
-#   at any voxel that's non-zero in at least one image."""
-#   pass
-def load_imgs(filenames, mask, nan_to_num=True):
+def load_imgs(filenames, masker, nan_to_num=True):
     """ Load multiple images from file into an ndarray.
 
     Args:
       filenames: A single filename or list of filenames pointing to valid images.
-      mask: A Mask instance.
+      masker: A Masker instance.
       nan_to_num: Optional boolean indicating whether to convert NaNs to zero.
 
     Returns:
@@ -85,9 +76,9 @@ def load_imgs(filenames, mask, nan_to_num=True):
     """
     if isinstance(filenames, basestring):
         filenames = [filenames]
-    data = np.zeros((mask.num_vox_in_mask, len(filenames)))
+    data = np.zeros((masker.num_vox_in_mask, len(filenames)))
     for i, f in enumerate(filenames):
-        data[:, i] = mask.mask(f, nan_to_num)
+        data[:, i] = masker.mask(f, nan_to_num)
     return data
 
 
@@ -116,6 +107,54 @@ def threshold_img(data, threshold, mask=None, mask_out='below'):
     elif mask_out.startswith('a'):
         data[data > threshold] = 0
     return data
+
+def create_grid(image, scale=4, mask=None, save_file=None):
+    """ Creates an image containing labeled cells in a 3D grid.
+    Args:
+        image: String or nibabel image. The image used to define the grid dimensions.
+        scale: The scaling factor which controls the grid size. Value reflects diameter of cube
+            in voxels.
+        mask: Optional string or nibabel image; a mask to apply to the grid. Only voxels with 
+            non-zero values in the mask will be retained; all other voxels will be zeroed out 
+            in the returned image.
+        save_file: Optional string giving the path to save image to. Image written out is
+            a standard Nifti image. If save_file is None, no image is written.
+    Returns:
+        A nibabel image with the same dimensions as the input image. All voxels in each cell
+        in the 3D grid are assigned the same non-zero label.
+    """
+    if isinstance(image, basestring):
+        image = nb.load(image)
+
+    #create a list of cluster centers 
+    centers = []
+    x_length, y_length, z_length = image.shape
+    for x in range(0, x_length, scale):
+        for y in range(0, y_length, scale):
+            for z in range(0, z_length, scale):
+                centers.append((x, y, z))
+
+    #create a box around each center with the diameter equal to the scaling factor
+    grid = np.zeros(image.shape)
+    for (i, (x,y,z)) in enumerate(centers):
+        for mov_x in range((-scale+1)/2,(scale+1)/2):
+            for mov_y in range((-scale+1)/2,(scale+1)/2):
+                for mov_z in range((-scale+1)/2,(scale+1)/2):
+                    try:  # Ignore voxels outside bounds of image
+                        grid[x+mov_x, y+mov_y, z+mov_z] = i+1
+                    except: pass
+
+    if mask is not None:
+        if isinstance(mask, basestring):
+            mask = nb.load(mask)
+        grid[~mask.get_data().astype(bool)] = 0.0
+
+    grid = nb.Nifti1Image(grid, image.get_affine(), image.get_header())
+
+    if save_file is not None:
+        nb.save(grid, save_file)
+
+    return grid
 
 
 def img_to_json(img, decimals=2, swap=False, save=None):

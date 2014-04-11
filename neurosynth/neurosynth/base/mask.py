@@ -6,39 +6,49 @@ import nibabel as nb
 import os
 
 
-class Mask(object):
+class Masker(object):
 
     """ A lightweight wrapper around the NiBabel classes that
     handles vectorization/masking/unmasking of images. """
 
     def __init__(self, volume):
-        """ Initialize a new ImageMask. The volume passed to the constructor indicates
+        """ Initialize a new Masker. The volume passed to the constructor indicates
         both the space in which all subsequent images are represented as well as the
         mask to use for all analyses. Any voxel in the mask with a non-zero valid is
         considered valid for analyses.
 
         TODO: implement additional masking to allow more efficient small-volume analyses.
         """
-        self.volume = nb.load(volume)
+        if isinstance(volume, basestring):
+            volume = nb.load(volume)
+        self.volume = volume
         data = self.volume.get_data()
         self.dims = data.shape
         self.vox_dims = self.get_header().get_zooms()
         self.full = np.float64(data.ravel())
-        self.in_mask = np.where(
-            self.full)  # Indices of in-mask voxels within full volume
+        self.in_mask = np.where(self.full)  # Indices of in-mask voxels within full volume
         self.num_vox_in_mask = np.shape(self.in_mask)[1]
 
     def mask(self, img, nan_to_num=True):
         """ Vectorize an image and mask out all invalid voxels.
 
         Args:
-          img: The image to vectorize and mask. Can be either a filename or a SpatialImage
-            previously loaded with NiBabel.
+          img: The image to vectorize and mask. Can be a filename, a SpatialImage
+            previously loaded with NiBabel, or an already-masked 1D array. The latter 
+            is included mainly for convenience (i.e., so callers don't have to check 
+            whether a given masking image has already been masked or not).
           nan_to_num: boolean indicating whether to convert NaNs to 0.
 
         Returns:
           A 1D NumPy array of in-mask voxels.
         """
+        # If the img is already masked, just return it
+        if type(img).__module__ == np.__name__:
+            if img.shape[0] == self.num_vox_in_mask:
+                return img
+            else:
+                raise ValueError("The image to mask already appears to be vectorized, " + 
+                    "but the dimensions don't match the Masker's dimensions.")
         if isinstance(img, basestring):
             img = nb.load(img)
         masked_data = img.get_data().ravel()[self.in_mask]
@@ -57,7 +67,6 @@ class Mask(object):
             assert(self.full.ndim == 1)
             # but we generate x,y,z,t volume
             img = np.zeros(self.full.shape + (n_volumes,))
-            # for t in xrange(n_volumes):
             img[self.in_mask, :] = data
             return np.reshape(img, self.volume.shape + (n_volumes,))
         else:

@@ -35,7 +35,7 @@ def analyze_features(dataset, features, image_type='pFgA_z', threshold=0.001, q=
       If save is None, an n_voxels x n_features 2D numpy array.
     """
     if save is None:
-        result = np.zeros((dataset.volume.num_vox_in_mask, len(features)))
+        result = np.zeros((dataset.masker.num_vox_in_mask, len(features)))
     else:
         result = []
 
@@ -45,7 +45,7 @@ def analyze_features(dataset, features, image_type='pFgA_z', threshold=0.001, q=
         if save is None:
             result[:, i] = ma.images[image_type]
         else:
-            ma.save_results('%s_%s' % (save, f))
+            ma.save_results('%s%s' % (save, f))
     return result
 
 
@@ -192,9 +192,9 @@ class MetaAnalysis(object):
         to all file names. Optionally, a restricted list of images to save can be passed; otherwise,
         all images currently stored in self.images will be saved. """
         logger.debug("Saving results...")
-        if image_list == None:
+        if image_list is None:
             image_list = self.images.keys()
         for suffix, img in self.images.items():
             if suffix in image_list:
                 imageutils.save_img(img, '%s_%s.nii.gz' % (
-                    outroot, suffix), self.dataset.volume)
+                    outroot, suffix), self.dataset.masker)

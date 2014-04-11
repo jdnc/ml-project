@@ -13,14 +13,41 @@ def feature_selection(feat_select, X, y):
     """" Implements various kinds of feature selection """
     # K-best
     if re.match('.*-best', feat_select) is not None:
-        n = feat_select.split('-')[0]
+        n = int(feat_select.split('-')[0])
 
-        selector = SelectKBest(k=int(n))
+        selector = SelectKBest(k=n)
 
-        features_selected = np.where(
-            selector.fit(X, y).get_support() == True)[0]
+        import warnings
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', category=UserWarning)
+            features_selected = np.where(
+                selector.fit(X, y).get_support() == True)[0]
+
+    elif re.match('.*-randombest', feat_select) is not None:
+        n = int(feat_select.split('-')[0])
+
+        from random import shuffle
+        features = range(0, X.shape[1])
+        shuffle(features)
+
+        features_selected = features[:n]
+
 
     return features_selected
+
+def get_score(X, y, clf, scoring = 'accuracy'):
+    from sklearn.preprocessing import binarize
+
+    if scoring == 'accuracy':
+        from sklearn.metrics import accuracy_score
+        score = accuracy_score(y, binarize(clf.predict(X), 0.5))
+    elif scoring =='f1':
+        from sklearn.metrics import f1_score
+        score = f1_score(y, binarize(clf.predict(X), 0.5))
+    else:
+        score = clf.score(X, y)
+
+    return score
 
 
 def classify_by_features(dataset, features, studies=None, method='SVM',
@@ -37,8 +64,8 @@ def regularize(X, method='scale'):
 
 
 def get_studies_by_regions(dataset, masks, threshold=0.08,
-                           remove_overlap=True, studies=None,
-                           features=None, regularization="scale"):
+    remove_overlap=True, studies=None,
+    features=None, regularization="scale"):
     """ Set up data for a classification task given a set of masks
     
         Given a set of masks, this function retrieves studies associated with each 
@@ -92,17 +119,14 @@ def get_studies_by_regions(dataset, masks, threshold=0.08,
                        grouped_ids]  # Remove
 
     # Create class label(y)
-
     y = [[idx] * len(ids) for (idx, ids) in enumerate(grouped_ids)]
     y = reduce(lambda a, b: a + b, y)  # Flatten
     y = np.array(y)
 
-    # If all ids are ints as strings, convert to ints
-    if not False in [i.isdigit() for i in flat_ids]:
-        flat_ids = [int(s) for s in flat_ids]
+    # Extract feature set for each class separately
+    X = [dataset.get_feature_data(ids=group_ids, features=features) for group_ids in grouped_ids]
 
-    # Extract feature set for only relevant ids
-    X = dataset.get_feature_data(ids=flat_ids, features=features)
+    X = np.vstack(tuple(X))
 
     if regularization:
         X = regularize(X, method=regularization)
@@ -120,10 +144,10 @@ def get_feature_order(dataset, features):
 
 
 def classify_regions(dataset, masks, method='ERF', threshold=0.08,
-                     remove_overlap=True, regularization='scale',
-                     output='summary', studies=None, features=None,
-                     class_weight='auto', classifier=None,
-                     cross_val='4-Fold', param_grid=None, scoring='accuracy'):
+    remove_overlap=True, regularization='scale',
+    output='summary', studies=None, features=None,
+    class_weight='auto', classifier=None,
+    cross_val='4-Fold', param_grid=None, scoring='accuracy'):
     """ Perform classification on specified regions
 
         Given a set of masks, this function retrieves studies associated with each 
@@ -173,21 +197,21 @@ def classify_regions(dataset, masks, method='ERF', threshold=0.08,
                     class_weight, scoring=scoring, param_grid=param_grid)
 
 
-def classify(X, y, method='ERF', classifier=None, output='summary',
+def classify(X, y, clf_method='ERF', classifier=None, output='summary_clf',
              cross_val=None, class_weight=None, regularization=None,
              param_grid=None, scoring='accuracy', refit_all=True, feat_select=None):
     """ Wrapper for scikit-learn classification functions
     Imlements various types of classification and cross validation """
 
     # Build classifier
-    clf = Classifier(method, classifier, class_weight, param_grid)
+    clf = Classifier(clf_method, classifier, param_grid)
 
     # Fit & test model with or without cross-validation
     if cross_val is not None:
-        score = clf.cross_val_fit(X, y, cross_val, scoring=scoring, feat_select=feat_select)
+        score = clf.cross_val_fit(X, y, cross_val, scoring=scoring, feat_select=feat_select, class_weight=class_weight)
     else:
         # Does not support scoring function
-        score = clf.fit(X, y).score(X, y)
+        score = clf.fit(X, y, class_weight=class_weight).score(X, y)
 
     # Return some stuff...
     from collections import Counter
@@ -198,17 +222,17 @@ def classify(X, y, method='ERF', classifier=None, output='summary',
         if output == 'summary':
             output = {'score': score, 'n': dict(Counter(y))}
         elif output == 'summary_clf':
-            output = {'score': score, 'n': dict(Counter(y)), 'clf': clf}
+            output = {'score': score, 'n': dict(Counter(y)), 'clf': clf, 'features_selected': clf.features_selected}
 
         return output
 
 class Classifier:
 
-    def __init__(self, clf_method='ERF', classifier=None,
-                 class_weight=None, param_grid=None):
+    def __init__(self, clf_method='ERF', classifier=None, param_grid=None):
         """ Initialize a new classifier instance """
 
         # Set classifier
+        self.features_selected = None
 
         if classifier is not None:
             self.clf = classifier
@@ -220,12 +244,12 @@ class Classifier:
         else:
             if clf_method == 'SVM':
                 from sklearn import svm
-                self.clf = svm.SVC(class_weight=class_weight)
+                self.clf = svm.SVC()
             elif clf_method == 'ERF':
                 from sklearn.ensemble import ExtraTreesClassifier
                 self.clf = ExtraTreesClassifier(n_estimators=100,
                                                 max_depth=None, min_samples_split=1,
-                                                random_state=0, compute_importances=True)
+                                                random_state=0)
             elif clf_method == 'GBC':
                 from sklearn.ensemble import GradientBoostingClassifier
                 self.clf = GradientBoostingClassifier(n_estimators=100,
@@ -241,7 +265,7 @@ class Classifier:
             self.clf = GridSearchCV(estimator=self.clf,
                                     param_grid=param_grid)
 
-    def fit(self, X, y, cv=None):
+    def fit(self, X, y, cv=None, class_weight = 'auto'):
         """ Fits X to outcomes y, using clf """
 
         # Incorporate error checking such as :
@@ -251,17 +275,47 @@ class Classifier:
 
         self.X = X
         self.y = y
+
+        self.set_class_weight(class_weight=class_weight, y = y)
+
         self.clf = self.clf.fit(X, y)
 
         return self.clf
 
-    def cross_val_fit(self, X, y, cross_val='4-Fold', scoring='accuracy', feat_select=None):
+    def set_class_weight(self, class_weight='auto', y=None):
+        """ Sets the class_weight of the classifier to match y """
+
+        if class_weight == None:
+            cw = None
+
+            try:
+                self.clf.set_params(class_weight = cw)
+            except ValueError:
+                pass
+                
+        elif class_weight == 'auto':
+            c = np.bincount(y)
+            ii = np.nonzero(c)[0]
+            c = c / float(c.sum())
+            cw = dict(zip(ii[::-1],c[ii]))
+
+            try:
+                self.clf.set_params(class_weight = cw)
+            except ValueError:
+                import warnings
+                warnings.warn("Tried to set class_weight, but failed. The classifier probably doesn't support it")
+
+
+
+    def cross_val_fit(self, X, y, cross_val='4-Fold', scoring='accuracy', feat_select=None, class_weight = 'auto'):
         """ Fits X to outcomes y, using clf and cv_method """
 
         from sklearn import cross_validation
 
         self.X = X
         self.y = y
+
+        self.set_class_weight(class_weight=class_weight, y = y)
 
         # Set cross validator
         if isinstance(cross_val, basestring):
@@ -276,6 +330,9 @@ class Classifier:
                 raise Exception('Unrecognized cross validation method')
         else:
             self.cver = cross_val
+
+        if feat_select is not None:
+            self.features_selected = []
 
         # Perform cross-validated classification
         from sklearn.grid_search import GridSearchCV
@@ -293,26 +350,28 @@ class Classifier:
 
             self.cvs = self.clf.best_score_
         else:
-            self.cvs = self.feat_select_cvs(
-                scoring=scoring, feat_select=feat_select)
+            self.cvs = self.feat_select_cvs(feat_select=feat_select, scoring=scoring)
+
+        if feat_select is not None:
+            fs = feature_selection(
+                    feat_select, X, y)
+            self.features_selected.append(fs)
+
+            X = X[:, fs]
 
         self.clf.fit(X, y)
 
         return self.cvs.mean()
 
-    def feat_select_cvs(self, scoring='accuracy', feat_select=None):
+    def feat_select_cvs(self, scoring = None, feat_select=None):
         """ Returns cross validated scores (just like cross_val_score), 
         but includes feature selection as part of the cross validation loop """
 
         scores = []
 
-        if feat_select is not None:
-            self.features_selected = []
-
         for train, test in self.cver:
             X_train, X_test, y_train, y_test = self.X[
                 train], self.X[test], self.y[train], self.y[test]
-
 
             if feat_select is not None:
                 # Get which features are kept
@@ -331,8 +390,9 @@ class Classifier:
             self.clf.fit(X_train, y_train)
 
             # Test classifier
-            scores.append(self.clf.score(X_test, y_test))
+            s = get_score(X_test, y_test, self.clf, scoring = scoring)
 
+            scores.append(s)
 
         return np.array(scores)
 

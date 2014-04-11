@@ -21,7 +21,7 @@ logger = logging.getLogger('neurosynth.dataset')
 class Dataset(object):
 
     def __init__(
-        self, filename, feature_filename=None, volume=None, r=6, transform=True,
+        self, filename, feature_filename=None, masker=None, r=6, transform=True,
                   target='MNI'):
         """ Initialize a new Dataset instance.
 
@@ -40,7 +40,7 @@ class Dataset(object):
         Args:
           filename: The name of a database file containing a list of activations.
           feature_filename: An optional filename to construct a FeatureTable from.
-          volume: An optional Nifti/Analyze image name defining the space to use for
+          masker: An optional Nifti/Analyze image name defining the space to use for
             all operations. If no image is passed, defaults to the MNI152 2 mm
             template packaged with FSL.
           r: An optional integer specifying the radius of the smoothing kernel, in mm.
@@ -78,17 +78,17 @@ class Dataset(object):
         # Load mappables
         self.mappables = self._load_mappables_from_txt(filename)
 
-        # Load the volume into a new Mask
+        # Load the volume into a new Masker
         try:
-            if volume is None:
+            if masker is None:
                 resource_dir = os.path.join(os.path.dirname(__file__),
                                             os.path.pardir,
                                             'resources')
-                volume = os.path.join(
+                masker = os.path.join(
                     resource_dir, 'MNI152_T1_2mm_brain.nii.gz')
-            self.volume = mask.Mask(volume)
+            self.masker = mask.Masker(masker)
         except Exception as e:
-            logger.error("Error loading volume %s: %s" % (volume, e))
+            logger.error("Error loading masker %s: %s" % (masker, e))
             # yoh: TODO -- IMHO should re-raise or not even swallow the exception here
             # raise e
 
@@ -104,43 +104,32 @@ class Dataset(object):
           filename: a string pointing to the location of the txt file to read from.
         """
         logger.info("Loading mappables from %s..." % filename)
-        data = {}
-        c = re.split('[\r\n]+', open(filename).read())
-        header = c.pop(0).lower().split('\t')
-        # Get indices of mandatory columns
-        mandatory_cols = ['x', 'y', 'z', 'id', 'space']
-        mc_inds = {}
-        try:
-            for mc in mandatory_cols:
-                mc_inds[mc] = header.index(mc)
-        except Exception as e:
+        
+        # Read in with pandas
+        contents = pd.read_csv(filename, sep='\t')
+        contents.columns = [col.lower() for col in list(contents.columns)]
+
+        # Make sure all mandatory columns exist
+        mc = ['x', 'y', 'z', 'id', 'space']
+        if (set(mc) - set(list(contents.columns))):
             logger.error(
-                "At least one of mandatory columns (x, y, z, id, and space) is missing: %s" % e)
+                "At least one of mandatory columns (x, y, z, id, and space) is missing from input file.")
             return
 
-        for l in c:
-            vals = l.split('\t')
-            row = {}
-            for i, v in enumerate(vals):
-                row[header[i]] = v
-            # Pop the mandatory fields off the row
-            id, space, x, y, z = [row.pop(k) for k in [
-                                          'id', 'space', 'x', 'y', 'z']]
-            if not id in data:
-                data[id] = {
-                  'id': id,
-                  'space': space,
-                  'peaks': []
-                }
-                # Save any other fields we don't recognize. Note that each row will
-                # overwrite any values that had the same key in previous rows.
-                for k, v in row.items():
-                    data[id][k] = v
-            data[id]['peaks'].append([x, y, z])
+        extra_fields = list(set(list(contents.columns)) - set(mc))  # save non-standard fields
+
+        def get_mappable_data(grp):
+            first = grp.iloc[0]
+            d = { 'peaks': grp[['x','y','z']].values }
+            for f in ['id', 'space'] + extra_fields:
+                d[f] = first[f]
+            return d
+
+        data = list(contents.groupby('id').apply(get_mappable_data))
 
         # Initialize all mappables--for now, assume Articles are passed
         logger.info("Converting text to mappables...")
-        return [mappable.Article(m, self.transformer) for m in data.values()]
+        return [mappable.Article(m, self.transformer) for m in data]
 
     def create_image_table(self, r=None):
         """ Create and store a new ImageTable instance based on the current Dataset.
@@ -213,7 +202,7 @@ class Dataset(object):
         else:
             return [m for m in self.mappables if m.id in ids]
 
-    def get_ids_by_features(self, features, threshold=None, func='sum', get_image_data=False, get_weights=False):
+    def get_ids_by_features(self, features, threshold=None, func=np.sum, get_image_data=False, get_weights=False):
         """ A wrapper for FeatureTable.get_ids().
 
         Args:
@@ -225,13 +214,11 @@ class Dataset(object):
           get_image_data: An optional boolean. When True, returns a voxel x mappable matrix
             of image data rather than the Mappable instances themselves.
         """
-        ids = self.feature_table.get_ids(
-            features, threshold, func, get_weights)
+        ids = self.feature_table.get_ids(features, threshold, func, get_weights)
         return self.get_image_data(ids) if get_image_data else ids
 
-    def get_ids_by_expression(self, expression, threshold=0.001, func='sum', get_image_data=False):
-        ids = self.feature_table.get_ids_by_expression(
-            expression, threshold, func)
+    def get_ids_by_expression(self, expression, threshold=0.001, func=np.sum, get_image_data=False):
+        ids = self.feature_table.get_ids_by_expression(expression, threshold, func)
         return self.get_image_data(ids) if get_image_data else ids
 
     def get_ids_by_mask(self, mask, threshold=0.0, get_image_data=False):
@@ -240,7 +227,7 @@ class Dataset(object):
         the proportion of voxels within the mask that must be active to
         warrant inclusion. E.g., if threshold = 0.1, only mappables with
         > 10% of voxels activated in mask will be returned. """
-        mask = self.volume.mask(mask).astype(bool)
+        mask = self.masker.mask(mask).astype(bool)
         num_vox = np.sum(mask)
         prop_mask_active = self.image_table.data.T.dot(
             mask).astype(float) / num_vox
@@ -268,48 +255,47 @@ class Dataset(object):
         peaks = np.array(peaks)  # Make sure we have a numpy array
         peaks = transformations.xyz_to_mat(peaks)
         img = imageutils.map_peaks_to_image(
-            peaks, r, vox_dims=self.volume.vox_dims,
-            dims=self.volume.dims, header=self.volume.get_header())
+            peaks, r, vox_dims=self.masker.vox_dims,
+            dims=self.masker.dims, header=self.masker.get_header())
         return self.get_ids_by_mask(img, threshold, get_image_data=get_image_data)
 
-    def add_features(self, filename, description='', validate=False):
+    def add_features(self, filename, description=''):
         """ Construct a new FeatureTable from file. Note: this is destructive, and will
         overwrite existing FeatureTable. Need to add merging operations that gracefully
         handle missing studies and conflicting feature names. """
-        self.feature_table = FeatureTable(
-            self, filename, description, validate)
+        self.feature_table = FeatureTable(self, filename, description)
 
     def get_image_data(self, ids=None, voxels=None, dense=True):
         """ A convenience wrapper for ImageTable.get_image_data(). """
         return self.image_table.get_image_data(ids, voxels=voxels, dense=dense)
 
-    def get_feature_data(self, ids=None, features=None, dense=True):
+    def get_feature_data(self, ids=None, **kwargs):
         """ A convenience wrapper for FeatureTable.get_image_data(). """
-        return self.feature_table.get_feature_data(ids, features=features, dense=dense)
+        return self.feature_table.get_feature_data(ids, **kwargs)
 
     def get_feature_names(self, features=None):
-        """ Returns a list of all current feature names.
-        Args:
-            features: If not none, retures orderd names only for those features
-         """
+        """ Returns names of features. If features is None, returns all features.
+        Otherwise assumes the user is trying to find the order of the features.  """
         if features:
             return self.feature_table.get_ordered_names(features)
         else:
             return self.feature_table.feature_names
 
-    def get_feature_counts(self, threshold=0.001):
+    def get_feature_counts(self, func=np.sum, threshold=0.001):
         """ Returns a dictionary, where the keys are the feature names
         and the values are the number of studies tagged with the feature. """
         result = {}
         for f in self.get_feature_names():
-            result[f] = len(self.get_ids_by_features([f], threshold=threshold))
+            result[f] = len(self.get_ids_by_features([f], func=func, threshold=threshold))
         return result
 
     @classmethod
     def load(cls, filename):
         """ Load a pickled Dataset instance from file. """
         import cPickle
-        return cPickle.load(open(filename, 'rb'))
+        dataset = cPickle.load(open(filename, 'rb'))
+        dataset.feature_table._csr_to_sdf()
+        return dataset
 
     def save(self, filename, keep_mappables=False):
         """ Pickle the Dataset instance to the provided file.
@@ -321,8 +307,13 @@ class Dataset(object):
         """
         if not keep_mappables:
             self.mappables = []
+
+        self.feature_table._sdf_to_csr()
+
         import cPickle
         cPickle.dump(self, open(filename, 'wb'), -1)
+
+        self.feature_table._csr_to_sdf()
 
     def to_json(self, filename=None):
         """ Save the Dataset to file in JSON format.
@@ -341,26 +332,26 @@ class Dataset(object):
 
 class ImageTable(object):
 
-    def __init__(self, dataset=None, mappables=None, volume=None, r=6, use_sparse=True):
+    def __init__(self, dataset=None, mappables=None, masker=None, r=6, use_sparse=True):
         """ Initialize a new ImageTable.
 
         If a Dataset instance is passed, all inputs are taken from the Dataset.
         Alternatively, a user can manually pass the desired mappables
-        and volume (e.g., in cases where the ImageTable class is being used without a
+        and masker (e.g., in cases where the ImageTable class is being used without a
         Dataset). Can optionally specify the radius of the sphere used for smoothing (default:
         6 mm), as well as whether or not to represent the data as a sparse array
         (generally this should be left to True, as these data are quite sparse and
         computation can often be speeded up by an order of magnitude.)
         """
         if dataset is not None:
-            mappables, volume, r = dataset.mappables, dataset.volume, dataset.r
-        for var in [mappables, volume, r]:
+            mappables, masker, r = dataset.mappables, dataset.masker, dataset.r
+        for var in [mappables, masker, r]:
             assert var is not None
         self.ids = [m.id for m in mappables]
-        self.volume = volume
+        self.masker = masker
         self.r = r
 
-        data_shape = (self.volume.num_vox_in_mask, len(mappables))
+        data_shape = (self.masker.num_vox_in_mask, len(mappables))
         if use_sparse:
             # Fancy indexing assignment is not supported for sparse matrices, so
             # let's keep lists of values and their indices (rows, cols) to later
@@ -373,8 +364,8 @@ class ImageTable(object):
         for i, s in enumerate(mappables):
             logger.debug("%s/%s..." % (str(i + 1), str(len(mappables))))
             img = imageutils.map_peaks_to_image(
-                s.peaks, r=r, header=self.volume.get_header())
-            img_masked = self.volume.mask(img)
+                s.peaks, r=r, header=self.masker.get_header())
+            img_masked = self.masker.mask(img)
             if use_sparse:
                 nz = np.nonzero(img_masked)
                 assert(len(nz) == 1)
@@ -438,86 +429,67 @@ class FeatureTable(object):
         the name of a file containing feature data. Optionally, can provide a description
         of the feature set. """
         self.dataset = dataset
-        self.load(filename, validate=validate)
+        self.load(filename)
         self.description = description
 
-    def load(self, filename, validate=False):
-        """ Loads FeatureTable data from file. Input must be in 1 of 2 formats:
-        (1) A sparse JSON representation (see _parse_json() for details)
-        (2) A dense matrix stored as plaintext (see _parse_txt() for details)
-        If validate == True, any mappable IDs in the input file that cannot be located
-        in the root Dataset's ImageTable will be silently culled. """
-        # try:
-        #     self._features_from_json(filename, validate)
-        # except Exception as e:
+    def load(self, filename):
+        """ Loads FeatureTable data from file. Input must be a dense matrix stored as 
+        plaintext (see _parse_txt() for details).
+        """
         try:
-            # logger.debug('Failed to load as JSON (Error: %s). Trying plain text' % (e,))
-            self._features_from_txt(filename, validate)
+            self._features_from_txt(filename)
         except Exception as e:
             logger.error("%s cannot be parsed: %s" % (filename, e))
 
-    # def _features_from_json(self, filename, validate=False):
-    #     """ Parses FeatureTable from a sparse JSON representation, where keys are feature
-    #     names and values are dictionaries of mappable id: weight mappings. E.g.,
-    #       {'language': ['study1': 0.003, 'study2': 0.103]} """
-    #     import json
-    #     json_data = json.loads(open(filename))
-    #     # Find all unique mappable IDs
-    #     unique_ids = set()
-    #     unique_ids = [unique_ids.update(d) for d in json_data.itervalues()]
-    #     # Cull invalid IDs if validation is on
-    #     if validate:
-    #         unique_ids &= set(self.dataset.image_table.ids)
-    #     # ...
-    #     self.data = data
 
-    def _features_from_txt(self, filename, validate=False):
+    def _features_from_txt(self, filename):
         """ Parses FeatureTable from a plaintext file that represents a dense matrix,
         with mappable objects in rows and features in columns. Values in cells reflect the
         weight of the intersecting feature for the intersecting study. Feature names and
         mappable IDs should be included as the first column and first row, respectively. """
 
         # Use pandas to read in data
-        data = pd.read_csv(filename, delim_whitespace=True, index_col=0)
-        self.feature_names = list(data.columns)
-        self.ids = data.index.values.astype(str)  # Always represent IDs as strings
-        self.data = data.values
+        self.data = pd.read_csv(filename, delim_whitespace=True, index_col=0).to_sparse()
 
         # Remove mappables without any features
-        if validate:
-            valid_ids = set(self.ids) & set(self.dataset.image_table.ids)
-            if len(valid_ids) < len(self.dataset.image_table.ids):
-                valid_id_inds = np.in1d(self.ids, np.array(valid_ids))
-                self.data = self.data[valid_id_inds,:]
-                self.ids = self.ids[valid_id_inds]
-        self.data = sparse.csr_matrix(self.data)
+        # if validate:
+        #     valid_ids = set(self.ids) & set(self.dataset.image_table.ids)
+        #     if len(valid_ids) < len(self.dataset.image_table.ids):
+        #         valid_id_inds = np.in1d(self.ids, np.array(valid_ids))
+        #         self.data = self.data[valid_id_inds,:]
+        #         self.ids = self.ids[valid_id_inds]
+        # self.data = sparse.csr_matrix(self.data)
 
+    @property
+    def feature_names(self):
+        return list(self.data.columns)
+    
     def get_feature_data(self, ids=None, features=None, dense=True):
         """ Slices and returns a subset of feature data.
 
         Args:
-          ids: A list or 1D numpy array of Mappable ids to return rows for. 
-            If None, returns data for all Mappables (i.e., all rows in array). 
-          features: A list or 1D numpy array of named features to return. 
-            If None, returns data for all features (i.e., all columns in array).
-          dense: Optional boolean. When True (default), convert the result to a dense
-            array before returning. When False, keep as sparse matrix. Note that if 
-            ids is not None, the returned array will always be dense.
-
+            ids: A list or 1D numpy array of Mappable ids to return rows for. 
+                If None, returns data for all Mappables (i.e., all rows in array). 
+            features: A list or 1D numpy array of named features to return. 
+                If None, returns data for all features (i.e., all columns in array).
+            dense: Optional boolean. When True (default), convert the result to a dense
+                array before returning. When False, keep as sparse matrix. Note that if 
+                ids is not None, the returned array will always be dense.
         Returns:
           A 2D numpy array, with mappable IDs in rows and features in columns.
         """
         result = self.data
+
         if ids is not None:
-            idxs = np.where(np.in1d(np.array(self.ids), np.array(ids)))[0]
-            result = result[idxs,:]
+            result = result.ix[ids]
+
         if features is not None:
-            idxs = np.where(np.in1d(np.array(self.feature_names), np.array(features)))[0]
-            result = result[:,idxs]
-        return result.toarray() if dense else result
+            result = result.ix[:,features]
+
+        return result#.to_dense() if dense else result
 
     def get_ordered_names(self, features):
-        """ Given a list of featurs, returns features in order that they appear in database
+        """ Given a list of features, returns features in order that they appear in database
         Args:
             features: A list or 1D numpy array of named features to return. 
 
@@ -525,12 +497,10 @@ class FeatureTable(object):
             A list of features in order they appear in database
         """
 
-        idxs = np.where(np.in1d(np.array(self.feature_names), np.array(features)))[0]
-        result = np.array(self.feature_names)[idxs]
+        idxs = np.where(np.in1d(self.data.columns.values, np.array(features)))[0]
+        return list(self.data.columns[idxs].values)
 
-        return list(result)
-
-    def get_ids(self, features, threshold=None, func='sum', get_weights=False):
+    def get_ids(self, features, threshold=None, func=np.sum, get_weights=False):
         """ Returns a list of all Mappables in the table that meet the desired feature-based
         criteria.
 
@@ -556,44 +526,52 @@ class FeatureTable(object):
         if isinstance(features, str):
             features = [features]
         features = self.search_features(features)  # Expand wild cards
-        feature_indices = np.in1d(np.array(self.feature_names), np.array(features))
-        data = self.data.toarray()
-        feature_weights = data[:, feature_indices]
-        weights = eval("np.%s(tw, 1)" % func, {}, {
-                       'np': np, 'tw': feature_weights})  # Safe eval
-        above_thresh = (weights >= threshold)
-        ids_to_keep = self.ids[above_thresh]
-        if get_weights:
-            return dict(zip(ids_to_keep, list(weights[above_thresh])))
-        else:
-            return ids_to_keep
+        feature_weights = self.data.ix[:, features]
+        weights = feature_weights.apply(func, 1)
+        above_thresh = weights[weights >= threshold]
+        # ids_to_keep = self.ids[above_thresh]
+        return above_thresh if get_weights else list(above_thresh.index)
 
     def search_features(self, search):
         ''' Returns all features that match any of the elements in the input list. '''
         search = [s.replace('*', '.*') for s in search]
+        cols = list(self.data.columns)
         results = []
         for s in search:
-            results.extend([f for f in self.feature_names if re.match(s + '$', f)])
-        return results
+            results.extend([f for f in cols if re.match(s + '$', f)])
+        return list(set(results))
 
-    def get_ids_by_expression(self, expression, threshold=0.001, func='sum'):
+    def get_ids_by_expression(self, expression, threshold=0.001, func=np.sum):
         """ Use a PEG to parse expression and return mappables. """
         from neurosynth.base import lexparser as lp
         lexer = lp.Lexer()
         lexer.build()
         parser = lp.Parser(
-            lexer, self.dataset, threshold=threshold, func='sum')
+            lexer, self.dataset, threshold=threshold, func=func)
         parser.build()
         return parser.parse(expression).keys()
 
-    def get_features_by_ids(self, ids=None, threshold=0.0001, func='sum', get_weights=False):
-        ''' Returns features that mach to ids'''
-        id_indices = np.in1d(self.ids, ids)
-        data = self.data.toarray()
-        ids_weights = reduce(lambda x,y: x+y, data[id_indices,:])/len(id_indices)
-        above_thresh = (ids_weights >= threshold)
-        features_to_keep = np.array(self.feature_names)[np.where(above_thresh)]
-        if get_weights:
-            return dict(zip(features_to_keep, list(ids_weights[above_thresh])))
-        else:
-            return features_to_keep
+    def get_features_by_ids(self, ids=None, threshold=0.0001, func=np.mean, get_weights=False):
+        ''' Returns features for which the mean loading across all specified studies (in ids)
+        is >= threshold. '''
+        weights = self.data.ix[ids].apply(func, 0)
+        above_thresh = weights[weights >= threshold]
+        return above_thresh if get_weights else list(above_thresh.index)
+
+    def _sdf_to_csr(self):
+        """ Convert FeatureTable to SciPy CSR matrix because pandas has a weird bug that 
+        crashes de-serializing when data are in SparseDataFrame. (Bonus: takes up 
+        less space.) Really need to fix this! """
+        data = self.data.to_dense()
+        self.data = {
+            'columns': list(data.columns),
+            'index': list(data.index),
+            'values': sparse.csr_matrix(data.values)
+        }
+
+    def _csr_to_sdf(self):
+        """ Inverse of _sdf_to_csr(). """
+        self.data = pd.DataFrame(self.data['values'].todense(), index=self.data['index'], 
+                            columns=self.data['columns']).to_sparse()
+
+

@@ -90,7 +90,7 @@ def peaks_to_vector(coordinates, mask, radius=6):
     #print(coordinates)
     new_coordinates = nbt.xyz_to_mat(np.array(coordinates))
     # now  get the denser image, expanding via spheres
-    dense_img  = nbi.map_peaks_to_image(new_coordinates,radius=radius)
+    dense_img  = nbi.map_peaks_to_image(new_coordinates, r=radius)
     # Create a mask object for the image
     niftiMask = nbm.Mask(mask)
     # mask the image formed

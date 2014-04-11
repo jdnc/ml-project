@@ -35,8 +35,8 @@ def extract_coordinates(filename, mask):
         x = row['x']
         y = row['y']
         z = row['z']
-        if is_valid([x,y,z], mask):
-            doc_dict[row['ID']].append([x,y,z])
+        f is_valid([x,y,z], mask):
+            doc_dict[row['id']].append([x,y,z])
     for key in list(doc_dict.keys()):
         if not doc_dict[key]:
             del(doc_dict[key])

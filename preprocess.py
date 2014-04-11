@@ -67,9 +67,7 @@ def is_valid(coordinates, mask):
         return False
 
 
-def peaks_to_vector(coordinates, mask=
-                    '/scratch/02863/mparikh/data/MNI152_T1_2mm_brain.nii.gz', 
-                    radius=10):
+def peaks_to_vector(coordinates, mask, radius=6):
     """
     Takes in a list of valid peak coordinates and 
     returns a vector of the corresponding image
@@ -92,7 +90,7 @@ def peaks_to_vector(coordinates, mask=
     #print(coordinates)
     new_coordinates = nbt.xyz_to_mat(np.array(coordinates))
     # now  get the denser image, expanding via spheres
-    dense_img  = nbi.map_peaks_to_image(new_coordinates, r=radius)
+    dense_img  = nbi.map_peaks_to_image(new_coordinates,radius=radius)
     # Create a mask object for the image
     niftiMask = nbm.Mask(mask)
     # mask the image formed
@@ -134,7 +132,7 @@ def set_targets(filename, threshold=0):
     return (target_dict, target_names)
 
 
-def get_features_targets(coordinate_dict, target_dict):
+def get_features_targets(coordinate_dict, target_dict, mask):
     """
     Given the dicts that have the list of coordinates and the list of targets
     corresponding to each study, returns the numpy arrays as expected by
@@ -149,7 +147,7 @@ def get_features_targets(coordinate_dict, target_dict):
     target_dict : dict
         the dict that has the study as the key and the presence absence of
         terms as values
-    mask: mask in Nifti format, optional
+    mask: mask in Nifti format
         fits the X array to be within the bounds of the mask.
 
     Returns
@@ -164,7 +162,7 @@ def get_features_targets(coordinate_dict, target_dict):
     y = np.empty(n_samples, dtype=object)
     for idx, key in enumerate(coordinate_dict):
         y[idx] = target_dict[key]
-        X[idx] = peaks_to_vector(coordinate_dict[key])
+        X[idx] = peaks_to_vector(coordinate_dict[key], mask)
     return X, y
 
 def features_targets_from_file(db_file, feature_file, mask, threshold=0):
@@ -190,7 +188,7 @@ def features_targets_from_file(db_file, feature_file, mask, threshold=0):
 
     coordinate_dict = extract_coordinates(db_file, mask)
     target_dict, target_names = set_targets(feature_file, threshold=threshold)
-    X, y = get_features_targets(coordinate_dict, target_dict)
+    X, y = get_features_targets(coordinate_dict, target_dict, mask)
     return (X, y)
 
 

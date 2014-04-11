@@ -42,7 +42,7 @@ def extract_coordinates(filename):
     return doc_dict
 
 
-def is_valid(coordinates, mask='/scratch/02863/mparikh/data/2mm_brain_mask.npy'):
+def is_valid(coordinates, mask):
     """
     Validates that the given x/y/z tuple is valid
     for the given mask

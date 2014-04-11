@@ -188,7 +188,7 @@ def features_targets_from_file(db_file, feature_file, mask, threshold=0):
 
     coordinate_dict = extract_coordinates(db_file, mask)
     target_dict, target_names = set_targets(feature_file, threshold=threshold)
-    X, y = get_features_targets(coordinate_dict, target_dict, mask)
+    X, y = get_features_targets(coordinate_dict, target_dict, 'data/MNI152_T1_2mm_brain.nii.gz')
     return (X, y)
 
 

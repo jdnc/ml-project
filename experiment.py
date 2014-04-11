@@ -5,7 +5,7 @@ import json
 
 import preprocess as pp
 
-def filter_studies_active_voxels(study_dict, threshold=5000, radius=10):
+def filter_studies_active_voxels(study_dict, mask, threshold=5000, radius=10):
     """
     Takes the studies with coordinates, and considers only those studies that
     have number of activated voxels >= threshold. Returns the dict containing
@@ -14,8 +14,8 @@ def filter_studies_active_voxels(study_dict, threshold=5000, radius=10):
     Parameters
     ----------
     study_dict  :  dict/str 
-	filename  to json stored dict or the dict of all the studies with 
-	coordinates.     
+	      filename  to json stored dict or the dict of all the studies with coordinates.     
+    mask : mask in nifti format
     threshold : int, optional
         the number of activated voxels in the study, for it to be included.
         Defaults to 5000, as was used in the original study.
@@ -35,7 +35,7 @@ def filter_studies_active_voxels(study_dict, threshold=5000, radius=10):
         if len(study_dict[key]) < 0: # study has fewer than 4 reported foci
             del(study_dict[key])
         else:  # study has less than 5000 activated foci 
-            voxels = pp.peaks_to_vector(study_dict[key], radius=radius)
+            voxels = pp.peaks_to_vector(study_dict[key], mask, radius=radius)
             num_activated = (voxels > 0).sum()
             if num_activated < threshold:
                 del(study_dict[key])

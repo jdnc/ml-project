@@ -50,7 +50,7 @@ def filter_studies_terms(feature_file, terms=None, threshold=0.001,
 
     Parameters
     ----------
-    feature_dict : str
+    feature_file : str
         the file with the raw features.
     terms : list of str, optional 
         the terms that are being considered as labels. If not specified,

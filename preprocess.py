@@ -12,7 +12,7 @@ import neurosynth.base.mask as nbm
 import neurosynth.base.transformations as nbt
 
 
-def extract_coordinates(filename):
+def extract_coordinates(filename, mask):
     """
     Takes in the raw database file and extracts coordinates corresponding
     to each document.
@@ -21,6 +21,7 @@ def extract_coordinates(filename):
     ----------
     filename : str
         complete path to file that has the raw data
+    mask : mask object in nifti format
 
     Returns
     -------

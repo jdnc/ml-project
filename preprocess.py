@@ -167,7 +167,7 @@ def get_features_targets(coordinate_dict, target_dict):
         X[idx] = peaks_to_vector(coordinate_dict[key])
     return X, y
 
-def features_targets_from_file(db_file, feature_file, threshold=0):
+def features_targets_from_file(db_file, feature_file, mask, threshold=0):
     """
     Takes the absolute filenames of the data and feature files and returns the
     numpy arrays expected by scikit learn algorithms
@@ -179,6 +179,7 @@ def features_targets_from_file(db_file, feature_file, threshold=0):
     feature_file : str
         absolute path to the file that has the features and term frequencies
         corresponding to each study
+    mask : mask in nifti format
     threshold : real, optional
         term present only if frequency > threshold, defaults to 0
     Returns
@@ -187,7 +188,7 @@ def features_targets_from_file(db_file, feature_file, threshold=0):
         scikit-learn. y is the n_samples x n_classes array of targets.
     """
 
-    coordinate_dict = extract_coordinates(db_file)
+    coordinate_dict = extract_coordinates(db_file, mask)
     target_dict, target_names = set_targets(feature_file, threshold=threshold)
     X, y = get_features_targets(coordinate_dict, target_dict)
     return (X, y)

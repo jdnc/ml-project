@@ -129,6 +129,9 @@ def set_targets(filename, threshold=0):
     else:
         for idx, row in feature_table.iterrows():
             target_dict[row['pmid']] = [int(x > threshold) for x in row[1:]]
+        for key in list(target_dict):
+            if not target_dict[key]:
+                del(target_dict[key])
     return (target_dict, target_names)
 
 

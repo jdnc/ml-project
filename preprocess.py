@@ -135,7 +135,7 @@ def set_targets(filename, threshold=0):
     return (target_dict, target_names)
 
 
-def get_features_targets(coordinate_dict, target_dict, mask, is_voxels=False):
+def get_features_targets(coordinate_dict, target_dict, mask=None, is_voxels=False):
     """
     Given the dicts that have the list of coordinates and the list of targets
     corresponding to each study, returns the numpy arrays as expected by
@@ -186,7 +186,8 @@ def features_targets_from_file(db_file, feature_file, mask, threshold=0):
     feature_file : str
         absolute path to the file that has the features and term frequencies
         corresponding to each study
-    mask : mask in nifti format
+    mask : mask in nifti format, optional
+        may not be specified if giving the coordinate dict values as voxels.
     threshold : real, optional
         term present only if frequency > threshold, defaults to 0
     Returns

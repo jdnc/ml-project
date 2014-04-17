@@ -48,7 +48,7 @@ def main():
     kf = cross_validation.KFold(len(y_new), n_folds=10)
     for train, test in kf:
 	 predicted  = clf.fit(x[train],y_new[train]).predict(x[test])
-	 predict_prob = LogisticRegression(penalty='l1')fit(x[train],y_new[train])
+	 predict_prob = LogisticRegression(penalty='l1').fit(x[train],y_new[train])
 			.predict_proba(x[test])
 	 cls_scores = utils.score_results(y_new[test], predicted, predicted_prob)
 	 label_scores = utils.label_scores(y_new[test], predicted, predicted_prob)

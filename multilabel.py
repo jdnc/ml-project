@@ -32,7 +32,8 @@ def main():
 	if not feature_dict[key]:
 	    del(feature_dict[key])
    # filter coordinates based on voxels
-   coord_dict = ex.filter_studies_active_voxels('data/docdict.txt', 'data/MNI152_T1_2mm_brain.nii.gz', threshold=500, radius=6)
+   coord_dict = ex.filter_studies_active_voxels('data/docdict.txt', 'data/MNI152_T1_2mm_brain.nii.gz', 
+                                                 threshold=500, radius=6)
    # find intersecting dicts
    coord_dict, feature_dict = ex.get_intersecting_dicts(coord_dict, feature_dict)
    # get the respective vectors

@@ -39,6 +39,8 @@ def filter_studies_active_voxels(study_dict, mask, threshold=5000, radius=10):
             num_activated = (voxels > 0).sum()
             if num_activated < threshold:
                 del(study_dict[key])
+            else:
+                study_dict[key] = voxels
     return study_dict
 
 def filter_studies_terms(feature_file, terms=None, threshold=0.001,

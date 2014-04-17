@@ -135,7 +135,7 @@ def set_targets(filename, threshold=0):
     return (target_dict, target_names)
 
 
-def get_features_targets(coordinate_dict, target_dict, mask):
+def get_features_targets(coordinate_dict, target_dict, mask=None, is_voxels=False):
     """
     Given the dicts that have the list of coordinates and the list of targets
     corresponding to each study, returns the numpy arrays as expected by
@@ -146,12 +146,18 @@ def get_features_targets(coordinate_dict, target_dict, mask):
     coordinate_dict : dict
         a dict having the studies as the keys and the list of coordinates for
         that study as the values. The coordinates are the raw coordinates from
-        the text without any transformation to the matrix space
+        the text without any transformation to the matrix space. Alternately
+        this may be the list of voxels corresponding to the study, rather than
+        the raw coordinates, 'is_voxels' must be set to true.
     target_dict : dict
         the dict that has the study as the key and the presence absence of
         terms as values
     mask: mask in Nifti format
         fits the X array to be within the bounds of the mask.
+    is_voxels : bool, optional
+        defines the format of the coordinate_dict. When true, the values
+        in coordinate_dict are the voxels, rather than the raw coordinates.
+        Defaults to false.
 
     Returns
     -------
@@ -165,7 +171,7 @@ def get_features_targets(coordinate_dict, target_dict, mask):
     y = np.empty(n_samples, dtype=object)
     for idx, key in enumerate(coordinate_dict):
         y[idx] = target_dict[key]
-        X[idx] = peaks_to_vector(coordinate_dict[key], mask)
+        X[idx] = coordinate_dict[key] if is_voxels else peaks_to_vector(coordinate_dict[key], mask)
     return X, y
 
 def features_targets_from_file(db_file, feature_file, mask, threshold=0):
@@ -180,7 +186,8 @@ def features_targets_from_file(db_file, feature_file, mask, threshold=0):
     feature_file : str
         absolute path to the file that has the features and term frequencies
         corresponding to each study
-    mask : mask in nifti format
+    mask : mask in nifti format, optional
+        may not be specified if giving the coordinate dict values as voxels.
     threshold : real, optional
         term present only if frequency > threshold, defaults to 0
     Returns

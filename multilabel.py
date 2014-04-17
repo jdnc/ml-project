@@ -23,7 +23,7 @@ from codesamples import utils
 
 THRESH = 0.001
 def main():
-    feature_dict, col_names = pp.set_targets(feature_file, threshold=-1)
+    feature_dict, col_names = pp.set_targets('data/features.txt', threshold=-1)
     # consider only the terms of interest
     with open('data/terms.json', 'rb') as f:
 	terms = json.load(f)

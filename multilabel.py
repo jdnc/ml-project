@@ -30,10 +30,10 @@ def main():
     for key in list(feature_dict):
 	feature_dict[key] = [x for x in terms if feature_dict[key][x] > THRESH]
 	if not feature_dict[key]:
-	    del(feature_dict[key])
+        del(feature_dict[key])
     # filter coordinates based on voxels
-    coord_dict = ex.filter_studies_active_voxels('data/docdict.txt', 'data/MNI152_T1_2mm_brain.nii.gz', 
-						  threshold=500, radius=6)
+    coord_dict = ex.filter_studies_active_voxels('data/docdict.txt', 'data/MNI152_T1_2mm_brain.nii.gz',
+                                                threshold=500, radius=6)
     # find intersecting dicts
     coord_dict, feature_dict = ex.get_intersecting_dicts(coord_dict, feature_dict)
     # get the respective vectors
@@ -44,25 +44,25 @@ def main():
     # perform the 10 fold cross_validation
     score_per_class = []
     score_per_label = []
-    clf =  OneVsRestClassifier(LogisticRegression(penalty='l1')) 
+    clf =  OneVsRestClassifier(LogisticRegression(penalty='l1'))
     kf = cross_validation.KFold(len(y_new), n_folds=10)
     for train, test in kf:
-	 predicted  = clf.fit(x[train],y_new[train]).predict(x[test])
-	 predict_prob = LogisticRegression(penalty='l1').fit(x[train],y_new[train]).predict_proba(x[test])
-	 cls_scores = utils.score_results(y_new[test], predicted, predicted_prob)
-	 label_scores = utils.label_scores(y_new[test], predicted, predicted_prob)
-	 score_per_class.append(cls_scores)
-	 score_per_label.append(label_scores)
-     with open('class_scores.json', 'wb') as f:
-	 json.dump(scores_per_class, f) 
-     with open('label_scores.json', 'wb') as f:
-	 json.dump(scores_per_label, f) 
-     return 
+        predicted  = clf.fit(x[train],y_new[train]).predict(x[test])
+        predict_prob = LogisticRegression(penalty='l1').fit(x[train],y_new[train]).predict_proba(x[test])
+        cls_scores = utils.score_results(y_new[test], predicted, predict_prob)
+        label_scores = utils.label_scores(y_new[test], predicted, predict_prob)
+        score_per_class.append(cls_scores)
+        score_per_label.append(label_scores)
+    with open('class_scores.json', 'wb') as f:
+        json.dump(score_per_class, f)
+    with open('label_scores.json', 'wb') as f:
+        json.dump(score_per_label, f)
+    return
 
 
 if __name__ == '__main__':
     main()
 
-   
+
 
 

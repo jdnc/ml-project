@@ -19,7 +19,7 @@ from sklearn.linear_model import LogisticRegression
 
 import preprocess as pp
 import experiment as ex
-from codesamples import utils
+import utils
 
 THRESH = 0.001
 def main():

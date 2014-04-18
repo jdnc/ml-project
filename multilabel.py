@@ -37,7 +37,7 @@ def main():
     # find intersecting dicts
     coord_dict, feature_dict = ex.get_intersecting_dicts(coord_dict, feature_dict)
     # get the respective vectors
-    X, y = pp.get_features_targets(coord_dict, feature_dict, is_voxels=True)
+    X, y = pp.get_features_targets(coord_dict, feature_dict, labels=terms, is_voxels=True)
     # fit a label binarizer
     lb = preprocessing.LabelBinarizer()
     y_new = lb.fit_transform(y)

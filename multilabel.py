@@ -30,7 +30,7 @@ def main():
     for key in list(feature_dict):
 	feature_dict[key] = [x for x in terms if feature_dict[key][x] > THRESH]
 	if not feature_dict[key]:
-        del(feature_dict[key])
+	    del(feature_dict[key])
     # filter coordinates based on voxels
     coord_dict = ex.filter_studies_active_voxels('data/docdict.txt', 'data/MNI152_T1_2mm_brain.nii.gz',
                                                 threshold=500, radius=6)

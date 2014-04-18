@@ -2,6 +2,7 @@ from __future__ import print_function
 import os
 import re
 
+import json
 import pandas
 import numpy as np
 from collections import defaultdict
@@ -155,7 +156,7 @@ def get_features_targets(coordinate_dict, target_dict, labels=None, mask=None, i
     labels : iterable, optional
 	a list of all the unique labels for the learner. Default is None.
 	If specified, it will generate a mapping from the labels to numeric values.
-	Not specifying may lead to erros later on. The mapping is stored in 
+	Not specifying may lead to erros later on. The mapping is stored in
 	current working dict as 'mapping.json', is a python dict.
     mask: mask in Nifti format
         fits the X array to be within the bounds of the mask.
@@ -181,9 +182,9 @@ def get_features_targets(coordinate_dict, target_dict, labels=None, mask=None, i
 	with open('mappings.json', 'wb') as f:
 	    json.dump(mapping, f)
     for idx, key in enumerate(coordinate_dict):
-	if labels:
-	    y[idx] = [mapping[x] for x in target_dict[key]]
-	else:
+        if labels:
+            y[idx] = [mapping[x] for x in target_dict[key]]
+        else:
             y[idx] = target_dict[key]
         X[idx] = coordinate_dict[key] if is_voxels else peaks_to_vector(coordinate_dict[key], mask)
     return X, y

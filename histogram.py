@@ -1,4 +1,4 @@
-from __future___ import print_function
+from __future__ import print_function
 """
 A script that takes in a dict or jsonized dict of terms corresponding to any study
 and plots a  bar chart plotting frequency vs term

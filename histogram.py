@@ -30,7 +30,7 @@ def plot_histogram(feature_dict):
     """
     if isinstance(feature_dict, basestring):
         with open(feature_dict, 'rb') as f:
-            feature_dict = json.dump(f)
+            feature_dict = json.load(f)
     # now generate the counts for each term
     term_counts = Counter()
     for key in feature_dict:

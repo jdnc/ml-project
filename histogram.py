@@ -38,7 +38,7 @@ def plot_histogram(feature_dict):
             term_counts[word] += 1
     # now load the terms from the actual term file
     with open('data/terms.json') as f:
-        terms = json.dump(f)
+        terms = json.load(f)
 
     # set the parameters for the actual plot
     # in vein with the example at matplotlib

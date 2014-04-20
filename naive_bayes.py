@@ -8,61 +8,61 @@ Uses Naive Bayes for multi-class OvO classification given 24 labels
 Uses 10-fold cross validation
 Uses a uniform prior for all terms
 """
-import argparse
-import sys
-import json
-import os
-
 import numpy as np
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.multiclass import OneVsRestClassifier
 from sklearn import cross_validation
 from sklearn import preprocessing
-from sklearn.metrics import confusion_matrix
 
 import preprocess as pp
 import experiment as ex
 
-def get_X_y(coordinate_file, feature_file, filter=True):
-    if filter:
-        coordinate_dict = ex.filter_studies_active_voxels(coordinate_file)
-    else:
-    	with open(coordinate_file) as f:
-    		coordinate_dict = json.load(f)
-    target_dict = ex.filter_studies_terms(feature_file, set_unique_label=True)
-    coordinate_dict, target_dict = ex.get_intersecting_dicts(coordinate_dict,
-                                                          target_dict)
-    X, y = pp.get_features_targets(coordinate_dict, target_dict)
-    return X, y
 
-
-def main():
-    parser = argparse.ArgumentParser(prog=sys.argv[0])
-    parser.add_argument("-s",required=True, help="name of folder to save the confusion matrix numpy array")
-    parser.add_argument("-c",required=True, help="name of file having the jsonized coordinate dict")
-    parser.add_argument("-f",required=True, help="name of file with the raw features")
-    args = parser.parse_args()
-    x, y = get_X_y(args.c, args.f)
-    # Since y has string labels encode them to numerical values
+ 
+def classify(x, y):
     le = preprocessing.LabelEncoder()
     le.fit(y)
-    # now encode y so that it has numerical classes rather than string
-    y_enc = le.transform(y)
-    # since study assumes uniform prior for each term, set fit_prior to false
+    y_new = le.transform(y)
     clf = MultinomialNB()
-    kf = cross_validation.KFold(len(y_enc), n_folds=10)
-    conf_mat = np.zeros((len(le.classes_),len(le.classes_)))
-    std_dev_fold = []
+    kf = cross_validation.KFold(len(y_new), n_folds=10)
+    accuracy = []
     for train, test in kf:
-        predicted = OneVsRestClassifier(clf).fit(x[train],y_enc[train]).predict(x[test])
-        conf_mat += confusion_matrix(y_enc[test], predicted, labels=np.arange(22))
-	std_dev_fold.append(np.std(predicted))
-    print(conf_mat) # just for debugging
-    print("Saving...") 
-    print (std_dev_fold) # debugging
-    np.save(os.path.join(args.s, "conf_mat.npy"), conf_mat)
-    np.save(os.path.join(args.s, "std_dev.npy"), np.array(std_dev_fold))
-    
+        predicted = clf.fit(x[train],y_new[train]).predict(x[test])
+        conf_mat =  confusion_matrix(y_new[test], predicted, labels=[0,1])
+        accuracy.append(conf_mat)
+    return accuracy
+
+def main():
+    with open('data/docdict.txt') as f:
+    	coordinates = json.load(f)
+    study_dict = ex.filter_studies_active_voxels(coordinates, 'data/MNI152_T1_2mm_brain.nii.gz')
+    feature_dict = ex.filter_studies_terms('data/features.txt', terms=['emotion', 'reward', 'pain'], set_unique_label=True)
+    e_r = {}
+    e_p = {}
+    p_r = {}
+    for key in feature_dict:
+        if feature_dict[key] in ['emotion', 'reward']:
+            e_r[key] = feature_dict[key]    
+    for key in feature_dict:
+        if feature_dict[key] in ['emotion', 'pain']:
+            e_p[key] = feature_dict[key]    
+    for key in feature_dict:
+        if feature_dict[key] in ['pain', 'reward']:
+            p_r[key] = feature_dict[key]    
+    studyER, ER = ex.get_intersecting_dicts(study_dict, e_r)
+    studyEP, EP = ex.get_intersecting_dicts(study_dict, e_p)
+    studyRP, RP = ex.get_intersecting_dicts(study_dict, p_r)
+    xER, yER = pp.get_features_targets(studyER, ER, mask='data/MNI152_T1_2mm_brain.nii.gz')
+    xEP, yEP = pp.get_features_targets(studyEP, EP, mask='data/MNI152_T1_2mm_brain.nii.gz')
+    xRP, yRP = pp.get_features_targets(studyRP, RP, mask='data/MNI152_T1_2mm_brain.nii.gz')
+    cfEP = classify(xEP, yEP)
+    cfER = classify(xER, yER)
+    cfRP = classify(xRP, yRP)
+    with open('e_vs_p.json', f):
+	json.dump(cfEP, f) 
+    with open('e_vs_r.json', f):
+	json.dump(cfER, f) 
+    with open('p_vs_r.json', f):
+	json.dump(cfRP, f) 
 
 if __name__ == "__main__":
     main()

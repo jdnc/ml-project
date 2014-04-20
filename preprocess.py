@@ -69,7 +69,7 @@ def is_valid(coordinates, mask):
 
 def peaks_to_vector(coordinates, mask, radius=6):
     """
-    Takes in a list of valid peak coordinates and 
+    Takes in a list of valid peak coordinates and
     returns a vector of the corresponding image
     Parameters
     ----------
@@ -101,9 +101,9 @@ def peaks_to_vector(coordinates, mask, radius=6):
 
 def set_targets(filename, threshold=0):
     """
-    Given the feature file, return the target vector showing 
+    Given the feature file, return the target vector showing
     the presence/absence of terms for a document
-    
+
     Parameters
     ----------
     filename : str
@@ -154,9 +154,8 @@ def get_features_targets(coordinate_dict, target_dict, mask):
     -------
     (X, y) : X is the n_samples x n_features array for the data input to
         scikit-learn. y is the n_samples x n_classes array of targets.
-    """  
+    """
     n_samples = len(coordinate_dict)
-    n_classes = len(target_dict.values()[0])
     n_features = 228453 # 91 * 109 * 91 now reduced!
     X = np.zeros((n_samples, n_features), dtype=int)
     y = np.empty(n_samples, dtype=object)

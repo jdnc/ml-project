@@ -126,10 +126,10 @@ def set_targets(filename, threshold=0):
     if threshold == -1:
         target_dict = {}
         for idx, row in feature_table.iterrows():
-            target_dict[row['pmid']] = row[1:]
+            target_dict[int(row['pmid'])] = row[1:]
     else:
         for idx, row in feature_table.iterrows():
-            target_dict[row['pmid']] = [int(x > threshold) for x in row[1:]]
+            target_dict[int(row['pmid'])] = [int(x > threshold) for x in row[1:]]
         for key in list(target_dict):
             if not target_dict[key]:
                 del(target_dict[key])

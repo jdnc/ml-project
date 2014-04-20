@@ -5,7 +5,7 @@ import json
 
 import preprocess as pp
 
-def filter_studies_active_voxels(study_dict, mask, threshold=5000, radius=10):
+def filter_studies_active_voxels(study_dict, mask, threshold=500, radius=6):
     """
     Takes the studies with coordinates, and considers only those studies that
     have number of activated voxels >= threshold. Returns the dict containing

@@ -8,16 +8,19 @@ Uses Naive Bayes for multi-class OvO classification given 24 labels
 Uses 10-fold cross validation
 Uses a uniform prior for all terms
 """
+
+import json
 import numpy as np
 from sklearn.naive_bayes import MultinomialNB
 from sklearn import cross_validation
 from sklearn import preprocessing
+from sklearn.metrics import confusion_matrix
 
 import preprocess as pp
 import experiment as ex
 
 
- 
+
 def classify(x, y):
     le = preprocessing.LabelEncoder()
     le.fit(y)
@@ -41,13 +44,13 @@ def main():
     p_r = {}
     for key in feature_dict:
         if feature_dict[key] in ['emotion', 'reward']:
-            e_r[key] = feature_dict[key]    
+            e_r[key] = feature_dict[key]
     for key in feature_dict:
         if feature_dict[key] in ['emotion', 'pain']:
-            e_p[key] = feature_dict[key]    
+            e_p[key] = feature_dict[key]
     for key in feature_dict:
         if feature_dict[key] in ['pain', 'reward']:
-            p_r[key] = feature_dict[key]    
+            p_r[key] = feature_dict[key]
     studyER, ER = ex.get_intersecting_dicts(study_dict, e_r)
     studyEP, EP = ex.get_intersecting_dicts(study_dict, e_p)
     studyRP, RP = ex.get_intersecting_dicts(study_dict, p_r)
@@ -58,11 +61,11 @@ def main():
     cfER = classify(xER, yER)
     cfRP = classify(xRP, yRP)
     with open('e_vs_p.json', f):
-	json.dump(cfEP, f) 
+	json.dump(cfEP, f)
     with open('e_vs_r.json', f):
-	json.dump(cfER, f) 
+	json.dump(cfER, f)
     with open('p_vs_r.json', f):
-	json.dump(cfRP, f) 
+	json.dump(cfRP, f)
 
 if __name__ == "__main__":
     main()

@@ -34,6 +34,11 @@ def main():
     # filter coordinates based on voxels
     coord_dict = ex.filter_studies_active_voxels('data/docdict.txt', 'data/MNI152_T1_2mm_brain.nii.gz',
                                                 threshold=500, radius=6)
+    # ensure that the keys are ints
+    for key in list(coord_dict):
+        coord_dict[int(key)] = coord_dict[key]
+        if not isinstance(key, int):
+            del(coord_dict[key])
     # find intersecting dicts
     coord_dict, feature_dict = ex.get_intersecting_dicts(coord_dict, feature_dict)
     # get the respective vectors

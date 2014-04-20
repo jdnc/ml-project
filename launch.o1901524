@@ -1,0 +1,78 @@
+TACC: Setting memory limits for job 1901524 to unlimited KB
+TACC: Dumping job script:
+--------------------------------------------------------------------------------
+#!/bin/csh
+#
+# SGE control file automatically created by launch
+# Using parametric launcher with control file: vsub_tacc.sh
+#$ -V                    #Inherit the submission environment
+#$ -cwd                  # Start job in submission directory
+#$ -j y                  # Combine stderr and stdout
+#$ -N launch       # Job Name
+#$ -A Analysis_Lonestar
+#$ -o $JOB_NAME.o$JOB_ID # Name of the output file (eg. myMPI.oJobID)
+#$ -pe 12way 12
+#$ -q normal
+#$ -l h_rt=01:00:00
+#----------------
+# Job Submission
+#----------------
+umask 2
+
+module load launcher
+module swap gcc intel
+setenv EXECUTABLE     $TACC_LAUNCHER_DIR/init_launcher
+setenv CONTROL_FILE vsub_tacc.sh
+setenv WORKDIR .
+cd $WORKDIR/
+echo " WORKING DIR:   $WORKDIR/"
+$TACC_LAUNCHER_DIR/paramrun $EXECUTABLE $CONTROL_FILE
+echo " "
+echo " Parameteric Job Complete"
+echo " "
+--------------------------------------------------------------------------------
+TACC: Done.
+
+Lmod Error: Swap failed: "gcc" is not loaded.
+
+ WORKING DIR:   ./
+TACC: Starting up job 1901524
+TACC: Setup complete. Running job script.
+TACC: starting parallel tasks...
+--------------------------------------------------
+TACC Launcher -> 12 processors allocated.
+TACC Launcher -> 7 total tasks to complete.
+--------------------------------------------------
+ 
+TACC Launcher -> Iniating task 1 on c314-313.ls4.tacc.utexas.edu (#!/bin/bash	   )
+TACC Launcher -> Iniating task 2 on c314-313.ls4.tacc.utexas.edu (#$ -M vsub@cs.utexas.edu)
+TACC Launcher -> Iniating task 7 on c314-313.ls4.tacc.utexas.edu (python /home1/02869/vsub/ml-project/naive_bayes.py -c /scratch/02869/vsub/data/docdict.txt  -f /scratch/02869/vsub/data/features.txt -s $SCRATCH/ )
+TACC Launcher -> Iniating task 6 on c314-313.ls4.tacc.utexas.edu (#python /home1/02869/vsub/ml-project/multi-check.py)
+TACC Launcher -> Iniating task 3 on c314-313.ls4.tacc.utexas.edu (#$ -N NaiveBayes)
+TACC Launcher -> Iniating task 4 on c314-313.ls4.tacc.utexas.edu (#$ -o naive_bayes.out)
+TACC Launcher -> Iniating task 5 on c314-313.ls4.tacc.utexas.edu (module load pylauncher)
+/opt/apps/python/epd/7.2.2/lib/python2.7/site-packages/nose/util.py:14: DeprecationWarning: The compiler package is deprecated and removed in Python 3.x.
+  from compiler.consts import CO_GENERATOR
+Traceback (most recent call last):
+  File "/home1/02869/vsub/ml-project/naive_bayes.py", line 68, in <module>
+    main()
+  File "/home1/02869/vsub/ml-project/naive_bayes.py", line 45, in main
+    x, y = get_X_y(args.c, args.f)
+  File "/home1/02869/vsub/ml-project/naive_bayes.py", line 32, in get_X_y
+    target_dict = ex.filter_studies_terms(feature_file, set_unique_label=True)
+  File "/home1/02869/vsub/ml-project/experiment.py", line 101, in filter_studies_terms
+    threshold=-1)   
+  File "/home1/02869/vsub/ml-project/preprocess.py", line 129, in set_targets
+    target_dict[row['pmid']] = row[1:]
+  File "/corral-repl/utexas/poldracklab/software_lonestar/python/lib/python2.7/site-packages/pandas-0.8.0rc2-py2.7-linux-x86_64.egg/pandas/core/series.py", line 429, in __getitem__
+    return self.index.get_value(self, key)
+  File "/corral-repl/utexas/poldracklab/software_lonestar/python/lib/python2.7/site-packages/pandas-0.8.0rc2-py2.7-linux-x86_64.egg/pandas/core/index.py", line 655, in get_value
+    raise e1
+KeyError: 'pmid'
+TACC: Shutting down parallel environment.
+TACC: Shutdown complete. Exiting.
+ 
+ Parameteric Job Complete
+ 
+TACC: Cleaning up after job: 1901524
+TACC: Done.

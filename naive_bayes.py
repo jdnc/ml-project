@@ -65,11 +65,11 @@ def main():
     cfER = classify(xER, yER)
     cfRP = classify(xRP, yRP)
     with open('e_vs_p.json', f):
-	json.dump(cfEP, f)
+	    json.dump(cfEP, f)
     with open('e_vs_r.json', f):
-	json.dump(cfER, f)
+	    json.dump(cfER, f)
     with open('p_vs_r.json', f):
-	json.dump(cfRP, f)
+	    json.dump(cfRP, f)
 
 if __name__ == "__main__":
     main()

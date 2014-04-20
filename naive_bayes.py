@@ -64,12 +64,12 @@ def main():
     cfEP = classify(xEP, yEP)
     cfER = classify(xER, yER)
     cfRP = classify(xRP, yRP)
-    with open('e_vs_p.json', f):
-	    json.dump(cfEP, f)
-    with open('e_vs_r.json', f):
-	    json.dump(cfER, f)
-    with open('p_vs_r.json', f):
-	    json.dump(cfRP, f)
+    with open('e_vs_p.npy', 'wb') as f:
+	    np.save(f, cfEP)
+    with open('e_vs_r.npy', 'wb') as f:
+	    np.save(f, cfER)
+    with open('p_vs_r.npy', 'wb') as f:
+	    np.save(f, cfRP)
 
 if __name__ == "__main__":
     main()

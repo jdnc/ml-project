@@ -37,7 +37,7 @@ def classify(x, y):
 def main():
     with open('data/docdict.txt') as f:
     	coordinates = json.load(f)
-    study_dict = ex.filter_studies_active_voxels(coordinates, 'data/MNI152_T1_2mm_brain.nii.gz')
+    study_dict = ex.filter_studies_active_voxels(coordinates, 'data/MNI152_T1_2mm_brain.nii.gz', radius=6, threshold=500)
     feature_dict = ex.filter_studies_terms('data/features.txt', terms=['emotion', 'reward', 'pain'], set_unique_label=True)
     e_r = {}
     e_p = {}

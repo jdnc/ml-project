@@ -38,6 +38,10 @@ def main():
     with open('data/docdict.txt') as f:
     	coordinates = json.load(f)
     study_dict = ex.filter_studies_active_voxels(coordinates, 'data/MNI152_T1_2mm_brain.nii.gz', radius=6, threshold=500)
+    # ensure that study dict has int as keys
+    for key in list(study_dict):
+        study_dict[int(key)] = study_dict[key]
+        del(study_dict[key])
     feature_dict = ex.filter_studies_terms('data/features.txt', terms=['emotion', 'reward', 'pain'], set_unique_label=True)
     e_r = {}
     e_p = {}

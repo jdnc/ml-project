@@ -25,10 +25,10 @@ N_CLUSTERS = 100000
 
 def classify(x, y):
     # get the connectivity for Ward
-    mask = npload('data/2mm_brain_mask.npy')
+    mask = np.load('data/2mm_brain_mask.npy')
     shape = mask.shape
     connectivity = image.grid_to_graph(n_x=shape[0], n_y=shape[1], n_z=shape[2], mask=mask)
-    ward = WardAgglomeration(n_cluster=N_CLUSTERS, connectivity=connectivity)
+    ward = WardAgglomeration(n_clusters=N_CLUSTERS, connectivity=connectivity)
     le = preprocessing.LabelEncoder()
     le.fit(y)
     y_new = le.transform(y)

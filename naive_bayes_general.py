@@ -41,7 +41,8 @@ def main():
     # ensure that study dict has int as keys
     for key in list(study_dict):
         study_dict[int(key)] = study_dict[key]
-        del(study_dict[key])
+        if not isinstance(key, int):
+            del(study_dict[key])
     with open('data/terms.json', 'rb') as f:
         terms = json.load(f)
     feature_dict = ex.filter_studies_terms('data/features.txt', terms=terms, set_unique_label=True)

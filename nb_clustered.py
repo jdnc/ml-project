@@ -36,6 +36,7 @@ def classify(x, y):
     kf = cross_validation.KFold(len(y_new), n_folds=10)
     accuracy = []
     for train, test in kf:
+        ward.fit(x[train])
         train_reduced = ward.transform(x[train])
         test_reduced = ward.transform(x[test])
         predicted = clf.fit(train_reduced, y_new[train]).predict(test_reduced)

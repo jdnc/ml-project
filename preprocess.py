@@ -174,21 +174,19 @@ def get_features_targets(coordinate_dict, target_dict, labels=None, mask=None, i
     #n_classes = len(target_dict.values()[0]) don't know what this means - has no use
     n_features = 228453 # 91 * 109 * 91 now reduced!
     X = np.zeros((n_samples, n_features), dtype=int)
+    y = []
     #y = np.empty(n_samples, dtype=object)
     if labels:
 	mapping = {}
-	y = []
 	for i in range(len(labels)):
 	    mapping[labels[i]] = i
 	with open('mappings.json', 'wb') as f:
 	    json.dump(mapping, f)
-    else:
-        y = np.empty(n_samples, dtype=object)
     for idx, key in enumerate(coordinate_dict):
         if labels:
             y.append([mapping[x] for x in target_dict[key]])
         else:
-            y[idx] = target_dict[key]
+            y.append(target_dict[key])
         X[idx] = coordinate_dict[key] if is_voxels else peaks_to_vector(coordinate_dict[key], mask)
     return X, y
 

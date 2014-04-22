@@ -11,7 +11,7 @@ Uses a uniform prior for all terms
 
 import json
 import numpy as np
-from sklearn.svm import SVC
+from sklearn.svm import LinearSVC
 from sklearn.grid_search import GridSearchCV
 from sklearn import cross_validation
 from sklearn import preprocessing
@@ -26,10 +26,8 @@ def classify(x, y):
     le = preprocessing.LabelEncoder()
     le.fit(y)
     y_new = le.transform(y)
-    tuned_parameters = tuned_parameters = [{'kernel': ['rbf'], 'gamma': [1e-3, 1e-4],
-                                           'C': [1, 10, 100, 1000]},
-                                           {'kernel': ['linear'], 'C': [1, 10, 100, 1000]}]
-    svr = SVC()
+    tuned_parameters =  [{'kernel': ['linear'], 'C': [1, 10, 100, 1000]}]
+    svr = LinearSVC()
     clf = GridSearchCV(svr, tuned_parameters)
     kf = cross_validation.KFold(len(y_new), n_folds=10)
     accuracy = []

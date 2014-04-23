@@ -13,6 +13,22 @@ Usage python get_data.py <in_dir>
 pattern = re.compile('(.*)\.txt')
 
 def get_data(in_dir):
+    """
+    Constructs a dict of dict corrsponding to frequency of each term in each study.
+    Assumes all the studies are in plain text in the input directory. Also requires
+    'terms.json' under data/ that is a list of terms to consider
+
+    Parameters
+    ----------
+    in_dir : str
+        the directory containing all the studies in plain text format.
+
+    Returns
+    -------
+    row_dict : dict
+        A dict of dicts. Each outer dict has the study id as key and a dict with
+        the normalized frequency of each term as valu.
+    """
     with open('data/terms.json', 'rb') as f:
         terms = json.load(f)
     row_dict = {}
@@ -37,6 +53,21 @@ def get_data(in_dir):
 
 
 def store_data(row_dict, out_file):
+    """
+    Stores given dict of dicts as a  csv file.
+
+    Parameters
+    ----------
+    row_dict : str
+        the name of the dict of dicts, having rows at outer level and columns
+        in inner dict.
+    out_file : str
+        complete path to write the csv output
+
+    Returns
+    -------
+    None
+    """
     df = pandas.DataFrame.from_dict(row_dict, orient='index')
     df.to_csv(out_file)
 

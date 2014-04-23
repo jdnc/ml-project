@@ -1,0 +1,1392 @@
+Neuron
+
+Article
+
+Triangulating the Neural, Psychological,
+and Economic Bases of Guilt Aversion
+
+Luke J. Chang,1 Alec Smith,2,5 Martin Dufwenberg,2,6 and Alan G. Sanfey1,3,4,*
+1Department of Psychology
+2Department of Economics
+University of Arizona, 1503 E. University Boulevard, Tucson, AZ 85721, USA
+3Donders Institute for Brain, Mind & Behavior
+4Behavioral Science Institute
+Radboud University Nijmegen, 6525EN Nijmegen, The Netherlands
+5California Institute of Technology, Pasadena, CA 91125, USA
+6University of Gothenburg, S-405 30 Gothenburg, Sweden
+*Correspondence: asanfey@u.arizona.edu
+DOI 10.1016/j.neuron.2011.02.056
+
+SUMMARY
+
+Why do people often choose to cooperate when they
+can better serve their interests by acting selﬁshly?
+One potential mechanism is that the anticipation of
+guilt can motivate cooperative behavior. We utilize
+a formal model of this process in conjunction with
+fMRI to identify brain regions that mediate coopera-
+tive behavior while participants decided whether or
+not to honor a partner’s trust. We observed increased
+activation in the insula, supplementary motor area,
+dorsolateral prefrontal cortex (PFC), and temporal
+parietal
+junction when participants were behaving
+consistent with our model, and found increased
+activity in the ventromedial PFC, dorsomedial PFC,
+and nucleus accumbens when they chose to abuse
+trust and maximize their ﬁnancial reward. This study
+demonstrates that a neural system previously impli-
+cated in expectation processing plays a critical role
+in assessing moral sentiments that in turn can sustain
+human cooperation in the face of temptation.
+
+INTRODUCTION
+
+Daily life confronts us on a regular basis with social situations in
+which we sometimes place trust in those around us or alternately
+are entrusted by others. Often, this takes the form of informal
+agreements, with the promise of beneﬁts to all concerned if
+mutual trust is upheld. As an example, imagine we are in a coffee
+shop, and another customer asks us to watch over her laptop as
+she steps outside to make a phone call. Assuming we repay this
+trust and do indeed protect her laptop, it is clear what the beneﬁt
+to her is. But what is in it for us? These everyday informal situa-
+tions are a mainstay of our social life, but there is surprisingly little
+experimental research examining the question of what motivates
+this behavior. Indeed, although we may painstakingly deliberate
+the merits of entering a formal
+legal contract, we rarely give
+much thought to the psychological foundations of these more
+
+560 Neuron 70, 560–572, May 12, 2011 ª2011 Elsevier Inc.
+
+mundane arrangements. However, these decisions serve as the
+foundation for a safe (Sampson et al., 1997) and economically
+successful society (Smith, 1984; Zak and Knack, 2001), and
+thus increased knowledge of the neural structures that underlie
+these behaviors can provide valuable clues into the mechanisms
+that underlie these behaviors of trust and reciprocity.
+
+Understanding the dynamic processes of strategic interac-
+tions has traditionally been under the purview of the ﬁeld of
+economics. Classical models of human behavior have typically
+assumed that people maximize their own material self-interest;
+however, a host of experimental evidence demonstrates that
+people appear to care about the payoffs of others (Camerer,
+2003). This insight has consequently resulted in the development
+of a number of models that emphasize other-regarding prefer-
+ences. These models typically consider either the distribution
+of payoffs (Bolton and Ockenfels, 2000; Fehr and Schmidt,
+1999) or other player’s intentions (Dufwenberg and Kirchsteiger,
+2004; Falk and Fischbacher, 2006; Rabin, 1993) and posit that
+cooperation occurs largely as the result of a positive, prosocial
+motivation (Fehr and Camerer, 2007).
+
+An alternative mechanism underlying trust and reciprocity that
+has received considerably less empirical attention concerns the
+inﬂuence of affective state on interactive decision making,
+speciﬁcally the role of anticipated guilt in deciding to help others.
+Guilt can be conceptualized as a negative emotional state asso-
+ciated with the violation of a personal moral rule or a social stan-
+dard (Haidt, 2003) and is particularly salient when one believes
+they have inﬂicted harm, loss, or distress on a relationship
+partner, for example when one fails to live up to the expectations
+of others (Baumeister et al., 1994). Acting to minimize guilt can
+thus be a powerful motivator in the decision-making process.
+According to this proposal, we may be particularly vigilant of
+our neighbor’s laptop, not because of any prosocial feeling,
+but rather because we anticipate feeling terrible if anything
+happened when the owner expected us to care for it. Supporting
+this idea, some research has demonstrated that people are
+indeed guilt averse and in fact often do make decisions to mini-
+mize their anticipated guilt regarding a social interaction. While
+these studies have provided evidence that beliefs about others’
+expectations motivate cooperative behavior
+(Charness and
+Dufwenberg, 2006; Dufwenberg and Gneezy, 2000; Reuben
+
+Neuron
+
+Neural Basis of Guilt Aversion
+
+et al., 2009; but see also Ellingsen et al., 2010) and that speciﬁ-
+cally thinking about a guilty experience can promote greater
+levels of cooperation (Ketelaar and Au, 2003), no study to date
+has directly demonstrated that guilt avoidance is the mechanism
+that underlies these decisions to cooperate. However, sophisti-
+cated methods from neuroscience such as fMRI can provide
+important insights into the underlying mechanisms.
+
+It is important to note that there is at present very limited under-
+standing of how complex social emotions such as guilt are instan-
+tiated in the brain. The few previous studies investigating the
+neural underpinnings of this mechanism have employed methods
+which may not realistically evoke natural feelings of guilt, such as
+script-driven imagery (e.g., ‘‘remember a time when you felt
+guilt’’) (Shin et al., 2000) or imaginary vignettes (e.g., ‘‘I shoplifted
+a dress from the store’’) (Takahashi et al., 2004). Because we
+contend that that the anticipation of guilt can motivate prosocial
+behavior, it is critical to explore how guilt impacts decision
+making while participants are actually undergoing a real social
+interaction. According to our conceptualization of guilt, people
+balance how they would feel if they disappointed their relation-
+ship partner against what they have to gain by abusing their trust.
+It is possible that during this process people may even experi-
+ence a preview of their future guilt at the time of the decision,
+which may be what ultimately motivates them to cooperate.
+
+Therefore, the present study attempts to address these ques-
+tions by integrating theory and methods from the diverse ﬁelds of
+psychology, economics, and neuroscience to understand the
+neural mechanisms that mediate cooperative behavior. We utilize
+a formal model of guilt aversion (Battigalli and Dufwenberg, 2007)
+developed within the context of Psychological Game Theory
+(PGT; Battigalli and Dufwenberg, 2009; Geanakoplos et al.,
+1989), which provides a mathematical framework to allow indi-
+vidual utility functions to encompass beliefs—a feature essential
+for modeling emotions.
+Importantly, using a formal model
+provides a precise quantiﬁcation of the amount of guilt antici-
+pated in each decision, and can be used to predict brain networks
+that track this signal. The use of computational models has been
+instrumental
+in understanding the neural systems underlying
+complex cognitive constructs involved in decision making such
+as prediction error (O’Doherty et al., 2004), uncertainty (Preusch-
+off et al., 2006), and mentalizing (Hampton and O’Doherty, 2007).
+This approach provides a principled method for both illuminating
+the neural responses to feelings of guilt and also exploring how
+they directly guide social decision making.
+
+For example, consider how behavior might be modeled in the
+commonly-studied Trust Game (TG) (Berg et al., 1995) using
+a guilt-aversion model. In this game, a player (the Investor)
+must decide how much of an endowment to invest with a partner
+(the Trustee – see Figure 1A). Once transferred, this money is
+multiplied by some factor (often 3 or 4), and then the Trustee
+has the opportunity to return money back to the Investor. If the
+Trustee honors trust, and returns money, both players end up
+with a higher monetary payoff than originally endowed. However,
+if the Trustee abuses trust and keeps the entire amount, the
+Investor takes a loss. The standard economic solution to this
+game uses backward induction and predicts that a rational and
+selﬁsh Trustee will never honor the trust given by the Investor,
+and the Investor realizing this, should never place trust in the ﬁrst
+
+place, and will invest zero in the transaction. In contrast, our
+model of guilt aversion posits that a rational Trustee is interested
+in both maximizing their ﬁnancial payoff (M2) and minimizing their
+anticipated guilt associated with letting their partner down.
+Anticipated guilt can be operationalized as the nonnegative
+difference between the amount of money the Investor expects
+back (E1S2) and the amount that the Trustee actually returns
+(S2). Because the Trustee typically does not know the Investor’s
+true belief, their expectation of this belief, referred to as their
+second order belief (E2E1S2), can be used as a proxy.
+
+U2 = M2   Q12ðE2E1S2   S2Þ +
+
+(1)
+
+According to this model, the Trustee’s anticipated guilt is thus
+based on their second order beliefs. The weight placed on antic-
+ipated guilt in the utility function is modulated by a guilt sensitivity
+parameter (Q12), which can vary for each partner the Trustee
+encounters. Participants make decisions, which maximize this
+utility function. If they are sufﬁciently guilt averse (Q12 > 1),
+then they will maximize their utility by returning the amount that
+they expect their partner will return, otherwise (Q12 < 1) they
+will receive the most utility from keeping all of the money (see
+Figure S1 available online for a simulation).
+
+it
+
+is important
+
+While a number of studies have investigated the neural
+systems underlying Investor’s initial decisions to trust (Delgado
+et al., 2005; King-Casas et al., 2005; Krueger et al., 2007), there
+have been surprisingly few that have studied the Trustee’s corre-
+sponding decisions to cooperate (Baumgartner et al., 2009;
+van den Bos et al., 2009). Previous work has found evidence
+that decisions to cooperate in an iterated Prisoner’s Dilemma
+Game are associated with the ventral striatum (Rilling et al.,
+2002). However,
+to note that decisions to
+cooperate in sequential games (i.e., the TG) may be fundamen-
+tally different from those in simultaneous-move games (i.e.,
+Prisoner’s Dilemma Game) because of the ability to visibly
+choose before the other player in the former (McCabe et al.,
+2000, 2003). Neuroscientiﬁc investigations of the TG have shown
+that decisions to abuse trust are associated with activity in the
+vmPFC and PCC (van den Bos et al., 2009). This study also
+observed interesting individual differences indicating that when
+making selﬁsh decisions, trust abusers exhibit more activity in
+the ventral striatum and less activity in the insula, as compared
+to cooperators. These results suggest that decisions to betray
+trust by trust abusers may be motivated by reward-related
+regions such as the ventral striatum and vmPFC, while decisions
+to cooperate may be associated with the insula for cooperators.
+Another study of Trustee behavior has focused on honoring
+promises to reciprocate rather than cooperation per se (Baum-
+gartner et al., 2009). Here, the authors found that dishonest
+participants had greater amygdala activation as compared to
+honest participants when deciding whether or not to reciprocate
+their partner’s trust. While both of these studies examining
+Trustee behavior have provided important insights into their
+respective questions of interest, neither has provided evidence
+directly addressing the speciﬁc mechanism that underlies the
+decision to cooperate in these interactive scenarios.
+
+The aim of the present study is to use a theory-driven
+approach to examine the neural processes associated with
+
+Neuron 70, 560–572, May 12, 2011 ª2011 Elsevier Inc. 561
+
+Neuron
+
+Neural Basis of Guilt Aversion
+
+Figure 1. Trial Timeline
+(A) Schematic of Trust Game (TG) with beliefs.
+Player 1 decides how much of their endowment
+they want to invest in Player 2 (S1) and has an
+expectation about
+the amount of money that
+Player 2 will return (E1S2). The amount that Player 1
+invests is multiplied by a factor of 4 by the exper-
+imenter. Player 2 has a belief about Player 1’s
+expectation (E2E1S2) and decides how much
+money to return back Player 1 (S2).
+(B) At session 1, all participants met as a group and
+played in the role of the Investor. After making an
+investment to every player, they were also asked
+how much of this amount (multiplied by 4) they
+believed their partner would return to them.
+(C) Session 2 took place while the participants
+underwent
+resonance
+imaging and played in the role of Trustee. Partici-
+pants ﬁrst saw a ﬁxation cross (A) and then
+a picture of
+round.
+Participants’ beliefs about their partner’s offer
+were then recorded (C) and then the actual offer
+was revealed (D). Next, participants’ beliefs about
+the amount of money they believed their partner
+expected them to reciprocate were recorded (E)
+and they then decided how much they actually
+wanted to return (F). The ﬁnal outcome was dis-
+played (G) and then the partner’s actual expecta-
+tions were revealed (H).
+
+functional magnetic
+
+their partner
+
+(B) on that
+
+magnetic resonance imaging (fMRI).
+During the TG they received the actual
+offers made by each Investor during
+Session 1 (see Figure 1 for a trial timeline
+of both sessions). After learning about the
+amount of money player 1 sent, we ﬁrst
+elicited the Trustee’s second-order beliefs about the amount of
+money that they believed the Investor expected them to return
+(E2E1S2). Participants could then return any amount of their
+multiplied investment in 10% increments (S2). At the conclusion
+of Session 2, all participants were shown a recap of each round,
+and their subjective counterfactual guilt was assessed (see
+methods).
+
+RESULTS
+
+Behavioral Results
+Our behavioral results demonstrated that participants behaved
+in a similar fashion to previous TG experiments (Camerer,
+2003; Figure 2). The Investor usually sent some amount of their
+endowment to the Trustee, with the Trustee being quite accurate
+in predicting this investment (mixed effects regression, two-
+tailed; b = 0.15, se = 0.06, t = 2.29, p = 0.02). The Trustee was
+also generally accurate in predicting the Investors’ expectations
+(b = 0.85, se = 0.06, t = 15.20, p < 0.001; Figure 3A). Supporting
+our model of guilt aversion, the Trustee used these expectations
+to guide their decision-making behavior, as they typically re-
+turned close to the amount of money that they believed their
+partner expected them to return (b = 0.90, se = 0.04, t = 21.32,
+p < 0.001; Figure 3B). Finally, participants reported that they
+
+guilt-motivated cooperation while the decision maker
+is
+immersed in a real, consequential interaction. As modeled by
+Equation 1, we elicit the participants’ expectations and utilize
+them to isolate the neural systems involved in the anticipation
+of guilt. We predicted that the motivation to minimize anticipated
+guilt would induce participants to cooperate and that these
+cooperative decisions would therefore be associated with
+greater activity in the insula/acc and amygdala, based on
+previous studies of both guilt (Shin et al., 2000) and general
+negative affect (Calder et al., 2000; Damasio et al., 2000).
+
+Thirty participants were recruited to play multiple single-shot
+rounds of a TG split over two sessions. Importantly, during this
+study we employed no deception, and therefore all participant
+interactions were both real and ﬁnancially consequential. Use
+of this methodology allows us to examine actual
+interactions
+and also account for naturally occurring individual differences
+in both trust and reciprocity. During Session 1, all participants
+played as Investor and made an offer to every other participant
+in the experiment. In addition, we asked each participant to
+report the amount of money that they expected their partner
+to return (E1S2). Seventeen of these participants were recruited
+to play as the Trustee in a subsequent imaging session. During
+Session 2, each of these participants played 28 single-shot
+rounds of the TG as the Trustee while undergoing functional
+
+562 Neuron 70, 560–572, May 12, 2011 ª2011 Elsevier Inc.
+
+Neuron
+
+Neural Basis of Guilt Aversion
+
+Figure 2. Behavioral Results
+(A) Histogram of the Investor’s Investment for all trials for all participants (mean = 51.7%, sd = 20.7%).
+(B) Histogram of the percentage of their investment (multiplied by 4) that they expect the Trustee to return (1st Order Belief) (mean = 40.81%, sd = 10.44%).
+(C) Histogram of the percentage of the Investor’s investment (multiplied by 4) that the Trustee believes the Investor expects them to return (2nd Order Belief)
+(mean = 44.33%, sd = 3.52%).
+(D) The percentage of the Investor’s investment (multiplied by 4) that the Trustee decides to return (mean = 38.37%, sd = 7.80%).
+
+would have felt more counterfactual guilt had they chosen to
+return less money than they actually did (b = 0.14, se = 0.03,
+t = 4.14, p < 0.001; Figure 3C). Taken together, these results
+suggest that participants behaved in a manner consistent with
+our model of guilt aversion.
+
+Neuroimaging Results
+We conducted several different analyses to examine the neural
+mechanisms underlying guilt aversion. First, a main contrast
+identiﬁed the neural processes underlying decisions that were
+consistent with the predictions of the guilt-aversion model (i.e.,
+match expectations or not). Second, we explored processes
+
+that tracked parametrically with the predictions of the model.
+Third, we examined whether these processes could be ex-
+plained by individual differences in guilt sensitivity estimated
+from their subjective counterfactual guilt ratings. Finally, we
+investigated the functional relationships between regions within
+the previously identiﬁed networks.
+Main Contrast
+To characterize the neural processes underlying the behavioral
+results, we attempted to isolate the two sources of value in Equa-
+tion 1—the minimization of anticipated guilt and the maximiza-
+tion of ﬁnancial reward. To do this, we compared trials during
+the decision phase in which participants returned the exact
+
+Neuron 70, 560–572, May 12, 2011 ª2011 Elsevier Inc. 563
+
+Neuron
+
+Neural Basis of Guilt Aversion
+
+Figure 3. Behavioral Results
+(A) Investor’s ﬁrst-order belief (E1S2) by the Trustee’s second-order belief (E2E1S2).
+(B) The amount returned by the Trustee (S2) by their second-order belief (see Table S1 for additional analyses).
+(C) Participant’s self-reported counterfactual guilt (the amount of guilt they would have felt had they returned less money) by the difference from their hypothetical
+choice from their actual behavior. The dotted lines represent participant’s best linear unbiased predictors (BLUPs).
+
+amount they believed their partner expected (i.e., minimized their
+anticipated guilt) to trials in which they returned less than they
+believed their partner expected (i.e., enhanced their ﬁnancial
+reward). The duration of the decision phase was modeled as
+the time to decision. There was no signiﬁcant difference in the
+response time between trials in which participants matched
+expectations (mean = 3412.29 ms, sd = 1310.65) as compared
+to trials in which they returned less than their expectation
+(mean = 3666.87 ms, sd = 1475.47; b = 0.25, se = 0.14,
+t = 1.80, p = 0.08). It is important to note that this response
+time is not particularly meaningful as participants were required
+to scroll through their choices and the starting point was random
+(see Experimental Procedures). The contrast, illustrated in Fig-
+ure 4, revealed increased activity in the insula, supplementary
+
+motor area (SMA), dorsal anterior cingulate (DACC), dorsolateral
+prefrontal cortex (DLPFC), and parietal areas,
+including the
+temporal parietal junction (TPJ), when participants matched their
+second-order beliefs about their partner’s expectations, thus
+minimizing guilt. Returning less than their second-order belief,
+and thereby increasing ﬁnancial gain, was associated with
+greater activity in the ventromedial prefrontal cortex VMPFC,
+bilateral nucleus accumbens (NAcc), and dorsomedial prefrontal
+cortex (DMFPC) (See Table S2 for all identiﬁed regions).
+Parametric Contrast
+While the main contrast illustrates regions associated with mini-
+mizing expected guilt as compared to maximizing ﬁnancial
+payoff, an additional question of interest is whether these activa-
+tions change parametrically as a function of the actual deviation
+
+564 Neuron 70, 560–572, May 12, 2011 ª2011 Elsevier Inc.
+
+Neuron
+
+Neural Basis of Guilt Aversion
+
+Figure 4. Minimizing Guilt Compared to Maximizing Financial Reward
+(A) Increased activity (yellow) in the SMA, ACC, and cerebellum when matching expectations. Increased activity (blue) in the NAcc, VMPFC, and DMPFC
+can be seen when participants returned less than their second-order belief. The color map indicates Z values between 0 and 4. Error bars on the peristimulus plots
+reﬂect ± 1 standard error.
+(B) Increased activity (yellow) in the insula when matching expectations and increased activity (blue) in the bilateral NAcc when returning less than their
+expectations.
+(C) Increased activity in the insula, SMA, and right DLPFC (yellow) when matching expectations and increased activity (blue) in the left NAcc when returning less
+than expectations. The left blowup depicts the relationship between participant’s counterfactual guilt sensitivity and their average activity for the insula. The right
+blowup depicts participant’s estimated counterfactual guilt sensitivity and their average activity in the bilateral NAcc. See Figure S1 for a blowup of the SMA.
+Images are presented using radiological conventions (right = left) on the participant’s average high resolution T1 image. The images are whole-brain thresholded
+using cluster correction Z > 2.3, p < 0.05.
+See also Figure S2 and Table S2.
+
+from matching expectations. To address this question we tested
+a parametric contrast that compared trials in which participants
+matched expectations to linear deviations from expectations (in
+10% increments). Similar to the main contrast, matching expec-
+tations was associated with increased activity in the right insula,
+right DLPFC, SMA, ACC, and precuneous (see Figure 5 and
+Table S3). Returning incrementally less than expectations was
+
+associated with increased activity in the bilateral NAcc and
+MPFC (including VMPFC, DMPFC, and ACC).
+
+However, participants systematically made slightly less
+money in trials in which they matched expectations (mean =
+$12.28, sd = 5.88) compared to trials in which they returned
+less than they believed the other player expected ($14.58, sd =
+6.79; beta =  2.08, t = 2.53, p < 0.05). To address this potential
+
+Neuron 70, 560–572, May 12, 2011 ª2011 Elsevier Inc. 565
+
+Neuron
+
+Neural Basis of Guilt Aversion
+
+the regressors,
+
+Figure 5. Parametric Contrast between Matching
+Expectations and Returning Less Than Second-
+Order Beliefs
+This ﬁgure reﬂects the parametric contrast (+6  1  2  3)
+of
+indicating matching expectations,
+returning 10% less than expectations, returning 20%
+less than expectations, and returning +30% less than
+expectations. Images are displayed in radiological orien-
+tation (left = right) and are thresholded using whole
+brain cluster correction, Z > 2.3, p < 0.05. Color maps
+reﬂect Z values between 0 and 4. See also Figure S3 and
+Table S3.
+
+confound and to rule out the possibility that the insula is simply
+tracking forgone ﬁnancial payoffs rather than guilt aversion, we
+ran an additional analysis (see Supplemental Information) that
+allowed us to examine the effect of matching expectations while
+controlling for the amount of money that subjects return (i.e.,
+their forgone ﬁnancial payoff). Consistent with our interpretation,
+matching expectations was associated with increased activity in
+the insula, ACC, SMA, bilateral DLPFC, and TPJ. Regions asso-
+ciated with reward maximization (i.e., returning less than expec-
+tations) no longer survived cluster correction after controlling for
+forgone ﬁnancial rewards, presumably as a consequence of high
+multicollinearity (see Figure S3 and Table S4).
+Individual Differences
+These data support the intriguing possibility suggested by our
+model that distinct networks may be processing competing
+motivations to either increase reward or decrease one’s antici-
+pated guilt. To examine this hypothesis further, we employed
+an individual differences approach in which we explored the
+relationship between differences in self-reported counterfactual
+guilt, assessed independently of the game, and our regions of
+interest across participants (see Figures 4C and S2; Experi-
+mental Procedures). Results from a robust regression (one-
+tailed)
+indicated that increased guilt sensitivity is positively
+related to increased activity in the insula and SMA (b = 106.92,
+se = 50.44, p = 0.05 and b = 99.64, se = 46.49, p = 0.02, respec-
+tively). That is, participants who reported that they would have
+felt more guilt had they returned less money showed increased
+insula and SMA activity when they matched expectations. In
+contrast, we observed a negative relationship between guilt
+sensitivity and the NAcc (b =  89.17, se = 44.28, p = 0.03),
+indicating that participants who reported that they would have
+experienced no change in guilt had they returned less money
+demonstrated increased activity in the NAcc when making
+a decision to maximize their ﬁnancial reward. This effect is
+anatomically speciﬁc to these regions, as there were no signiﬁ-
+cant relationships observed between guilt sensitivity and the
+right DLPFC, left DLPFC, VMPFC, or DMPFC.
+Interregional Correlations
+While we have primarily focused on disentangling the neural
+systems associated with the motivations underlying decision
+behavior, we also observed a network of regions that have previ-
+
+566 Neuron 70, 560–572, May 12, 2011 ª2011 Elsevier Inc.
+
+ously been associated with an executive control system (e.g.,
+DLPFC, parietal regions, and SMA) (Miller and Cohen, 2001)
+when participants matched expectations. Consistent with work
+that has suggested that the insula and SMA may comprise
+a distinct network which signals the need for executive control
+(Sridharan et al., 2008), we observed positive relationships
+between the insula and SMA across subjects (r(16) = 0.64,
+p < 0.01) and also between bilateral DLPFC and the SMA
+(r(16) = 0.74, p < 0.001), but no relationship between the insula
+and DLPFC (Pearson correlations, two-tailed). These relation-
+ships are concordant with previous conceptualizations of PFC
+functioning (Miller and Cohen, 2001) and suggest that the insula
+may recruit the dlPFC for increased self-control via the SMA.
+Finally, we also observed a signiﬁcant negative relationship
+between activity in the insula and the NAcc across subjects
+(r(16) =  0.56, p = 0.02), hinting at a possible reciprocal relation-
+ship between these two systems, a relationship also predicted
+by our model.
+
+DISCUSSION
+
+Utilizing a formal game theoretic model of utility maximization
+involving guilt aversion (Battigalli and Dufwenberg, 2007), we
+ﬁnd compelling evidence that moral sentiments aid in producing
+cooperative behavior in a consequential social exchange. Our
+model formalizes the psychological construct of guilt as a devia-
+tion from a perceived expectation of behavior and in turn posits
+that
+trust and cooperation may depend on avoidance of
+a predicted negative affective state. Congruent with our model’s
+predictions, we observed evidence suggesting that when partic-
+ipants chose whether or not to honor an investment partner’s
+trust distinct neural systems are involved in the assessment of
+anticipated guilt and in maximizing individual ﬁnancial gain,
+respectively. These results provide converging psychological,
+economic, and neural evidence that a guilt-aversion mechanism
+underlies decisions to cooperate and demonstrate the utility of
+an interdisciplinary approach in assessing the motivations
+behind high-level decision-making.
+
+Our experimental paradigm adds to the standard TG method-
+ology by also eliciting participants’ (second-order) beliefs, allow-
+ing us to test the predictions of the guilt-aversion model.
+
+Neuron
+
+Neural Basis of Guilt Aversion
+
+In addition, we did not employ deception, and all participant
+interactions were ﬁnancially consequential, which importantly
+allows us to examine real interactions and also account for natu-
+rally occurring individual differences in both trust and reciprocity.
+Consistent with previous work (Charness and Dufwenberg,
+2006; Dufwenberg and Gneezy, 2000), our results indicate that
+participants do indeed engage in mentalizing and are in fact
+able to accurately assess their partners’ expectations. Further,
+as proposed by the model, participants use these expectations
+in their decisions and frequently choose to return the amount
+of money that they believe their partner expected them to return.
+Based on the postexperimental ratings that assess counterfac-
+tual guilt, we can infer that the motivation to match expectations
+is guilt aversion. Indeed, participants report that they would have
+felt more guilt had they returned less money in the game.
+
+The guilt-aversion model explored here is distinct to other
+models of social preference as it posits that participants can
+mentalize about their partner’s expectations and that they then
+use this information to avoid disappointing the partner.
+In
+contrast, other models conjecture that people are (1) motivated
+by a ‘‘warm glow’’
+feeling and ﬁnd cooperation inherently
+rewarding (Andreoni, 1990; Fehr and Camerer, 2007), (2) moti-
+vated to minimize the discrepancy between self and others’
+payoffs (Bolton and Ockenfels, 2000; Fehr and Schmidt, 1999),
+or (3) motivated to reciprocate good intentions and punish bad
+intentions (Dufwenberg and Kirchsteiger, 2004; Rabin, 1993).
+The guilt-aversion model thus provides a different psychological
+account of cooperation than other models because it incorpo-
+rates both social reasoning and social emotional processing.
+The model also makes the interesting prediction that a social
+emotion is in effect an expectation error signal (Montague and
+Lohrenz, 2007), which functions to motivate people to behave
+consistent with shared social expectations. There is preliminary
+evidence indicating that these different motivations may be
+mediated by distinct neural systems. For example, altruism
+may be associated with areas associated with reward process-
+ing in the ventral striatum (Rilling et al., 2002). Inequity aversion
+may be associated with OFC (Tricomi et al., 2010), and inten-
+tion-based reciprocity may be associated with a theory of mind
+network including the TPJ and the MPFC (van den Bos et al.,
+2009).
+
+To understand the neural mechanisms underlying our model,
+we attempted to dissociate the competing motivations to either
+minimize guilt or maximize ﬁnancial gain by comparing trials
+in which participants chose to match their partners’ expectations
+to trials in which they returned less than they believed their
+partner expected. Participants exhibited increased activity in
+the insula, SMA, DACC, DLPFC, and parietal areas, including
+the TPJ, when they minimized their anticipated guilt by
+returning the amount of money that they believed their partner
+expected them to return. These results are consistent with
+another study which examined Trustee’s decisions to cooperate
+(van den Bos et al., 2009), indicating that the belief elicitation
+procedure did not appear to alter the neural processing of coop-
+erative decisions. The insula, SMA, and ACC have been impli-
+cated in a number of negative affective states such as guilt
+(Shin et al., 2000), anger (Damasio et al., 2000), and disgust
+(Calder et al., 2000) as well as physical pain, social distress
+
+(Eisenberger et al., 2003), and empathy for other’s pain (Singer
+et al., 2004; see Craig, 2009, for a review). These studies support
+our conjecture that the prospect of not fulﬁlling the expectations
+of another can result in a negative affective state, which in turn
+ultimately motivates cooperative behavior. Finally, it is inter-
+esting to note that the neural systems involved in making deci-
+sions that minimize anticipated guilt are remarkably similar to
+those previously demonstrated to be involved in the decision
+to reject unfair offers in the Ultimatum Game (Sanfey et al.,
+2003), suggesting that at least one function of this network
+may be to motivate adherence to shared social expectations
+(Montague and Lohrenz, 2007). Recent work on decisions to
+conform to a perceived social norm has uncovered the same
+network (Berns et al., 2010; Klucharev et al., 2009), which indi-
+cates that perhaps the function of this frequently observed
+network is to track deviations from expectations and bias actions
+to maintain adherence to the expectation such as a moral rule or
+social norm. Sanfey et al., (2003) ﬁnd that this network biases
+behavior to punish norm violators, while we observe here that
+this network biases behavior to be congruent with a socially
+shared expectation. This interpretation is consistent with
+a wealth of work on expectations in other domains of cognitive
+neuroscience such as novelty detection (Downar et al., 2000),
+placebo effects (Wager et al., 2004), and error monitoring
+(Miller and Cohen, 2001), suggesting that the network may be
+domain general (Dosenbach et al., 2006) and extend to social
+decision making.
+
+An alternative interpretation of our results is that Trustees feel
+empathy toward the Investor and anticipate their partner’s an-
+ticipated disappointment, which motivates them to cooperate.
+Empathy (like guilt) is another nebulous construct, though has
+yet to be formalized. Both empathy and guilt aversion require
+the ability to represent another’s mental state (i.e., theory of
+mind) and directly relate to other’s disappointment. However,
+one crucial distinction between the two constructs is that
+empathy posits that the Trustee feels the Investor’s anticipated
+emotion (e.g., disappointment), while guilt-aversion contends
+that the act of disappointing a partner produces an emotion in
+the Trustee (e.g., guilt), which is qualitatively different from
+what the Investor is experiencing. Though our current design
+cannot parse apart
+these two interpretations, nor can our
+imaging results, as both of these constructs likely involve the
+insula (Singer et al., 2004), future work might attempt to differen-
+tiate between these two closely related constructs from both
+theoretical and empirical perspectives.
+
+When participants returned less than their second-order belief
+and thereby increased their own ﬁnancial gain, we found activa-
+tion associated with greater activity in the VMPFC, bilateral
+NAcc, and DMFPC. These results became even more pro-
+nounced when we examined parametric deviations from expec-
+tation. Consistent with previous work that has examined
+decisions to abuse trust (van den Bos et al., 2009), we ﬁnd
+increased activity in the VMPFC when participants return less
+than they believe their partner expected and predict that damage
+to this region would likely impair the ability to form accurate
+expectations, producing the guilt insensitive pattern of behavior
+observed in patient work (Krajbich et al., 2009). More broadly,
+however, these regions (i.e., NAcc and VMPFC) have received
+
+Neuron 70, 560–572, May 12, 2011 ª2011 Elsevier Inc. 567
+
+Neuron
+
+Neural Basis of Guilt Aversion
+
+the DLPFC, insula, or ACC/SMA would result in participants
+choosing to return less money in the TG, as has indeed recently
+been demonstrated (Knoch et al., 2009). However, we make the
+divergent predictions that while disrupting all regions would
+reduce cooperative behavior, disrupting the DLPFC would still
+result in an affective response, while disrupting the insula or
+ACC/SMA would in contrast blunt the experience of guilt. Our
+results also predict that inaccurate expectations should also
+inﬂuence cooperative behavior. Overestimating partners’ expec-
+tations would result in excessive guilt and enhanced associated
+insula/ACC/SMA activation, while underestimating partners’
+expectations would temper participant’s guilt and insula/ACC/
+SMA activation and ultimately reduce their levels of cooperation,
+which is consistent with ﬁndings with patients with VMPFC
+damage (Krajbich et al., 2009).
+
+This study demonstrates the synergistic effects of applying
+a neuroeconomic approach to the study of higher-level socio-
+cognitive-affective processes.
+Imprecise psychological con-
+structs such as guilt can be formally operationalized using
+sophisticated economic models.
+the integration of
+psychological constructs into economic models can substan-
+tially improve their ability to predict actual decision-making
+behavior, in comparison to classical approaches. Finally, and
+most importantly, this interdisciplinary approach allows these
+mathematically quantiﬁed psychological constructs to be exam-
+ined at the neural level in order to both better specify the theoret-
+ical models, as well as further understand the interactions
+between neural systems.
+
+In turn,
+
+To return to our original example, our results suggest that one
+reason why we choose to stand guard over a stranger’s posses-
+sions for no obvious reward is because signals originating in the
+insula and SMA remind us that allowing something bad to
+happen to the laptop, and thus deviating from the owner’s
+expectations, would lead to strong feelings of guilt in the event
+of an untimely theft. Ultimately, gaining a greater mechanistic
+understanding of the microprocesses that can occur at a neural
+level can help facilitate greater understanding of emergent prop-
+erties of macro-level interactive behavior that play a vital role in
+creating and maintaining a harmonious society.
+
+EXPERIMENTAL PROCEDURES
+
+Participants
+Thirty participants (mean age = 18.5, female = 30%) were recruited from the
+University of Arizona campus, all of whom were screened for any signiﬁcant
+health or neurological problems. The experiment was approved by the local
+Institutional Review Board and consisted of two separate sessions. From
+this sample, all participants that were eligible to enter the MRI environment
+(n = 17) were recruited from Session 1 to participate in Session 2 (mean
+age = 18.5, female = 53%). One participant from session 1 was excluded as
+a result of erratic responses, and some of one participant’s fMRI data from
+the second session was lost due to technical reasons. Participants were
+assumed to be strangers.
+
+Experimental Design
+At session 1, all participants met as a group, were assigned an identiﬁcation
+number, and had their individual pictures taken. After the instructions to the
+game were explained, all pictures were presented one at a time to the entire
+group. While the pictures were being presented, each participant played in
+the role of the Investor with the pictured participant and was endowed with
+
+attention for their role in computing value (Rangel et al., 2008)
+and the anticipation and processing of both primary and
+secondary reward (Dreher and Tremblay, 2009). In addition, we
+observed activity in the DMPFC, which has been implicated in
+mentalizing (Amodio and Frith, 2006) or simulating another’s
+mental state. This signal may indicate that participants are
+engaging in reasoning about their partner’s potential reaction
+to their decision. Together, these results suggest that maxi-
+mizing one’s utility involves a process of weighing the costs
+and beneﬁts of letting a relationship partner down.
+
+interest
+
+It is possible that the network associated with matching
+expectations is tracking forgone ﬁnancial payoffs rather than
+guilt aversion per se. However, this interpretation is unlikely
+because we continue to observe activity in the insula when
+participants match expectations after controlling for the amount
+of money that participants chose to return. To provide further
+support for our interpretation that the competing motivations to
+maximize ﬁnancial gain and minimize anticipated guilt are
+associated with distinct regions, we examined the relationship
+between the regions of
+(as deﬁned by the group
+analyses) and independently assessed individual differences in
+guilt sensitivity. Consistent with our interpretation, we ﬁnd that
+participants who report
+they would have experienced
+more guilt had they returned less money demonstrated
+increased insula and SMA activation when they matched expec-
+tations. Conversely, participants who claimed that they would
+not have experienced any additional guilt had they returned
+less money showed increased activity in the NAcc when they
+in fact returned less than they believed their partner expected
+them to return. This implies that there is individual variability in
+the way in which anticipated guilt inﬂuences decisions. People
+who are more guilt sensitive have increased activity in the
+network associated with moral sentiments, while people with
+less guilt sensitivity have greater activity in those areas associ-
+ated with reward and value.
+
+that
+
+Together, our results suggest that participants who are guilt
+sensitive may experience moral sentiments via the insula and
+SMA, which signals that they will feel guilty if they believe they
+let their investment partner down. This notion that feelings can
+be used as information in the decision-making process has
+been discussed in other domains of decision making such as
+risk (Damasio, 1994; Loewenstein et al., 2001; Mellers et al.,
+1997; Slovic et al., 2002) and regret (Coricelli et al., 2005).
+According to this framework, people generate anticipated
+emotions about how they might feel after choosing a particular
+outcome, which ultimately predicts their decision (Mellers
+et al., 1997). Interestingly, anticipatory feelings associated with
+risk have been reliably associated with the anterior insula (Critch-
+ley et al., 2001) and ACC (Coricelli et al., 2005), which provides
+further support for our argument that guilt aversion is generated
+by a sampling of the sentiment in question and is processed by
+the cingulo-insular network. Importantly, this extends the notion
+of anticipatory emotions from individual decision making to
+social contexts. These feelings originating in the insula may
+recruit the DLPFC to override the competing motivation to maxi-
+mize ﬁnancial gain and overall result in participants honoring
+their partner’s trust and returning their initial investment. If this
+neural account is accurate, then we would predict that disrupting
+
+568 Neuron 70, 560–572, May 12, 2011 ª2011 Elsevier Inc.
+
+Neuron
+
+Neural Basis of Guilt Aversion
+
+$10 for the round. After making an investment on the round, they were then
+asked how much of this amount (multiplied by 4) they believed their partner
+would return to them. At the end of the session, participants were paid $5
+for their participation.
+
+A subset of participants (n = 17) were recruited from Session 1 to participate
+in the second session, in which they played the TG in the role of the Trustee
+while being scanned using functional magnetic resonance imaging (fMRI).
+Each participant had an individually tailored paradigm, in which they decided
+how much money they wanted to return to the other participants in the exper-
+iment, based on these partners’ actual proposals to them from Session 1. Each
+participant played a total of 28 rounds, distributed over four runs. Each run
+lasted exactly 7 min including an extra 14 s ﬁxation cross display at the begin-
+ning of the run to allow for T1 equilibrium, and another 21 s ﬁxation cross at the
+end of the run (210 volumes per run). The timeline of events in a typical round
+can be seen in Figure 1B. The stimuli were presented using E-Prime software
+via VisuaStim goggles (Resonance Technologies Inc, IL, USA), and partici-
+pants indicated their answers by using a two-button ﬁber optic response
+box. Responses changed in 10% increments on each button press. These
+increments were randomly selected to either increase from $0 or decrease
+from the maximum amount of money for that round (which varied depending
+on how much had been sent by the partner), ensuring that the number of
+button presses was orthogonal to the amount of money selected, removing
+effects of any motor confounds. After participants selected their chosen
+amount of money, they used the second button to conﬁrm this response.
+
+After participants completed scanning, they rated their counterfactual guilt
+by indicating on a 7-point Likert scale the amount of guilt they believed they
+would have experienced had they returned a different amount of money,
+and were then paid a $20 participation fee. Finally, at the conclusion of the
+entire experiment, all participants were paid 50% of their earnings for one
+randomly selected trial. If participants participated in both sessions, they
+were paid for two separate trials. Participants in the ﬁrst session that correctly
+predicted their partner’s behavior for the trial selected received an additional
+$2 bonus (Charness and Dufwenberg, 2006; Dufwenberg and Gneezy,
+2000). Only identiﬁcation numbers were provided at the time of payment,
+thus ensuring that Trustees’ responses were completely anonymous. No
+deception was employed in this study.
+
+Data Acquisition
+Each scanning session included a T1-weighted MPRAGE structural scan
+(TR = 11 ms, TE = 4 ms, matrix = 256 3 256, slice thickness = 1 mm, gap =
+0 mm) and four functional runs. Functional scans were acquired in the axial
+plane using a 3-shot multiple echo planar imaging (MEPI) GRAPPA sequence
+which aided in reducing geometric distortions (Newbould et al., 2007). Param-
+in regions associated with high
+eters were optimized to maximize signal
+susceptibility artifact (e.g., orbitofrontal cortex and medial temporal
+lobe)
+(Sto¨ cker et al., 2006; Weiskopf et al., 2006) (TR = 2000 ms, TE = 256 ms,
+matrix = 96 3 96, FOV = 192 mm, slice thickness = 3.0 mm, 42 axial slices).
+
+Data Preprocessing
+Functional
+imaging data were preprocessed and analyzed using the FSL
+Software package 4.1.4 (FMRIB, Oxford, UK). The ﬁrst three volumes of
+each functional run were discarded to account for T1 equilibrium effects.
+Images were corrected for slice scan time using an ascending interleaved
+procedure. Head motion was corrected using MCFLIRT using a six parameter
+rigid-body transformation. Images were spatially smoothed using a 5 mm
+full-width at half maximum Gaussian kernel. A high-pass ﬁlter was used to
+cut off temporal periods longer than 66 s. All images were initially coregistered
+to the participant’s high-resolution structural scan and were then coregistered
+to the MNI 152 person 2 mm template using a 12 parameter afﬁne transforma-
+tion. All functional analyses are overlaid on the participants’ average high-
+resolution structural scan in MNI space.
+
+General Analysis Methods
+A three-level mixed-effects general linear model (GLM) was used to analyze
+the imaging data. A ﬁrst-level GLM was deﬁned for each participant’s func-
+tional run that included a boxcar regressor for each epoch of interest (e.g.,
+decision phase) convolved with a canonical double-gamma hemodynamic
+
+response function (HRF). The duration of epochs in which participants
+submitted a response were modeled using the participant’s reaction time
+(Grinband et al., 2008). To account for residual variance, we also included
+the temporal derivatives of each regressor of interest, the six estimated
+head movement parameters, and any missed trials as covariates of no interest.
+The resulting general linear model was corrected for temporal autocorrelations
+using a ﬁrst-order autoregressive model. A second-level ﬁxed effects model
+was ﬁt for each subject to account for intrarun variability. For each participant,
+contrasts were calculated between parameter estimates for different regres-
+sors of interest at every voxel in the brain. A third-level mixed-effects model
+using FEAT with full Bayesian inference (Woolrich et al., 2004) was used to
+summarize group effects for every speciﬁed contrast. Statistical maps were
+corrected for multiple comparisons using whole-brain cluster correction based
+on Gaussian random ﬁeld theory with an initial cluster threshold of Z > 2.3 and
+a Family Wise Error corrected threshold of p < 0.05 (Worsley et al., 1992).
+Peristimulus plots used functionally deﬁned ROIs and were calculated by
+ﬁtting a FIR model using fslroi 2.0 (Poldrack, 2007) and averaging within and
+then across participants.
+
+Behavioral Analyses
+All behavioral statistics were computed using the R statistical package
+(R Development Core Team, 2008). For regressions that included repeated
+observations, we used the lme4 mixed effects GLM package (Bates et al.,
+2008). Participants were treated as a random effect with varying intercepts
+and slopes. We report the regression coefﬁcients (b), standard errors (SE), t
+values, and p values. Because there is no generally agreed upon method for
+calculating p values in mixed models, we used two separate methods. First,
+we calculated the degrees of freedom by subtracting the number of ﬁxed
+effects from the total number of observations (Kliegl et al., 2007). Second,
+we generated conﬁdence intervals from the posterior distribution of the
+parameter estimates using Markov Chain Monte Carlo methods (Baayen
+et al., 2008). These methods produced identical results. For robust regres-
+sions, we used the rlm function from the MASS package using MM estimation
+(Venables and Ripley, 2002).
+
+Guilt Sensitivity Estimation
+Our linear model of guilt aversion (Equation 1) makes sharp predictions about
+the amount of money that participants should return (see Figure S1 for
+a simulation). Our model allows for the guilt sensitivity parameter (q12) to
+vary for every Investor/Trustee interaction. There are two possible maxima
+of the utility function depending on q12. If participants are completely guilt
+averse (q12 > 1) then the model predicts they should always match their
+second-order belief. If they are completely guilt in-averse (q12 < 1) then they
+should always keep all of the money. Because all participants demonstrated
+some degree of guilt sensitivity, meaning that no subject always kept all of
+the money, all participants were classiﬁed as guilt averse and thus we
+observed no variability in Q12.
+
+Counterfactual Guilt
+To conﬁrm that participants were actually motivated by anticipated guilt, we
+elicited their counterfactual guilt for each trial following the scanning session.
+After displaying a recap of each trial, we asked participants how much
+guilt they would have felt had they returned a different amount of money.
+This amount was randomly selected from all choices below and one choice
+above the amount they actually returned (choices increased or decreased in
+10% increments). The deviation from the participant’s actual choice was
+used to predict the amount of guilt that participants reported that would
+have felt had they returned that amount using a mixed effects regression.
+Thus, each participant’s best linear unbiased predictions (BLUPs) (Pinheiro
+and Bates, 2000) represent their sensitivity to guilt. Larger slopes indicate
+that participants reported they would have felt more guilt had they returned
+less money, revealing a higher degree of guilt sensitivity, while smaller slopes
+reveal a low degree of guilt sensitivity with participants,
+indicating little
+change in the amount of guilt they would have experienced had they returned
+less money. The regression can be seen in Figure 2C along with each partici-
+pant’s BLUP.
+
+Neuron 70, 560–572, May 12, 2011 ª2011 Elsevier Inc. 569
+
+Neuron
+
+Neural Basis of Guilt Aversion
+
+used robust regression to estimate the effects using MM estimation (Venables
+and Ripley, 2002).
+
+SUPPLEMENTAL INFORMATION
+
+Supplemental Information includes three ﬁgures, four tables, and Supple-
+mental Experimental Procedures and can be found with this article online at
+doi:10.1016/j.neuron.2011.02.056.
+
+ACKNOWLEDGMENTS
+
+We thank Matt Kleinman for his help in collecting the data and Drs. Anouk
+Scheres, James Rilling, and Lynn Nadel for their helpful comments. We
+Institute of Aging
+would like to acknowledge funding from the National
+(R21AG030768)
+Institute of Mental Health
+(R03MH077058) to A.G.S. and (F31MH085465) to L.J.C., and the National
+Science Foundation to M.D.
+
+the National
+
+to A.G.S.,
+
+Accepted: February 25, 2011
+Published: May 11, 2011
+
+REFERENCES
+
+Amodio, D.M., and Frith, C.D. (2006). Meeting of minds: the medial frontal
+cortex and social cognition. Nat. Rev. Neurosci. 7, 268–277.
+
+Andreoni, J. (1990). Impre altruism and donations to public goods: A theory of
+warm-glow giving. Econ. J. 100, 464–477.
+
+Baayen, R.H., Davidson, D.J., and Bates, D.M. (2008). Mixed-effects modeling
+with crossed random effects for subjects and items. J. Mem. Lang. 59,
+340–412.
+
+Bates, D., Maechler, M., and Bolker, B. (2011). lme4: Linear mixed-effects
+models using S4 classes. R package version 0.999375-39. http://CRAN.
+R-project.org/package=lme4.
+Battigalli, P., and Dufwenberg, M. (2007). Guilt in games. Am. Econ. Rev. 97,
+170–176.
+
+Battigalli, P., and Dufwenberg, M. (2009). Dynamic psychological games.
+J. Econ. Theory 144, 1–35.
+
+Baumeister, R.F., Stillwell, A.M., and Heatherton, T.F. (1994). Guilt: An inter-
+personal approach. Psychol. Bull. 115, 243–267.
+
+Baumgartner, T., Fischbacher, U., Feierabend, A., Lutz, K., and Fehr, E. (2009).
+The neural circuitry of a broken promise. Neuron 64, 756–770.
+
+Berg, J., Dickhaut, J., and McCabe, K. (1995). Trust, reciprocity, and social
+history. Games Econ. Behav. 10, 122–142.
+
+Berns, G.S., Capra, C.M., Moore, S., and Noussair, C. (2010). Neural mecha-
+nisms of
+ratings of music.
+Neuroimage 49, 2687–2696.
+
+the inﬂuence of popularity on adolescent
+
+Bolton, G.E., and Ockenfels, A. (2000). ERC: A theory of equity, reciprocity,
+and competition. Am. Econ. Rev. 90, 166–193.
+
+Calder, A.J., Keane, J., Manes, F., Antoun, N., and Young, A.W. (2000).
+Impaired recognition and experience of disgust following brain injury. Nat.
+Neurosci. 3, 1077–1078.
+
+Camerer, C.F. (2003). Behavioral Game Theory (New York: Russell Sage
+Foundation).
+
+Charness, G., and Dufwenberg, M.
+Econometrica 74, 1579–1601.
+
+(2006). Promises and partnership.
+
+Coricelli, G., Critchley, H.D., Jofﬁly, M., O’Doherty, J.P., Sirigu, A., and Dolan,
+R.J.
+(2005). Regret and its avoidance: A neuroimaging study of choice
+behavior. Nat. Neurosci. 8, 1255–1262.
+
+Craig, A.D. (2009). How do you feel—now? The anterior insula and human
+awareness. Nat. Rev. Neurosci. 10, 59–70.
+
+Critchley, H.D., Mathias, C.J., and Dolan, R.J. (2001). Neural activity in the
+human brain relating to uncertainty and arousal during anticipation. Neuron
+29, 537–545.
+
+Analysis 1, Main Contrast
+To identify regions of the brain that are associated with anticipated guilt as pre-
+dicted by our model, we examined trials during the return phase in which
+participants matched expectations by returning the amount of money that
+they believed their partner expected (n = 207), as compared to trials in which
+they returned less than they believed their partner expected (n = 183). This
+allowed us to identify neural systems associated with guilt aversion and also
+to see systems involved in maximizing ﬁnancial payoffs. For this analysis, we
+excluded trials by modeling them as covariates of no interest where (1) the
+partner sent $0, and thus there was no decision for the participant to make
+(n = 33), (2) the participant returned more than their second order belief
+(n = 66), and (3) the participants either did not indicate their belief or the amount
+they wanted to return (n = 20). This model thus included the following
+30 regressors:
+
+(1) Face phase
+(2) Prediction phase
+(3) Investment phase
+(4) Belief elicitation phase
+(5) Decision phase when participants matched their partner’s expecta-
+
+tions (n = 207)
+
+(6) Decision phase when participants returned 10% less than their
+
+partners’ expectations (n = 99)
+
+(7) Decision phase when participants returned 20% less than their
+
+partners’ expectations (n = 46)
+
+(8) Decision phase when participants returned 30%+ less than their
+
+partners’ expectations (n = 38)
+
+(9) Decision phase when participants returned more than their expecta-
+
+tions (n = 66)
+
+(10) Summary phase
+(11) Handed-down-belief phase
+(12) Missed trials
+(13–24) Temporal derivatives of regressors 1–12
+(25–30) Estimated head movement parameters (6)
+
+We compared trials in which the participant matched their expectations
+to trials in which they returned less than their expectations (+0.99  0.33
+ 0.33  0.33 for regressors 5–8). The results of this analysis can be seen in Fig-
+ure 4 and Table S2.
+
+Analysis 2, Parametric Contrast
+An additional question of interest is whether the activations found above
+change parametrically as a function of deviation from matching expectations.
+To address this, we tested a parametric contrast in which we compared trials
+in which participants matched expectations to a linear deviation in 10% incre-
+ments Winsorized at 30%. Responses greater than or equal to 30% were
+grouped together, as these were relatively rare and this procedure ensured
+that the number of cases were balanced across regressors. This contrast
+speciﬁcally compared matching expectations to returning 10% less, 20%
+less, and 30+% less (+6  1  2  3 for regressors 5–8) using the model from
+Analysis 1 .
+
+Analysis 3, Counterfactual Guilt Correlations
+To address the hypothesis that regions associated with guilt aversion should
+become more active as a function of guilt sensitivity, we extracted the average
+third-level parameter estimates from each of the regions of interest and exam-
+ined their relationship with our measure of counterfactual guilt. We extracted
+the average values in the clusters located in the right and left DLPFC, insula,
+SMA, MOFC, and DMPFC by restricting to voxels that were located both in
+these clusters and in the respective anatomical masks taken from the
+Harvard-Oxford probabilistic atlas. Because of the small size of the nucleus
+accumbens, all voxels located in a bilateral anatomical mask were used
+regardless of statistical signiﬁcance. We used the individual slopes (BLUPs)
+from the random effects component of the counterfactual guilt analysis
+as our metric of guilt sensitivity. Due to the noise of the two metrics
+(average beta values from a third-level
+imaging analysis and individual
+BLUPs from a mixed effects analysis) and non-Gaussian distribution, we
+
+570 Neuron 70, 560–572, May 12, 2011 ª2011 Elsevier Inc.
+
+Neuron
+
+Neural Basis of Guilt Aversion
+
+Damasio, A.R. (1994). Descartes’ Error: Emotion, Reason, and the Human
+Brain (New York: Penguin Putnam).
+
+Damasio, A.R., Grabowski, T.J., Bechara, A., Damasio, H., Ponto, L.L., Parvizi,
+J., and Hichwa, R.D. (2000). Subcortical and cortical brain activity during the
+feeling of self-generated emotions. Nat. Neurosci. 3, 1049–1056.
+
+Krueger, F., McCabe, K., Moll, J., Kriegeskorte, N., Zahn, R., Strenziok, M.,
+Heinecke, A., and Grafman, J. (2007). Neural correlates of trust. Proc. Natl.
+Acad. Sci. USA 104, 20084–20089.
+
+Loewenstein, G.F., Weber, E.U., Hsee, C.K., and Welch, N. (2001). Risk as
+feelings. Psychol. Bull. 127, 267–286.
+
+Delgado, M.R., Frank, R.H., and Phelps, E.A. (2005). Perceptions of moral
+character modulate the neural systems of reward during the trust game. Nat.
+Neurosci. 8, 1611–1618.
+
+McCabe, K.A., Smith, V.L., and LePore, M. (2000). Intentionality detection and
+‘‘mindreading’’: Why does game form matter? Proc. Natl. Acad. Sci. USA 97,
+4404–4409.
+
+Dosenbach, N.U., Visscher, K.M., Palmer, E.D., Miezin, F.M., Wenger, K.K.,
+Kang, H.C., Burgund, E.D., Grimes, A.L., Schlaggar, B.L., and Petersen, S.E.
+(2006). A core system for the implementation of task sets. Neuron 50, 799–812.
+
+Downar, J., Crawley, A.P., Mikulis, D.J., and Davis, K.D. (2000). A multimodal
+cortical network for the detection of changes in the sensory environment. Nat.
+Neurosci. 3, 277–283.
+
+Dreher, J.C., and Tremblay, L.K., eds. (2009). Handbook of Reward and
+Decision-Making (Burlington, MA: Academic Press).
+
+Dufwenberg, M., and Gneezy, U. (2000). Measuring beliefs in an experimental
+lost wallet game. Games Econ. Behav. 30, 163–182.
+
+Dufwenberg, M., and Kirchsteiger, G. (2004). A theory of sequential reciprocity.
+Games Econ. Behav. 47, 268–298.
+
+Eisenberger, N.I., Lieberman, M.D., and Williams, K.D. (2003). Does rejection
+hurt? An FMRI study of social exclusion. Science 302, 290–292.
+
+McCabe, K., Rigdon, M.L., and Smith, V.L. (2003). Positive reciprocity and
+intentions in trust games. J. Econ. Behav. Organ. 52, 267–275.
+
+Mellers, B., Schwartz, A., and Ritov, I. (1997). Elation and disappointment:
+Emotional responses to risky options. Psychol. Sci. 8, 423–429.
+
+Miller, E.K., and Cohen, J.D. (2001). An integrative theory of prefrontal cortex
+function. Annu. Rev. Neurosci. 24, 167–202.
+
+Montague, P.R., and Lohrenz, T. (2007). To detect and correct: Norm violations
+and their enforcement. Neuron 56, 14–18.
+
+Newbould, R.D., Skare, S.T., Jochimsen, T.H., Alley, M.T., Moseley, M.E.,
+Albers, G.W., and Bammer, R. (2007). Perfusion mapping with multiecho multi-
+shot parallel imaging EPI. Magn. Reson. Med. 58, 70–81.
+
+O’Doherty, J., Dayan, P., Schultz, J., Deichmann, R., Friston, K., and Dolan,
+R.J. (2004). Dissociable roles of ventral and dorsal striatum in instrumental
+conditioning. Science 304, 452–454.
+
+Ellingsen, T., Johannesson, M., Tjotta, S., and Torsvik, G. (2010). Testing guilt
+aversion. Games Econ. Behav. 68, 95–107.
+
+Pinheiro, J., and Bates, D. (2000). Mixed-Effects Models in S and S-Plus (New
+York, NY: Springer-Verlag).
+
+Falk, A., and Fischbacher, U. (2006). A theory of reciprocity. Games Econ.
+Behav. 54, 293–315.
+
+Poldrack, R.A. (2007). Region of interest analysis for fMRI. Soc. Cogn. Affect.
+Neurosci. 2, 67–70.
+
+Fehr, E., and Camerer, C.F.
+circuitry of social preferences. Trends Cogn. Sci. (Regul. Ed.) 11, 419–427.
+
+(2007). Social neuroeconomics: The neural
+
+Fehr, E., and Schmidt, K.M. (1999). A theory of fairness, competition, and
+cooperation. Q. J. Econ. 114, 817–868.
+
+Geanakoplos, J., Pearce, D., and Stacchetti, E. (1989). Psychological games
+and sequential rationality. Games Econ. Behav. 1, 60–79.
+
+Grinband, J., Wager, T.D., Lindquist, M., Ferrera, V.P., and Hirsch, J. (2008).
+Detection of time-varying signals in event-related fMRI designs. Neuroimage
+43, 509–520.
+
+Haidt, J. (2003). The moral emotions. In Handbook of Affective Sciences, R.J.
+Davidson, K.R. Scherer, and H.H. Goldsmith, eds. (Oxford: Oxford University
+Press), pp. 852–870.
+
+Hampton, A.N., and O’Doherty, J.P. (2007). Decoding the neural substrates of
+reward-related decision making with functional MRI. Proc. Natl. Acad. Sci.
+USA 104, 1377–1382.
+
+Ketelaar, T., and Au, W.T. (2003). The effects of feelings of guilt on the
+behaviour of uncooperative individuals in repeated social bargaining games:
+An affect-as-information interpretation of the role of emotion in social interac-
+tion. Cogn. Emotion 17, 429–453.
+
+King-Casas, B., Tomlin, D., Anen, C., Camerer, C.F., Quartz, S.R., and
+Montague, P.R. (2005). Getting to know you: Reputation and trust in a two-
+person economic exchange. Science 308, 78–83.
+
+Kliegl, R., Risse, S., and Laubrock, J. (2007). Preview beneﬁt and parafoveal-
+on-foveal effects from word n + 2. J. Exp. Psychol. Hum. Percept. Perform. 33,
+1250–1255.
+
+Klucharev, V., Hyto¨ nen, K., Rijpkema, M., Smidts, A., and Ferna´ ndez, G.
+(2009). Reinforcement learning signal predicts social conformity. Neuron 61,
+140–151.
+
+Knoch, D., Schneider, F., Schunk, D., Hohmann, M., and Fehr, E. (2009).
+Disrupting the prefrontal cortex diminishes the human ability to build a good
+reputation. Proc. Natl. Acad. Sci. USA 106, 20895–20899.
+
+Preuschoff, K., Bossaerts, P., and Quartz, S.R. (2006). Neural differentiation of
+expected reward and risk in human subcortical structures. Neuron 51,
+381–390.
+
+Rabin, M. (1993). Incorporating fairness into game theory and economics. Am.
+Econ. Rev. 83, 1281–1302.
+
+Rangel, A., Camerer, C., and Montague, P.R. (2008). A framework for studying
+the neurobiology of value-based decision making. Nat. Rev. Neurosci. 9,
+545–556.
+
+R Development Core Team (2008). R: A language and environment for statis-
+tical computing. (Vienna, Austria).
+
+Reuben, E., Sapienza, P., and Zingales, L. (2009). Is mistrust self-fulﬁlling?
+Econ. Lett. 104, 89–91.
+
+Rilling, J., Gutman, D., Zeh, T., Pagnoni, G., Berns, G., and Kilts, C. (2002). A
+neural basis for social cooperation. Neuron 35, 395–405.
+
+Sampson, R.J., Raudenbush, S.W., and Earls, F. (1997). Neighborhoods and
+violent crime: a multilevel study of collective efﬁcacy. Science 277, 918–924.
+
+Sanfey, A.G., Rilling, J.K., Aronson, J.A., Nystrom, L.E., and Cohen, J.D.
+(2003). The neural basis of economic decision-making in the Ultimatum
+Game. Science 300, 1755–1758.
+
+Shin, L.M., Dougherty, D.D., Orr, S.P., Pitman, R.K., Lasko, M., Macklin, M.L.,
+Alpert, N.M., Fischman, A.J., and Rauch, S.L. (2000). Activation of anterior par-
+alimbic structures during guilt-related script-driven imagery. Biol. Psychiatry
+48, 43–50.
+
+Singer, T., Seymour, B., O’Doherty, J., Kaube, H., Dolan, R.J., and Frith, C.D.
+(2004). Empathy for pain involves the affective but not sensory components of
+pain. Science 303, 1157–1162.
+
+Slovic, P., Finucane, M.L., Peters, E., and MacGregor, D.G. (2002). The affect
+heuristic. In Heuristics and Biases, T. Gilovich, D. Grifﬁn, and D. Kahneman,
+eds. (New York: Cambridge University Press), pp. 397–420.
+
+Smith, A. (1984). The Theory of Moral Sentiments (Indianapolis: Liberty Fund).
+Originally published 1759.
+
+Krajbich, I., Adolphs, R., Tranel, D., Denburg, N.L., and Camerer, C.F. (2009).
+Economic games quantify diminished sense of guilt in patients with damage to
+the prefrontal cortex. J. Neurosci. 29, 2188–2192.
+
+Sridharan, D., Levitin, D.J., and Menon, V. (2008). A critical role for the right
+fronto-insular cortex in switching between central-executive and default-
+mode networks. Proc. Natl. Acad. Sci. USA 105, 12569–12574.
+
+Neuron 70, 560–572, May 12, 2011 ª2011 Elsevier Inc. 571
+
+Neuron
+
+Neural Basis of Guilt Aversion
+
+Sto¨ cker, T., Kellermann, T., Schneider, F., Habel, U., Amunts, K., Pieperhoff,
+P., Zilles, K., and Shah, N.J. (2006). Dependence of amygdala activation on
+echo time: Results from olfactory fMRI experiments. Neuroimage 30, 151–159.
+
+Takahashi, H., Yahata, N., Koeda, M., Matsuda, T., Asai, K., and Okubo, Y.
+(2004). Brain activation associated with evaluative processes of guilt and
+embarrassment: An fMRI study. Neuroimage 23, 967–974.
+
+Tricomi, E., Rangel, A., Camerer, C.F., and O’Doherty, J.P. (2010). Neural
+evidence for inequality-averse social preferences. Nature 463, 1089–1091.
+
+van den Bos, W., van Dijk, E., Westenberg, M., Rombouts, S.A.R.B., and
+Crone, E.A. (2009). What motivates repayment? Neural correlates of reci-
+procity in the Trust Game. Soc. Cogn. Affect. Neurosci. 4, 294–304.
+
+Venables, W.N., and Ripley, B.D. (2002). Modern Applied Statistics with S,
+Fourth Edition (New York: Springer).
+
+Wager, T.D., Rilling, J.K., Smith, E.E., Sokolik, A., Casey, K.L., Davidson, R.J.,
+Kosslyn, S.M., Rose, R.M., and Cohen, J.D.
+(2004). Placebo-induced
+changes in FMRI in the anticipation and experience of pain. Science 303,
+1162–1167.
+
+Weiskopf, N., Hutton, C., Josephs, O., and Deichmann, R. (2006). Optimal EPI
+parameters for reduction of susceptibility-induced BOLD sensitivity losses: A
+whole-brain analysis at 3 T and 1.5 T. Neuroimage 33, 493–504.
+
+Woolrich, M.W., Behrens, T.E., Beckmann, C.F., Jenkinson, M., and Smith,
+S.M.
+linear modelling for FMRI group analysis using
+Bayesian inference. Neuroimage 21, 1732–1747.
+
+(2004). Multilevel
+
+Worsley, K.J., Evans, A.C., Marrett, S., and Neelin, P. (1992). A three-dimen-
+sional statistical analysis for CBF activation studies in human brain.
+J. Cereb. Blood Flow Metab. 12, 900–918.
+Zak, P.J., and Knack, S. (2001). Trust and Growth. Econ. J. 111, 295–321.
+
+572 Neuron 70, 560–572, May 12, 2011 ª2011 Elsevier Inc.
+
+

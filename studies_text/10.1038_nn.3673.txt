@@ -1,0 +1,1498 @@
+a r t I C l e S
+
+Changing value through cued approach: an automatic 
+mechanism of behavior change
+Tom Schonberg1,4, Akram Bakkour1,4, Ashleigh M Hover1, Jeanette A Mumford1,2, Lakshya Nagar1,  
+Jacob Perez1 & Russell A Poldrack1–3
+
+It is believed that choice behavior reveals the underlying value of goods. The subjective values of stimuli can be changed  
+through reward-based learning mechanisms as well as by modifying the description of the decision problem, but it has yet to be 
+shown that preferences can be manipulated by perturbing intrinsic values of individual items. Here we show that the value of  
+food items can be modulated by the concurrent presentation of an irrelevant auditory cue to which subjects must make a  
+simple motor response (i.e., cue-approach training). Follow-up tests showed that the effects of this pairing on choice lasted at 
+least 2 months after prolonged training. Eye-tracking during choice confirmed that cue-approach training increased attention  
+to the cued items. Neuroimaging revealed the neural signature of a value change in the form of amplified preference-related 
+activity in ventromedial prefrontal cortex.
+
+A basic tenet of economic theory is that choices are a reflection of the 
+values that the decision maker places on the available options1, but it 
+is well known that these values can change with experience, time and 
+context. Research in psychology over the past century has focused on 
+reinforcement as the main mechanism to influence value2,3, whereas 
+research in behavioral economics has focused on factors such as the 
+description of the decision problem (e.g., framing4–6). These studies 
+have shown that choices are influenced by how options are described, 
+how preferences are elicited and by the context of other available 
+options5,7,8, but they have not attempted to directly perturb the under-
+lying basic values of individual items. Other work has shown that 
+choice itself influences preference9–11, and that preferences can also be 
+modulated by mere exposure to items12,13 and by embodied approach/
+avoidance responses14–16. Here we demonstrate a new mechanism by 
+which value can be modulated in a lasting manner simply through 
+cued approach to a stimulus using a combination of behavioral, eye-
+tracking and functional-neuroimaging methods.
+
+Our approach was influenced by previous research demonstrating 
+that, by modulating the time spent viewing items17, manipulations  
+of attention can influence choice18,19. It has likewise been shown  
+that  focusing  attention  at  behaviorally  relevant  points  in  time, 
+regardless  of  the  attended  item,  can  ‘boost’  memory  for  visual 
+scenes20,21. We examined whether association of a food item with an 
+irrelevant cue and motor response can modulate subsequent choices 
+to consume the item.
+
+In each of the studies reported below, we asked participants to fast 
+for 4 h before visiting the laboratory. Upon arrival, they participated 
+in an auction (the Becker-DeGroot-Marschak (BDM) procedure)22,23 
+(Fig. 1a) that measured willingness to pay (WTP) for each of 60 snack 
+
+food items; we informed participants that the auction would be played 
+for real consumption at the end of the experiment. We sorted items 
+based on WTP and split the items into sets of higher-valued and 
+lower-valued items to allow assessment of differential effects based 
+on individual item preferences. Participants underwent cue-approach 
+training in which they observed images of individual food items pre-
+sented for 1 s (Fig. 1b) and were instructed to press a button as fast 
+as possible (before the image disappeared) only when they heard a 
+tone (i.e., Go trials). We adjusted the tone-presentation delay using a 
+staircase procedure to ensure that the task remained difficult. Sixteen 
+items (8 high-value and 8 low-value) were consistently associated 
+with a tone. There was no feedback to the participants regarding the 
+success of the button press in the allotted time window. We presented 
+the entire set of items 8, 12 or 16 times across the different studies. In 
+each study we presented each item the same number of times, thus 
+controlling for any potential mere-exposure effects12,13. In a probe 
+phase that followed training, we presented participants with pairs of 
+items that were matched (Supplementary Fig. 1) for the initial utility 
+of the items (to allow isolation of the cue-approach effect, Fig. 1c) but 
+differed by whether they had or had not been associated with a cue 
+during training (i.e., one Go and one ‘NoGo’ item). We asked partici-
+pants to choose one item per trial for a chance to consume that item 
+at the end of the study. We randomly selected one trial and honored 
+the choice on that trial. If training had no effect, participants should 
+be indifferent between the two items and choose them equally often. 
+After the probe phase, we repeated the initial auction (Fig. 1d) to test 
+whether the expressed monetary value of individual items changed 
+after training (both auctions were played out together such that only 
+one bid was chosen).
+
+1Imaging Research Center, The University of Texas at Austin, Austin, Texas, USA. 2Department of Psychology, The University of Texas at Austin, Austin, Texas, USA. 
+3Department of Neuroscience, The University of Texas at Austin, Austin, Texas, USA. 4These authors contributed equally to this work. Correspondence should be 
+addressed to T.S. (schonberg@utexas.edu).
+
+Received 8 October 2013; accepted 7 February 2014; published online 9 March 2014; doi:10.1038/nn.3673
+
+nature neurOSCIenCe  VOLUME 17 | NUMBER 4 | APRIL 2014 
+
+625
+
+npg© 2014 Nature America, Inc. All rights reserved.a r t I C l e S
+
+Figure 1  Task procedure. (a) Participants were endowed with three dollars 
+and told that after making a series of auction-based choices, they would 
+have an opportunity to use these $3 to buy a snack. During the auction 
+phase, participants were presented with 60 items, one at a time, on a 
+computer screen. They bid by moving a mouse cursor along an analog 
+scale that spanned from 0 to 3 at the bottom of the screen. The auction 
+was self-paced, and the next item was presented only after the participant 
+placed the bid. (b) During training, participants were instructed to  
+press a button when they heard a tone (occurring after a variable delay 
+based on a staircase) but before the image disappeared from the screen 
+(1 s after it appeared). Images appeared on the screen one at a time, and 
+~25% of items were associated with a tone. Trials were separated by a 
+jittered intertrial interval (ITI) with a mean duration of 3 s. GSD, Go-signal 
+delay. (c) During the probe, participants were instructed to choose one 
+of two items that appeared on the screen to the right and left of a central 
+fixation cross. Participants were told that a single trial would be selected 
+and honored for real consumption, meaning they would receive the food 
+item they chose on that particular trial. Participants had 1.5 s to make 
+their choice, and trials were separated by a variable intertrial interval with 
+a mean duration of 3 s. RT, reaction time. (d) The auction described in a 
+was repeated at the end of the experiment. 
+
+RESULTS
+Cue-approach binary-choice effects
+We varied the length of training from the initial study (which included 
+12  repetitions  of  all  60  snack  food  items)  to  test  whether  fewer  
+(8  repetitions,  study  2)  or  more  (16  repetitions,  study  4)  repeti-
+tions would have a different effect on choice. In all four independ-
+ent samples (studies 1 through 4, total n = 102 participants, Fig. 2a 
+and Supplementary Table 1), we found a consistent effect of cue-
+approach training on choices during the probe phase for high-value 
+item pairs: participants chose high-value Go items on 60–65% of trials 
+(P = 0.00006–0.008; 63% across samples 1–4, P < 0.0001 two sided 
+repeated measures logistic regression). There were no differences in 
+this effect between the different samples (all pairwise comparisons, 
+P values > 0.6, two sided repeated measures logistic regression). This 
+occurred even though participants had never been presented with 
+these items in pairs previously, nor were they externally reinforced 
+for pressing the button during training. We did not find an increase 
+of Go-item choices in low-value pairs (except for a marginally signifi-
+cant effect in study 1 (58%, P = 0.054, two sided repeated measures  
+logistic  regression)  and  a  weak  effect  across  studies  1–4  (55%  
+P  =  0.032,  two  sided  repeated  measures  logistic  regression)).  
+
+a
+
+o
+G
+
+ 
+f
+
+o
+
+ 
+
+n
+o
+
+i
+t
+r
+o
+p
+o
+r
+P
+
+e
+b
+o
+r
+p
+
+ 
+t
+
+a
+
+i
+
+ 
+s
+e
+c
+o
+h
+c
+ 
+m
+e
+
+t
+i
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+c
+
+o
+G
+
+ 
+f
+
+ 
+
+o
+n
+o
+
+i
+t
+r
+o
+p
+o
+r
+P
+
+e
+b
+o
+r
+p
+
+ 
+t
+
+a
+
+i
+
+ 
+s
+e
+c
+o
+h
+c
+ 
+m
+e
+
+t
+i
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+High-value Go versus NoGo
+Low-value Go versus NoGo
+
+***
+
+*
+
++
+
+**
+
++
+
+Study 1
+n = 29
+12 reps
+
+Study 2
+n = 25
+8  reps
+
+Study 3
+n = 21
+12  reps
+
+Study 4
+n = 27
+16  reps
+
+Study 4
+retest
+n = 20
+16  reps
+
+High-value Go versus NoGo
+Low-value Go versus NoGo
+
+b
+
+s
+r
+a
+
+l
+l
+
+o
+d
+
+ 
+
+n
+
+i
+ 
+
+P
+T
+W
+
+1.6
+
+1.2
+
+0.8
+
+0.4
+
+**
+
+Go items
+NoGo items
+
+i
+
+H
+g
+h
+-
+v
+a
+u
+e
+
+l
+
+ 
+i
+t
+
+e
+m
+s
+
+L
+o
+w
+-
+v
+a
+u
+e
+
+l
+
+ 
+i
+t
+
+e
+m
+s
+
+Pretrain
+
+Posttrain
+
+Time
+
+Eye on Go item
+Eye on NoGo item
+
+1.0
+
+0.4
+
+0.2
+
+d
+
+m
+e
+
+l
+
+a
+
+t
+
+o
+
+t
+ 
+
+n
+o
+
+i
+t
+r
+o
+p
+o
+r
+P
+
+t
+i
+ 
+
+ 
+
+n
+o
+e
+y
+e
+e
+m
+
+ 
+
+i
+t
+ 
+
+i
+
+e
+c
+o
+h
+c
+
+Study 5
+n = 42
+
+12 repetitions
+
+Study 6
+n = 26
+
+16 repetitions
+
+0
+
+Eye on G o
+
+Eye on
+NoG o
+
+Eye on G o
+
+Eye on
+NoG o
+
+when chosen when not chosen
+
+$0 $1 $2 $3
+
+$0 $1 $2 $3
+
+$0 $1 $2 $3
+
+Self-paced stimulus 
+
+Subject response
+
+Self-paced stimulus 
+
+Subject response
+
+a
+
+Auction 1
+
+$0 $1 $2 $3
+
+presentation
+
+b
+
+Training
+
+1,000 ms stimulus
+
+presentation
+
+c
+
+Probe
+
++
+
+presentation
+
++
+
+Jittered ITI (~3 s )
+
+1,000 ms stimulus
+
+presentation
+
+ GSD after ~750 ms
+
++
+
+Jittered ITI (~3 s )
+
++
+
++
+
+1,500 ms total 
+
+stimulus presentation
+
+Choice con(cid:31)rmation:
+
+Jittered ITI (~3 s )
+
+1,500 ms –RT
+
+Repeat auction procedures as shown above
+
+d
+
+Auction 2
+
+The  increase  in  choice  for  Go  items  was  significantly  higher  for  
+high-value versus low-value pairs (P < 0.001 across the cue-approach 
+studies 1–4, two sided repeated measures logistic regression). The fact 
+that the effect was not consistent across high-value and low-value 
+pair trials suggests that choosing Go items was not a general strategy 
+adopted by participants at probe (e.g., owing to demand characteristic)  
+but rather that cue-approach training was selectively more effective 
+for higher-value items.
+
+We  should  emphasize  that  all  items  used  were  palatable  junk  
+food items. In an additional study (study 7) in which all items were 
+below the median auction value (Supplementary Fig. 2), we still 
+observed  a  cue-approach  effect  (Supplementary  Fig.  3)  for  the 
+higher-valued items in this set, which suggested that the difference 
+in cue-approach effects between high-valued and low-valued items 
+may be relative to the overall distribution of value in the training set; 
+alternatively, there may be a nominal value threshold below which 
+the effect does not occur.
+
+Figure 2  Behavioral results for cue-approach and cue-avoidance studies. 
+(a) Proportion of choices of the Go item in pairs of high-value Go 
+versus NoGo and low-value Go versus NoGo items for each of the four 
+cue-approach studies (1– 4) as well as for study 4 retest. Number of 
+repetitions reflect number of individual stimulus presentations during 
+training. Significance level reflects odds of choosing the Go versus NoGo item.  
+(b) WTP before and after training for Go and NoGo separately for items  
+in the probe high-value Go versus high-value NoGo pairs (top) and low-
+value Go versus low-value NoGo (bottom) pairs. The sample includes  
+all participants from studies 1– 4 of cue approach. Significance level 
+reflects interaction for time by item type (Go or NoGo) in a repeated-
+measures linear regression. n = 102 participants. (c) Proportion of choices 
+of the Go item in pairs of high-value Go versus NoGo and low-value  
+Go versus NoGo (light gray) items for the two cue-avoidance studies.  
+(d) Proportion of total choice time during probe that gaze position was 
+on the high-value Go or NoGo item in a pair for trials when Go or NoGo 
+items were chosen separately. The sample is a subset of study 4 (n = 18 
+participants). Eighteen participants had their eye positions recorded with 
+an eye tracker while performing the cue-approach task. Significance levels 
+reflect repeated measures linear regression. Effects for d are discussed in 
+Results. Error bars, s.e.m. (a,c) and within-subject s.e.m. (b,d).  
+***P < 0.0001, **P < 0.001, *P < 0.01, +P < 0.05 (two-sided tests).
+
+626 
+
+VOLUME 17 | NUMBER 4 | APRIL 2014  nature neurOSCIenCe
+
+npg© 2014 Nature America, Inc. All rights reserved.a r t I C l e S
+
+Cue-approach auction effects
+As mentioned above, we repeated the initial auction (Fig. 1d) to test 
+whether the expressed monetary value of individual items changed 
+after training (both auctions were played out together such that only 
+one bid was chosen). We found evidence that nonreinforced training 
+influenced the value of individual items. We selected high-valued 
+and low-valued items on the basis of their relatively extreme val-
+ues in the initial auction, and thus both high-valued and low-valued 
+items showed overall regression to the mean (Fig. 2b). Across samples 
+1–4, the high-value Go items retained their value better (i.e., showed 
+less regression to the mean) than the high-value NoGo items (delta 
+between high-value Go and NoGo = 12.2 cents, P = 0.0006 combined 
+across samples 1–4, two sided repeated measures linear regression). 
+For the low-value items there was also regression to the mean for 
+both Go and NoGo items (delta between low-value Go and NoGo =  
+4.9 cents less, P = 0.12, two sided repeated measures linear regression). 
+When we analyzed data for both auctions using repeated-measures 
+linear regression with Go/NoGo and value (high/low) factors and 
+a participant-grouping factor, there was a main effect of Go/NoGo  
+(P < 0.0001, two sided repeated measures linear regression), and the 
+interaction term of high/low by Go/NoGo was marginally significant 
+for the second auction bids when accounting for the first auction bids 
+(P = 0.053, two sided repeated measures linear regression).
+
+This suggests that cue-approach training also influenced subjective 
+values of Go versus NoGo items (as expressed by relative changes  
+in WTP) differently for high-value and low-value items. Previous 
+work  has  demonstrated  effects  of  choice  on  preferences  (see  
+refs.  9,10  for  the  underlying  neural  mechanisms),  which  extend  
+for long periods of time24. Thus, it is likely that the binary choices 
+influenced the auction. In an additional sample collected without a 
+probe phase (study 9) there was not a significant effect on the second 
+auction (Supplementary Table 2). Direct comparison of this greater 
+retention of the original values of high-value Go items compared to 
+high-value NoGo items between the two samples that showed this 
+effect (study 2 and study 4) with the no-probe study 9 showed a mar-
+ginal difference for study 4 versus study 9 (P = 0.0592, two sided 
+repeated measures linear regression) and for study 2 versus study 9 
+(P = 0.0471, two sided repeated measures linear regression). When 
+combining samples 1−4 and comparing them to study 9, the compari-
+son was not significant (P = 0.1, two sided repeated measures linear 
+regression). This hints that ‘pre-post’ auction differences might reflect 
+the effects of choice during the probe phase. A fuller understanding 
+of the factors that modulate these changes in value will require addi-
+tional empirical work.
+
+Cue-avoidance and cue without approach
+To test the mechanism underlying the cue-approach effect, we ran two 
+additional independent samples (Fig. 2c) on a cue-avoidance task, 
+which is a functional mirror of the cue-approach manipulation. The 
+entire procedure was identical to that described in Figure 1, except 
+for the training phase. In this phase, rather than asking participants 
+to press the button only when they heard the sound, we asked the 
+participants to press the button every time they saw an image, unless 
+they heard a sound. We titrated the timing of the sound using a lad-
+der technique similar to that in a standard stop-signal task25. In this 
+version, the cue appeared at exactly the same frequency as studies 1–4 
+but served as an inhibition or avoidance cue rather than an approach 
+cue, similar to the ‘automated inhibition’ version of the stop-signal 
+task26,27. In a probe phase identical to that described above, we found 
+no difference between choices of Go and NoGo items (for choice of 
+high-value Go: 48% (P = 0.5, two sided repeated measures logistic 
+
+regression) and 45% (P = 0.3, two sided repeated measures logistic 
+regression) in studies 5 (with 12 repetitions of all items) and 6 (with 
+16 repetitions of all items), respectively; for choice of low-value Go: 
+52% (P = 0.7, two sided repeated measures logistic regression) and 
+53%,  (P  =  0.4,  two  sided  repeated  measures  logistic  regression)). 
+Furthermore, in a direct comparison between the pooled samples of 
+the cue-approach version (studies 1−4, n = 102 participants) and the 
+pooled sample of the cue-avoidance version (studies 5 and 6, n = 68 
+participants), we found that the choices of the high-value Go items 
+were significantly greater for the cue-approach task (P < 0.0001, two 
+sided repeated measures logistic regression between subjects) but not 
+for the low-value Go items (P = 0.28, two sided repeated measures 
+logistic regression between subjects).
+
+To test whether a motoric action is necessary for the cue-approach 
+effect,  we  performed  an  additional  study  (study  8)  in  which  we 
+repeated the same procedure without requiring any motor responses. 
+Participants heard the cue at times yoked to those of study 4 partici-
+pants but were not required to make any motor responses. We did not 
+find any effects during the probe phase (Supplementary Fig. 3) of 
+study 8 (P values > 0.3, two sided repeated measures logistic regres-
+sion). There was a significant difference for choices of high-value 
+Go items between study 4 and study 8 (P = 0.002, two sided repeated 
+measures logistic regression) but not for low-value Go items (P = 0.7, 
+two sided repeated measures logistic regression). These results suggest 
+that the motor response is crucial for the cue-approach effect.
+
+Eye gaze during training
+We  examined  whether  the  observed  effects  were  due  to  greater  
+observation times during training and thus modulation of the mere-
+exposure  effect28,29.  We  tested  the  gaze  time  during  training  on  
+part  of  the  samples  for  which  sufficient  eye-tracking  data  were  
+collected: on 12 participants from the imaging sample (study 3), on 
+all participants in the last run of the longer-training cue-avoidance 
+study (study 6) and on all participants for the study with cues but no 
+approach (study 8). We did not find any significant differences in gaze 
+times (P values > 0.1, two sided repeated measures linear regression) 
+across all of training nor on the last training run in any of these studies 
+(Supplementary Table 3).
+
+It should be noted that there were no significant behavioral-choice 
+effects in any of these studies (nor within the subsample of 12 par-
+ticipants from study 3), and thus these gaze data cannot entirely rule 
+out an effect of gaze differences. To examine this question further, 
+we performed a regression of gaze time for each item and subsequent 
+choices for the corresponding item during probe for each of these 
+studies. This was possible because there was variance in choices of 
+individual items even though there was no mean difference in choices 
+between  Go  and  NoGo  items.  We  found  no  significant  effect  of  
+gaze time (P values range between 0.06 to 0.48, two sided repeated 
+measures logistic regression; Supplementary Table 3) either for Go 
+items and/or for the interaction of choices of Go versus NoGo items in 
+any of these samples. Furthermore, the fact that participants observed  
+the items for almost their entire presentation times in all of these  
+studies (and for similar periods of time at the end of training) suggests 
+that it is unlikely that the observed effects are driven by differences 
+in gaze duration. Additional work is necessary to conclusively test 
+whether gaze differences are related to choices during probe.
+
+Eye gaze during probe
+Recent work shows that participants spend more time fixating on  
+an  item  before  choosing  it  compared  to  unchosen  alternatives17  
+and that high-value items draw attention30, which reflects the role of 
+
+nature neurOSCIenCe  VOLUME 17 | NUMBER 4 | APRIL 2014 
+
+627
+
+npg© 2014 Nature America, Inc. All rights reserved.a r t I C l e S
+
+Figure 3  Imaging results from the probe phase. (a) Parametric effect of 
+the number of times each high-value Go item was chosen during probe. 
+(b) The difference in the parametric effect of the number of times each 
+item was chosen during probe between high-value Go and high-value 
+NoGo items. This analysis was only run in an a priori mask of mPFC that 
+encompassed the medial PFC by combining Harvard-Oxford atlas regions 
+(frontal pole, frontal medial cortex, paracingulate gyrus and subcallosal 
+cortex) falling between x = 14, x = −14 and z < 0. x-y-z values reported  
+in standard Montreal Neurological Institute (MNI) space. Heatmap color 
+bar ranges from z-stat = 2.3 to 3.3. Map in a was cluster-corrected at a 
+whole-brain level. P < 0.05, two sided linear regression.
+
+attentional mechanisms in value computation and choice behavior31. 
+Eye-tracking data collected on a subset of sample 4 (16 repetitions, n = 18  
+participants)  during  the  probe  phase  was  consistent  with  this.  
+We calculated the proportion of time participants spent viewing a  
+particular item as the total amount of time the gaze position was 
+within the bounds of a food item on the screen, divided by the reaction 
+time. In a repeated-measures linear regression comparing proportion 
+of time spent viewing an item against Go/NoGo and chosen/unchosen 
+factors (with two grouping factors of item presentations and par-
+ticipants), we found a main effect of chosen/unchosen (P < 0.0001, 
+two  sided  repeated  measures  linear  regression)  and  Go/NoGo  
+(P = 0.002, two sided repeated measures linear regression) (Fig. 2d). 
+Thus, participants tended to spend a larger proportion of the total 
+gaze time on the chosen versus unchosen item during the choice 
+window regardless of whether it was a Go item (proportion = 39% 
+versus 28%, P < 0.0001, two sided repeated measures linear regres-
+sion) or NoGo item (proportion = 36% versus 32%, P = 0.01, two 
+sided repeated measures linear regression) (Fig. 2d), consistent with 
+the previous results17.
+
+We found a significant difference in gaze time between unchosen 
+Go versus NoGo items (P = 0.04, two sided repeated measures linear 
+regression; Fig. 2d), which showed that cue-approach training drove 
+attention toward the Go items in the subsequent decision-making 
+phase even when participants did not choose these items. This may 
+reflect increased salience of Go items32. In additional analyses we found 
+a positive association between the pre-post training difference in bids 
+and the proportion of time spent viewing an item during the choice 
+phase (P = 0.029, two sided repeated measures linear regression), which 
+linked the observed gaze bias18 directly to changes in preference.
+
+Long-term behavioral maintenance
+To examine the long-term maintenance of the cue-approach effect, 
+we invited participants to return to the lab after their initial visit to 
+perform a second probe phase. We found that, after an average of 
+66 d (range 41−87 d), participants in the sample with the longest  
+training  (16  presentations)  showed  continued  preference  for  the 
+high-value  Go  over  NoGo  items  (n  =  20  participants,  P  =  0.04,  
+two sided repeated measures logistic regression, proportion 60%). 
+
+a
+
+# Go last scan training run
+
+b
+
+# NoGo last scan training run
+
+x = –2
+
+x = –2
+
+z = 2.3
+
+z = 3.3
+
+a
+
+# high-value Go choice at probe
+
+b
+
+# high-value Go > NoGo at probe
+
+x = –2
+
+x = –2
+
+z = 2.3
+
+z = 3.3
+
+Long-term maintenance was also present in the eye-tracking data; 
+an analysis of eye-tracking data during the follow-up probe showed 
+a main effect of Go/NoGo (P = 0.0001, two sided repeated measures 
+linear regression), though in this case the effect was only present for 
+chosen items (Supplementary Fig. 4). This suggests that longer cue-
+approach training may have effects that last over months. We found 
+no such effect in any of the other samples with shorter training.
+
+In  an  additional  sample  (study  7),  we  repeated  the  probe  after  
+1  week  and  1  month  (Supplementary  Fig.  3);  the  cue-approach  
+effect on choices remained significant (P values < 0.0001, two sided 
+repeated measures logistic regression) at both delays for the higher-
+valued items (which were below the median auction value in this 
+sample). Further studies will be needed to verify how much additional 
+training may be necessary to ensure long-term maintenance and for 
+how long this effect lasts.
+
+Imaging results during probe and training
+The foregoing behavioral and eye-tracking results provide converging 
+evidence that cue-approach training increased the subjective value 
+of cue-associated Go items. To investigate the neural signature of 
+this value change, we performed training and probe while partici-
+pants were scanned with fMRI in study 3 (n = 21 participants, items 
+presented for 12 repetitions). Previous studies23,33–35 establish that 
+the ventromedial prefrontal cortex (vmPFC) is crucial for encoding 
+decision values, and therefore we focused our analysis on this region 
+during the probe phase. During the probe phase, we tested whether 
+the greater preference for the chosen Go items was reflected in blood 
+oxygenation level–dependent (BOLD) signals. The pairs during probe 
+were matched for their pretraining preference; the effectiveness of 
+this procedure is highlighted by the lack of difference in choices of 
+Go and NoGo items in the cue-avoidance studies (studies 5 and 6) 
+and no-approach study (study 8). We defined the post-training pref-
+erence for each item as the number of times each item was chosen 
+during the probe phase (out of eight presentations) and used this 
+value as a parametric regressor for the chosen item on each trial (Go 
+or NoGo). Consistent with the common involvement of the vmPFC 
+and ventral and mediodorsal striatal regions in representation of sub-
+jective value, activity in these regions was positively associated with 
+number of times chosen for high Go items (Fig. 3a; for all activation 
+peaks see Supplementary Table 4). Further, we found that the asso-
+ciation between BOLD response and preference was stronger (more 
+
+Figure 4  Imaging results from the last training run. (a,b) Modulation  
+of number of times each high-value Go item was chosen (a) and NoGo 
+item was chosen (b) during probe. This analysis was only run in an 
+extensive mask of mPFC that encompassed the medial PFC by combining 
+Harvard-Oxford regions (frontal pole, frontal medial cortex, paracingulate 
+gyrus and subcallosal cortex) falling between x = 14, x = −14 and  
+z < 0. Heatmap color bar ranges from z-stat = 2.3 to 3.3. Maps were  
+cluster-corrected within a priori mask of mPFC, as in Figure 3b. P < 0.05, 
+two sided linear regression. 
+
+628 
+
+VOLUME 17 | NUMBER 4 | APRIL 2014  nature neurOSCIenCe
+
+npg© 2014 Nature America, Inc. All rights reserved.positive) in vmPFC for high-value Go items compared to high-value 
+NoGo items during probe when we limited the analysis to an exten-
+sive area of the vmPFC (Fig. 3b). Thus, the enhanced preference for 
+high-value Go items was also reflected in the neural signature of a 
+stronger relation between vmPFC activity and preference. A previous 
+study36 involving real versus hypothetical choices shows that the sig-
+nal in brain regions including vmPFC is amplified during real choices, 
+which can be attributed to increased attention during real choices. We 
+did not find any neural signature for a value change for the low-value 
+Go items (versus either baseline or low-value NoGo items), consistent 
+with the lack of a behavioral effect on the low-value items.
+
+We also examined training-related changes in fMRI signals. There 
+were no differences in stimulus-driven activations when we compared 
+the fMRI activity related to onset of Go items at the end of training ver-
+sus the beginning of training, which perhaps reflected the fact that no 
+choices were required (participants simply pressed a button when they 
+heard a tone). Previous studies show value-related activations in the 
+absence of choice37 and therefore for all subsequent analyses we used 
+as a parametric regressor the same preference indicator as in the probe 
+phase, i.e., the number of times each item was chosen during probe. 
+In the last run of training, vmPFC response (using the prehypoth-
+esized anatomical mask for the region) was associated with number 
+of choices on the later probe for both Go and NoGo items (sepa-
+rately) (Fig. 4; for all activation peaks, see Supplementary Table 5).  
+However, there were no significant differences between the preference- 
+related effect for Go and NoGo items during the last run, and no 
+preference-related effects for either item type during the first run of 
+training. This suggests that the mere exposure to the items for both Go 
+and NoGo items increased their values in a relatively similar way.
+
+DISCUSSION
+Previous research has focused on the roles of experience, time and 
+context in modulating decision values2–6. The present work is, to our 
+knowledge, the first to show that the subjective value of goods (mea-
+sured both by choice and by WTP) can be modified through simple 
+cue-approach exposure without external reinforcement or any other 
+explicit manipulation of value. Our converging results using behav-
+ioral and neuroimaging methods provide insight into an automatic 
+mechanism that directly perturbs the values of items by driving atten-
+tion toward those items. We suggest that the cue-approach manipula-
+tion enhanced the attention devoted to the processing of the items and 
+thus amplified the value signals of the items. This is further exempli-
+fied by the fact we obtained this effect only for the higher-valued items 
+in the training set, even when these high-value items were below the 
+median auction value (in study 7). We found that the auditory cue by 
+itself was not sufficient for the behavior change and that the change 
+was not due to viewing-time differences during training. It is plausible 
+that a motor approach signal was activated during the probe phase, but 
+the effect of training on auction responses, which required an entirely 
+different response, speaks against this alternative. Results of the cue 
+without approach and the lack of effects in the cue-avoidance studies 
+all suggest that the cue-approach effect is not merely an attentional 
+or salience effect but rather that it reflects the combination of the  
+cue with the motor-approach response. Other researchers38,39 have 
+managed to train participants to avoid choices of food items, albeit in 
+a different experimental setup with close to 100% stopping rates. This 
+suggests that the failed stop trials in our studies (which targeted 75% 
+successful inhibition) may have obscured the effect. Additional studies 
+will be needed to test this. Future studies will also need to test whether 
+the choice effects reported here generalize from the specific trained 
+pictures to other stimuli representing the same or similar items.
+
+a r t I C l e S
+
+In conclusion, our findings suggest that cue-approach training can 
+potentially serve as a ‘nudge’40 working at the level of enhancing atten-
+tion to and memory for items in order to modify choices. This is espe-
+cially important given the failures of many current interventions aimed 
+at changing unhealthy habits based on effortful self-control41.
+
+METHODS
+Methods and any associated references are available in the online 
+version of the paper.
+
+Note: Any Supplementary Information and Source Data files are available in the 
+online version of the paper.
+
+AcknowledgmenTS
+We thank N. Malecek for assistance with eye-tracking, C. Leuker for assistance  
+with data collection, and A. Aron, C. Fox, C. Trepel and C. White for comments on 
+an earlier version of this manuscript. This research was supported by a grant from 
+US National Institutes of Health (1R01AG041653).
+
+AUTHoR conTRIBUTIonS
+T.S., A.B. and R.A.P. designed the experiment, T.S., A.B., A.H.M., L.N. and J.P. 
+conducted the experiment, T.S., A.B., A.H.M. and J.A.M. analyzed the data, and 
+T.S., A.B. and R.A.P. discussed the results and wrote the paper. 
+
+comPeTIng FInAncIAl InTeReSTS
+The authors declare no competing financial interests.
+
+Reprints and permissions information is available online at http://www.nature.com/
+reprints/index.html.
+
+1.  Samuelson,  P.A.  A  note  on  the  pure  theory  of  consumer’s  behaviour.  Economica 
+
+New Ser. 5, 61–71 and addendum 353–354 (1938).
+
+2.  Thorndike, E.L. Animal Intelligence: Experimental Studies (Macmillan, 1911).
+3.  O’Doherty, J. et al. Dissociable roles of ventral and dorsal striatum in instrumental 
+
+conditioning. Science 304, 452–454 (2004).
+
+4.  Tversky, A. & Kahneman, D. Rational choice and the framing of decisions. J. Bus. 
+
+59, S251–S278 (1986).
+
+5.  Slovic, P. The construction of preference. Am. Psychol. 50, 364 (1995).
+6.  De Martino, B., Kumaran, D., Seymour, B. & Dolan, R.J. Frames, biases, and rational 
+
+decision-making in the human brain. Science 313, 684–687 (2006).
+
+7.  Fischhoff, B. Value elicitation: is there anything in there? Am. Psychol. 46, 835–847 
+
+(1991).
+
+8.  Payne,  J.W.,  Bettman,  J.R.  &  Schkade,  D.A.  Measuring  constructed  preferences: 
+
+towards a building code. J. Risk Uncertain. 19, 243–270 (1999).
+
+9.  Brehm,  J.W.  Post-decision  changes  in  the  desirability  of  choice  alternatives.  
+
+J. Abnorm. Soc. Psychol. 52, 384–389 (1956).
+
+10. Sharot, T., De Martino, B. & Dolan, R.J. How choice reveals and shapes expected 
+
+hedonic outcome. J. Neurosci. 29, 3760–3765 (2009).
+
+11. Izuma,  K.  et  al.  Neural  correlates  of  cognitive  dissonance  and  choice-induced 
+
+preference change. Proc. Natl. Acad. Sci. USA 107, 22014–22019 (2010).
+
+12. Zajonc,  R.B.  Attitudinal  effects  of  mere  exposure.  J.  Pers.  Soc.  Psychol.  9,  1–6 
+
+(1968).
+
+13. Zajonc,  R.B.  Mere  exposure:  a  gateway  to  the  subliminal. Curr. Dir. Psychol. Sci. 
+
+10, 224–228 (2001).
+
+14. Cacioppo,  J.T.,  Priester,  J.R.  &  Berntson,  G.G.  Rudimentary  determinants  of 
+attitudes.  II.  Arm  flexion  and  extension  have  differential  effects  on  attitudes.  
+J. Pers. Soc. Psychol. 65, 5–17 (1993).
+
+15. Fishbach, A. & Shah, J.Y. Self-control in action: implicit dispositions toward goals 
+
+and away from temptations. J. Pers. Soc. Psychol. 90, 820–832 (2006).
+
+16. Wiers,  R.W.,  Eberl,  C.,  Rinck,  M.,  Becker,  E.S.  &  Lindenmeyer,  J.  Retraining 
+automatic action tendencies changes alcoholic patients’ approach bias for alcohol 
+and improves treatment outcome. Psychol. Sci. 22, 490–497 (2011).
+
+17. Krajbich,  I.  &  Rangel,  A.  Multialternative  drift-diffusion  model  predicts  the 
+relationship  between  visual  fixations  and  choice  in  value-based  decisions.  Proc. 
+Natl. Acad. Sci. USA 108, 13852–13857 (2011).
+
+18. Shimojo,  S.,  Simion,  C.,  Shimojo,  E.  &  Scheier,  C.  Gaze  bias  both  reflects  and 
+
+influences preference. Nat. Neurosci. 6, 1317–1322 (2003).
+
+19. Armel,  K.C.,  Beaumel,  A.  &  Rangel,  A.  Biasing  simple  choices  by  manipulating 
+
+relative visual attention. Judgm. Decis. Mak. 3, 396–403 (2008).
+
+20. Lin, J.Y., Pype, A.D., Murray, S.O. & Boynton, G.M. Enhanced memory for scenes 
+presented  at  behaviorally  relevant  points  in  time.  PLoS  Biol.  8,  e1000337 
+(2010).
+
+21. Swallow,  K.M.  &  Jiang,  Y.V.  The  attentional  boost  effect:  transient  increases  
+in  attention  to  one  task  enhance  performance  in  a  second  task.  Cognition  115, 
+118–132 (2010).
+
+22. Becker, G.M., Degroot, M.H. & Marschak, J. Measuring utility by a single-response 
+
+sequential method. Behav. Sci. 9, 226–232 (1964).
+
+nature neurOSCIenCe  VOLUME 17 | NUMBER 4 | APRIL 2014 
+
+629
+
+npg© 2014 Nature America, Inc. All rights reserved.a r t I C l e S
+
+23. Plassmann, H., O’Doherty, J. & Rangel, A. Orbitofrontal cortex encodes willingness 
+
+33. Tom, S.M., Fox, C.R., Trepel, C. & Poldrack, R.A. The neural basis of loss aversion 
+
+to pay in everyday economic transactions. J. Neurosci. 27, 9984–9988 (2007).
+
+24. Sharot,  T.,  Fleming,  S.M.,  Yu,  X.,  Koster,  R.  &  Dolan,  R.J.  Is  choice-induced 
+
+preference change long lasting? Psychol. Sci. 23, 1123–1129 (2012).
+
+25. Logan, G.D. & Cowan, W.B. On the ability to inhibit thought and action: a theory 
+
+of an act of control. Psychol. Rev. 91, 295–327 (1984).
+
+26. Verbruggen,  F.  &  Logan,  G.D.  Automatic  and  controlled  response  inhibition: 
+associative  learning  in  the  go/no-go  and  stop-signal  paradigms.  J.  Exp.  Psychol. 
+Gen. 137, 649–672 (2008).
+
+27. Lenartowicz,  A.,  Verbruggen,  F.,  Logan,  G.D.  &  Poldrack,  R.A.  Inhibition-related 
+activation  in  the  right  inferior  frontal  gyrus  in  the  absence  of  inhibitory  cues.  
+J. Cogn. Neurosci. 23, 3388–3399 (2011).
+
+28. Yagi, Y., Ikoma, S. & Kikuchi, T. Attentional modulation of the mere exposure effect. 
+
+J. Exp. Psychol. Learn. Mem. Cogn. 35, 1403–1410 (2009).
+
+29. Huang,  Y.F.  &  Hsieh,  P.J.  The  mere  exposure  effect  is  modulated  by  selective 
+
+attention but not visual awareness. Vision Res. 91, 56–61 (2013).
+
+30. Anderson,  B.A.,  Laurent,  P.A.  &  Yantis,  S.  Value-driven  attentional  capture. Proc. 
+
+Natl. Acad. Sci. USA 108, 10367–10371 (2011).
+
+31. Lim,  S.L.,  O’doherty,  J.P.  &  Rangel,  A.  The  decision  value  computations  in  the 
+vmpfc  and  striatum  use  a  relative  value  code  that  is  guided  by  visual  attention.  
+J. Neurosci. 31, 13214–13223 (2011).
+
+32. Towal,  R.B.,  Mormann,  M.  &  Koch,  C.  Simultaneous  modeling  of  visual  saliency 
+and value computation improves predictions of economic choice. Proc. Natl. Acad. 
+Sci. USA 110, E3858–E3867 (2013).
+
+in decision-making under risk. Science 315, 515–518 (2007).
+
+34. Chib,  V.S.,  Rangel,  A.,  Shimojo,  S.  &  O’Doherty,  J.P.  Evidence  for  a  common 
+representation  of  decision  values  for  dissimilar  goods  in  human  ventromedial 
+prefrontal cortex. J. Neurosci. 29, 12315–12320 (2009).
+
+35. McNamee,  D.,  Rangel,  A.  &  O’Doherty,  J.P.  Category-dependent  and  category-
+independent  goal-value  codes  in  human  ventromedial  prefrontal  cortex.  Nat. 
+Neurosci. 16, 479–485 (2013).
+
+36. Kang,  M.J.,  Rangel,  A.,  Camus,  M.  &  Camerer,  C.F.  Hypothetical  and  real  choice 
+differentially  activate  common  valuation  areas.  J.  Neurosci.  31,  461–468 
+(2011).
+
+37. Levy,  I.,  Lazzaro,  S.C.,  Rutledge,  R.B.  &  Glimcher,  P.W.  Choice  from  non-choice: 
+predicting  consumer  preferences  from  blood  oxygenation  level–dependent  signals 
+obtained during passive viewing. J. Neurosci. 31, 118–125 (2011).
+
+38. Veling,  H.,  Aarts,  H.  &  Papies,  E.K.  Using  stop  signals  to  inhibit  chronic  dieters’ 
+
+responses toward palatable foods. Behav. Res. Ther. 49, 771–780 (2011).
+
+39. Veling,  H.,  Aarts,  H.  &  Stroebe,  W.  Using  stop  signals  to  reduce  impulsive  
+choices  for  palatable  unhealthy  foods.  Br.  J.  Health  Psychol.  18,  354–368 
+(2013).
+
+40. Thaler, R.H. & Sunstein, C.R. Nudge: Improving Decisions About Health, Wealth, 
+
+and Happiness (Yale University Press, 2008).
+
+41. Marteau, T.M., Hollands, G.J. & Fletcher, P.C. Changing human behavior to prevent 
+disease: the importance of targeting automatic processes. Science 337, 1492–1495 
+(2012).
+
+630 
+
+VOLUME 17 | NUMBER 4 | APRIL 2014  nature neurOSCIenCe
+
+npg© 2014 Nature America, Inc. All rights reserved.ONLINE METHODS
+Participants.  252  healthy  subjects  participated  in  nine  studies  using  three  
+versions of a task (see Supplementary Table 1 for sample details). No statistical 
+test was run to determine sample size a priori. The sample sizes we chose are 
+similar to those used in previous publications, and our replications used similar 
+sample sizes after our first successful result.
+
+All participants had normal or corrected-to-normal vision, no history of 
+psychiatric diagnoses, neurologic or metabolic illnesses, no history of eating 
+disorders, had no food restrictions and were not taking any medications that 
+would interfere with the experiment. Additionally, participants who were scanned 
+(study 3) were free of any metal implants or any other contraindications for MRI. 
+Participants were told that the goal of the experiment was to study food prefer-
+ences and were asked to refrain from eating 4 h before arrival to the laboratory23. 
+All participants gave informed consent, and the study was approved by the inter-
+nal review board at the University of Texas at Austin.
+
+disappeared from the screen. The items that were chosen as Go items were con-
+sistently associated with the tone. In study 1 we initiated the tone at 650 ms after 
+the item was presented on the screen (Go-signal delay, GSD) and then updated 
+the GSD using a ladder technique; we increased the GSD by 17 ms if participants 
+pressed the button before the item disappeared, whereas the GSD was reduced 
+by 50 ms if the participants pressed the button after the item disappeared (always 
+after 1 s). We chose this 3:1 ladder titration ratio to ensure a 75% success rate in 
+button presses. In study 1 (n = 29 participants) and study 3 (n = 21 participants) 
+all 60 food items were presented 12 times each during training. In study 2 they 
+were presented 8 times and in study 4 (n = 27 participants) they were presented 
+16 times. The order of presentation within the 60 items was randomized, and all 
+items were presented before the next set started. After two presentations of all 
+items the participants received a short self-paced break before continuing to the 
+next run. In studies 2, 3 and 4, we initiated the ladders at 750 ms as the results 
+from study 1 showed a convergence around that number.
+
+experimental procedure. The general task procedure is presented in Figure 1. 
+Participants first underwent an auction (Fig. 1a), then a training task (Fig. 1b),  
+then a probe (Fig. 1c) and finally a repeat of the auction (Fig. 1d). Stimulus 
+presentation and behavioral data acquisition were implemented in Pygame42 for 
+the auction and Matlab (MathWorks) with Psychotoolbox43–45 for the training 
+and probe phases.
+
+Auction. First, participants took part in an auction22,23 (Fig. 1a) in which pho-
+tographs of 60 appetitive junk food items23 were presented in random order. 
+We followed the BDM procedure22,23 in which participants were endowed with 
+three dollars and told that they would have an opportunity to use them to buy a 
+snack at the end of the session. During the auction, participants were presented 
+with one item at a time on a computer screen. They placed their bid by moving 
+the mouse cursor along an analog scale that spanned from 0 to 3 at the bottom 
+of the screen. The auction was self-paced, and the next item was presented only 
+after the participant placed his or her bid. This procedure has been shown to reli-
+ably provide a measure of WTP per item23. Two participants from cue-approach  
+study 1, one from study 3 and two from study 4 were excluded because there was 
+not enough range in bids for those participants to properly categorize the stimuli 
+using the method explained in the next section. In the cue-avoidance study, three 
+participants were excluded from study 5 and two from study 6 because they bid 
+less than $0.25 on more than 40 items; in studies 7 and 8, we also excluded one 
+participant in each sample owing to auction exclusion criteria. These exclusions 
+ensured a sufficient number of highly valued items that were different enough 
+from lower-valued items.
+
+Item selection. Items were ranked based on WTP, where item 1 had the highest 
+WTP and so forth until item 60, which had the lowest WTP. We then chose eight 
+items as higher-valued (ranked 8–15) and eight items as lower-valued (ranked 
+46–53). Out of each of these eight items, four were associated with an auditory 
+cue to later served as Go items and four were not associated with the cue to later 
+served as NoGo items (Supplementary Fig. 1). This selection procedure ensured 
+pairing of high-value Go with high-value NoGo items and low-value Go with 
+low-value NoGo items. These pairs made up of two items of similar WTP later 
+presented at probe (see below) such that participants should a priori be indiffer-
+ent in a choice between them based on initially stated values. To maintain ~25% 
+cue frequency (8 of 30 high and 8 out of 30 low) as is usually done in stop-signal 
+tasks25, we chose an additional 4 high-value items (out of the items ranked 16–23) 
+and an additional 4 low-value items (out of the items ranked 38–45) that were 
+later used in high-value Go versus low-value Go comparisons and high-value 
+NoGo versus low-value NoGo comparisons during probe (data not shown).
+
+For study 7 (n = 26 participants), we only used the lower-value 30 items 
+for  training  and  selected  items  ranked  38–45  as  the  higher-value  items 
+(Supplementary Fig. 2).
+
+cue-approach training. The task is functionally opposite to the stop-signal 
+task25. On each trial, images of the food items were presented on the screen for 
+1 s followed by an intertrial interval of an average 3 s (range 1–12 s, Fig. 1b).  
+Item  presentation  was  randomized  within  a  block  of  60  trials.  Participants  
+were instructed to press a button on the keyboard as fast as they could, but  
+only when they heard a tone. Their task was to press the button before the items 
+
+cue-avoidance training. Item selection was identical to the procedure for cue-
+approach training. This task is highly similar to the trained-inhibition version of 
+the stop-signal task26,27. All components and timings of this task were identical 
+to the cue-approach training except for two details. First, in this task, participants 
+were instructed to press the button as fast as they could every time they saw an 
+item, unless they heard a tone. Second, as this task was designed to optimize the 
+difficulty of stopping, the stop-signal-delay was initiated at 250 ms. We used 
+a similar 3:1 ratio for ladders titration in this task; we decreased the ladder by 
+50 ms if participants did not stop on time and increased it by 17 ms if they  
+did manage to stop. In study 5 (n = 42 participants) all items were presented  
+12 times and in study 6 (n = 26 participants) all items were presented 16 times.
+
+cue without approach. For study 8 we followed the same procedure as in the 
+cue-approach training but did not ask the 31 participants to press the button when 
+they heard the tone. We used yoked ladders from study 4.
+
+Probe. After the completion of training, participants filled in a computer-adapted 
+version of the Barratt impulsiveness scale (BIS)-11 questionnaire46. They were 
+then told that they would next perform a new task (Fig. 1c) where they would 
+be presented pairs of items. They were told that a single trial would be drawn at 
+random at the end of the session and their choice on that trial would be honored 
+(i.e., they would receive the item that they had chosen on that trial at the end of 
+the experiment and will stay to consume it in the lab).
+
+Pairing procedure. We presented unique pairs of items during the probe phase. 
+The main goal of our analysis was to test how the cue-approach or avoidance 
+training affected participants’ preferences between items that had similar initial 
+value. We presented items from the same value category (high or low with similar 
+WTP rankings) such that one item was associated with the cue during training 
+and the other was not (Supplementary Fig. 1). Participants were presented with 
+16 unique pairs (each of the four Go items were paired with each of the four NoGo 
+items) for each value category. If the manipulation did not affect participants’ 
+valuation of the items then they should be indifferent between them. Participants 
+were also presented with two additional pair types made up of high-value Go 
+versus low-value Go and high-value NoGo versus low-value NoGo items. These 
+pairs served as ‘sanity checks’ to ensure that the initial WTPs truly represented 
+participants’ values (the results of these comparisons are not reported, but in all 
+cases the expected differences between choice of high- and low-valued items 
+were observed).
+
+no-probe  version.  In  study  9  we  did  not  include  the  probe  phase  for  25  
+participants.
+
+Trial timing. At trial onset, the two items in a pair were presented directly to the 
+right and left of a fixation cross (Fig. 1c). Participants had 1.5 s to respond with 
+either of two buttons on the keyboard corresponding to the left or right locations 
+on the screen. The chosen item was highlighted with a green rectangle around it. 
+The choice confirmation remained on the screen for 500 ms until a fixation-cross 
+appeared during the intertrial interval for an average of 3 s (range 1–12 s). If the 
+participants did not choose within the allotted time, a message appeared on the 
+screen asking them to please choose faster followed by the intertrial fixation cross 
+
+doi:10.1038/nn.3673
+
+nature neurOSCIenCe
+
+npg© 2014 Nature America, Inc. All rights reserved.and the next trial began. Each of the 64 unique pairs was presented twice across 
+the two probe runs. The order and left-right locations of the items on the screen 
+were randomized across participants and across the two runs.
+
+Questionnaires. As mentioned above, the BIS-11 (ref. 46) questionnaire was 
+administered between training and probe (no significant correlations were found 
+with the proportion of choices of high-value Go items, P > 0.3, two sided Pearson 
+correlation). At the end of the session, when participants remained in the lab to 
+consume the food item, they received several additional questionnaires, which 
+are beyond the scope of this manuscript.
+
+Probe  behavior.  To  test  whether  cue-approach  (or  cue-inhibition)  training 
+induced a preference change, we performed a repeated-measures logistic regres-
+sion using the lmer function from the lme4 library in R (ref. 47) to compare the 
+odds of choosing the Go to NoGo items against equal odds for the high-value 
+and low-value pairs separately. We also performed a repeated-measures linear 
+regression to test for differences in reaction time (RT) for choices of Go and NoGo 
+items for the high-value and low-value pairs separately (data not shown).
+
+Probe eye-tracking. Eye-tracking data were acquired using an Eyelink-1000  
+SR-Research eye tracker. Usable data were obtained on 18 participants from  
+cue-approach study 4. Gaze position was categorized as being either within the  
+x-axis  boundaries  of  the  fixation  cross,  within  the  x-axis  boundaries  of  
+the stimulus on the right of the fixation cross or on the left of the fixation  
+cross. The proportion of the trial time spent looking at the right or left items 
+on each trial was calculated. We examined the difference in the proportion of 
+total trial time spent looking at the Go item versus the NoGo item, when the 
+participant chose the high-value Go or the high-value NoGo item separately 
+using repeated measures linear regression. We also examined the difference in the 
+proportion of time spent looking at the Go versus the NoGo item when that item  
+was  not  chosen  using  repeated-measures  linear  regression.  We  also  looked 
+at the main effect of Go/NoGo item assignment as well as the main effect of 
+chosen/unchosen on the proportion of choice time spent viewing an item during 
+probe phase using repeated measures linear regression including the two factors 
+Go/NoGo and chosen/unchosen with two grouping factors (for item presenta-
+tion and participant).
+
+Auction. Repeated-measures linear regression was used to test the two-way 
+interaction between time (pretraining auction and post-training auction) and 
+condition (Go and NoGo) within each value category separately. This interaction 
+tests whether the change in WTP over time is different for Go and NoGo items. 
+P values for the effects in the mixed models were calculated using the Kenward-
+Rogers approximation for degrees of freedom48. In order to better account for 
+regression to the mean, we looked at the main effect of factor Go/NoGo item 
+assignment as well as its interaction with value (high-value versus low-value 
+items) on WTP at the second, post-training auction while accounting for WTP 
+on the first, pretraining auction using repeated-measures linear regression with 
+a grouping factor for participant.
+
+We also investigated the influence of the change in WTP from pre- to post-
+training auctions on the proportion of choice time spent viewing a particular 
+item during the probe phase accounting for Go/NoGo item assignment using 
+repeated-measures linear regression with a grouping factor for participant.
+
+Retest. We recontacted all participants and requested that they return to the lab. 
+Participants were requested to fast for 4 h similar to the original experiment.  
+In  this  follow-up  session,  20  participants  performed  the  auction  and  then  
+probe phase with the same pairings as the one they had originally performed on 
+their first visit to the lab.
+
+Imaging version. We performed study 3 of the cue approach experiment while 
+21  participants  were  scanned  with  fMRI.  In  this  version,  participants  used 
+an MRI-compatible response pad to enter their response. They filled in the  
+computer-adapted version of the BIS-11 (ref. 46) using the MRI-compatible  
+button box before the probe phase while inside the scanner.
+
+fmRI acquisition and analysis. Imaging data were acquired on a 3T Skyra MRI 
+scanner (Siemens) with a 32-channel head coil. Functional data were acquired 
+
+using a T2*-weighted echo planar imaging sequence (repetition time (TR) = 
+2,000 ms, echo time TE = 30 ms, flip angle (FA) = 60°, field of view (FOV) = 256, 
+acquisition matrix of 128 × 128. Forty eight oblique axial slices with a 2-mm 
+inplane resolution were positioned 30° off the anterior commissure-posterior 
+commissure line to reduce the frontal signal dropout49 and spaced 2 mm with a 
+0.5 mm gap to achieve full brain coverage). Slices were acquired using the multi-
+band sequence50 (acceleration factor = 2, parallel imaging factor iPAT = 2) in an 
+interleaved fashion. Higher-order shimming was used to reduce susceptibility 
+artifacts. Each of the training runs consisted of 194 volumes and each of the probe 
+runs consisted of 164 volumes. In addition to functional data, a single three-
+dimensional high-resolution full brain image acquired using a magnetization  
+prepared  rapid  gradient  echo  (MPRAGE)  pulse  sequence  (TR  =  1,900  ms,  
+TI = 900 ms, TE = 2.43 ms, FA = 9°, FOV = 25 cm2) was acquired for brain mask-
+ing and image registration.
+
+Raw imaging data in DICOM format were converted to NIFTI format and 
+preprocessed through a standard preprocessing pipeline using the FSL package51 
+version 5. Functional image time series were first aligned using the MCFLIRT tool 
+to obtain six motion parameters that correspond to the x-y-z translation and rota-
+tion of the brain over time. Second, the skull was removed from the T2* images 
+using the brain extraction tool (BET) and from the high-resolution T1 images 
+using Freesurfer52,53. Spatial smoothing was performed using a Gaussian kernel 
+with a full-width half maximum (FWHM) of 5 mm. Data and design matrix were 
+high-pass filtered using a Gaussian-weighted least-squares straight line fit with a 
+cutoff period of 100 s. Grand-mean intensity normalization of each run’s entire 
+four-dimensional data set by a single multiplicative factor was also performed. 
+The functional volumes for each participant and run were registered to the high 
+resolution T1-weighted structural volume using a boundary-based registration 
+method54 implemented in FSL5 (BBR). The T1-weighted image was then regis-
+tered to the MNI152 2 mm template using a linear registration implemented in 
+FLIRT (12 degrees of freedom). These two registration steps were concatenated 
+to obtain a functional-to-standard space registration matrix.
+
+Imaging analysis. We focused our analysis on the probe phase to examine the 
+neural signature of value change. We used a general linear model (GLM) for the 
+probe phase that included seven regressors for each of the four trial types: for 
+high-value Go versus high-value NoGo, (i) onsets of trials when high-value Go 
+items were chosen with fixed duration of 0.87 s, which was the average RT across 
+all trials across all subjects; (ii) to explore the preference for each item (Fig. 3a), 
+we used the demeaned total number of choices (on all probe trials where this 
+item appeared) of the chosen item as a parametric modulator of the above onset 
+regressor (the same average RT was used as duration as above); (iii) to account 
+for the difference in pretraining WTP between the items in each pair we added 
+the WTP difference as a parametric modulator with the same onsets and dura-
+tions as regressor #1. All of the above three regressors were added for the trials 
+when participants chose the NoGo item in a pair. To account for RT differences 
+between choices of the Go and NoGo items we added a regressor with the onsets 
+of all high-value Go and NoGo trials but as the modulator we added the demeaned 
+RT across all these trials. We defined the same seven regressors for the probe trials 
+that compared low-value Go to low-value NoGo and also high-value Go versus 
+low-value Go and high-value NoGo versus low-value NoGo, which resulted in 
+a total of 28 regressors (four trial types times 7) and an additional regressor for 
+missed trials of all types. We included the six motion regressors described above, 
+framewise displacement (FD) and RMS intensity difference from one volume to 
+the next (DVARS)55 as confound regressors. We also modeled out trials with FD 
+and DVARS that exceeded a threshold of 0.5 by adding a single time point regres-
+sor for each ‘to-be-scrubbed’ volume56. All regressors were entered at the first level 
+of analysis and all (but the added confound regressors) were convolved with a 
+canonical double-gamma hemodynamic response function. The temporal deriva-
+tive of each regressor (but the added confound regressors) was included in the 
+model. The model was estimated separately for each participant for each run.
+
+To test which regions showed a greater modulation by the preference for  
+an item we contrasted the parametric modulator of the chosen high-value Go 
+items (regressor (ii) above) with the same regressor for the high-value NoGo 
+items (Fig. 3b). We masked this contrast by our pre-hypothesized vmPFC region. 
+The mask encompassed the medial PFC by combining Harvard-Oxford regions 
+(frontal pole, frontal medial cortex, paracingulate gyrus and subcallosal cortex) 
+falling between x = 14, x = −14 and z < 0.
+
+nature neurOSCIenCe
+
+doi:10.1038/nn.3673
+
+npg© 2014 Nature America, Inc. All rights reserved.Four participants were excluded from the imaging analysis because their para-
+metric modulator of choices was zeroed out. One chose all high-value Go items 
+at exactly the same proportion and three chose all high-value NoGo items at the 
+same proportion during probe. Thus, the parametric modulator was perfectly 
+correlated with the intercept regressor (column of 1 s) resulting in a rank-deficient  
+design matrix.
+
+For all group analyses we averaged across individual subjects to perform  
+a one-sample t-test to obtain the overall effects for the group. All reported  
+statistical maps were corrected at the whole-brain level using a cluster-based 
+Gaussian random field correction for multiple comparisons, with an uncorrected 
+cluster-forming threshold of z = 2.3 and corrected extent threshold of P < 0.05, 
+except for the comparison between modulation of high-value Go and high-value 
+NoGo during probe, which was corrected only for the medial PFC mask.
+
+Training. The GLM during the training phase included 4 regressors for each Go 
+item broken down by subsequent four probe trial types (high-value Go versus 
+high-value NoGo, low-value Go versus low-value NoGo, high-value Go versus 
+Low-value Go and high-value NoGo versus low-value NoGo): (i) onsets of the 
+Go trial, modeled with a fixed duration of 1 s; (ii) same onset and duration but 
+modulated by subsequent number of choices during probe; (iii) same onset and 
+duration but modulation by initial WTP; (iv) same onset and duration but modu-
+lated by the Go-signal delay for that trial. Thus there were four different Go trials 
+and for each there were four regressors yielding a total of 16 regressors. Then for 
+each of the different types of the NoGo trials there were three regressors similar 
+to above except the modulation by the Go signal delay as there was no signal in 
+the NoGo trials. Thus, there were four different NoGo trials and for each there 
+were three regressors yielding a total of 12 regressors. To account for RT differ-
+ences between all trials we added a regressor with the onsets of all Go trials and 
+the modulator was the demeaned RT across all these trials. We further added a 
+missed trial regressor for high-value Go and low-value Go and two regressors for 
+an erroneous response for high-value and low-value NoGo. There were a total 
+
+of 33 regressors. We added the same covariates as in the probe design matrix: we 
+included the 6 motion regressors described above, along with framewise displace-
+ment (FD) and RMS intensity difference from one volume to the next (DVARS)55 
+as confound regressors.
+
+42. Shinners, P. PyGame–python game development http://www.pygame.org/ (2011).
+43. Brainard, D.H. The psychophysics toolbox. Spat. Vis. 10, 433–436 (1997).
+44. Pelli,  D.G.D.  The  videotoolbox  software  for  visual  psychophysics:  transforming 
+
+numbers into movies. Spat. Vis. 10, 437–442 (1997).
+
+45. Kleiner,  M.,  Brainard,  D.,  Pelli,  D.,  Ingling,  A.  &  Murray,  R.  What’s  new  in 
+
+Psychtoolbox-3. Perception 36, ECVP Abstract Supplement (2007).
+
+46. Patton,  J.H.,  Stanford,  M.S.  &  Barratt,  E.S.  Factor  structure  of  the  Barratt 
+
+impulsiveness scale. J. Clin. Psychol. 51, 768–774 (1995).
+
+47. de  Boeck,  P.  &  Wilson,  M.  Explanatory  Item  Response  Models  (Springer, 
+
+ 2004).
+
+48. Kenward, M.G. & Roger, J.H. Small sample inference for fixed effects from restricted 
+
+maximum likelihood. Biometrics 53, 983–997 (1997).
+
+49. Deichmann,  R.,  Gottfried,  J.A.,  Hutton,  C.  &  Turner,  R.  Optimized  EPI  for  fMRI 
+
+studies of the orbitofrontal cortex. Neuroimage 19, 430–441 (2003).
+
+50. Moeller, S. et al. Multiband multislice GE-EPI at 7 tesla, with 16-fold acceleration 
+using partial parallel imaging with application to high spatial and temporal whole-
+brain fMRI. Magn. Reson. Med. 63, 1144–1153 (2010).
+
+51. Smith,  S.M.  et  al.  Advances  in  functional  and  structural  MR  image  analysis  and 
+
+implementation as FSL. Neuroimage 23 (suppl. 1), S208–S219 (2004).
+
+52. Ségonne,  F.  et  al.  A  hybrid  approach  to  the  skull  stripping  problem  in  MRI. 
+
+Neuroimage 22, 1060–1075 (2004).
+
+53. Dale, A.M., Fischl, B. & Sereno, M.I. Cortical surface-based analysis. I. Segmentation 
+
+and surface reconstruction. Neuroimage 9, 179–194 (1999).
+
+54. Greve, D.N. & Fischl, B. Accurate and robust brain image alignment using boundary-
+
+based registration. Neuroimage 48, 63–72 (2009).
+
+55. Power, J.D., Barnes, K.A., Snyder, A.Z., Schlaggar, B.L. & Petersen, S.E. Spurious 
+but  systematic  correlations  in  functional  connectivity  MRI  networks  arise  from 
+subject motion. Neuroimage 59, 2142–2154 (2012).
+
+56. Siegel,  J.S.  et  al.  Statistical  improvements  in  functional  magnetic  resonance 
+imaging analyses produced by censoring high-motion data points. Hum. Brain Mapp. 
+doi:10.1002/hbm.22307 (17 July 2013).
+
+doi:10.1038/nn.3673
+
+nature neurOSCIenCe
+
+npg© 2014 Nature America, Inc. All rights reserved.

@@ -1,0 +1,900 @@
+NeuroImage 69 (2013) 120–125
+
+Contents lists available at SciVerse ScienceDirect
+
+NeuroImage
+
+j o u r n a l h o m e p a ge : w ww . e l s e v i e r . c o m/ l o c a t e / y n i m g
+
+Escaping the here and now: Evidence for a role of the default mode network in
+perceptually decoupled thought
+Jonathan Smallwood a,⁎, Christine Tipper b, Kevin Brown c, Benjamin Baird b, Haakon Engen a,
+Joseph R. Michaels b, Scott Grafton b, Jonathan W. Schooler b
+a Department of Social Neuroscience, Max Planck Institute for Human Cognitive and Brain Sciences, Leipzig, Germany
+b Department of Psychological and Brain Sciences, University of California, Santa Barbara, USA
+c Department of Physics, University of California, Santa Barbara, USA
+
+a r t i c l e
+
+i n f o
+
+a b s t r a c t
+
+Article history:
+Accepted 8 December 2012
+Available online 20 December 2012
+
+Keywords:
+Absent-minded lapses
+Daydreaming
+Default mode network
+Medial prefrontal cortex
+Posterior cingulate
+Mind-wandering
+Response time
+Stimulus-independent thought
+
+Introduction
+
+Cognition that is not based on perception can lead to at least two different outcomes. In some situations, cog-
+nition that is independent of perception can allow actions to be selected other than those prescribed by im-
+mediate perceptual input. In others, cognition can be independent of perception and unrelated to the current
+behavioral goal allowing thoughts to develop that are largely independent of the actions involved in an ex-
+ternal task. The default mode network (DMN) has been implicated in both of these kinds of perceptually
+decoupled thought. The current experiment used functional magnetic resonance imaging to explore whether
+a common region of this network was co-activated by both of these states. Both the medial pre-frontal cortex
+and the posterior cingulate – two major hubs of the DMN – showed greater activity when (i) actions that did
+not depend upon immediate perceptual input were faster and (ii) when actions based on perceptual input
+were slower. Together these data suggest that the DMN is important in cognition that is independent from
+perceptual input regardless of whether such thoughts result in action, or, instead compete with the behavior-
+al goals of the moment.
+
+© 2012 Elsevier Inc. All rights reserved.
+
+One distinguishing feature of higher order cognition is that it
+allows the agent freedom from immediacy (Shadlen and Gold, 2004)
+whereby information processing is not limited to that which emerges
+as a direct response to stimulus input. At least in humans, this can
+arise in two different ways. Sometimes cognition supports actions
+that are not an automatic response to events in the immediate stim-
+ulus environment. For example, when stopping to pick up laundry
+while driving home, our behavior is not prescribed by the external
+stimulus: Unlike a red trafﬁc light, stopping is not an act we should
+take every time we see the laundromat. At other times cognition
+can proceed largely unencumbered by both external stimuli and im-
+mediate behavioral goals. When we daydream about a vacation on
+the commute to work self-generated information forms the content
+of thought. Thus a second form of freedom from immediacy arises
+from states of ‘pure’ internal mentation which have no direct basis
+in the external environment (referred to as stimulus independent
+thought) (Antrobus et al., 1967). The current experiment explored if
+similar neural processes underpin these two different types of
+
+⁎ Corresponding author.
+
+E-mail address: smallwood@cbs.mpg.de (J. Smallwood).
+
+1053-8119/$ – see front matter © 2012 Elsevier Inc. All rights reserved.
+http://dx.doi.org/10.1016/j.neuroimage.2012.12.012
+
+freedom from immediacy: (a) situations in which actions are selected
+that could not be made on the basis of immediate stimulus input
+and (b) situations when cognition is decoupled from perception and
+unrelated to current behavioral goals.
+
+The default mode network (DMN, (Buckner et al., 2008) is a
+constellation of brain regions with two main hubs (Andrews-Hanna
+et al., 2010) — the anterior medial pre-frontal cortex (aMPFC, BA
+10) and the posterior cingulate cortex/precuneus (pCC/Pre, BAs 7,
+23, 31). The DMN is recruited when decisions regarding external
+stimuli are made using content from memory, for example, making
+inferences about mental states of others (Mitchell et al., 2006), imag-
+ining the future (Schacter et al., 2007, 2008, 2012), making autobio-
+graphical plans (Gerlach et al., 2011; Spreng et al., 2010), or, in the
+simplest case, retrieving a memory based on an associated cue
+(Huijbers et al., 2011). In these studies there is a relatively tight
+connection between DMN activity and behavior because the cognitive
+processes lead to relatively immediate task relevant actions (e.g. an
+external response in a cognitive experiment).
+
+The DMN is also active during SITs that have no relation to any
+external task being performed (Andrews-Hanna, 2011) such as
+daydreaming, mind-wandering, or absent-minded errors (Christoff
+et al., 2009; Mason et al., 2007; McKiernan et al., 2003, 2006;
+Stawarczyk et al., 2011; Weissman et al., 2006). Although states of
+self-generated thought such as mind-wandering may lead to behav-
+ioral outcomes over longer time frames, or lead to errors in a task,
+
+J. Smallwood et al. / NeuroImage 69 (2013) 120–125
+
+121
+
+they rarely make a direct contribution to immediate and accurate
+external task relevant actions.
+
+Operationalizing cognition that is independent of perception
+
+The DMN therefore has been implicated in two forms of cognition
+that allow freedom from immediacy: it allows cognition to guide
+actions that go beyond those prescribed by an external stimulus and
+it is implicated in thoughts that have no bearing upon immediate
+perceptual input or current task goals. The current experiment used
+functional magnetic resonance imaging (fMRI) to examine whether
+speciﬁc regions of the DMN are engaged during thoughts that do
+not depend upon perceptual input regardless of whether they result
+in task-related action. To test whether speciﬁc regions of the DMN
+network supports a general process through which cognition gains
+independence from perception (known as perceptual decoupling)
+we asked participants to perform two tasks. In one, working memory
+(WM), a sequence of numeric stimuli was encoded and participants
+were intermittently probed regarding the parity of the prior stimulus.
+In a second, choice reaction time (CRT), sequences of digits were
+monitored at a relatively minimal level for the intermittent occurrence
+of non-colored target and participants made responses that indicated
+the parity of the colored target.
+
+In this paradigm actions are always initiated in response to
+colored stimuli. An important feature of this design was that the
+colored stimuli required participants to switch from a passive
+viewing mode to one entailing active external behavior. Although
+both induced this switch, in the WM task participants had to gener-
+ate the action based on information stored internally (i.e. Was the
+previous number odd or even?), while in the CRT task the same
+decision is made based on perceptual information that is available
+at the moment that the action takes place (i.e. Is the current number
+odd or even?). Thus, actions made in the WM task depend on cogni-
+tion unrelated to immediate perceptual input to a greater extent
+than do those in the CRT task. In relative terms, therefore, correct
+responses to the colored numbers in the WM task reﬂect perceptu-
+ally decoupled thought that results in a task-relevant action.
+
+Thoughts that are not prescribed by perceptual input and that are
+unrelated to external tasks goals cannot be operationalized as directly
+as those that lead to action; instead this state must be inferred
+indirectly. One method to do this exploits the fact that perceptually
+independent thought that is unrelated to the current task can
+compromise performance in tasks that depend upon detailed external
+attention (e.g. Weissman et al., 2006). In the current experiment we
+operationalized poor performance as longer response times (RT)
+and performed a trial-by-trial analysis of the neural responses that
+preceded longer RT. A perceptual
+focus is needed both when
+encoding WM non-targets and when responding to CRT targets and
+
+Table 1
+A summary of how the different conditions allow an examination of the common role
+of memory and perception in the guidance of behavior.
+
+Task
+
+Choice reaction time (CRT)
+
+Working memory (WM)
+
+Stimulus type
+
+Non colored
+
+Colored
+
+6
+No
+High
+No
+
+Example stimulus
+Motor response
+Event frequency
+Task relevance
+Guidance of cognition Memory
+Example stimulus
+Motor response
+Event Frequency
+Task Relevance
+Guidance of Cognition
+
+3
+No
+High
+Yes
+Perception
+
+7
+Yes
+Low
+Yes
+Perception
+?
+Yes
+Low
+Yes
+Memory
+
+so based on the logic of Weismann et al. on the occasions when
+actions based on perceptual input are inefﬁcient (e.g. RT is relatively
+long), we inferred that task-unrelated perceptually decoupling was
+likely to have occurred.
+
+Summary of experimental aims
+
+To test whether perceptually decoupled thought depends on
+similar processes regardless of whether it results in immediate
+action, we sought evidence of brain regions whose activity patterns
+were common to two situations: (a) relatively fast responses for
+actions that depend upon memory rather than perceptual input
+and (b) relatively slower responses for actions that depend on
+perceptual input rather than memory. Importantly, regions with
+activity patterns which showed a crossover interaction of this type
+would support a process that was independent of immediate percep-
+tion and that was not a direct consequence of a task, the need to
+make an active response, or the frequency that an event occurred
+(see Table 1).
+
+Methods
+
+Participants
+
+16 neurologically healthy right-handed individuals participated in
+
+the current experiment (8 females, age range=18 to 21).
+
+Tasks
+
+Participants performed two runs of both the CRT and the WM task
+using a counterbalanced design. Runs of both tasks consisted of a se-
+ries of 32 mini-blocks. Each mini-block began with a series of
+non-colored numbers and ended with the presentation of a colored
+stimulus. In each run, 128 non-colored stimuli were presented and
+the number in each mini block was randomized. Each run lasted
+560 s and on average 17.5 s of non-colored numbers preceded each
+colored event. In the CRT task the mini-blocks ended with the presen-
+tation of a red numeral. In the WM task mini-blocks were terminated
+by the presentation of a target trial (a red ‘?’). In both tasks, partici-
+pants made a right-hand manual response to the colored targets
+using a button box. A left button indicated a target stimulus was
+odd while a right button push indicated that it was even. Each stimu-
+lus was presented for 1–1.5 s and was followed by a ﬁxation cross
+lasting 1–2.5 s. Prior to performing each task in the scanner, partici-
+pants were given practice runs of each that lasted approximately
+one minute. Task order was counterbalanced. Stimulus presentation
+used MATLAB (Version 7.5, The Mathworks Inc., Natick, MA) and
+the Psychophysics Toolbox extensions (Brainard, 1997; Pelli, 1997;
+Kleiner et al., 2007).
+
+fMRI data acquisition
+
+fMRI data were collected on a phased array research dedicated
+Siemens Magnetom Trio Tim 3.0 T scanner with a standard 12 chan-
+nel head coil. The entire scanning session consisted of six scans, in-
+cluding four task-related functional scans, a resting state functional
+scan, and a high-resolution 3D anatomical scan. Functional scans
+used a 2D gradient echo echo-planar imaging (EPI) pulse sequence
+sensitive to T2* BOLD contrast (64×64 matrix, 192×192 mm FOV,
+37 interleaved AC-PC oriented transverse slices, 3 mm×3 mm
+in-plane resolution, 3 mm slice thickness, 0.5 mm slice gap,
+2000 ms TR, 30 ms TE, 90° ﬂip angle). Task-related scans acquired
+280 functional volumes. The high-resolution structural image was ac-
+quired using a ﬂash 3D pulse sequence sensitive to T1 contrast
+(256×256 matrix, 220×220 mm FOV, 192 interleaved saggital slices,
+0.9×0.9 mm in-plane resolution, 0.89 mm slice thickness, 0.01 mm
+
+122
+
+J. Smallwood et al. / NeuroImage 69 (2013) 120–125
+
+slice gap, 15 ms TR, 4.20 ms TE, 20° ﬂip angle). Each functional scan-
+ning run began with the acquisition of four dummy volumes used to
+achieve steady-state tissue magnetization, which were discarded. A
+transistor–transistor logic (TTL) pulse sent out by the scanner at the
+onset of each viable EPI volume triggered the stimulus presentation
+software, and synched the beginning of each trial to the onset of the
+next complete image volume. All images were reconstructed off-line
+according to standard Siemens protocols and stored in DICOM format.
+
+fMRI image processing
+
+All preprocessing and analysis were performed using SPM8
+(Wellcome Trust Department of
+Imaging Neuroscience, University
+College London, UK). Functional scans were realigned to their mean
+volume using a seventh degree B-Spline interpolation. Each participant's
+structural scan was co-registered to the mean of his/her functional vol-
+umes using an automated rigid-body transformation algorithm. Normal-
+ization to MNI space was performed using Uniﬁed Segmentation
+(Ashburner and Friston, 2005) and the subsequent images were
+resampled into 3×3×3.5 mm voxels. Finally, images were smoothed
+with a 5-mm FWHM kernel. This relatively low smoothing kernel was
+chosen to ensure maximum anatomical speciﬁcity of the subsequent
+results.
+
+Statistical analysis was performed using the general linear model
+framework implemented in SPM8. A high-pass ﬁlter (128 s), and an
+autoregressive model [AR(1)] was applied to correct for low frequency
+drift and correct for autocorrelation. Additionally, movement parame-
+ters, as estimated during realignment, were added as regressors of no
+interest to remove residual motion-related variance.
+
+Results
+
+Behavioral performance
+
+Participants were accurate on both the WM (M=.96 (SE=.01)
+and the CRT task (M=.96 (SE=.01) and this did not vary by condi-
+tion, F (1,16)=.03, p=.86. Consistent with previous behavioral
+studies (e.g. Baird et al., 2012; Smallwood et al., in press) correct RT
+
+-6 
+
+18 
+
+-10 
+
+Left
+
+37 
+
+51 
+
+min 
+
+max 
+
+Fig. 1. Neural recruitment reﬂecting perceptually decoupled thought regardless of task
+relevance. The brain regions for which the correlation between longer RT and the bold sig-
+nal was different when the perceptual input was important to actions (targets in the
+choice reaction time task, CRT, and the pre-target interval during working memory,
+WM) than when perceptual input was less important to actions (pre-target interval dur-
+ing CRT and targets during WM). Images were thresholded at pb.005. Minimum cluster
+size (k=71) was determined using topological FDR.
+
+Table 2
+Regions of activation observed in the current experiment.
+
+t
+
+Cluster size
+
+Peak co ordinates
+
+Posterior cingulate cortex/precuneus
+MPFC
+Dorsal MPFC
+Ventral MPFC
+
+4.69
+4.45
+4.02
+3.93
+
+255
+112
+76
+71
+
+y
+
+X
+−9 −58
+12
+−6
+−6
+
+50
+32
+38
+
+z
+
+34
+16
+48
+−15
+
+was signiﬁcantly shorter when participants performed the WM
+(M=685 ms (SE=5.2)) than the CRT (M=730 ms (SE=5.2)), F
+(1,16)=6.0, p b.05. RT is shorter during WM blocks because partici-
+pants must continually maintain attention on each digit, whereas in
+the CRT task participants need only attend when the colored target
+is presented. Presentation of the colored stimulus in CRT therefore
+requires its identity to be encoded before the decision can be made;
+hence RT is longer than in the WM task.
+
+fMRI
+
+Our analysis consisted of a whole brain search of the patterns of
+brain activity that relate to faster actions that are controlled by mem-
+ory and slower responding when actions depend on immediate per-
+ceptual
+input. Following Weissman et al. (2006) we created
+subject-speciﬁc GLM to estimate beta weights for four conditions, in-
+cluding the target stimuli and a pre-target interval for both WM and
+CRT tasks. In order to explore baseline activity during the pre-target
+interval we placed a regressor 2.5 s before the non-colored stimulus
+that directly preceded a colored stimulus (e.g. prior to the informa-
+tion that should be encoded during the WM task). Modeling the
+pre-target period in this fashion allowed us to assess the impact of
+trial-by-trial changes in baseline activity that preceded all informa-
+tion that could contribute to a response in both tasks using an equal
+time window. We also modeled the onset of the colored stimulus to
+index target related activity. For both of these regressors RT was a
+parametric modulator at the ﬁrst level. The parametric modulation
+of the regressors placed in the pre-target interval allowed us to use
+trial-by-trial changes in the subsequent speed of responding as a
+proximal measure of the information processes that were taking
+place in the pre-target period. The parametric modulation of the
+neural activity that occurs upon presentation of the target provides
+a proximal indicator for the neural processes that facilitate or impair
+current action. The canonical HRF was used to model the BOLD data.
+Finally, average beta weights across the two runs of each task were
+calculated, indicating the strength of the correlation between BOLD
+activity and RT for each task and each event type. Higher beta values
+indicated brain regions in which increased BOLD activity is associated
+with slower responses to targets, and thus compromised (less
+efﬁcient) performance.
+
+Average beta weight estimates of each participant's RT-correlated
+BOLD activity for each event type (target/pre-target baseline) in each
+task (WM/CRT) were submitted to a second level random-effects
+analysis using a 2×2 repeated measures ANOVA. Using the
+subject-speciﬁc average beta images from the ﬁrst-level analysis, we
+calculated a contrast that weighted events positively when cognition
+depended upon perception (CRT colored and WM baseline) and nega-
+tively on situations when it did not (CRT baseline and WM colored).
+Whole brain analyses were conducted, and thresholded at p b.005,
+correcting for multiple comparisons using topological FDR (Chumbley
+et al., 2010). This analysis revealed four clusters of activity: one with-
+in the PCC and three within the mPFC. These clusters are displayed in
+Fig. 1 and reﬂect neural regions whose activation showed an interac-
+tion between relatively longer RT under conditions when cognition
+should be guided by perception and shorter RT when cognition was
+guided by information based on memory (see also Table 2).
+
+J. Smallwood et al. / NeuroImage 69 (2013) 120–125
+
+123
+
+i
+
+ii
+
+P
+
+T
+
+P
+
+T
+
+iii
+
+P
+
+T
+
+-6
+
+Left
+
+iv
+
+Task
+
+CRT
+WM
+
+p<.005 
+min
+
+Interval
+
+Target
+Pre-target
+
+T
+P   
+k = 71
+
+max
+
+P
+
+T
+
+Fig. 2. Speciﬁc relation between RT and neural activity under conditions in which action depended on perceptual input or when it did not. Panels i–iv present the average beta
+weights at the group level in the peak voxels of each of the four clusters of activity demonstrating an interaction between RT when perception was more important to action
+and when it was less important to action. In both the posterior cingulate cortex (Cluster i) and medial pre-frontal cortex (Cluster iii) a full cross-over interaction was observed in-
+dicating that activity in these regions was associated with faster actions if task performance depended on memory and slower actions if task performance depended on perception.
+Regions: i) posterior cingulate cortex (PCC), ii) dorsal medial pre-frontal cortex (dMPFC), iii) medial prefrontal cortex (MPFC) and iv) ventral pre-frontal cortex (VMPFC).
+
+To ascertain the speciﬁc nature of the relationship between neural
+activity and performance we extracted the average beta weights from
+the peak voxel in each of the four clusters. These were calculated sep-
+arately for each task event (pre-target/target) in each task (CRT/WM)
+and are presented in Fig. 2. In the clusters centered around the PCC
+and the MPFC, indicated by the blue shading, neural activity and RT
+exhibited a complete cross-over interaction: in these regions higher
+BOLD signal activity was associated with faster actions when behavior
+did not depend on perception (e.g. the pre-target intervals in the CRT
+and the targets intervals in the WM task) and slowed responding
+when behavior depended directly on perceptual
+input (e.g. the
+pre-target intervals in the WM task and the targets in the CRT). In
+the clusters centered around the dorsal mPFC and in the ventral
+mPFC, indicated by green shading, the interaction was due to in-
+creased neural activity associated with longer RT whenever task
+
+relevant behavior depended on perception (e.g. the CRT). Only in
+the clusters in the PCC and the mPFC, therefore, was neural activity
+associated with a cost to actions based on perception as well as a ben-
+eﬁt to actions based on memory.1
+
+Finally, we used the default settings of SPM 8 to formally test the
+spatial conjunction null hypothesis (Nichols et al., 2005) between
+those brain regions that were associated with slower responding
+when action was based on immediate perceptual input and faster
+responding when action was based on information from memory.
+
+1 We also examined the reverse contrast (e.g. those brain regions which facilitated
+responding to external information and interfered with responding to internal infor-
+mation). This analysis yielded no clusters with sufﬁcient extent to pass the cluster cor-
+rection (FDR) when we applied the same threshold as in prior analyses (p b.005) nor
+an uncorrected threshold of p b.001.
+
+124
+
+J. Smallwood et al. / NeuroImage 69 (2013) 120–125
+
+-6 
+
+Left
+
+18 
+
+-10 
+
+37 
+
+51 
+
+Fig. 3. The results of a conjunction analysis comparing the task differences in the cor-
+relation between RT and bold activity during targets (CRT>WM) and the pre-target in-
+terval (CRT bWM). Default SPM settings were used and the analysis was thresholded at
+p b.05. The minimum cluster size was set at 10.
+
+The contrasts targets (CRT>WM) and non-targets (CRT bWM) were
+entered as the input images and the p-value for this conjunction
+was set at p b.05. The resulting images are presented in Fig. 3. For
+the purposes of display the minimum cluster size was set at 10. It
+can be seen that three of the four clusters identiﬁed by the main
+analysis exhibited activity in similar spatial regions. Importantly,
+therefore, the clusters of activity centered on the PCC and the mPFC
+– the two regions that exhibited a full crossover interaction in the
+main analysis – survived this more conservative conjunction analysis.
+
+Discussion
+
+The current work set out to identify whether elements of the DMN
+exhibit activity that support perceptually decoupled thought regard-
+less of whether or not it resulted in immediate action. We observed
+clusters of activity in both the PCC and in a dorsal region of mPFC
+whose activity was associated with a faster responding to task rele-
+vant processing when behavior was governed by memory (e.g.
+responding during the WM task) and slower responding when be-
+havior was
+(e.g.
+responding during CRT). Together these data suggest that cognitive
+operations that are engaged when the mind decouples attention
+from perceptual input occur in PCC and mPFC regardless of whether
+the ultimate cognitive goal is to perform an action in the here and
+now.
+
+controlled by immediate perceptual
+
+input
+
+Although perceptually decoupled thought is necessary for certain
+forms of mental simulation, it can also derail the goals of the moment
+(see Smallwood, forthcoming-a, forthcoming-b for a discussion) and
+so the hypothesis that this information processing state is important
+for multiple psychological processes served by the DMN provides a
+simple parsimonious account for the variety of mental states that
+have been linked to this network. For example, prior studies have
+documented that elements of the default mode such as mPFC and
+pCC have been linked to absent-minded lapses (e.g. Christoff et al.,
+2009; Weissman et al., 2006). Others have documented higher DMN
+activity under situations in which internal guided thought is neces-
+sary such as during mental simulation or episodic retrieval
+(Huijbers et al., 2011; Mitchell, 2009; Mason et al., 2007). As both
+
+absent-minded lapses and mental simulation can depend on percep-
+tual decoupling, the hypothesis that elements of the DMN affords per-
+ceptually decoupled thought not only accounts for the current data it
+also provides a uniﬁed account of the variety of psychological pro-
+cesses that are associated with this network.
+
+We observed that regions in both the mPFC and pCC exhibit
+behavior that are consistent with the claim that they afford perceptu-
+ally decoupled thought and this hypothesis gains further support
+from prior accounts of the speciﬁc function postulated for each re-
+gion. For example, several authors have suggested that mPFC allows
+cognition to focus on internal representations rather than those
+provided by perception, perhaps by allowing the integration of multi-
+ple features in the services of a cognitive task (Christoff et al., 2004;
+Wagner et al., 2005). It has also been argued that the mPFC serves a
+general function that supports a retrieval mode that is independent
+of content (e.g. Tulving, 1987). Because the contents of the retrieval
+processes engaged during spontaneous self-generated thoughts are
+not likely to entail the parity of numbers, while task related retrieval
+in the WM tasks must, the overlap between these two conditions in
+mPFC is consistent with the view that this region supports a general
+purpose retrieval mode. Finally, there are several lines of anatomical
+evidence that supports a link between internally focused thought
+and the mPFC. In macaques the uncinate fasciculus ﬁber tract con-
+nects the mPFC to areas of the medial temporal lobe (Petrides and
+Pandaya, 2007) and resting state studies in humans has revealed
+functional connectivity between the bilateral hippocampus and ven-
+tral regions of mPFC (Kahn et al., 2008). Indeed, consistent with a
+role of the uncinate fasciculus in memory-guided thought, patient
+M.L., who suffered a focal lesion to this ﬁber tract was unable to en-
+gage in normal mental time travel (Levine et al., 1998). Together
+this functional and anatomical evidence suggests that MPFC receives
+input from brain systems that are known to represent information
+stored internally rather than sensory information and is one reason
+why this region may allow behavioral control that is independent of
+stimulus input and hence more abstract (Ramnani and Owen, 2004).
+Our data also suggests that the pCC is important in processes
+necessary for perceptually decoupled cognition. Consistent with
+evidence for a role of the pCC in perceptual decoupling, studies
+using tasks that depend on control but with less requirement on
+memory retrieval (e.g. the Eriksen ﬂanker task) have demonstrated
+that the pCC region increases activity when external task perfor-
+mance suffers (Eichele et al., 2008). Critically, however, pCC is also
+known to support task relevant memory retrieval, and is thought to
+be especially important in resolving the competition between memo-
+ry retrieval and concurrent perceptual
+input. In a recent study,
+Huijbers and colleagues developed a paradigm in which the retrieval
+of information from memory occurs in the context of task irrelevant
+visual input. This study demonstrated that pCC activity is high when
+retrieval is successful and task irrelevant visual input is disregarded.
+By contrast, when pCC activity is low retrieval fails and the task irrel-
+evant visual input is more likely to be encoded (Huijbers et al., 2009).
+This evidence suggests that pCC activity may be important in the
+resolution of competition between concurrent external input and
+memory retrieval processes and so could be important in stabilizing
+an internal train thought against the disruptions of the external
+environment (see Smallwood, forthcoming-b).
+
+Based on these different lines of evidence we propose that these
+two regions of the DMN (pCC and mPFC) may serve complimentary
+functions in facilitating an internal train of thought; the mPFC may
+allow internal representations to inﬂuence cognition, whereas the
+pCC could help resolve the competition between external and inter-
+nal information. Together the functions of perceptual decoupling as
+well as the self-generation of thought based on memory map directly
+onto theoretical formulations of those conditions that are conducive
+to the persistence of an internal train of thought that is unrelated to
+sensory input (Smallwood, forthcoming-a, forthcoming-b). If this
+
+J. Smallwood et al. / NeuroImage 69 (2013) 120–125
+
+125
+
+formulation is correct, understanding the interplay between pCC and
+mPFC may be important in attempts to understand cognition because
+the process of perceptual decoupling and coupling maybe involved in
+our capacity for freedom from immediacy that differentiates volun-
+tary action from reﬂexive behavior (Haggard, 2008).
+
+Finally, at the most general level these data add to a growing body
+of evidence (Spreng, 2012) that question the conception of the DMN
+as a task-negative network (Fox et al., 2005). Previous studies have
+argued against the idea that the DMN is necessarily anti-correlated
+with goal directed systems (such as the dorso-lateral PFC, or the
+dorsal anterior Cinglate Cortex) because both are active under certain
+conditions such as during mind-wandering (Christoff et al., 2009;
+Kirschner et al., 2012), autobiographical planning (Gerlach et al.,
+2011; Spreng et al., 2010; Spreng and Schacter, 2012) or when social
+information is maintained in working memory (Meyer et al., 2012). In
+a manner that is complimentary to the argumentation proposed by
+others (e.g. Spreng, 2012), the current study documents that the
+DMN provides support for perceptually decoupled thought if it occurs
+in the service of the task requiring memory input, while hindering
+task performance if activity in the same region occurs a few moments
+earlier in situations when perceptually coupled thought is important.
+Although the coarse spatial resolution of fMRI means that we cannot
+preclude the possibility that speciﬁc populations of neurons serve dis-
+tinct functions within different elements of the DMN, these data do indi-
+cate that at the network level the identiﬁcation of whether a brain
+system serves to facilitate or interfere with a task cannot be made on
+brain anatomy alone. Instead, we propose that it is the temporal
+coupling of activity in brain regions to goals in the external environment
+that determines whether it helps or hinders concurrent actions
+(Smallwood et al., 2012a, 2012b, 2011a). Although the capacity for SIT
+allows us to perform goals based on long-term memory (Baird et al.,
+2011), is associated with delayed gratiﬁcation, (Smallwood et al., in
+press) enhances creativity (Baird et al., 2012), and consolidates
+self-memories (Smallwood et al., 2011b, 2011c) its capacity to
+monopolize attention with unrelated information means it can also
+be the vehicle for absent-minded error (Barron et al., 2011; McVay
+and Kane, 2009). Based on the current result we suggest that
+absent-minded lapses do not necessarily depend upon speciﬁc neural
+processes, but rather occur in moments when the mind conﬁgures men-
+tal resources so as to perform an internal task that is incompatible with
+current behavioral goals (Smallwood, forthcoming-a, forthcoming-b). In
+this way our competence at perceptual decoupling comes with an asso-
+ciated cost: the capacity to escape from the constraints of the here and
+now facilitates the resolution of distant goals but does so at the detri-
+ment of the integrity of actions performed in the present.
+
+Acknowledgments
+
+This research was supported by supported by grant R305A110277
+from the US Ofﬁce of Education awarded to J.W. Schooler and
+J. Smallwood.
+
+References
+
+Andrews-Hanna, J.R., 2011. The brain's default network and its adaptive role in internal
+
+mentation. Neuroscientist.
+
+Andrews-Hanna, J.R., Reidler, J.S., Sepulcre, J., Poulin, R., Buckner, R.L., 2010. Functional-
+
+anatomic fractionation of the brain's default network. Neuron 65 (4), 550–562.
+
+Antrobus, J.S., Coleman, R., Singer, J.L., 1967. Signal-detection performance by subjects
+
+differing in predisposition to daydreaming. J. Consult. Psychol. 31 (5), 487–491.
+
+Baird, B., Smallwood, J., Schooler, J.W., 2011. Back to the future: autobiographical plan-
+
+ning and the functionality of mind-wandering. Conscious. Cogn.
+
+Barron, E., Riby, L.M., Greer, J., Smallwood, J., 2011. Absorbed in thought: the effect of
+mind wandering on the processing of relevant and irrelevant events. Psychol. Sci.
+22 (5), 596–601.
+
+Buckner, R.L., Andrews-Hanna, J.R., Schacter, D.L., 2008. The brain's default network:
+
+anatomy, function, and relevance to disease. Ann. N. Y. Acad. Sci. 1124, 1–38.
+
+Christoff, K., Gordon, A.M., Smallwood, J., Smith, R., Schooler, J.W., 2009. Experience
+sampling during fMRI reveals default network and executive system contributions
+to mind wandering. Proc. Natl. Acad. Sci. U. S. A. 106 (21), 8719–8724.
+
+Fox, M.D., Snyder, A.Z., Vincent, J.L., Corbetta, M., Van Essen, D.C., Raichle, M.E., 2005.
+The human brain is intrinsically organized into dynamic, anticorrelated functional
+networks. Proc. Natl. Acad. Sci. U. S. A. 102 (27), 9673–9678.
+
+Gerlach, K.D., Spreng, R.N., Gilmore, A.W., Schacter, D.L., 2011. Solving future problems:
+default network and executive activity associated with goal-directed mental simu-
+lations. NeuroImage 55 (4), 1816–1824.
+
+Haggard, P., 2008. Human volition: towards a neuroscience of will. Nat. Neurosci.
+
+934–946. http://dx.doi.org/10.1038/nrn2497.
+
+Huijbers, W., Pennartz, C.M., Cabeza, R., Daselaar, S.M., 2009. When learning and re-
+
+membering compete: a functional MRI study. PLoS Biol. 7 (1), e11.
+
+Huijbers, W., Pennartz, C.M., Cabeza, R., Daselaar, S.M., 2011. The hippocampus is
+coupled with the default network during memory retrieval but not during memory
+encoding. PLoS One 6 (4), e17463.
+
+Kahn, I., Andrews-Hanna, J.R., Vincent, J.L., Snyder, A.Z., Buckner, R.L., 2008. Distinct
+cortical anatomy linked to subregions of the medial temporal lobe revealed by in-
+trinsic functional connectivity. J. Neurophysiol. 100 (1), 129–139.
+
+Kirschner, A., Kam, J.W., Handy, T.C., Ward, L.M., 2012. Differential synchronization in de-
+
+fault and task-speciﬁc networks of the human brain. Front. Hum. Neurosci. 6, 139.
+
+Kleiner, M., Brainard, D., Pelli, D., 2007. What's new in Psychtoolbox-3? Perception 36
+
+(ECVP Abstract Supplement).
+
+Levine, B., Black, S.E., Cabeza, R., Sinden, M., McIntosh, A.R., Toth, J.P., Tulving, E., Stuss,
+D.T., 1998. Episodic memory and the self in a case of isolated retrograde amnesia.
+Brain 121, 1951–1973.
+
+Mason, M.F., Norton, M.I., Van Horn, J.D., Wegner, D.M., Grafton, S.T., Macrae, C.N.,
+2007. Wandering minds: the default network and stimulus-independent thought.
+Science 315 (5810), 393–395.
+
+McKiernan, K.A., Kaufman, J.N., Kucera-Thompson, J., Binder, J.R., 2003. A parametric
+manipulation of factors affecting task-induced deactivation in functional neuroim-
+aging. J. Cogn. Neurosci. 15 (3), 394–408.
+
+McKiernan, K.A., D'Angelo, B.R., Kaufman, J.N., Binder, J.R., 2006. Interrupting the
+“stream of consciousness”: an fMRI investigation. NeuroImage 29 (4), 1185–1191.
+McVay, J.C., Kane, M.J., 2009. Conducting the train of thought: working memory capacity,
+goal neglect, and mind wandering in an executive-control task. J. Exp. Psychol. Learn.
+Mem. Cogn. 35 (1), 196–204.
+
+Mitchell, J.P., 2009. Social psychology as a natural kind. Trends Cogn. Sci. 13 (6), 246–251.
+Nichols, T., Brett, M., Andersson, J., Wager, T., Poline, J.B., 2005. Valid conjunction infer-
+ence with the minimum statistic. NeuroImage 25 (3), 653–660. http://dx.doi.org/
+10.1016/j.neuroimage.2004.12.005 (15).
+
+Pelli, D.G., 1997. The VideoToolbox software for visual psychophysics: transforming
+
+numbers into movies. Spat. Vis. 10, 437–442.
+
+Ramnani, N., Owen, A.M., 2004. Anterior prefrontal cortex: insights into function from
+
+anatomy and neuroimaging. Nat. Rev. Neurosci. 5 (3), 184–194.
+
+Schacter, D.L., Addis, D.R., Buckner, R.L., 2007. Remembering the past to imagine the fu-
+
+ture: the prospective brain. Nat. Rev. Neurosci. 8 (9), 657–661.
+
+Schacter, D.L., Addis, D.R., Buckner, R.L., 2008. Episodic simulation of future events:
+
+concepts, data, and applications. Ann. N. Y. Acad. Sci. 1124, 39–60.
+
+Schacter, D.L., Addis, D.R., Hassabis, D., Martin, V.C., Spreng, R.N., Spuznar, K.L., 2012.
+imagining and the brain. Neuron 76,
+
+The future of memory: remembering,
+677–694. http://dx.doi.org/10.1016/j.neuron.2012.11.001.
+
+Shadlen, M.N., Gold, J.L., 2004. The neurophysiology of decision making as a window on
+cognition. In: Gazzaniga, M.S. (Ed.), The Cognitive Neurosciences III. MIT Press, pp.
+1229–1243.
+
+Smallwood, J., forthcoming. Distinguishing how from why the mind wanders: a
+
+process-occurrence framework for self-generated thought. Psychol. Bull.
+
+Smallwood, J., forthcoming. Searching for the elements of thought: a reply to Franklin,
+
+Mrazek, Holloway and Schooler. Psychol. Bull.
+
+Smallwood, J., Brown, K.S., Tipper, C., Giesbrecht, B., Franklin, M.S., Mrazek, M.D., et al.,
+2011a. Pupillometric evidence for the decoupling of attention from perceptual
+input during ofﬂine thought. PLoS One 6 (3), e18298.
+
+Smallwood, J., Schooler, J.W., Turk, D.J., Cunningham, S.J., Burns, P., Macrae, C.N., 2011b.
+Self-reﬂection and the temporal focus of the wandering mind. Conscious. Cogn. 20
+(4), 1120–1126.
+
+Smallwood, J., Schooler, J.W., Turk, D.J., Cunningham, S.J., Burns, P., Macrae, C.N., 2011c.
+
+Self-reﬂection and the temporal focus of the wandering mind. Conscious. Cogn.
+
+Smallwood, J., Brown, K., Baird, B., Schooler, J.W., 2012a. Cooperation between the de-
+fault mode network and the frontal–parietal network in the production of an inter-
+nal train of thought. Brain Res. 1428, 60–70.
+
+Smallwood, J., Brown, K.S., Baird, B., Mrazek, M.D., Franklin, M.S., Schooler, J.W., 2012b.
+Insulation for daydreams: a role for tonic norepinephrine in the facilitation of in-
+ternally guided thought. PLoS One 7 (4), e33706.
+
+Spreng, R.N., 2012. The fallacy of a “task-negative” network. Front. Psychol. 3, 145.
+Spreng, R.N., Stevens, W.D., Chamberlain, J.P., Gilmore, A.W., Schacter, D.L., 2010. De-
+fault network activity, coupled with the frontoparietal control network, supports
+goal-directed cognition. NeuroImage 53 (1), 303–317.
+
+Stawarczyk, D., Majerus, S., Maj, M., Van der Linden, M., D'Argembeau, A., 2011. Mind-
+wandering: phenomenology and function as assessed with a novel experience
+sampling method. Acta Psychol. 136 (3), 370–381.
+
+Tulving, E., 1987. Multiple memory systems and consciousness. Hum. Neurobiol. 6 (2),
+
+67–80.
+
+Wagner, A.D., Shannon, B.J., Kahn, I., Buckner, R.L., 2005. Parietal lobe contributions to
+
+episodic memory retrieval. Trends Cogn. Sci. 9 (9), 445–453.
+
+Christoff, K., Ream, J.M., Gabrieli, J.D., 2004. Neural basis of spontaneous thought pro-
+
+Weissman, D.H., Roberts, K.C., Visscher, K.M., Woldorff, M.G., 2006. The neural bases of
+
+cesses. Cortex 40 (4–5), 623–630.
+
+momentary lapses in attention. Nat. Neurosci. 9 (7), 971–978.
+
+

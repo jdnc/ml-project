@@ -1,0 +1,2759 @@
+Cerebral Cortex March 2013;23:739–749
+doi:10.1093/cercor/bhs065
+Advance Access publication March 20, 2012
+
+Decoding the Role of the Insula in Human Cognition: Functional Parcellation and
+Large-Scale Reverse Inference
+
+Luke J. Chang1,2, Tal Yarkoni3, Mel Win Khaw4 and Alan G. Sanfey1,5,6
+
+1Department of Psychology, University of Arizona, Tucson, AZ 85721, USA, 2Department of Psychiatry, Semel Institute for
+Neuroscience and Human Behavior, University of California Los Angeles, Los Angeles, CA 90024, USA, 3Department of Psychology,
+University of Colorado, Boulder, CO 8309, USA, 4Department of Psychology, Duke University, Durham, NC 2708, USA and, 5Donders
+Institute for Brain, Cognition and Behavior, Postbus 9101, 6500 HB Nijmegen and 6Behavioral Science Institute, Radboud University,
+Postbus 9104, 6500 HE Nijmegen, The Netherlands
+
+Address correspondence to Luke J. Chang. Email: ljchang@email.arizona.edu.
+
+Recent work has indicated that the insula may be involved in goal-
+directed cognition, switching between networks, and the conscious
+awareness of affect and somatosensation. However, these ﬁndings
+have been limited by the insula’s remarkably high base rate of
+activation and considerable functional heterogeneity. The present
+study used a relatively unbiased data-driven approach combining
+resting-state connectivity-based parcellation of the insula with
+large-scale meta-analysis to understand how the insula is
+anatomically organized based on functional connectivity patterns
+as well as the consistency and speciﬁcity of
+the associated
+cognitive functions. Our ﬁndings support a tripartite subdivision of
+the insula and reveal that the patterns of functional connectivity in
+the resting-state analysis appear to be relatively conserved across
+tasks in the meta-analytic coactivation analysis. The function of the
+networks was meta-analytically ‘‘decoded’’ using the Neurosynth
+framework and revealed that while the dorsoanterior insula is more
+consistently involved in human cognition than ventroanterior and
+posterior networks, each parcellated network is speciﬁcally
+associated with a distinct function. Collectively, this work suggests
+that the insula is instrumental in integrating disparate functional
+systems involved in processing affect, sensory-motor processing,
+and general cognition and is well suited to provide an interface
+between feelings, cognition, and action.
+
+Keywords: connectivity, insula, meta-analysis, parcellation, reverse
+inference
+
+Introduction
+The insula is one of the most frequently activated regions in
+functional neuroimaging research (Duncan and Owen 2000;
+Nelson et al. 2010; Yarkoni et al. 2011). Insular activation is
+reliably reported in a broad range of cognitive domains
+(Augustine 1996; Shelley and Trimble 2004), yet a detailed
+understanding of the functional anatomy of the insula is only
+now beginning to emerge (Craig 2009; Singer et al. 2009).
+Recent studies employing a diverse range of methodological
+approaches—including cytoarchitectonic mapping (Mesulam
+and Mufson 1982; Kurth, Eickhoff, et al. 2010), tractography
+(Nanetti et al. 2009), meta-analysis of task-related functional
+magnetic resonance imaging (fMRI) data (Wager and Feldman-
+Barrett 2004; Mutschler et al. 2009; Kurth, Zilles, et al. 2010),
+and functional connectivity (Nelson et al. 2010; Cauda et al.
+2011; Deen et al. 2011)—appear to converge on the functional
+parcellation of the insula into at least 3 functionally distinct
+subregions. These include a ventroanterior region associated
+
+Ó The Author 2012. Published by Oxford University Press. All rights reserved.
+For permissions, please e-mail: journals.permissions@oup.com
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+with chemosensory (Pritchard et al. 1999) and socio-emotional
+processing (Sanfey et al. 2003; Chang et al. 2011), a dorsoante-
+rior
+region associated with higher cognitive processing
+(Dosenbach et al. 2006; Eckert et al. 2009), and a posterior
+insula region associated with pain and sensorimotor processing
+(Craig 2002; Wager et al. 2004).
+
+Despite the emerging consensus, several important ques-
+tions about the role of insula activation in cognition remain
+unanswered. First, parcellation-based methods of resting-state
+data are inherently limited in their ability to directly link
+networks to speciﬁc functions due to the absence of any
+cognitive manipulation. At least one study has proposed that
+connectivity patterns in the insula may change according to the
+function being probed (Jabbi et al. 2008). Moreover, most
+studies have focused on one type of analysis (e.g., functional
+connectivity, meta-analysis, etc.); it remains unclear to what
+extent functional distinctions are consistent across different
+kinds of data.
+
+region is
+
+Second, efforts to map distinct insula regions onto speciﬁc
+cognitive functions have focused disproportionately on a few
+psychological domains (Wager and Feldman-Barrett 2004;
+Mutschler et al. 2009). But systematic functional--anatomical
+mapping requires a comprehensive representation of psycho-
+logical tasks and states in order to quantify both how consistent
+and how speciﬁc activations of different insula regions are
+(Wager et al. 2009). ‘‘Consistency’’ is necessary for determining
+reliably associated with
+whether a particular
+a particular cognitive process (i.e.,
+the degree to which
+a cognitive function implies a particular brain activation),
+while ‘‘speciﬁcity’’ is essential for performing reverse inference
+(i.e., the degree to which a particular brain activation implies
+a cognitive function) (Poldrack 2006). Establishing speciﬁcity is
+particularly crucial because insula regions differ considerably in
+activation likelihood. Whereas the dorsal anterior insula is
+activated in virtually all tasks involving goal-directed cognition
+(Duncan and Owen 2000; Dosenbach et al. 2006; Yarkoni et al.
+2009), posterior and ventroanterior insula activations are
+reported much less frequently. Failing to account for such
+differences could lead to misattribution of the functional role
+of different subregions.
+
+The present study used a data-driven approach to insula
+parcellation that combined functional connectivity analysis
+with a new framework for meta-analysis that enables quanti-
+ﬁcation of both the consistency and speciﬁcity of network
+brain activity (Neurosynth; Yarkoni et al. 2011). We ﬁrst
+parcellated the insula using a clustering analysis of functional
+connectivity patterns in resting-state fMRI data and replicated
+
+the tripartite division observed in previous studies. We then
+identiﬁed broader networks that were functionally coactivated
+with the insula regions both at rest and in over 4400 studies
+and used the NeuroSynth framework to meta-analytically
+‘‘decode’’ the functional role of these networks. Our results
+corroborate previous functional divisions and importantly
+extend these results by demonstrating a striking difference in
+the speciﬁcity of activation across different insula regions.
+
+Materials and Methods
+
+Participants
+Eighteen participants (mean age = 20.4, standard deviation = 2.6, female
+= 56%) were recruited to participate in this study via advertisements
+posted on the University of Arizona campus. All participants were
+screened for signiﬁcant health-related or neuropsychiatric disorders
+and none were currently taking psychoactive medication. One
+participant was excluded from the analysis for technical reasons
+(corrupted data). All participants gave informed consent according to
+procedures approved by the University of Arizona’s Institutional
+Review Board.
+
+Data Acquisition
+Data were collected at the conclusion of a social decision-making
+experiment
+(Chang and Sanfey 2009, 2011). Participants were
+instructed to close their eyes and keep their head as still as possible
+and encouraged to let their minds wander. Each scanning session
+included a T1-weighted magnetization prepared rapid gradient echo
+structural scan (time repetition [TR] = 11 ms, time echo [TE] = 4 ms,
+matrix = 256 3 256, slice thickness = 1 mm, gap = 0 mm). The
+functional resting scan lasted 2 min and 24 s and acquired 72 volumes
+using a 3-shot multiple echo planar imaging GRAPPA sequence that was
+optimized to maximize signal
+in regions associated with high
+susceptibility artifact, such as orbitofrontal cortex and medial temporal
+lobe (Stocker et al. 2006; Weiskopf et al. 2006) (TR = 2000 ms, TE = 25 ms,
+matrix = 96 3 96, ﬁeld of view = 192 mm, slice thickness = 3.0 mm,
+42 axial slices, voxel size 2 3 2 3 3).
+
+Data Preprocessing
+Functional imaging data were preprocessed and analyzed using the FSL
+Software package 4.1.4 (FMRIB, Oxford, UK). The ﬁrst 3 volumes of
+each functional run were discarded to account for T1 equilibrium
+effects. Images were corrected for slice scan time using an ascending
+interleaved procedure. Head motion was corrected using MCFLIRT
+using a 6-parameter rigid-body transformation. Images were spatially
+smoothed using a 5-mm full-width at half-maximum Gaussian kernel. A
+high-pass ﬁlter was used to cut off temporal periods longer than 100 s.
+All
+images were initially coregistered to the participant’s high-
+resolution structural scan and were then coregistered to the Montreal
+Neurological Institute 152 person 2-mm template using a 12-parameter
+afﬁne transformation. Nine covariates and their temporal derivatives
+(18 covariates total) were regressed out and the resulting residual
+(with a mean of 10 000) was used in all subsequent analyses. The
+covariates included 1) average global signal (Fox et al. 2009), 2) average
+CSF activity in two 2-mm diameter spheres placed in the lateral
+ventricles (–24, –44, 8 and 26, –44, 8) (Fox et al. 2005, 2009), 3) average
+activity in two 7-mm diameter spheres placed in white matter in the
+prefrontal cortex (24, 40, 4 and –24, 40, 4) (Fox et al. 2005, 2009), and
+4--9) 6 estimated head movement parameters from MCFLIRT procedure
+(Lund et al. 2005). The spheres were coregistered from stereotactic
+space to subject
+space before extracting mean activity. These
+covariates remove ﬂuctuations unlikely to occur as a result of regional
+correlations.
+
+Functional Parcellation Analysis
+We used a data-driven approach to parcellate the right insula into
+distinct anatomical subregions based on shared connectivity proﬁles
+
+740
+
+Insula Parcellation d Chang et al.
+
+with the rest of the brain. The right insula was selected because of its
+more frequent association with emotions and interoception (Craig
+2002; Singer et al. 2009). This approach shares conceptual similarity
+with other studies that have used diffusion tensor imaging to examine
+white matter connectivity (Johansen-Berg et al. 2004; Beckmann et al.
+2009) and more recently with resting-state fMRI (Cauda et al. 2011;
+Deen et al. 2011). First, we created a 2D matrix of time series cross-
+correlations for every voxel in the insula (n = 1252 deﬁned by the
+Harvard--Oxford cortical atlas) with every voxel in the rest of the brain
+(see Fig. 2, panel A). To reduce the search space, we downsampled
+voxels outside of the insula to 5 3 5 3 6 mm3 (approximately 13 000).
+We then created a correlation matrix of voxels in the insula based on
+the similarity of their connectivity proﬁle with voxels in the rest of the
+brain for every participant (see Fig. 2, panel B upper matrix). We sorted
+this matrix using an unsupervised clustering technique (see Fig. 2,
+panel B lower matrix). This process involved applying a k-means
+clustering algorithm to ﬁnd voxels in the insula that shared similar
+connectivity proﬁles to voxels in the rest of the brain. We did not place
+any spatial constraints on the algorithm, thus voxels were more likely to
+be clustered together the greater their similarity in connectivity
+proﬁles with the rest of the brain. We used the k-means algorithm
+implemented in Matlab using the best solution from 100 replicates.
+Because we did not have a strong a priori hypothesis about the possible
+number of subregions other than the 3 distinct cytoarchitectonic
+regions, we used an objective validity indicator (VI) to determine the
+optimal number of clusters. The VI maximizes the ratio between the
+average intercluster distance to the average intracluster distance.
+Finally, to create group maps for the clusters, we coregistered the
+individual subject maps to stereotactic space and summed the number
+of subjects that loaded on each cluster for every voxel in the insula.
+Thus, the group maps were determined by the number of subjects that
+had a similar spatial clustering solution. We used an arbitrary cutoff of
+n = 10 participants to threshold the map (other thresholds yielded
+similar cluster centers).
+
+Determining Optimal Number of Clusters Using the VI
+The k-means algorithm attempts to ﬁnd cluster solutions that minimize
+the Euclidean distance between each data point and the cluster center.
+To select the number of extracted clusters, we ran the clustering
+algorithm on the restricted set of k[2,10] and used a VI to empirically
+select the optimal clustering solution. Our VI is similar to those
+proposed by others (Ray and Turi 1999) and represents the average
+intercluster to intracluster distance ratio across subjects. First, we
+calculate the average within-cluster sum of squares (intra)
+
+2
+
+1
+N
+
+k
++
+i=1
+
++
+
+Intra =
+
+ð1Þ
+where N represents the number of voxels in the matrix and K reﬂects
+the number of clusters. We take x to be each voxel and zi to be the
+center of cluster Ci. Second, we calculate the average between-cluster
+sum of squares
+
+x2ci kx – zik
+
+ð2Þ
+Finally, VI can be calculated as the max of the intercluster to
+
+Inter = meanðzi – zj2; i=1; . . . k – 1; j=i + 1; . . . ; kÞ
+
+intracluster distance ratio, averaged across subjects.
+
+n
++
+i=1
+
+argmax Inter
+Intra
+
+n
+
+VI =
+
+ð3Þ
+
+where n represents the number of subjects.
+
+Identifying Parcellated Network Analysis
+To identify the brain networks that connect with each of the insular
+subregions identiﬁed by the cluster analysis, we utilized a multilevel
+multiple regression approach. Importantly, this method ensures that
+the networks were statistically independent from activity in the other
+subregions and were spatially consistent across subjects. We ﬁrst
+extracted the average time series for each of the 3 subregions classiﬁed
+by the clustering algorithm in subject space and entered them into
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+a ﬁrst-level general linear model. We then summarized these results at
+the group level using a mixed effect model with full Bayesian inference
+(Woolrich et al. 2004). We employed whole brain cluster correction
+using an initial cluster threshold of Z > 2.3 and a Family Wise Error
+corrected threshold of P < 0.05 (Worsley et al. 1992).
+
+Meta-Analytic Coactivation Analysis
+If the subregions identiﬁed by the clustering analysis reﬂect meaningful
+functional divisions, they should emerge not only in time course--based
+analyses but also in large-scale analyses of entire studies (Toro et al.
+2008; Smith et al. 2009). Previous meta-analysis studies that sought to
+identify functional divisions within the insula have focused on
+a relatively small number of psychological domains (e.g., different
+sensory modalities, cognitive control, etc.; Wager and Feldman-Barrett
+2004; Mutschler et al. 2009; Kurth, Zilles, et al. 2010); however, such
+analyses are susceptible to bias since researchers understandably tend
+to choose those domains for analysis that were already thought to be
+related to insula functionality. To provide a more comprehensive and
+unbiased window into coactivation of the insula with other regions, we
+instead relied on the ‘‘Neurosynth’’ database (http://neurosynth.org),
+which at present contains activation coordinates for nearly 4400 fMRI
+studies that were selected without regard for the psychological process
+under investigation. Collectively, these studies comprise over 145 000
+reported activations, representing the largest extant database of fMRI
+activations (The references for all the individual studies can be found
+on the Neurosynth website (www.neurosynth.org). The website
+provides multiple interfaces for identifying speciﬁc studies, including
+1) listing all studies included in each term-based meta-analysis; 2) listing
+all studies that report activation within 10 mm of a given coordinate;
+and 3) a search interface displaying all studies that contain a speciﬁed
+keyword or author name.).
+
+To identify networks associated with the cluster centers from each
+insular subregion across studies in the Neurosynth database (n = 4393),
+we identiﬁed regions in which activations were coreported with
+activations in each of the insula subregions. Each voxel in the binary
+database was coded as a 1 if it fell within 10 mm of a focus reported in
+the study (cf. Wager et al. 2009). Speciﬁcally, for each voxel in the brain
+(n = 231 202), we conducted a multiple logistic regression, predicting
+coactivation status (present or absent in each of the studies) from
+binary indicators of activation in each of the insula cluster centers
+(again, coding presence vs. absence in each study). Each map was
+thresholded using cluster correction with an initial cutoff of z > 4.5 and
+a corrected P < 0.05. We also quantiﬁed the spatial coherence of the
+resting state and the meta-analytic coactivation networks by computing
+the Pearson correlation between pairs of maps across all voxels (Smith
+et al. 2009). It is important to note that all 4393 studies were used to
+estimate the connectivity beta parameters—co-occurrences and
+non-occurrences both provide important sources of information in
+understanding coactivation.
+
+Meta-Analytic Decoding of Network Function
+An important beneﬁt of the Neurosynth framework is that it enables
+quantitative inferences about the potential cognitive functions associ-
+ated with distributed patterns of activation. The database contains
+automatically generated meta-analysis maps for several
+thousand
+psychological terms and topics (Poldrack et al. 2011; Yarkoni et al.
+2011); importantly, these meta-analysis maps can distinguish ‘‘forward
+inference’’
+from ‘‘reverse inference’’ (Poldrack 2006). Forward in-
+ference reﬂects the probability of observing activity in a region given
+knowledge of the psychological process; this is the type of inference
+produced by most fMRI studies, which start from a known experimen-
+tal manipulation and observe the pattern of brain activity associated
+with that manipulation. In contrast, reverse inference reﬂects the
+probability of a psychological process being present given knowledge
+of activation in a particular brain region. Reverse inference is analogous
+to ‘‘decoding’’ mental states from brain activity and is arguably what
+researchers are interested in most of the time; however, it is rarely
+possible to produce such inferences in individual fMRI studies, since
+knowing the probability with which a given brain state implies a given
+mental state implicitly requires knowledge of the probability with
+
+which the same brain state implies many other mental states. Because
+the Neurosynth framework contains a relatively comprehensive set of
+term-to-activation mappings,
+it is possible to compute whole-brain
+maps for individual psychological concepts in both the forward
+direction (i.e., P(ActivationjState)) and the reverse direction (i.e.,
+P(StatejActivation)). Statistical
+inference is then performed using
+a chi-square test to generate P value maps, and the resulting maps
+are FDR-corrected for multiple comparisons (for full details, see
+Yarkoni et al. 2011). Thus, one can establish both how consistently
+a particular task or state activates a given region and how speciﬁc
+activation in that region is to the task—effectively decoding mental
+states from brain activity.
+
+In the present study, we used the Neurosynth database to meta-
+analytically decode the functional role of distinct insula-based net-
+works. For each meta-analytic insula coactivation map (see above), we
+computed the voxel-wise Pearson correlation with each of 200 topic-
+based meta-analysis maps in the Neurosynth database (see http://
+neurosynth.org). The topics were generated by applying Latent
+Dirichlet Allocation (LDA) to the full text of all articles in the
+Neurosynth database. LDA is a generative model for text (Blei et al.
+2003) and assumes that each article is generated by sampling words
+from a set of topic distributions. The distribution of words over topics
+and topics over articles was inferred using Bayesian inference as
+implemented by MALLET (McCallum 2002). Topic loadings were
+computed for all articles and were used to identify articles with high
+loadings on each topic (for full details, see Poldrack et al. 2011).
+Contrast maps for each individual topic were created by comparing
+studies that loaded highly on that topic with all other studies. Whole-
+brain forward and reverse inference maps for each topic were
+computed in an identical manner to that described previously for
+term-based analyses in Yarkoni et al. (2009, 2011) (see also http://
+neurosynth.org). We conducted separate correlation analyses for
+forward inference and reverse inference topic maps. The resulting
+coefﬁcients were then used to generate a ranking of the psychological
+topics most consistently or speciﬁcally associated with each insula
+network, where the consistency analysis indicated the extent to which
+the insula network resembled the one activated by a particular task, and
+the speciﬁcity analysis indicated the degree to which activation of the
+insula network implied that a task or state was likely to be present.
+
+Results
+
+Functional Parcellation
+While the optimal cluster solution ranged from a k of 2 to 5 for
+individual subjects, the VI metric converged on a 3-cluster
+solution for the group (see Fig. 1, panel C). The 3D cluster
+solution for a representative subject can be seen in Figure 1,
+panel D. As is evident
+in this subject’s ordered insular
+correlation matrix (Fig. 1, panel B), the clustering algorithm
+was able to successfully group voxels together that shared
+similar patterns of connectivity with the rest of the brain.
+Importantly, the individual cluster solutions were associated
+with a consistent spatial proﬁle across participants (Fig. 2).
+Figure 2 depicts voxels that were classiﬁed similarly for at least
+10 participants (approximately 70% of the sample). Our data-
+driven approach ﬁnds 2 main subdivisions of the insula. The
+ﬁrst subdivision is between voxels in the anterior and posterior
+insula (–38, –10, 6). The anterior insula further parcellates into
+dorsal (–38, 12, –2) and ventral (–34, 8, –8) subregions. These
+results successfully replicate other parcellation studies, which
+have found a 3-cluster solution (Deen et al. 2011).
+
+Resting-State Network Connectivity
+As described above,
+the parcellation analysis identiﬁed 3
+distinct insular subregions. Our connectivity analysis demon-
+strates that these subregions were associated with distinct
+
+Cerebral Cortex March 2013, V 23 N 3
+
+741
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Figure 1. Functional parcellation method. Panel A depicts a high-resolution right insula (2.5 3 2.5 3 3 mm3) by low-resolution rest of brain matrix (5 3 5 3 6 mm3) of voxel-
+wise time series correlations. Panel B depicts 2 correlation matrices of voxels in the insula based on their pattern of connectivity with the rest of the brain. The upper matrix is the
+unordered matrix for one subject. The lower matrix is the same matrix ordered by the clustering algorithm. Panel C depicts the VI metric, which selects 3 as the optimal number of
+clusters (k). Panel D depicts the 3D spatial maps sorted by the results of the cluster analysis.
+
+functional networks. The ﬁrst network was associated with the
+ventroanterior portion and was functionally connected to
+primarily limbic areas including the amygdala, ventral tegmen-
+tal area (VTA), superior temporal sulcus, and posterolateral
+orbitofrontal cortex. The second network was functionally
+connected to the dorsoanterior portion of the insula and
+included the anterior cingulate cortex (ACC) and dorsolateral
+prefrontal cortex (DLPFC). The third network was functionally
+connected to the posterior insula and included the supple-
+mentary motor area (SMA) and somatosensory cortex. The 3
+divisions of
+the insula and their associated functionally
+connected networks can be seen in Figure 3. These results
+are similar to those reported by Deen et al. (2011) but are more
+discriminated as a result of our multiple regression procedure.
+
+Meta-Analytic Coactivation Networks
+We were further interested in whether the networks we
+observed in our resting-state data were task speciﬁc or could
+
+742
+
+Insula Parcellation d Chang et al.
+
+also be found in studies that manipulated cognitive states. We
+used the cluster centers identiﬁed in the parcellation analysis in
+a multiple logistic regression in order to identify networks that
+were independently coactivated across the 4400 studies in the
+Neurosynth database. This meta-analytic coactivation analysis
+(Robinson et al. 2010) identiﬁed similar networks found in the
+resting-state functional connectivity analysis. The ventroante-
+rior cluster was coupled primarily to limbic regions including
+the bilateral amygdalae, ventral striatum, VTA, temporal poles,
+LOFC, and MPFC. The dorsoanterior cluster was coupled to
+bilateral DACC, DLPFC, dorsal striatum, and TPJ. Finally, the
+posterior region was connected to the SMA, posterior temporal
+lobes, somatosensory cortex, right hippocampus, and rostral
+ACC. We observed a strong spatial coherence between the
+resting-state parcellated networks and the meta-analytic
+coactivation networks with moderate to strong overlap in all
+3 cases (r = 0.36, 0.51, and r = 0.48 for ventroanterior,
+respectively). The
+dorsoanterior,
+
+and posterior
+
+insula,
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Figure 2. Results of the functional parcellation analysis. Figure 2 depicts the number of subjects loading on each cluster for each voxel in the insula.
+
+convergence of these networks is particularly remarkable given
+that they were identiﬁed from very different levels of analysis.
+These results suggest that network connectivity is highly
+robust and relatively invariant to task.
+
+Meta-Analytic Decoding of Network Function
+Finally, we used the Neurosynth database to meta-analytically
+decode the psychological processes associated with each
+distinct insula network. To do this, we correlated each meta-
+analytic insula coactivation network with the forward and
+reverse inference meta-analysis maps for 200 distinct topics
+(We ran all the analyses initially on a subset of the database
+(~3000 studies) prior to the expansion of the database and
+found virtually identical results, which suggests that these
+ﬁndings are stable and will likely not dramatically change as
+new studies are added to the database.). Table 1 illustrates the 5
+unique topics (and accompanying terms) most associated with
+each network that were present in both forward and reverse
+inference analyses and did not describe either a methodological
+technique or statistical analysis (e.g., BOLD, cluster, TMS, etc.).
+The full table of correlation values for the forward and reverse
+inference analyses for all 200 topics can be found on our
+website (http://www.u.arizona.edu/~ljchang/NewSite/papers/
+Changetal_InsulaTopicCorrelations.xls). The top 15 unique
+topics implied by each network maps that were not about
+methods can be seen in Figure 4.
+
+several
+
+recent
+
+A forward inference analysis, which tested for consistency of
+activation, revealed that the dorsoanterior insula network was
+more consistently activated than the ventroanterior and
+posterior networks for nearly all topics (Fig. 5). This ﬁnding
+replicates
+the
+dorsoanterior insula and functionally connected regions such
+as the ACC tend to show substantially higher rates of activation
+than other regions in neuroimaging studies (Duncan and Owen
+2000; Nelson et al. 2010; Yarkoni et al. 2011), which has lead
+some to conclude that the network is processing goal-directed
+cognition (Dosenbach et al. 2006; Yarkoni et al. 2009).
+
+studies demonstrating that
+
+However, correlating each meta-analytic insula coactivation
+network with reverse inference meta-analysis maps—effectively
+decoding mental states from brain activation—revealed clear
+functional dissociations between insula networks (Fig. 5). The
+ventroanterior insular network was associated with topics
+related to emotion, chemosensation, and autonomic function;
+the dorsoanterior insular network was associated with topics
+related to higher cognitive tasks and executive control; and the
+posterior insular network was associated primarily with pain,
+sensorimotor, and language-related topics. Figure 5 displays the
+relative speciﬁcity of activation of each insular network across
+a number of relevant topics. These results extend previous
+conceptualizations of the insula that have used region of interest
+(ROI)-based meta-analyses (Wager and Feldman-Barrett 2004;
+Mutschler et al. 2009; Kurth, Zilles, et al. 2010).
+
+Cerebral Cortex March 2013, V 23 N 3
+
+743
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Figure 3. Positively connected functionally parcellated networks. Figure 3 depicts the brain networks that are functionally coupled to each insular subregion controlling for activity
+in other subregions. The resting-state analysis assesses functional connectivity using multilevel multiple regression. The coactivation analysis highlights networks that are coactive
+across studies in the Neurosynth database using multiple logistic regression. vIns (red) 5 networks connected to the ventroanterior region of the insula. dIns (blue) 5 networks
+connected to the dorsoanterior region of the insula. pIns (green) 5 networks connected to the posterior insular region. Images are presented using neurological conventions (i.e.,
+right 5 right). Both analyses are thresholded using whole brain cluster correction with an initial cluster threshold of Z [ 2.3 for the resting state and Z [ 4.5 for the coactivation
+and a Family Wise Error corrected threshold of P \ 0.05. The correlation matrix reﬂects the spatial coherence of the networks using Pearson correlations multiplied by 100.
+
+Discussion
+While previous studies have begun to delineate the dissociable
+functional roles of different insula regions, the present study is
+the ﬁrst to combine time series--based analyses of the insula
+with large-scale, data-driven meta-analysis of the extant neuro-
+imaging literature. We demonstrated a marked convergence
+across time series and meta-analytic approaches and provided
+strong evidence for functional speciﬁcity in distinct insula
+networks. Importantly, our analyses were performed on a large,
+representative set of studies and terms, and thus provide
+relatively unbiased estimates of the functional speciﬁcity and
+consistency of activation in different
+insula regions. Our
+approach enabled us to not only functionally distinguish
+different
+to quantitatively
+estimate the relative degree of functional speciﬁcity displayed
+by each region.
+
+regions within the insula but
+
+Functional Dissociations within the Insula
+Our ﬁndings converge with prior cytoarchitectonic studies
+(Mesulam and Mufson 1982; Kurth, Zilles, et al. 2010), meta-
+analyses (Wager and Feldman-Barrett 2004; Mutschler et al.
+2009; Kurth, Zilles, et al. 2010) and functional connectivity
+studies (Deen et al. 2011) in identifying 3 functionally distinct
+regions within the human insula. The dorsal/ventral distinction
+we observed in the anterior insula is consistent with that found
+by Nelson et al. (2010), which used an edge detection
+algorithm to ﬁnd functional borders in the anterior insula
+based on patterns of resting-state connectivity. Our results
+diverge slightly from another parcellation study, which
+employed a very coarse resolution (only 10 insular ROIs
+compared with our 1252) and a priori ﬁxed the number of
+clusters to 2 (Cauda et al. 2011). However, in their hierarchical
+clustering analysis, they also observed modest support for
+
+744
+
+Insula Parcellation d Chang et al.
+
+a 3-cluster solution. Despite these technical differences, our
+results appear to be highly consistent with extant literature and
+suggest that the insula may be parcellated into at least 3
+different regions.
+
+The ventroanterior agranular insula appears to be involved in
+the processing of chemosensory information such as olfaction
+and gustation (Yaxley et al. 1990; Pritchard et al. 1999). In
+contrast, the posterior granular insula seems to be a multimodal
+convergence zone for sensory information and processes
+exteroreceptive information (e.g., touch, temperature, and
+pain),
+interoceptive information (e.g., somatovisceral sensa-
+tions) (Craig 2002, 2003), auditory information (Bamiou et al.
+2003), and vestibular information (Guldin and Grusser 1998;
+Brandt and Dieterich 1999).
+
+The convergence of multimodal sensory information and
+ability to readout subjective states (Craig 2009; Ullsperger et al.
+2010) likely explains why the insula is intimately involved in
+affective processing (Damasio et al. 2000; Wager and Feldman-
+Barrett 2004). In particular, it has been associated with both
+the experience and observation (Wicker et al. 2003) of disgust
+to both taste and smell (Phillips et al. 1997), anticipatory
+anxiety (Phelps et al. 2001; Berns et al. 2006), feelings of anger
+(Damasio et al. 2000; Denson et al. 2009), guilt (Chang et al.
+2011), and also moral violations (Sanfey et al. 2003). Affective
+processing is functionally important
+for detecting salient
+information and signaling the recruitment of additional
+attentional resources and cognitive control. Thus, the insula
+is also well suited to interface between physiological sensations
+and higher order cognitive systems and in accordance with this
+conceptualization has routinely been implicated in a variety of
+cognitive processes (Duncan and Owen 2000; Dosenbach et al.
+2006; Eckert et al. 2009; Van Snellenberg and Wager 2009;
+Yarkoni et al. 2009). In fact, the insula has been demonstrated
+to be functionally connected with the anterior cingulate,
+
+RI dorsal
+ 0.17
+
+ 0.09
+
+ 0.29
+
+ 0.14
+
+0.36
+
+0.34
+
+0.33
+
+0.28
+
+RI posterior
+
+0.03
+
+0.05
+
+ 0.07
+
+0.02
+
+ 0.16
+
+ 0.01
+
+ 0.12
+
+ 0.10
+
+ 0.18
+
+ 0.06
+
+ 0.11
+
+ 0.18
+
+ 0.02
+
+ 0.01
+
+ 0.14
+
+ 0.01
+
+ 0.14
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Table 1
+Results of consistency and speciﬁcity analyses
+
+Topic
+
+Emotion
+
+ID #
+
+116
+
+N studies
+
+221
+
+FI ventral
+
+0.35
+
+FI dorsal
+
+0.47
+
+FI posterior
+
+RI ventral
+
+0.24
+
+0.49
+
+ 0.08
+
+ 0.02
+
+ 0.06
+
+Emotional neutral emotion valence arousal affective regulation cognitive negative processing emotions mood affect unpleasant emotionally responses pleasant reappraisal induction ratings aversive
+
+content arousing compared ﬁlm behavioral sadness positive images lateral.
+Gustation
+0.41
+
+36
+
+23
+
+0.23
+
+0.09
+
+0.44
+
+Food foods hunger eating BMI calorie weight hungry satiety obese motivational reward satiated images caloric appetizing value factors intake energy taste individuals obesity eat cues meal
+
+consumption body lateral response.
+Face
+
+103
+
+167
+
+0.36
+
+0.34
+
+0.17
+
+0.44
+
+Facial neutral expressions emotional emotion fearful happy expression fear processing angry sad emotions anger recognition compared social perception disgust dynamic happiness information gender
+
+intensity role versus identity affect affective sadness.
+Anxiety
+
+39
+
+69
+
+0.38
+
+0.48
+
+0.25
+
+0.43
+
+Anxiety threat avoidance trait fear activation aversive anxious response attachment threatening individuals scores STAI behavioral reactivity panic disorders responses approach individual behavior bias
+
+increased analyses levels temperament harm contrast sd.
+Olfaction
+
+156
+
+52
+
+0.42
+
+0.51
+
+0.44
+
+0.39
+
+0.01
+
+0.23
+
+Olfactory odor taste swallowing air odors pleasantness water intensity sensory stimulus odorants stimulation pleasant gustatory ﬂavor primary oral odorant saliva activated sucrose concentration smell
+
+sweat smelling chemosensory perceived produced cm.
+Switching
+
+189
+
+51
+
+0.63
+
+0.06
+
+locked univalent positivity.
+Inhibition
+
+152
+
+67
+
+0.00
+
+0.68
+
+0.18
+
+Switch switching ocd repeat task rule stimulus set switches cost response informatively costs associated control pre preparation bivalent rules cfs behavioral cognitive relevant contrast rt cued type
+
+Inhibition response nogo inhibitory trials inhibit motor inhibited prepotent cognitive responses voluntary behavior inhibiting normal selection event pre suppression executive commission ms successful
+
+inhibitions preparation respond hypnosis stops errors decide.
+Error processing
+
+125
+
+63
+
+commission event performed pre behavior role button.
+Conﬂict
+
+51
+
+48
+
+0.69
+
+0.14
+
+0.65
+
+0.13
+
+Error errors correct monitoring incorrect response processing trials responses correction detection rates ern signal following rate likelihood corrected adjustments erroneous correctly conﬂict failure
+
+Conﬂict response ﬂanker incompatible ci simon cognitive meditation processing compatible conﬂicts based arrow monitoring stimulus compatibility analysis control resolution pre meditators direction
+
+selection ms types responses level error arrows associated.
+Feedback
+
+44
+
+48
+
+0.03
+
+0.64
+
+0.24
+
+0.25
+
+0.09
+
+Feedback rule rules correct contrast performance activation based response following pre frn feedforward received estimation error probabilistic behavior subject incorrect tail trial violation sensitive
+
+informative loop guess lat directed reinforcement.
+Pain
+180
+
+64
+
+0.14
+
+0.68
+
+0.55
+
+0.14
+
+0.32
+
+0.51
+
+Pain intensity painful stimulation ratings stimulus noxious sensory nociceptive thermal rating unpleasantness heat processing perception temperature somatosensory affective chronic analgesia evoked
+
+threshold scale vas modulation perceived imaging experimental sensation mid.
+Somatosensory
+
+0.05
+
+126
+
+86
+
+0.57
+
+0.55
+
+0.05
+
+0.48
+
+Stimulation tactile somatosensory sensory touch activation ipsilateral activated ﬁnger stimulated electrical stimulus evoked study vibrotactile representation rest body primary somatotopic subject input
+
+secondary stimulations applied system information ﬁngers activations leg.
+Sensorimotor
+ 0.04
+
+143
+
+89
+
+Motor primary pre sensorimotor sensory execution simple movement somatosensory planning movements action output performed role performance proper bilaterally coordinates rest associated
+
+0.58
+
+0.37
+
+0.21
+
+0.33
+
+secondary behavior functional central network tasks changes performing multiple.
+Music
+
+0.03
+
+151
+
+54
+
+0.43
+
+0.42
+
+0.02
+
+0.32
+
+0.07
+
+0.25
+
+Music musical musicians vocal singing pitch ap melody melodies listening piano tonal pianists note non-musicians auditory melodic notes pieces excerpts playing compared professional instrument
+
+study perception tasks played improvisation integration.
+Auditory
+
+197
+
+143
+
+ 0.06
+
+0.47
+
+0.32
+
+Auditory sounds sound processing noise ear db acoustic hearing primary temporal stimulation listening vocalizations scanner intensity activated silent heard headphones hz animal produced silence
+
+acquisition information perception amplitude binaural tones.
+
+Notes: Terms associated with each topic from consistency and speciﬁcity analyses. All values reﬂect Pearson correlation coefﬁcients. N studies 5 number of studies associated with each topic. FI 5
+forward Inference, RI 5 reverse Inference.
+
+amygdala, and VTA to form a ‘‘salience detection’’ network
+(Seeley et al. 2007) and appears to be integrally involved in
+switching between the executive control and default networks
+(Sridharan et al. 2008; Menon and Uddin 2010).
+
+Our work addresses a number of limitations associated with
+previous functional connectivity (Cauda et al. 2011; Deen et al.
+2011) and meta-analyses (Wager and Feldman-Barrett 2004;
+Mutschler et al. 2009; Kurth, Zilles, et al. 2010) studies. First,
+due to the very nature of the type of data (i.e., no manipulation
+of function), parcellation of resting-state connectivity patterns
+cannot directly link networks to a speciﬁc function. It is
+important to note this limitation because at least one previous
+study has suggested that the insula’s connectivity patterns may
+change as a function of the active cognitive state. For example,
+while the anterior insula is involved in both experiencing and
+imagining disgust, it appears to be differentially functionally
+coupled to networks associated with somatosensory or
+cognitive functions, respectively (Jabbi et al. 2008). Our results
+provide evidence countering this argument as we replicated
+the resting-state functional connectivity networks in our meta-
+analytic coactivation analysis of nearly 4400 neuroimaging
+studies. This suggests that rather than the insula changing
+
+connectivity patterns based on cognitive state, it may be the
+involvement of different insular subregions and
+degree of
+(relatively conserved)
+that change
+depending on the function being probed.
+
+associated networks
+
+Distinguishing Consistency from Speciﬁcity
+Although previous studies have identiﬁed functional dissocia-
+tions between different insula regions, our approach allowed us
+to expand on this work by separately quantifying both the
+speciﬁcity and the consistency of insula activation for different
+psychological processes. Forward inference analysis revealed
+that the dorsoanterior insula network was more consistently
+activated than the ventroanterior and posterior networks for
+nearly all topics. This ﬁnding is in accord with recent work
+demonstrating that the dorsoanterior insula and ACC tend to
+show substantially higher rates of activation than other regions
+in neuroimaging studies (Duncan and Owen 2000; Nelson et al.
+2010; Yarkoni et al. 2011), which has lead some to conclude
+that the network is nonspeciﬁcally involved in general goal-
+directed cognition (Dosenbach et al. 2006; Yarkoni et al. 2009).
+However, our reverse inference/decoding analysis revealed
+
+Cerebral Cortex March 2013, V 23 N 3
+
+745
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Figure 4. Functional rankings of coactivation maps. Figure 4 depicts the results of the decoding analysis. The top 15 topics from the reverse inference analysis that were
+associated with each Meta-Analytic Functional Coactivation Analysis network map. Red 5 network associated with ventroanterior insula. Blue 5 network coupled with
+dorsoanterior insula. Green 5 network connected to posterior insula. Images are presented in neurological orientation and thresholded using whole brain cluster correction with
+an initial cluster threshold of Z [ 4.5 and a Family Wise Error corrected threshold of P \ 0.05 size and transparency of word clouds reﬂect rank-ordered correlation coefﬁcients
+exponentiated to the 2nd power, which emphasizes terms that are most associated with each network (Poldrack et al. 2009).
+
+Figure 5. Consistency and speciﬁcity of functions associated with meta-analytic coactivation of parcellated insular networks. The correlation values for the top 5 topics for each
+cluster using forward and reverse inference. Topics were selected if they were present in both forward and reverse inference analyses and represented nonmethod terms.
+
+a marked degree of
+functional speciﬁcity for all 3 insula
+networks. The ventroanterior insular network was associated
+with topics related to emotion, chemosensation, and auto-
+nomic function;
+insular network was
+associated with topics related to higher cognitive tasks and
+executive control; and the posterior insular network was
+associated primarily with pain, sensorimotor, and language-
+related topics.
+
+the dorsoanterior
+
+The fact that the dorsoanterior network is reliably activated
+by a broad range of goal-directed tasks despite showing
+considerable speciﬁcity in our decoding analysis suggests that
+while the higher cognitive functions supported by this network
+may be relatively circumscribed, those functions are probably
+a prerequisite for many different
+forms of goal-directed
+cognition. Put differently, many different kinds of tasks—for
+example, attending to sensory stimuli, viewing emotional
+
+746
+
+Insula Parcellation d Chang et al.
+
+goals,
+
+arousal
+
+and modulate
+
+pictures, etc.—are likely to require the capacity to sustain
+attention, monitor
+level
+(Dosenbach et al. 2006; Nelson et al. 2010). But this does not
+imply that the role of dorsoanterior insula is to attend to
+sensory stimuli or process emotion. Thus, our ﬁndings un-
+derscore the importance of distinguishing between consis-
+tency and speciﬁcity of activation and provide additional
+support
+to extant hypothesis-driven and ROI-based meta-
+analytic work (Wager and Feldman-Barrett 2004; Mutschler
+et al. 2009; Kurth, Zilles, et al. 2010).
+
+Limitations
+While we believe our ﬁndings provide an important step in
+using data-driven approaches to infer the functional neuro-
+anatomy of the insula and identify likely associated cognitive
+functions based on network connectivity, there are a number
+of important caveats in interpreting these results (for extended
+discussion, see Yarkoni et al. 2011). First, our automated
+methods assume that frequently occurring terms in an article
+will accurately reﬂect the cognitive processes reﬂected in brain
+ﬁndings presented in the accompanying tables. At present, the
+software does not take into account methodological details
+that might
+the ﬁndings (e.g., stereotactic space,
+direction of contrast, type of paradigm, etc.). However, it is
+important
+these potential problems should
+primarily result in random variation and thereby not reﬂect
+any systematic bias. In other words, these potential short-
+comings will only make it more difﬁcult to ﬁnd signiﬁcant
+results and should not systemically inﬂuence the results it does
+detect. In addition, random ﬂuctuations will theoretically be
+minimized as the number of studies in the database increases in
+size.
+
+to note that
+
+impact
+
+Second, this approach is effective primarily for relatively
+coarse cognitive processes that can be adequately captured by
+broad terms (e.g., emotion); it currently has little ability to
+capture more nuanced distinctions (e.g., disgust vs.
+fear).
+Despite this limitation, the automated Neurosynth software has
+been highly successful at replicating ﬁndings using manually
+coded methods and decoding broad cognitive states
+in
+individual human subjects (Yarkoni et al. 2011), and we are
+currently working to improve speciﬁcity via alternative coding
+and modeling approaches (e.g., Poldrack et al. 2011).
+
+Finally,
+
+the Neurosynth software cannot account
+
+for
+conﬁrmation bias present in the literature. For example, the
+fact that people routinely associate amygdala activation with
+emotion (and hence are more likely to publish this association)
+will increase the likelihood that the software will determine
+that amygdala activity implies an emotional state. This is an
+important limitation, as it presently constrains the promise of
+a fully automated and completely unbiased analytical approach.
+However, this problem is also present in every other method
+not excluding our own inherent assessments. The beneﬁt of
+our approach is that it minimizes the potential of introducing
+further biases at various stages of analysis.
+
+Conclusions
+Combining resting-state connectivity—based parcellation of
+the insula with large-scale meta-analysis, this study applied
+a relatively unbiased data-driven approach to understand how
+the insula is anatomically organized based on functional
+connectivity patterns and the consistency and speciﬁcity of
+
+associated cognitive functions. Our ﬁndings support a tripartite
+subdivision of the insula, with dorsoanterior, ventroanterior,
+and posterior
+regions broadly mapping onto cognitive,
+affective-chemosensory, and sensorimotor processing, respec-
+tively. We also ﬁnd evidence that different
+tasks elicit
+differential engagement of relatively conserved insula networks
+rather than altering large-scale connectivity patterns with
+insula subregions. Finally, we ﬁnd that while the dorsoanterior
+insula is more consistently involved in human cognition than
+ventroanterior and posterior networks, each parcellated
+network is speciﬁcally associated with a distinct function.
+Collectively, this work suggests that the insula is instrumental
+in integrating disparate functional systems involved in process-
+ing affect, sensory-motor processing, and general cognition and
+is well suited to provide an interface between feelings,
+cognition, and action.
+
+Funding
+National Institute of Aging (R21AG030768 to A.S.); National
+Institute of Mental Health (F31MH085465 to L.C.); National
+Institute of Nursing Research (F32NR012081 to T.Y.).
+
+Notes
+We thank Drs Mike X Cohen and Thorsten Kahnt for their helpful
+comments. Conﬂict of Interest : None declared.
+
+References
+Augustine JR. 1996. Circuitry and functional aspects of the insular lobe
+in primates including humans. Brain Res Brain Res Rev. 22:229--244.
+Bamiou DE, Musiek FE, Luxon LM. 2003. The insula (Island of Reil) and
+its role in auditory processing. Literature review. Brain Res Brain Res
+Rev. 42:143--154.
+
+Beckmann M, Johansen-Berg H, Rushworth MF. 2009. Connectivity-
+based parcellation of human cingulate cortex and its relation to
+functional specialization. J Neurosci. 29:1175--1190.
+
+Berns GS, Chappelow J, Cekic M, Zink CF, Pagnoni G, Martin-
+Skurski ME. 2006. Neurobiological substrates of dread. Science.
+312:754--758.
+
+Blei D, Ng A, Jordan M. 2003. Latent Dirichlet allocation. J Mach Learn
+
+Res. 3:993--1022.
+
+Brandt T, Dieterich M. 1999. The vestibular cortex. Its locations,
+
+functions, and disorders. Ann N Y Acad Sci. 871:293--312.
+
+Cauda F, D’Agata F, Sacco K, Duca S, Geminiani G, Vercelli A. 2011.
+the insula in the resting brain.
+
+Functional connectivity of
+Neuroimage. 55:8--23.
+
+Chang LJ, Sanfey AG. 2009. Unforgettable ultimatums? Expectation
+violations promote enhanced social memory following economic
+bargaining. Front Behav Neurosci. 3:36.
+
+Chang LJ, Sanfey AG. Forthcoming. Great expectations: neural compu-
+tations underlying the use of social norms in decision-making. Soc
+Cogn Affect Neurosci.
+
+Chang LJ, Smith A, Dufwenberg M, Sanfey AG. 2011. Triangulating the
+neural, psychological, and economic bases of guilt aversion. Neuron.
+70:560--572.
+
+Craig AD. 2002. How do you feel? Interoception: the sense of the
+physiological condition of the body. Nat Rev Neurosci. 3:655--666.
+Craig AD. 2003. Interoception: the sense of the physiological condition
+
+of the body. Curr Opin Neurobiol. 13:500--505.
+
+Craig AD. 2009. How do you feel--now? The anterior insula and human
+
+awareness. Nat Rev Neurosci. 10:59--70.
+
+Damasio AR, Grabowski TJ, Bechara A, Damasio H, Ponto LL, Parvizi J,
+Hichwa RD. 2000. Subcortical and cortical brain activity during the
+feeling of self-generated emotions. Nat Neurosci. 3:1049--1056.
+
+Deen B, Pitskel NB, Pelphrey KA. 2011. Three systems of insular
+functional connectivity identiﬁed with cluster analysis. Cereb
+Cortex. 21:1498--1506.
+
+Cerebral Cortex March 2013, V 23 N 3
+
+747
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+ 
+
+Denson TF, Pedersen WC, Ronquillo J, Nandy AS. 2009. The angry brain:
+neural correlates of anger, angry rumination, and aggressive
+personality. J Cogn Neurosci. 21:734--744.
+
+Dosenbach NU, Visscher KM, Palmer ED, Miezin FM, Wenger KK,
+Kang HC, Burgund ED, Grimes AL, Schlaggar BL, Petersen SE. 2006.
+A core system for the implementation of
+task sets. Neuron.
+50:799--812.
+
+Duncan J, Owen AM. 2000. Common regions of the human frontal lobe
+recruited by diverse cognitive demands. Trends Neurosci.
+23:475--483.
+
+Eckert MA, Menon V, Walczak A, Ahlstrom J, Denslow S, Horwitz A,
+Dubno JR. 2009. At the heart of the ventral attention system: the
+right anterior insula. Hum Brain Mapp. 30:2530--2541.
+
+Fox MD, Snyder AZ, Vincent JL, Corbetta M, Van Essen DC, Raichle ME.
+2005. The human brain is intrinsically organized into dynamic,
+anticorrelated functional networks. Proc Natl Acad Sci U S A.
+102:9673--9678.
+
+Fox MD, Zhang D, Snyder AZ, Raichle ME. 2009. The global signal and
+observed anticorrelated resting state brain networks. J Neurophysiol.
+101:3270--3283.
+
+Guldin WO, Grusser OJ. 1998. Is there a vestibular cortex? Trends
+
+Neurosci. 21:254--259.
+
+Jabbi M, Bastiaansen J, Keysers C. 2008. A common anterior insula
+representation of disgust observation, experience and imagination
+shows divergent
+functional connectivity pathways. PLoS One.
+3:e2939.
+
+Johansen-Berg H,
+
+TE,
+
+Behrens
+
+I,
+Rushworth MF, Brady JM, Smith SM, Higham DJ, Matthews PM.
+2004. Changes in connectivity proﬁles deﬁne functionally distinct
+regions in human medial frontal cortex. Proc Natl Acad Sci U S A.
+101:13335--13340.
+
+Robson MD, Drobnjak
+
+Kurth F, Eickhoff SB, Schleicher A, Hoemke L, Zilles K, Amunts K. 2010.
+Cytoarchitecture and probabilistic maps of the human posterior
+insular cortex. Cereb Cortex. 20:1448--1461.
+
+Kurth F, Zilles K, Fox PT, Laird AR, Eickhoff SB. 2010. A link between
+the systems: functional differentiation and integration within the
+human insula revealed by meta-analysis. Brain Struct Funct.
+214:519--534.
+
+Lund TE, Norgaard MD, Rostrup E, Rowe JB, Paulson OB. 2005. Motion
+or activity: their role in intra- and inter-subject variation in fMRI.
+Neuroimage. 26:960--964.
+
+McCallum AK. 2002. MALLET: a machine learning for language toolkit
+[Internet]. Available from: http://mallet.cs.umass.edu. Accessed 12/
+15/2011.
+
+Menon V, Uddin LQ. 2010. Saliency, switching, attention and control:
+function. Brain Struct Funct.
+
+insula
+
+a network model of
+214:655--667.
+
+Mesulam MM, Mufson EJ. 1982. Insula of the old world monkey. I.
+Architectonics in the insulo-orbito-temporal component of the
+paralimbic brain. J Comp Neurol. 212:1--22.
+
+Mutschler I, Wieckhorst B, Kowalevski S, Derix J, Wentlandt J, Schulze-
+Bonhage A, Ball T. 2009. Functional organization of the human
+anterior insular cortex. Neurosci Lett. 457:66--70.
+
+Nanetti L, Cerliani L, Gazzola V, Renken R, Keysers C. 2009. Group
+analyses of connectivity-based cortical parcellation using repeated
+k-means clustering. Neuroimage. 47:1666--1677.
+
+Nelson SM, Dosenbach NU, Cohen AL, Wheeler ME, Schlaggar BL,
+Petersen SE. 2010. Role of the anterior insula in task-level control
+and focal attention. Brain Struct Funct. 214:669--680.
+
+Phelps EA, O’Connor KJ, Gatenby JC, Gore JC, Grillon C, Davis M. 2001.
+Activation of the left amygdala to a cognitive representation of fear.
+Nat Neurosci. 4:437--441.
+
+Phillips ML, Young AW, Senior C, Brammer M, Andrew C, Calder AJ,
+Bullmore ET, Perrett DI, Rowland D, Williams SC, et al. 1997. A
+speciﬁc neural substrate for perceiving facial expressions of disgust.
+Nature. 389:495--498.
+
+Poldrack RA. 2006. Can cognitive processes be inferred from neuro-
+
+imaging data? Trends Cogn Sci. 10:59--63.
+
+Poldrack RA, Halchenko YO, Hanson SJ. 2009. Decoding the large-scale
+structure of brain function by classifying mental States across
+individuals. Psychological Science. 20(11):1364--1372.
+
+748
+
+Insula Parcellation d Chang et al.
+
+Poldrack RA, Kalar D, Barman B, Mumford JA, Yarkoni T. 2011. Topic
+mapping: a literature-wide analysis of mind-brain relationships.
+Program No. 841.24. 2011, Neuroscience Meeting Planner; 2011
+Nov 12--16; Washington (DC): Society for Neuroscience. Online.
+
+Pritchard TC, Macaluso DA, Eslinger PJ. 1999. Taste perception in
+patients with insular cortex lesions. Behav Neurosci. 113:663--671.
+Ray S, Turi RH. 1999. Determination of number of clusters in K-means
+clustering and application in colour image segmentation. In: Pal NR,
+De AK, Das J, editors. Proceedings of
+the 4th International
+Conference on Advances in Pattern Recognition and Digital
+Techniques Calcutta, India; 1999 December 27–29; New Delhi,
+India: Narosa Publishing House. p. 137--143.
+
+Robinson JL, Laird AR, Glahn DC, Lovallo WR, Fox PT. 2010.
+Metaanalytic connectivity modeling: delineating the functional
+connectivity of the human amygdala. Hum Brain Mapp. 31:173--184.
+Sanfey AG, Rilling JK, Aronson JA, Nystrom LE, Cohen JD. 2003. The
+neural basis of economic decision-making in the Ultimatum Game.
+Science. 300:1755--1758.
+
+Seeley WW, Menon V, Schatzberg AF, Keller J, Glover GH, Kenna H,
+Reiss AL, Greicius MD. 2007. Dissociable intrinsic connectivity
+networks for salience processing and executive control. J Neurosci.
+27:2349--2356.
+
+Shelley BP, Trimble MR. 2004. The insular lobe of Reil--its anatamico-
+functional,
+in
+humans—a review. The world journal of biological psychiatry: the
+ofﬁcial. World J Biol Psychiatry. 5:176--200.
+
+neuropsychiatric
+
+behavioural
+
+attributes
+
+and
+
+Singer T, Critchley HD, Preuschoff K. 2009. A common role of insula in
+
+feelings, empathy and uncertainty. Trends Cogn Sci. 13:334--340.
+
+Smith SM, Fox PT, Miller KL, Glahn DC, Fox PM, Mackay CE, Filippini N,
+Watkins KE, Toro R, Laird AR, et al. 2009. Correspondence of the
+brain’s functional architecture during activation and rest. Proc Natl
+Acad Sci U S A. 106:13040--13045.
+
+Sridharan D, Levitin DJ, Menon V. 2008. A critical role for the right
+fronto-insular cortex in switching between central-executive and
+default-mode networks. Proc Natl Acad Sci U S A. 105:12569--12574.
+Stocker T, Kellermann T, Schneider F, Habel U, Amunts K, Pieperhoff P,
+Zilles K, Shah NJ. 2006. Dependence of amygdala activation on echo
+time:
+from olfactory fMRI experiments. Neuroimage.
+30:151--159.
+
+results
+
+Toro R, Fox PT, Paus T. 2008. Functional coactivation map of the human
+
+brain. Cereb Cortex. 18:2553--2559.
+
+Ullsperger M, Harsay HA, Wessel JR, Ridderinkhof KR. 2010. Conscious
+perception of errors and its relation to the anterior insula. Brain
+Struct Funct. 214:629--643.
+
+Van Snellenberg JX, Wager TD. 2009. Cognitive and motivational
+functions of the human prefrontal cortex. In: Christensen AL,
+Goldberg E, Bougakov D, editors. Luria’s Legacy in the 21st Century.
+New York (NY): Oxford University Press. p. 30--62.
+
+Wager TD, Feldman-Barrett L. 2004. From affect to control: functional
+specialization of the insula in motivation and regulation. Published
+Online at PsycExtra. [cited 2011 Dec 15]. Available from: URL
+http://www.apa.org/pubs/databases/psycextra/.
+
+Wager TD, Lindquist MA, Nichols TE, Kober H, Van Snellenberg JX.
+2009. Evaluating the consistency and speciﬁcity of neuroimaging
+data using meta-analysis. Neuroimage. 45:S210--S221.
+
+Wager TD, Rilling JK, Smith EE, Sokolik A, Casey KL, Davidson RJ,
+Kosslyn SM, Rose RM, Cohen JD. 2004. Placebo-induced changes in
+FMRI
+in the anticipation and experience of pain. Science.
+303:1162--1167.
+
+Weiskopf N, Hutton C, Josephs O, Deichmann R. 2006. Optimal EPI
+parameters for reduction of susceptibility-induced BOLD sensitivity
+losses: a whole-brain analysis at 3 T and 1.5 T. Neuroimage.
+33:493--504.
+
+Wicker B, Keysers C, Plailly J, Royet JP, Gallese V, Rizzolatti G. 2003.
+Both of us disgusted in My insula: the common neural basis of seeing
+and feeling disgust. Neuron. 40:655--664.
+
+Woolrich MW, Behrens TE, Beckmann CF, Jenkinson M, Smith SM. 2004.
+Multilevel linear modelling for FMRI group analysis using Bayesian
+inference. Neuroimage. 21:1732--1747.
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Worsley KJ, Evans AC, Marrett S, Neelin P. 1992. A three-dimensional
+statistical analysis for CBF activation studies in human brain. J Cereb
+Blood Flow Metab. 12:900--918.
+
+Yarkoni T, Barch DM, Gray JR, Conturo TE, Braver TS. 2009. BOLD
+correlates of trial-by-trial reaction time variability in gray and white
+matter: a multi-study fMRI analysis. PLoS One. 4:e4257.
+
+Yarkoni T, Poldrack RA, Nichols TE, Van Essen DC, Wager TD. 2011.
+Large-scale automated synthesis of human functional neuroimaging
+data. Nat Methods. 8:665--670.
+
+Yaxley S, Rolls ET, Sienkiewicz ZJ. 1990. Gustatory responses of single
+neurons in the insula of the macaque monkey. J Neurophysiol.
+63:689--700.
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Cerebral Cortex March 2013, V 23 N 3
+
+749
+
+

@@ -1,0 +1,1209 @@
+ORIGINAL RESEARCH ARTICLE
+published: 12 November 2013
+doi: 10.3389/fnhum.2013.00734
+
+HUMAN NEUROSCIENCE
+The default modes of reading: modulation of posterior
+cingulate and medial prefrontal cortex connectivity
+associated with comprehension and task focus while
+reading
+Jonathan Smallwood1*, Krzysztof J. Gorgolewski 2, Johannes Golchert 2, Florence J. M. Ruby1, Haakon
+Engen3, Benjamin Baird 4, Melaina T. Vinski 5, Jonathan W. Schooler 4 and Daniel S. Margulies 2
+1 Department of Psychology, University of York, Hesslington, North Yorkshire,UK
+2 Max Planck Research Group: Neuroanatomy & Connectivity, Max Planck Institute for Human Cognitive and Brain Sciences, Leipzig, Germany
+3 Department of Social Neuroscience, Max Planck Institute for Human Cognitive and Brain Sciences, Leipzig, Germany
+4 Department of Psychological and Brain Sciences, University of California, Santa Barbara, CA, USA
+5 Department of Psychology, Neuroscience and Behavior, McMaster University, Hamilton, ON, Canada
+
+Edited by:
+John J. Foxe, Albert Einstein College
+of Medicine, USA
+Reviewed by:
+Mohamed L. Seghier, UCL, UK
+Kathrin Kollndorfer, Medical University
+of Vienna, Austria
+*Correspondence:
+Jonathan Smallwood, Department of
+Psychology, University of York,
+Hesslington, North Yorkshire, UK
+e-mail: smallwoodjm@gmail.com
+
+Reading is a fundamental human capacity and yet it can easily be derailed by the
+simple act of mind-wandering. A large-scale brain network, referred to as the default
+mode network (DMN), has been shown to be involved in both mind-wandering and
+reading, raising the question as to how the same neural system could be implicated
+in processes with both costs and beneﬁts to narrative comprehension. Resting-state
+functional magnetic resonance imaging (rs-fMRI) was used to explore whether the
+intrinsic functional connectivity of the two key midline hubs of the DMN—the posterior
+cingulate cortex (PCC) and anterior medial prefrontal cortex (aMPFC)—was predictive
+of individual differences in reading comprehension and task focus recorded outside of
+the scanner. Worse comprehension was associated with greater functional connectivity
+between the PCC and a region of the ventral striatum. Better comprehension was
+associated with greater functional connectivity with a region of the right insula. By
+contrast reports of increasing task focus were associated with functional connectivity
+from the aMPFC to clusters in the PCC, the left parietal and temporal cortex, and
+the cerebellum. Our results suggest that the DMN has both costs (such as poor
+comprehension) and beneﬁts to reading (such as an on-task focus) because its midline
+core can couple its activity with other regions to form distinct functional communities
+that allow seemingly opposing mental states to occur. This ﬂexible coupling allows the
+DMN to participate in cognitive states that complement the act of reading as well as
+others that do not.
+
+Keywords: default mode network, reading, mind wandering, self-generated thought, comprehension, posterior
+cingulate cortex, medial prefrontal cortex (MPFC)
+
+INTRODUCTION
+The development of writing has profoundly changed our social
+world: it allows ideas to be publicized to geographically diverse
+groups of individuals and permits concepts to be passed from
+generation to generation. More prosaically, but no less impor-
+tantly, reading is a source of enjoyment available to every literate
+individual. Despite the value of reading, it can often seem that
+our minds are ill suited to the task of narrative comprehension. It
+is relatively common during reading, for example, to experience
+thoughts and feelings that are unrelated to the prose in front of
+us. Such task-unrelated thinking occurs across many task contexts
+(Smallwood and Schooler, 2006) and when it occurs in read-
+ing is a well-documented correlate of comprehension problems
+(Schooler et al., 2004; Smallwood et al., 2008; Franklin et al., 2011;
+
+McVay and Kane, 2011). At present we lack a detailed appreciation
+of the processes that govern how our thoughts are constrained to
+the narrative of a piece of prose, or those that cause our minds to
+wander away from what we are reading.
+
+The current study used resting-state functional magnetic res-
+onance imaging (rs-fMRI) to investigate whether variations in
+the experience of reading across individuals have a basis in the
+brain’s functional architecture. We were particularly interested in
+how the reading experience of different individuals varied with
+the behavior of the anterior medial prefrontal cortex (aMPFC)
+and posterior cingulate cortex (PCC), two major midline hubs of
+the default mode network (DMN; Raichle et al., 2001; Greicius
+and Menon, 2004; Buckner et al., 2008; Andrews-Hanna et al.,
+2010). The DMN is a constellation of brain regions including
+
+Frontiers in Human Neuroscience
+
+www.frontiersin.org
+
+November 2013 | Volume 7 | Article 734 | 1
+
+Smallwood et al.
+
+Reading by default
+
+regions of prefrontal, parietal and temporal cortex that were
+initially discovered to “deactivate” during externally driven tasks,
+and also exhibit correlated intrinsic neural activity. The DMN
+consists of a midline core that includes the aMPFC and the PCC
+that can ﬂexibly couple its activity to two additional subsystems:
+(i) a medial temporal lobe (MTL) subsystem that includes the
+hippocampus, the medial orbitofrontal cortex, and the temporal
+poles, and is important in episodic memory; and (ii) a dorsal
+subsystem that includes a dorsal region of the medial prefrontal
+cortex and lateral regions of the parietal cortex including the
+temporoparietal junction, and may be important in simulating of
+self and other (Buckner et al., 2008; Andrews-Hanna et al., 2010).
+Currently the functions of the DMN are a matter of debate:
+prior studies have documented that the DMN plays a role in
+task-unrelated thought in sustained attention tasks (Mason et al.,
+2007; Christoff et al., 2009; Stawarczyk et al., 2011) as well as
+absent-minded lapses (Eichele et al., 2008; Christoff et al., 2009),
+suggesting that activity in this network could be responsible for
+the comprehension deﬁcits that occur when the mind wanders
+during reading. Given that the DMN is implicated in task-
+unrelated thinking, it would seem intuitive that this network
+would be responsible for failures in comprehension that accrue
+due to mind-wandering.
+
+Despite the appeal of the account of the DMN as the sub-
+strate for task-unrelated thought, the picture is likely to be more
+complicated: regions of the DMN have also been implicated
+in processes that are likely to be engaged during reading. For
+example, Fletcher et al. (1995) demonstrated that reading stories
+containing a narrative relating to either physical reality or to
+the mental states of other individuals activated the PCC relative
+to a series of unlinked sentences. Additionally, grey matter vol-
+ume in the PCC is correlated with an individual’s capacity for
+phonological decoding (He et al., 2013). Recent meta-analyses
+have conﬁrmed the role of the PCC and aMPFC in extended
+narrative comprehension, especially of a ﬁctional nature (Mar,
+2011).
+
+Functional studies suggest the DMN is also implicated in
+processes that readers could use when reading. For example, the
+DMN is activated when participants make mental state attribu-
+tions (Spreng et al., 2009; Spreng and Mar, 2012), when they
+retrieve information from memory (Huijbers et al., 2011), and
+has been hypothesized to allow for multiple different mental
+states all of which rely on information from memory to guide
+behavior (Smallwood et al., 2013). Meta-analyses also indicate
+that elements of the DMN are important in semantic processing:
+a capacity which is critical for reading (Binder and Desai, 2011).
+Semantic processing, mental state attribution, and the retrieval
+of information from memory are all abilities that are important
+in narrative comprehension because they allow the reader to
+understand the motives of characters and to make links between
+different elements of an extended text.
+
+To understand why the DMN could be implicated in both
+costs and beneﬁts to reading (Smallwood, 2013), we recorded how
+effectively individuals stayed on task while they read three differ-
+ent expository texts from an engaging popular work describing
+the history of science as well as the lives of the protagonists who
+contributed to this story. Afterwards participants completed a set
+
+of open-ended questions assessing their comprehension of what
+they read. Previously recorded rs-fMRI data was also available
+from a subset of these individuals which we used to explore how
+trait differences in the effectiveness of reading, measured both
+subjectively and objectively, were related to differences in the
+intrinsic functional connectivity of two of the major hubs of the
+DMN (aMPFC and PCC).
+
+Based on prior evidence of DMN activation associated both
+with processes engaged by reading and with mind-wandering, as
+well as evidence that mind-wandering during reading is associated
+with poorer reading performance, we predicted that differences
+in reading effectiveness would relate to distinct patterns of func-
+tional connectivity between the midline core of the DMN and
+other brain regions. Prior studies have looked at how the behav-
+ior of resting state networks associated with reading behavior
+(Koyama et al., 2011), here we report an rs-fMRI investigation
+that is focused on the DMN. We used hypothesis driven seed-
+based analysis to examine whether metrics of reading behavior
+modulate the whole-brain connectivity of these regions. We were
+particularly interested in whether any observed modulations of
+functional connectivity could help shed light on how the DMN
+can be both beneﬁcial and costly to the act of reading. Although
+this approach is limited by our choice of seed regions, it does not
+constrain the results of our analysis and so provides a straightfor-
+ward, hypothesis driven method to assess our question of interest
+(Cole et al., 2010).
+
+METHODS
+Healthy participants were recruited for the current experiment
+from the Max Planck Institute for Human Cognitive and Brain
+Sciences participant database. Ethical approval was obtained prior
+to completing this experiment from the Ethics committee of
+the University of Leipzig (Ref # 360-10-13122010). Participants
+provided written informed consent prior to their participation.
+
+ASSESSMENT OF READING BEHAVIOR
+Individual differences in maintaining focus on the narrative while
+reading and subsequent text comprehension was assessed in a
+sample of 61 healthy native German speakers (age range = 19–
+50, mean = 27.9 years, (SD = 5) 37 females, all right handed)
+while they read three excerpts from the ofﬁcial translation of Bill
+Bryson’s A Short History of Everything, a text that has been used in
+English language studies of mind-wandering (Smallwood et al.,
+2009b; Smilek et al., 2010). These texts are engaging non-ﬁction
+works that describes the characters and historical contexts of
+important scientiﬁc events. One text dealt with biology, a second
+with chemistry and a third dealt with geology. On average each
+text was approximately 1200 words long (mean = 1187). The
+Fleisch Kincaid levels were calculated using an online website1
+and ranged from 34–39 making these texts slightly easier than
+university level material.
+
+Participants read each text on a computer screen in an indi-
+vidual testing booth. Text was presented one sentence at a time
+and participants received experience sampling probes at random
+intervals (5–7 times for each text). Reading was self-paced and
+
+1http://www.leichtlesbar.ch/html/_ergebnis.html
+
+Frontiers in Human Neuroscience
+
+www.frontiersin.org
+
+November 2013 | Volume 7 | Article 734 | 2
+
+Smallwood et al.
+
+Reading by default
+
+lasted approximately one hour in total. Experience sampling
+probes asked participants to report whether, at the moment prior
+to the probe, they were focused on what they were reading or
+on something else, a phenomenon described as task-unrelated
+thought (“Dachten Sie an die Aufgabe oder an etwas anderes?”).
+Participants answered this probe using a slider operated via a
+mouse. At the end of each text participants were asked about their
+familiarity with the text measured using a similar slider as was
+used to assess task focus.
+
+After each text, comprehension of the material was assessed
+using a set of open-ended paper and pencil questions. On average
+participants took approximately 15 (±5) min to read each text
+and approximately the same time for answer the questions.
+
+MRI ACQUISITION AND ANALYSIS
+rs-fMRI scans of 42 participants (age range = 19–26, mean = 27
+years, 21 females) were retrieved from the existing Max Planck
+Institute for Human Cognitive and Brain Sciences participant
+database. The scans were collected on either a 3.0 Tesla Siemens
+Tim Trio (n = 26) or a Siemens Vario scanner (n = 16) before the
+reading assessment. Scanning duration varied from 360–600 s and
+two different slice order acquisitions were employed (ascending,
+n = 38, interleaved, n = 4). For all participants, the remaining
+parameters were the same (Repetition Times (TR) = 2000 ms;
+Echo Time (TE) = 30 ms; ﬂip angle = 90◦; s acquisition matrix =
+64 × 64; Field of view (FOV) = 192 mm; acquisition voxel size =
+3 × 3 × 4 mm). Participants were instructed to relax, to hold as
+still as possible, and to keep their eyes open. High-resolution T1-
+weighted anatomical scans were also acquired for all participants
+(MPRAGE, TR = 2300 ms; TE = 2.96 ms; TI = 900 ms; ﬂip angle
+= 9◦; FOV = 256 mm; acquisition voxel size = 1 × 1 × 1 mm).
+FUNCTIONAL CONNECTIVITY ANALYSIS
+Preprocessing, seed selection, and time series extraction
+Cortical surface reconstruction was performed on the T1 scans
+using FreeSurfer (Dale et al., 1999; Fischl et al., 2001, 2002,
+2004; Behzadi et al., 2007; Reuter et al., 2010). For each subject,
+nonlinear transformation from T1 to MNI template (created
+from 152 subjects, resampled at 2 mm, provided with FSL) was
+calculated using Advanced Neuroimaging Tools (ANTs; Avants
+et al., 2011).
+
+To remove potential scanner instability effects the ﬁrst
+four volumes of each echo planar imaging (EPI) sequence
+were removed. This was followed by simultaneous slice-timing
+and motion correction using 4DRealign implemented in nipy2
+(Roche, 2011). Afﬁne transformation from mean EPI image to
+T1 volume was calculated using BB Register (Greve and Fischl,
+2009). Brain mask, cerebrospinal ﬂuid (CSF) mask and white
+matter (WM) mask were extracted from FreeSurfer parcella-
+tion and transformed into EPI space (thresholded at 0.5 after
+interpolation). Realigned timeseries were masked using the brain
+mask. Principal components of physiological noise were estimated
+using the CompCor (Behzadi et al., 2007). Joined WM and CSF
+masks and voxels of highest variance were used to extract two
+sets of principal components (a.k.a. aCompCor and tCompCor).
+
+Using both of those strategies ensures robust estimation of phys-
+iological noise. Outliers in the EPI sequence were discovered
+based on intensity and motion parameters (ArtDetect).3 This
+was followed by denoising of the time-series using a general
+linear model (GLM) model with motion parameters, CompCorr
+components, and outliers as regressors (note that global signal
+was not regressed). Time-series were also smoothed using SUSAN
+with 5 mm full width half minimum (FWHM) kernel (Smith,
+1992). Finally high pass (0.1 Hz) and low pass (0.01 Hz) ﬁlters
+were applied using FSL. Quality of scans and preprocessing was
+assessed visually by looking at EPI to T1 coregistration overlay,
+motion parameters plots and temporal signal to noise ratio vol-
+umes (tSNR).
+
+To estimate connectivity from aMPFC and PCC, we selected
+spherical regions of interest (ROIs) of 6 mm radius with centers
+at MNI (x, y, z) from left aMPFC =− 6, 52, −2, right aMPFC
+= 6, 52, −2, left PCC =− 8, −56, 26, and right PCC = 8,
+−56, 26. These correspond to the major hubs of the DMN
+in the left hemisphere as reported by Andrews-Hanna et al.
+(2010) and we transformed them to the right hemisphere to
+reﬂect the fact that the DMN has a complex bilateral struc-
+ture in normal healthy controls (Swanson et al., 2011). ROI
+masks were transformed back to each subject’s EPI space using
+combined inverse nonlinear MNI to T1 transform and afﬁne
+T1 to EPI (thresholded after interpolation at 0.5). Translated
+ROIs were restricted within the brain mask. ROIs time-series
+were estimated by averaging voxels within each ROI. Full brain
+connectivity (correlation) maps were calculated using analy-
+sis of functional neuroimages (AFNI). Connectivity maps were
+Fisher’s r-to-z transformed and spatially transformed to MNI
+space for group-level analysis. Finally, these maps were averaged
+to provide an average connectivity maps for both regions across
+hemispheres. These averaged maps were used in the subsequent
+analysis.
+
+Preprocessing was performed with a workﬂow from
+Brain Imaging Pipelines4 and all data processing integrated
+using Nipype (Gorgolewski et al., 2011). Code used for
+generating connectivity maps is available at https://github.
+com/NeuroanatomyAndConnectivity/pipelines/tree/reading_by_
+default/src/reading_by_default. Unthresholded statistical maps
+have been uploaded to NeuroVault.org and are available at
+http://neurovault.org/collections/59.
+
+Analysis strategy
+The answers to comprehension questions were scored according
+to an agreed rating system by two independent raters who were
+blind to the other’s rating and showed high agreement (> 90%).
+The resulting average scores for each question showed reasonable
+inter-item agreement (Cronbachs Alpha = 0.78). For each partici-
+pant, an overall comprehension score was computed by averaging
+the scores obtained across all questions.
+
+For the behavioral analysis we used a linear mixed model
+(LMM) as implemented in statistical package for the social sci-
+ences (SPSS) to examine how the subjective experience while
+
+2http://nipy.org/nipy
+
+3http://www.nitrc.org/projects/artifact_detect/
+4https://github.com/INCF/BrainImagingPipelines
+
+Frontiers in Human Neuroscience
+
+www.frontiersin.org
+
+November 2013 | Volume 7 | Article 734 | 3
+
+Smallwood et al.
+
+Reading by default
+
+reading was related to the objective measure of comprehension.
+Building on prior research detailing that poor comprehension
+can be a marker for task unrelated thought, we predicted the
+subjective reports of participants based on their comprehension
+of what they were reading. LMMs allow the comparison of predic-
+tors recorded on multiple occasions within different participants
+in a single model and so allowed us to assess whether variation
+in task focus within an individual and between different texts is
+associated with changes in comprehension level. In this analysis
+the participant was treated as a random effect, the task focus
+score was the dependent variable and the comprehension of what
+was read was included as a continuous independent factor. We
+also included age and gender as ﬁxed factors in this model. We
+recruited a larger number of subjects for the behavioral element of
+the study to ensure that the relationships described were as robust
+as possible.
+
+For the rs-fMRI analysis, SPM8 was used to perform a second-
+level random effects analysis of the patterns of connectivity from
+each ROI. This model included two between-participant regres-
+sors for each seed region: (i) reports of subjective focus during
+reading and (ii) average comprehension of the information read
+in the text. Scan length was also included in the model as a
+nuisance regressor. To perform inference we used the topological
+False Discovery Rate (FDR) approach (Chumbley et al, 2010):
+(1) statistical maps were thresholded at p < 0.01 (uncorrected) to
+deﬁne clusters; (2) the probability of the size of each cluster (given
+the search space, smoothness, and cluster forming threshold) was
+calculated using Random Field Theory (Worsley et al., 1992);
+(3) Benjamini-Hochberg procedure was applied to these p-values
+to maintain FDR (of clusters) at 5% level (Chumbley et al,
+2010). These maps reﬂect the relationship between subjective and
+objective measures of reading behavior and the modulations of
+the intrinsic functional architecture of two key seeds of the DMN.
+In order to create scatter plots, the beta weights of the peak voxel
+from the cluster identiﬁed by the group-level analysis were calcu-
+lated for each individual using SPM. To account for the different
+scanning sequences that our participants had we included three
+nuisance regressors: scanner type (1 or 0), scanning length in
+volumes (range 180–300), and slice-timing order scheme (1 or 0).
+
+RESULTS
+BEHAVIORAL RESULTS
+Comprehension was acceptable for each text (see Figure 1). Prior
+to analysis, all variables were z-transformed. The LMM revealed
+the expected positive relationship between higher ratings of task
+related focus when participants read a text when their subse-
+quent comprehension was higher (F(1, 171.83) = 4.37, p < 0.05,
+t(171.83) = 2.09). This indicates that within participant changes
+in task focus while reading can be predicted based on whether a
+participant was successfully able to answer comprehension ques-
+tions on the material presented during the period when attention
+was sampled (Smallwood et al., 2008). Neither age nor gender
+were associated with differences in task focus (all p-values < 0.3).
+We repeated this analysis including a participant’s familiarity with
+the text, and this did not appreciably alter the main effect of
+comprehension on task focus (F(1, 137.59) = 3.89, p = 0.051,
+t(137.59) = 1.97), nor was there an effect of familiarity on ratings
+
+FIGURE 1 | Group level behavioral results. The group average for the
+comprehension ranged from .5 to .7 across the three texts, indicating that
+the measure was not a ﬂoor nor at ceiling. This is summarized in Panel (A).
+LMMs comparing the within participant variation in comprehension and
+task focus indicated that on texts when comprehension was higher,
+participants reported better task focus. This is summarized in Panel (B) in
+which the parameter estimates extracted from the LMMs were used to
+estimate the task focus at one standard deviation above and below the
+mean. In both panels the error bars indicate the standard error of the mean.
+
+of task focus or an interaction with comprehension (for both
+comparisons p-values < 0.3).
+
+For the purpose of the group-level fMRI analysis we calculated
+individual differences in comprehension for each individual,
+as well as in the maintenance of task focus on what was read.
+Boxplot analysis indicated that one individual was an outlier on
+the measure of task focus, and this score was manually replaced
+with a score that was adjacent to the next highest score. At the
+group-level, comprehension and task focus were uncorrelated
+(r =− 0.06, p = 0.667).
+FUNCTIONAL IMAGING RESULTS
+The connectivity patterns of the seed regions used in the current
+analysis are presented visually in Figure 2. These maps are thresh-
+olded with a T-value of +/−3 and provide a visualization of the
+patterns of connectivity upon which our subsequent analyses are
+based. Table 1 presents the results of the group level analyses.
+
+COMPREHENSION
+A whole brain search of the connectivity of PCC indicated that
+it was modulated by comprehension. Decreasing comprehension
+was associated with greater connectivity with a cluster between
+the PCC and the ventral striatum / amygdala. This can be seen
+in Figure 3. By contrast, as comprehension increased across indi-
+viduals within our sample we found greater connectivity between
+the PCC and the right anterior insula (AI). Connectivity with
+aMPFC did not vary signiﬁcantly with either better or worse
+comprehension.
+
+TASK FOCUS
+We found that aMPFC connectivity was modulated by better
+task focus. With increasing task focus, aMPFC exhibited greater
+
+Frontiers in Human Neuroscience
+
+www.frontiersin.org
+
+November 2013 | Volume 7 | Article 734 | 4
+
+Smallwood et al.
+
+Reading by default
+
+FIGURE 2 | Group level patterns of connectivity from bilateral seeds from
+the aMPFC and PCC employed in the current study. These maps are
+presented to help visualize the group level patterns of connectivity upon
+which subsequent analysis are based. Warm colors indicate brain
+
+regions exhibiting positive correlations and cold colors indicate regions
+exhibiting negative correlations. For the purpose of display these maps are
+thresholded at a T -value of +/−3. All results are overlaid on a standard MNI
+template.
+
+connectivity with a region of precuneus/PCC, a cluster in the
+left parietal cortex, and a third cluster in the temporal cortex.
+aMPFC connectivity was also higher with two clusters within the
+cerebellum for individuals who stayed on task. These clusters are
+presented in Figure 4.
+
+DISCUSSION
+Our rs-fMRI examination suggests that variations in reading
+behavior are reﬂected by relatively complex associations with the
+connectivity patterns of both PCC and aMPFC. Although the
+objective (comprehension) and subjective (reports of task focus)
+indicators were uncorrelated at the group-level, our analysis using
+
+a LMM indicated that the measures were sensitive to within
+participant variance in the constructs measured. This suggests
+that ﬂuctuations in task focus, and narrative comprehension
+showed a pattern of common variation within the individuals
+in our sample. At a group level we found that a more on task
+focus during reading was associated with greater functional con-
+nectivity between the aMPFC and the posterior cingulate and
+the precuneus, the left angular gyrus and temporal lobe, and
+the cerebellum. Although this result may seem contradictory
+with respect to the known role of the DMN in task-unrelated
+thought (e.g., Mason et al., 2007), this interpretation is consistent
+with evidence reviewed in the introduction that this network is
+
+Table 1 | Neural regions whose resting-state functional connectivity with the PCC was modulated by comprehension during reading and the
+aMPFC by task focus.
+
+Seed
+
+Relationship
+
+aMPFC
+
+On Task
+
+PCC
+
+Good Comprehension
+Poor Comprehension
+
+k
+
+392
+762
+885
+451
+362
+
+424
+371
+
+Z
+
+4.74
+4.62
+4.59
+4.36
+3.71
+
+3.62
+4.02
+
+Peak region
+
+Peak voxel
+
+Cerebellum
+Left Temporal Lobe
+Left Parietal Cortex
+Cerebellum
+Posterior Cingulate
+
+Right Anterior Insula
+Striatum
+
+X
+
+4
+−40
+−20
+10
+6
+
+52
+2
+
+Y
+−58
+−16
+−54
+−52
+−74
+22
+2
+
+Z
+−44
+−16
+42
+−10
+38
+
+10
+−12
+
+Cluster forming threshold was set at p < 0.01 and signiﬁcant clusters were determined using topological FDR (q-value < 0.05).
+
+Frontiers in Human Neuroscience
+
+www.frontiersin.org
+
+November 2013 | Volume 7 | Article 734 | 5
+
+Smallwood et al.
+
+Reading by default
+
+the DMN (−48, −68, 28) (Seghier et al., 2010; Seghier and Price,
+2012). If this region can participate in both semantic and DMN
+processes, it could afford the integration of processes supported
+by both systems. This could be one reason why we ﬁnd greater
+connectivity between the aMPFC and this region with increasing
+on task reports across individuals: the ability to integrate semantic
+information with processes supported by the DMN would allow
+participants to build a richer model of what they are reading
+which would thus support an attentive focus on what is being
+read.
+
+Comprehension was associated with differences in PCC func-
+tional connectivity. We found that better comprehension was
+associated with greater functional connectivity between the PCC
+and the right AI. Along with the anterior cingulate, these regions
+participate in what is known as the saliency network (Seeley
+et al., 2007). Our observation that individuals who have good
+comprehension shows heightened coupling between the right AI
+and the PCC is consistent with the notion that the saliency net-
+work plays an important role in coordinating the DMN (Menon
+and Uddin, 2010). For example, individuals with fronto-temporal
+dementia disease do not recruit the DMN when engaged in
+moral reasoning, a result that is thought to occur because of a
+diminished inﬂuence of the saliency network on DMN function
+(Chiong et al., 2013). Similarly, traumatic brain injury disrupts
+ongoing task performance in a go/no-go task due to a failure
+to deactivate the DMN, which occurs because of deﬁcits in the
+integrity of WM tracts linking the hubs of the saliency network
+(anterior cingulate cortex (ACC) and AI). We hypothesize that the
+heightened coupling between the PCC and the right AI we observe
+could reﬂect a signature of an individual who can exert control
+over the processes served by the DMN which in turn would allow
+them to maximize their performance on tasks which require this
+network (such as reading). Interestingly, the right AI has been
+identiﬁed as the entry point of information into the saliency
+network, a ﬁnding which could explain why we ﬁnd evidence in
+its connectivity with the PCC (Ham et al., 2013).
+
+By contrast, worse comprehension was associated with greater
+coupling between the PCC and a region of the ventral striatum
+and this region is known to provide strong motivational signals
+that guide learning and behavior (Liljeholm and O’Doherty,
+2012) and prior resting-state functional connectivity experiments
+have shown that this region of inferior ventral striatum shows a
+pattern of robust connectivity to PCC that more superior areas
+of the ventral striatum do not (Di Martino et al., 2008). Studies
+have found that activity in the ventral striatum exhibit reduced
+deactivation during cognitive tasks when individuals with atten-
+tion deﬁcit hyperactivity disorder (ADHD) are off medication,
+which is argued to result from motivational problems (Peterson
+et al., 2009). Individuals with ADHD also tend to show greater
+educational problems (Kuriyan et al., 2013), as well as greater
+mind-wandering (Shaw and Giambra, 1993). Recent studies have
+also found increased connectivity between the striatum and the
+PCC in adolescents with major depression (Gabbay et al., 2013),
+an observation that is relevant because greater mind-wandering
+and worse performance on objective measures of performance
+are correlates of states of dysphoria (Smallwood et al., 2007b),
+negative affect (Smallwood et al., 2009a) as well as clinical depres-
+
+FIGURE 3 | Modulation of the connectivity pattern of the bilateral PCC
+by objective indicators of reading performance. These images were
+created using a cluster forming threshold of p < 0.01. Topological FDR
+(q-value < 0.05) was used to correct for multiple comparisons. The scatter
+plots reﬂect the average correlation with the PCC for the peak voxel in each
+cluster. Each point is a single individual. Co-ordinates reﬂect the peak voxels
+for each cluster. All results are overlaid on a standard MNI template.
+Unthresholded statistical maps have been uploaded to NeuroVault.org and
+are available at http://neurovault.org/collections/59
+
+involved in processes necessary for narrative comprehension, as
+well as more general evidence that integrity within the DMN is
+predictive of better rather than worse task performance (Kelly
+et al., 2008).
+
+Objective variations in performance tracked with variations in
+connectivity of the PCC seed: as comprehension decreased across
+individuals we saw greater coupling between PCC and a cluster
+of subcortical regions including the inferior ventral striatum. By
+contrast, increasing comprehension was associated with greater
+coupling between the PCC and the right AI. Subjective descrip-
+tions of experience during reading varied with the connectivity
+of the aMPFC. As task focus increased across participants, the
+aMPFC showed greater coupling with a region of the posterior
+cingulate that overlapped with our seed region. This indicates that
+functional integrity within the midline core of the DMN is higher
+for people who stay focused during reading.
+
+We also found evidence that suggests that an on task focus
+during reading is associated with greater coupling between the
+DMN and neural regions that support semantic processing. Indi-
+viduals with higher on task reports exhibited greater connectivity
+between the aMPFC and a cluster in the left parietal cortex
+extending into the left angular gyrus and a second cluster that
+extended ventrally down the left temporal lobe and encompassed
+the hippocampus. The temporal lobe, especially on the left, is
+known to play an important role in semantic processes involved in
+language comprehension (Binder and Desai, 2011). Furthermore,
+grey matter volume is larger in a region of left parietal cortex for
+individuals who are especially competent at phonological decod-
+ing (He et al., 2013). In addition, the dorsal terminus of the cluster
+we identiﬁed in the parietal cortex (−45, −68, 26) is adjacent
+to the peak voxel of a region that has recently be found to be
+commonly activated by semantic tasks, as well as participating in
+
+Frontiers in Human Neuroscience
+
+www.frontiersin.org
+
+November 2013 | Volume 7 | Article 734 | 6
+
+Smallwood et al.
+
+Reading by default
+
+FIGURE 4 | Modulation of the connectivity pattern of the bilateral
+aMPFC by subjective indicators of reading performance. These
+images were created using a cluster forming threshold of p < 0.01.
+Topological FDR (q-value < 0.05) was used to correct for multiple
+comparisons. The scatter plots reﬂect the average correlation with the
+
+aMPFC for the peak voxel
+in each cluster. Each point is a single
+individual. Co-ordinates reﬂect the peak voxels for each cluster. All
+results are overlaid on a standard MNI template. Unthresholded
+statistical maps have been uploaded to NeuroVault.org and are
+available at http://neurovault.org/collections/59/
+
+Frontiers in Human Neuroscience
+
+www.frontiersin.org
+
+November 2013 | Volume 7 | Article 734 | 7
+
+Smallwood et al.
+
+Reading by default
+
+sion (Watts et al., 1988). Taken together we hypothesize that the
+pattern of heightened connectivity between PCC and striatum
+may be a neural signature that signiﬁes problems in external
+task performance, perhaps due to motivational difﬁculties in
+assigning value to an external task (see also Mason et al., 2013).
+Support for this motivational account comes from experiments
+that show that performance-related ﬁnancial reward improves
+performance and does so by reducing mind-wandering (Mrazek
+et al., 2012).
+
+Our study found that the intrinsic functional connectivity
+of the two midline hubs of the DMN, and in particular the
+PCC, was such that they were capable of producing contrasting
+cognitive states: our results implicated the PCC in the production
+of distinctive, often opposing cognitive states (e.g., better and
+worse comprehension) through its cooperation with spatially
+distinct regions of the brain. The PCC is part of a highly corrected
+rich club of core nodes (Zuo et al., 2012; Sporns, 2013) that are
+more densely interconnected than would be expected by chance
+(van den Heuvel and Sporns, 2011) and many of the short
+communication paths within the brain go through one or more
+of its members (Harriger et al., 2012). These anatomical features
+would allow a neural region to control the dissemination of a large
+amount of neural communication (Sporns, 2013) and so would
+explain the PCC’s participation in different neural communities
+serving oppossing cognitive functions. It is noteworthy that we
+found that the the PCC either showed greater functional con-
+nectivity with the AI or the caudate/putamen depending on the
+level of a participants reading comprehension: all three of these
+regions are members of the rich club (van den Heuvel and Sporns,
+2011).
+
+In practical terms we demonstrated that rs-fMRI can be used
+to gain a functional description of the brain organization asso-
+ciated with reading behavior and it could be possible to use this
+approach in the future to understand attentional problems related
+to mind-wandering during reading (Smallwood et al., 2007a). For
+example, changing patterns of connectivity between regions of the
+DMN could provide an additional outcome measure for evaluat-
+ing interventions that target improving educational achievement
+in individuals with difﬁculties in reading. Ultimately, given its
+sensitivity to individual differences in reading comprehension,
+rs-fMRI could even provide a method for the diagnosis of the
+speciﬁc functional problems that individuals have with reading
+problems.
+
+Although our results are encouraging, the relatively small
+sample size (Yarkoni, 2009) means that our results must be treated
+with caution until they are replicated with a larger number of
+participants. Also, it should be noted that the LMM indicated
+the expected relationship between objective and subjective indica-
+tors of reading comprehension within participants. However, our
+rs-fMRI analysis is only focused on between participant differ-
+ences. This prevents us from clearly dissociating the trait of mind-
+wandering while reading from the state of mind that occurs
+when our thoughts drift from what we were reading to task-
+unrelated concerns. To address this issue it would be necessary
+to acquire fMRI data with while reading is taking place, or at
+least using multiple sessions of both reading and rs-fMRI data
+on the same day. Also, it is important to note that we conducted
+
+a targeted investigation of the two key hubs of the DMN, and
+so our study does not provide any information on the behavior
+of other regions of the DMN or of the resting-state more gener-
+ally.
+
+In terms of the implications of our results for understanding
+the neural basis of reading, we suggest caution when consider-
+ing the generality of our results. Given the complexity of tasks
+such as narrative comprehension, we expect that there are likely
+important boundary conditions on how the DMN contributes to
+this behavior. For example, it has been shown that this network
+exhibits greater negative correlation with the left fusiform gyrus
+for adults who read effectively, as assessed by capacities such
+as phonological expertise, whereas this relationship is reversed
+in children (Koyama et al., 2011). These results suggest that
+experience or age may inﬂuence the links between resting-state
+dynamics and reading abilities. Other studies have shown that
+patterns of connectivity predicting reading performance occur
+at multiple spatial scales (Wang et al., 2013), suggesting that the
+sub-components of large scale networks (such as the DMN) may
+play different roles during different phases of reading. It is also
+important to bear in mind that the neural processes engaged
+during reading can vary dependent on the texts factual or ﬁctional
+composition (Altmann et al., 2012). Altogether such evidence
+suggests that for maximum relevance to educational research it
+would be valuable for future studies to examine the functional
+architecture that supports differences in reading experience for
+texts that vary on their narrative characteristics, as well as inves-
+tigating how dynamics vary with the expertise of the reader.
+Both of these questions may also beneﬁt from collecting neural
+data when participants are engaged in the act of reading. While
+these limitations provide an important caveat on our results, our
+data is nonetheless an important step in understanding the links
+between subjective experience and objective indicators of reading
+experience and their related neural correlates.
+
+Finally, these data provide a plausible answer to the question
+that motivated this research in the ﬁrst place: Why should the
+DMN be implicated in both costs and beneﬁts to reading? We found
+that the mutual connectivity of the midline core of the DMN was
+such that it produced contrasting cognitive states. The aMPFC
+exhibited increasing coupling to a region of the PCC (encompass-
+ing the seed regions we used in our analysis) more for participants
+who reported maintaining focus on what they read. The PCC seed
+was more functionally coupled to the striatum for individuals who
+performed poorly on tests of comprehension, and more coupled
+to the AI for those who did well. Based on these data we can
+rule out simple accounts of the DMN as supporting either task-
+unrelated thought or successful reading. Instead we propose a
+novel hypothesis for why narrative comprehension suffers when
+the mind wanders (Schooler et al., 2004; Smallwood et al., 2008;
+Franklin et al., 2011; McVay and Kane, 2011): mind-wandering
+interferes with reading comprehension because it engages regions
+of the DMN that are also important in making sense of what
+is being read. This competitive hypothesis assumes that there
+are common processes that underlie an individual’s capability to
+make sense of what they are reading, which are also engaged by
+task-unrelated thinking. Whether the DMN helps or hinders the
+act of reading, therefore, may depend on whether its midline core
+
+Frontiers in Human Neuroscience
+
+www.frontiersin.org
+
+November 2013 | Volume 7 | Article 734 | 8
+
+Smallwood et al.
+
+Reading by default
+
+is coupled to systems that represent the words on the page, or to
+the self-generated experiences that occupy our thoughts when the
+mind wanders.
+
+ACKNOWLEDGMENTS
+Part of this data was collected in part fulﬁllment of Johannes
+Golchert’s Master thesis. Florence J. M. Ruby was partially sup-
+ported by grant from the United States Department of Educa-
+tion grant R305A110277 awarded to Jonathan W. Schooler and
+Jonathan Smallwood.5 The content of the information does not
+necessarily reﬂect the position or policy of the U. S. Government,
+and no ofﬁcial endorsement should be inferred.
+
+REFERENCES
+Altmann, U., Bohrn, I. C., Lubrich, O., Menninghaus, W., and Jacobs, A. M. (2012).
+Fact vs ﬁction–how paratextual information shapes our reading processes. Soc.
+Cogn. Affect. Neurosci. doi: 10.1093/scan/nss098. [Epub ahead of print].
+
+Andrews-Hanna, J. R., Reidler, J. S., Sepulcre, J., Poulin, R., and Buckner, R.
+L. (2010). Functional-anatomic fractionation of the brain’s default network.
+Neuron 65, 550–562. doi: 10.1016/j.neuron.2010.02.005
+
+Avants, B. B., Tustison, N. J., Song, G., Cook, P. A., Klein, A., and Gee, J. C. (2011).
+A reproducible evaluation of ANTs similarity metric performance in brain
+image registration. Neuroimage 54, 2033–2044. doi: 10.1016/j.neuroimage.2010.
+09.025
+
+Behzadi, Y., Restom, K., Liau,
+
+J., and Liu, T. T. (2007). A component
+for BOLD and perfusion
+based noise correction method (CompCor)
+based fMRI. Neuroimage 37, 90–101. doi: 10.1016/j.neuroimage.2007.
+04.042
+
+Binder, J. R., and Desai, R. H. (2011). The neurobiology of semantic memory.
+
+Trends Cogn. Sci. 15, 527–536. doi: 10.1016/j.tics.2011.10.001
+
+Buckner, R. L., Andrews-Hanna, J. R., and Schacter, D. L. (2008). The brain’s default
+network: anatomy, function, and relevance to disease. Ann. N Y Acad. Sci. 1124,
+1–38. doi: 10.1196/annals.1440.011
+
+Chiong, W., Wilson, S. M., D’esposito, M., Kayser, A. S., Grossman, S. N.,
+Poorzand, P., et al. (2013). The salience network causally inﬂuences default
+mode network activity during moral reasoning. Brain 136, 1929–1941. doi: 10.
+1093/brain/awt066
+
+Christoff, K., Gordon, A. M., Smallwood, J., Smith, R., and Schooler, J. W. (2009).
+Experience sampling during fMRI reveals default network and executive system
+contributions to mind wandering. Proc. Natl. Acad. Sci. U S A 106, 8719–8724.
+doi: 10.1073/pnas.0900234106
+
+Chumbley, J., Worsley, K., Flandin, G., and Friston, K. (2010). Topological FDR for
+neuroimaging. Neuroimage 49, 3057–3064. doi: 10.1016/j.neuroimage.2009.10.
+090
+
+Cole, D. M., Smith, S. M., and Beckmann, C. F. (2010). Advances and pitfalls in the
+analysis and interpretation of resting-state FMRI data. Front. Syst. Neurosci. 4:8.
+doi: 10.3389/fnsys.2010.00008
+
+Dale, A. M., Fischl, B., and Sereno, M. I. (1999). Cortical surface-based analysis.
+I. Segmentation and surface reconstruction. Neuroimage 9, 179–194. doi: 10.
+1006/nimg.1998.0395
+
+Di Martino, A., Scheres, A., Margulies, D. S., Kelly, A. M., Uddin, L. Q., Shehzad, Z.,
+et al. (2008). Functional connectivity of human striatum: a resting state FMRI
+study. Cereb. Cortex 18, 2735–2747. doi: 10.1093/cercor/bhn041
+
+Eichele, T., Debener, S., Calhoun, V. D., Specht, K., Engel, A. K., Hugdahl, K., et
+al. (2008). Prediction of human errors by maladaptive changes in event-related
+brain networks. Proc. Natl. Acad. Sci. U S A 105, 6173–6178. doi: 10.1073/pnas.
+0708965105
+
+Fischl, B., Liu, A., and Dale, A. M. (2001). Automated manifold surgery:
+constructing geometrically accurate and topologically correct models of the
+human cerebral cortex. IEEE Trans. Med. Imaging 20, 70–80. doi: 10.1109/42.
+906426
+
+Fischl, B., Salat, D. H., Busa, E., Albert, M., Dieterich, M., Haselgrove, C., et al.
+(2002). Whole brain segmentation: automated labeling of neuroanatomical
+
+5http://www.ed.gov/
+
+structures in the human brain. Neuron 33, 341–355. doi: 10.1016/S0896-
+6273(02)00569-X
+
+Fischl, B., van der Kouwe, A., Destrieux, C., Halgren, E., Segonne, F., Salat, D. H.,
+et al. (2004). Automatically parcellating the human cerebral cortex. Cereb. Cortex
+14, 11–22. doi: 10.1093/cercor/bhg087
+
+Fletcher, P. C., Happe, F., Frith, U., Baker, S. C., Dolan, R. J., Frackowiak, R. S.,
+et al. (1995). Other minds in the brain: a functional imaging study of “theory
+of mind” in story comprehension. Cognition 57, 109–128. doi: 10.1016/0010-
+0277(95)00692-R
+
+Franklin, M. S., Smallwood, J., and Schooler, J. W. (2011). Catching the mind in
+ﬂight: using behavioral indices to detect mindless reading in real time. Psychon.
+Bull. Rev. 18, 992–997. doi: 10.3758/s13423-011-0109-6.
+
+Gabbay, V., Ely, B. A., Li, Q., Bangaru, S. D., Panzer, A. M., Alonso, C. M., et al.
+(2013). Striatum-based circuitry of adolescent depression and anhedonia. J. Am.
+Acad. Child Adolesc. Psychiatry 52, 628–641. e613. doi: 10.1016/j.jaac.2013.04.
+003
+
+Gorgolewski, K., Burns, C. D., Madison, C., Clark, D., Halchenko, Y. O., Waskom,
+M. L., et al. (2011). Nipype: a ﬂexible, lightweight and extensible neuroimag-
+ing data processing framework in python. Front. Neuroinform. 5:13. doi: 10.
+3389/fninf.2011.00013
+
+Greicius, M. D., and Menon, V. (2004). Default-mode activity during a passive
+sensory task: uncoupled from deactivation but impacting activation. J. Cogn.
+Neurosci. 16, 1484–1492. doi: 10.1162/0898929042568532
+
+Greve, D. N., and Fischl, B. (2009). Accurate and robust brain image align-
+ment using boundary-based registration. Neuroimage 48, 63–72. doi: 10.1016/j.
+neuroimage.2009.06.060
+
+Ham, T., Leff, A., De Boissezon, X., Joffe, A., and Sharp, D. J. (2013). Cognitive
+control and the salience network: an investigation of error processing and
+effective connectivity. J. Neurosci. 33, 7091–7098. doi: 10.1523/JNEUROSCI.
+4692-12.2013
+
+Harriger, L., van den Heuvel, M. P., and Sporns, O. (2012). Rich club organization
+of macaque cerebral cortex and its role in network communication. PLoS One
+7:e46497. doi: 10.1371/journal.pone.0046497
+
+He, Q., Xue, G., Chen, C., Lu, Z. L., and Dong, Q. (2013). Decoding the neu-
+roanatomical basis of reading ability: a multivoxel morphometric study. J.
+Neurosci. 33, 12835–12843. doi: 10.1523/JNEUROSCI.0449-13.2013
+
+Huijbers, W., Pennartz, C. M., Cabeza, R., and Daselaar, S. M. (2011). The
+hippocampus is coupled with the default network during memory retrieval but
+not during memory encoding. PLoS One 6:e17463. doi: 10.1371/journal.pone.
+0017463
+
+Kelly, A. M., Uddin, L. Q., Biswal, B. B., Castellanos, F. X., and Milham, M. P.
+(2008). Competition between functional brain networks mediates behavioral
+variability. Neuroimage 39, 527–537. doi: 10.1016/j.neuroimage.2007.08.008
+
+Koyama, M. S., Di Martino, A., Zuo, X. N., Kelly, C., Mennes, M., Jutagir, D. R.,
+et al. (2011). Resting-state functional connectivity indexes reading competence
+in children and adults. J. Neurosci. 31, 8617–8624. doi: 10.1523/JNEUROSCI.
+4865-10.2011
+
+Kuriyan, A. B., Pelham, W. E., Molina, B. S. G., Waschbusch, D. A., Gnagy, E. M.,
+Sibley, M. H., et al. (2013). Young adult educational and vocational outcomes
+of children diagnosed with ADHD. J. Abnorm. Child Psychol. 41, 27–41. doi: 10.
+1007/s10802-012-9658-z
+
+Liljeholm, M., and O’Doherty, J. P. (2012). Contributions of the striatum to
+learning, motivation, and performance: an associative account. Trends Cogn. Sci.
+16, 467–475. doi: 10.1016/j.tics.2012.07.007
+
+Mar, R. A. (2011). The neural bases of social cognition and story comprehension.
+
+Annu. Rev. Psychol. 62, 103–134. doi: 10.1146/annurev-psych-120709-145406
+
+Mason, M. F., Brown, K., Mar, R. A., and Smallwood, J. (2013). Driver of discontent
+or escape vehicle: the affective consequences of mindwandering. Front. Psychol.
+4:477. doi: 10.3389/fpsyg.2013.00477
+
+Mason, M. F., Norton, M. I., Van Horn, J. D., Wegner, D. M., Grafton, S.
+T., and Macrae, C. N. (2007). Wandering minds: the default network and
+stimulus-independent thought. Science 315, 393–395. doi: 10.1126/science.
+1131295
+
+McVay, J. C., and Kane, M. J. (2011). Why does working memory capacity predict
+variation in reading comprehension? On the inﬂuence of mind wandering
+and executive attention. J. Exp. Psychol. Gen. 141, 302–320. doi: 10.1037/
+a0025250
+
+Frontiers in Human Neuroscience
+
+www.frontiersin.org
+
+November 2013 | Volume 7 | Article 734 | 9
+
+Smallwood et al.
+
+Reading by default
+
+Menon, V., and Uddin, L. Q. (2010). Saliency, switching, attention and control: a
+network model of insula function. Brain Struct. Funct. 214, 655–667. doi: 10.
+1007/s00429-010-0262-0
+
+Mrazek, M. D., Smallwood, J., Franklin, M. S., Chin, J. M., Baird, B., and Schooler,
+J. W. (2012). The role of mind-wandering in measurements of general aptitude.
+J. Exp. Psychol. Gen. 141, 788–798. doi: 10.1037/a0027968
+
+Peterson, B. S., Potenza, M. N., Wang, Z., Zhu, H., Martin, A., Marsh, R., et al.
+(2009). An FMRI study of the effects of psychostimulants on default-mode
+processing during stroop task performance in youths with ADHD. Am. J.
+Psychiatry 166, 1286–1294. doi: 10.1176/appi.ajp.2009.08050724
+
+Raichle, M. E., MacLeod, A. M., Snyder, A. Z., Powers, W. J., Gusnard, D. A., and
+Shulman, G. L. (2001). A default mode of brain function. Proc. Natl. Acad. Sci.
+U S A 98, 676–682. doi: 10.1073/pnas.98.2.676
+
+Reuter, M., Rosas, H. D., and Fischl, B. (2010). Highly accurate inverse consistent
+registration: a robust approach. Neuroimage 53, 1181–1196. doi: 10.1016/j.
+neuroimage.2010.07.020
+
+Roche, A. (2011). A four-dimensional registration algorithm with application to
+joint correction of motion and slice timing in fMRI. IEEE Trans. Med. Imaging
+30, 1546–1554. doi: 10.1109/TMI.2011.2131152
+
+Schooler, J. W., Reichle, E. D., and Halpern, D. V. (2004). Zoning out while reading:
+evidence for dissociations between experience and metaconsciousness. Thinking
+and Seeing: Visual Metacognition in Adults and Children 203–226.
+
+Seeley, W. W., Menon, V., Schatzberg, A. F., Keller, J., Glover, G. H., Kenna, H., et al.
+(2007). Dissociable intrinsic connectivity networks for salience processing and
+executive control. J. Neurosci. 27, 2349–2356. doi: 10.1523/JNEUROSCI.5587-
+06.2007
+
+Seghier, M. L., Fagan, E., and Price, C. J. (2010). Functional subdivisions in the left
+angular gyrus where the semantic system meets and diverges from the default
+network. J. Neurosci. 30, 16809–16817. doi: 10.1523/JNEUROSCI.3377-10.2010
+Seghier, M. L., and Price, C. J. (2012). Functional heterogeneity within the default
+network during semantic processing and speech production. Front. Psychol.
+3:281. doi: 10.3389/fpsyg.2012.00281
+
+Shaw, G. A., and Giambra, L. (1993). Task-unrelated thoughts of college-students
+diagnosed as hyperactive in childhood. Dev. Neuropsychol. 9, 17–30. doi: 10.
+1080/87565649309540541
+
+Smallwood, J. (2013). Distinguishing how from why the mind wanders: a process-
+occurence framework for self generated thought. Psychol. Bull. 139, 519–535.
+doi: 10.1037/a0030010
+
+Smallwood, J., Fishman, D. J., and Schooler, J. W. (2007a). Counting the cost of an
+absent mind: mind wandering as an underrecognized inﬂuence on educational
+performance. Psychon. Bull. Rev. 14, 230–236. doi: 10.3758/BF03194057
+
+Smallwood, J., Fitzgerald, A., Miles, L. K., and Phillips, L. H. (2009a). Shifting
+moods, wandering minds: negative moods lead the mind to wander. Emotion
+9, 271–276. doi: 10.1037/a0014855
+
+Smallwood, J., McSpadden, M., and Schooler, J. W. (2008). When attention matters:
+the curious incident of the wandering mind. Mem. Cognit. 36, 1144–1150.
+doi: 10.3758/MC.36.6.1144
+
+Smallwood, J., Nind, L., and O’connor, R. C. (2009b). When is your head at? An
+exploration of the factors associated with the temporal focus of the wandering
+mind. Conscious Cogn. 18, 118–125. doi: 10.1016/j.concog.2008.11.004
+
+Smallwood,
+
+J., O’Connor, R. C., Sudbery, M. V., and Obonsawin, M.
+(2007b). Mind-wandering and dysphoria. Cogn. Emot. 21, 816–842. doi: 10.
+1080/02699930600911531
+
+Smallwood, J., and Schooler, J. W. (2006). The restless mind. Psychol. Bull. 132,
+
+946–958. doi: 10.1037/0033-2909.132.6.946
+
+Smallwood, J., Tipper, C., Brown, K., Baird, B., Engen, H., Michaels, J. R., et al.
+(2013). Escaping the here and now: evidence for a role of the default mode
+network in perceptually decoupled thought. Neuroimage 69, 120–125. doi: 10.
+1016/j.neuroimage.2012.12.012
+
+Smilek, D., Carriere, J. S., and Cheyne, J. A. (2010). Out of mind, out of sight: eye
+blinking as indicator and embodiment of mind wandering. Psychol. Sci. 21, 786–
+789. doi: 10.1177/0956797610368063
+
+Smith, S. M. (1992). A new class of corner ﬁnder. Proc. 3rd British Machine Vision
+
+Conference.
+
+Sporns, O. (2013). Network attributes for segregation and integration in the human
+
+brain. Curr. Opin. Neurobiol. 23, 162–171. doi: 10.1016/j.conb.2012.11.015
+
+Spreng, R. N., and Mar, R. A. (2012). I remember you: a role for memory in social
+cognition and the functional neuroanatomy of their interaction. Brain Res. 1428,
+43–50. doi: 10.1016/j.brainres.2010.12.024
+
+Spreng, R. N., Mar, R. A., and Kim, A. S. (2009). The common neural basis of
+autobiographical memory, prospection, navigation, theory of mind, and the
+default mode: a quantitative meta-analysis. J. Cogn. Neurosci. 21, 489–510.
+doi: 10.1162/jocn.2008.21029
+
+Stawarczyk, D., Majerus, S., Maquet, P., and D’argembeau, A. (2011). Neural cor-
+relates of ongoing conscious experience: both task-unrelatedness and stimulus-
+independence are related to default network activity. PLoS One 6:e16997. doi: 10.
+1371/journal.pone.0016997
+
+Swanson, N., Eichele, T., Pearlson, G., Kiehl, K., Yu, Q., and Calhoun, V. D. (2011).
+Lateral differences in the default mode network in healthy controls and patients
+with schizophrenia. Hum. Brain Mapp. 32, 654–664. doi: 10.1002/hbm.21055
+
+van den Heuvel, M. P., and Sporns, O. (2011). Rich-club organization of the human
+connectome. J. Neurosci. 31, 15775–15786. doi: 10.1523/JNEUROSCI.3539-11.
+2011
+
+Wang, J. X., Bartolotti, J., Amaral, L. A., and Booth, J. R. (2013). Changes in
+task-related functional connectivity across multiple spatial scales are related to
+reading performance. PLoS One 8:e59204. doi: 10.1371/journal.pone.0059204
+
+Watts, F. N., Macleod, A. K., and Morris, L. (1988). Associations between phenom-
+enal and objective aspects of concentration problems in depressed-patients. Br.
+J. Psychol. 79, 241–250. doi: 10.1111/j.2044-8295.1988.tb02285.x
+
+Worsley, K. J., Evans, A. C., Marrett, S., and Neelin, P. (1992). A three-dimensional
+statistical analysis for CBF activation studies in human brain. J. Cereb. Blood
+Flow Metab. 12, 900–918. doi: 10.1038/jcbfm.1992.127
+
+Yarkoni, T. (2009). Big correlations in little studies: inﬂated fMRI correlations
+reﬂect low statistical power - commentary on Vul et al(2009). Perspect. Psychol.
+Sci. 4, 294–298. doi: 10.1111/j.1745-6924.2009.01127.x
+
+Zuo, X. N., Ehmke, R., Mennes, M., Imperati, D., Castellanos, F. X., Sporns, O.,
+et al. (2012). Network centrality in the human functional connectome. Cereb.
+Cortex 22, 1862–1875. doi: 10.1093/cercor/bhr269
+
+Conﬂict of Interest Statement:The authors declare that the research was conducted
+in the absence of any commercial or ﬁnancial relationships that could be construed
+as a potential conﬂict of interest.
+
+Received: 15 August 2013; accepted: 14 October 2013; published online: 12 November
+2013.
+Citation: Smallwood J, Gorgolewski KJ, Golchert J, Ruby FJM, Engen H, Baird B,
+Vinski MT, Schooler JW and Margulies DS (2013) The default modes of reading:
+modulation of posterior cingulate and medial prefrontal cortex connectivity associated
+with comprehension and task focus while reading. Front. Hum. Neurosci. 7:734. doi:
+10.3389/fnhum.2013.00734
+This article was submitted to the journal Frontiers in Human Neuroscience.
+Copyright © 2013 Smallwood, Gorgolewski, Golchert, Ruby, Engen, Baird, Vinski,
+Schooler and Margulies. This is an open-access article distributed under the terms of the
+Creative Commons Attribution License (CC BY). The use, distribution or reproduction
+in other forums is permitted, provided the original author(s) or licensor are credited
+and that the original publication in this journal is cited, in accordance with accepted
+academic practice. No use, distribution or reproduction is permitted which does not
+comply with these terms.
+
+Frontiers in Human Neuroscience
+
+www.frontiersin.org
+
+November 2013 | Volume 7 | Article 734 | 10
+
+

@@ -1,0 +1,2817 @@
+Cerebral Cortex Advance Access published April 18, 2013
+ 
+
+Cerebral Cortex
+doi:10.1093/cercor/bht098
+
+Connectivity Architecture and Subdivision of the Human Inferior Parietal Cortex Revealed
+by Diffusion MRI
+
+Michael Ruschel1, Thomas R. Knösche1, Angela D. Friederici2, Robert Turner3, Stefan Geyer3, and Alfred Anwander1,2
+
+1Research Group “Cortical Networks and Cognitive Functions”, 2Department of Neuropsychology, 3Department of Neurophysics,
+Max Planck Institute for Human Cognitive and Brain Sciences, Leipzig, Germany
+
+Address correspondence to Alfred Anwander, Max Planck Institute for Human Cognitive and Brain Sciences, Stephanstrasse 1a, 04103 Leipzig,
+Germany. Email: anwander@cbs.mpg.de; http://www.cbs.mpg.de/~anwander
+Stefan Geyer and Alfred Anwander share senior authorship.
+
+The human inferior parietal cortex convexity (IPCC) is an important
+association area, which integrates auditory, visual, and somatosen-
+sory information. However, the structural organization of the IPCC is
+a controversial issue. For example, cytoarchitectonic parcellations
+reported in the literature range from 2 to 7 areas. Moreover, anatom-
+ical descriptions of the human IPCC are often based on experiments
+in the macaque monkey. In this study, we used diffusion-weighted
+magnetic resonance imaging combined with probabilistic tractogra-
+phy to quantify the connectivity of the human IPCC, and used this
+information to parcellate this cortex area. This provides a new struc-
+tural map of the human IPCC, comprising 3 subareas (inferior parie-
+tal cortex anterior, IPC middle, and IPC posterior) of comparable
+size,
+in a rostro-caudal arrangement in the left and right hemi-
+spheres. Each subarea is characterized by a connectivity ﬁngerprint,
+and the parcellation is similar to the subdivision reported for the
+macaque IPCC with 3 areas in a rostro-caudal arrangement (PF, PFG,
+and PG). However, the present study also reliably demonstrates new
+structural features in the connectivity pattern of the human IPCC,
+which are not known to exist in the macaque. This study quantiﬁes
+intersubject variability by providing a population representation of
+the subarea arrangement and demonstrates the substantial laterali-
+zation of the connectivity patterns of the IPCC.
+
+Keywords: connectivity-based parcellation, diffusion MRI, diffusion tensor
+imaging, human parietal lobe, inferior parietal cortical convexity, probabilistic
+tractography
+
+Introduction
+The human inferior parietal cortex convexity (IPCC) is an
+important association area, which integrates auditory, visual,
+and somatosensory information. This region plays a prominent
+role in visuo-spatial attention, especially in the right hemi-
+sphere, and in particular in the stimulus-driven ventral fronto-
+parietal attention network. In contrast, the superior posterior
+parietal lobe (SPL) is (bilaterally) engaged in the more endogen-
+ously driven dorsal attention network (Corbetta and Shulman
+2002). A second important area of involvement for the IPCC is
+in episodic memory retrieval. Paralleling the dichotomy of their
+involvement in the attention networks, the SPL is more associ-
+ated with endogenous or voluntary processes, while the IPCC
+supports processes like recollection, driven by external events
+(Cabeza et al. 2008; Vilberg and Rugg 2008). Moreover, in the
+left hemisphere, the IPCC is an important constituent of the cor-
+tical language network (Sakai et al. 2001; Binder et al. 2009;
+Graves et al. 2010; Hartwigsen et al. 2010; Price 2010).
+
+There is evidence that the IPCC can be further subdivided
+familiarity-based
+
+subareas. For example,
+
+into functional
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+episodic memory effects are primarily found in the rostral
+part of IPCC (approximately the supramarginal gyrus; Cabeza
+et al. 2008; Vilberg and Rugg 2008). This same rostral area is
+related to covert articulation and phonological decision/
+mapping within the language network, while the caudal part
+of IPCC (approximately the angular gyrus) is involved in se-
+mantic retrieval (Vigneau et al. 2006; Binder et al. 2009;
+Graves et al. 2010; Price 2010).
+
+Hence, the IPCC accommodates a rich variety of cognitive
+functionality, which maps onto distinct functionally special-
+ized subareas. This is likely to be paralleled by a similar struc-
+tural organization of anatomically distinct subareas. However,
+this subdivision remains a controversial
+issue. Brodmann
+(1909), in his “classical” cytoarchitectonic map, subdivided
+the IPCC into 2 regions: Rostral area 40 (on the supramarginal
+gyrus) and caudal area 39 (on the angular gyrus). Subsequent
+investigators, using cytoarchitecture (von Economo and Kos-
+kinas 1925; Gerhardt 1940; Sarkissov et al. 1955) or mye-
+loarchitecture (Vogt 1911; Batsch 1956), parcellated the IPCC
+into a higher number of regions, each characterized by a
+speciﬁc regional architectonic layout (termed “subareas” or
+“subregions”). A recent study (Caspers et al. 2006), using
+state-of-the-art
+cytoarchitectonic
+mapping (Schleicher et al. 1999), found 7 areas in the IPCC: 5
+in its rostral part (broadly equivalent to Brodmann area 40)
+and 2 in its caudal part (broadly equivalent to Brodmann area
+39). Subsequently, Caspers et al.
+(2013) used receptor
+mapping and showed that these 7 areas could be clustered
+into 3 larger rostro-caudally arranged regions.
+
+observer-independent
+
+In the macaque monkey, the situation is more straightfor-
+ward. The classical cyto- and myeloarchitectonic literature
+identiﬁed 1 (Brodmann 1909) or 2 (Vogt and Vogt 1919; von
+Bonin and Bailey 1947) regions. Multimodal studies employ-
+ing architectonic mapping (Pandya and Seltzer 1982; Gregor-
+iou et al. 2006), in vitro autoradiography of the distribution of
+neurotransmitter binding sites (Geyer et al. 2005), tract tracing
+(Pandya and Seltzer 1982; Rozzi et al. 2006), and electrophysi-
+ology (Rozzi et al. 2008) converge on a parcellation into 4
+regions: PF, PFG, PG, and Opt— aligned in a rostro-caudal ar-
+rangement along the longitudinal axis of the IPCC. The no-
+menclature of the areas were proposed by Pandya and Seltzer
+(1982), based on the initial naming convention by von Bonin
+and Bailey (1947). The 4 areas markedly differ in their archi-
+tectonic organization (cytoarchitecture, myeloarchitecture,
+regional distribution of neurotransmitter binding sites, and
+immunoreactivity; Geyer et al. 2005; Gregoriou et al. 2006),
+frontal, parietal, as well as temporal cortical connections
+(Rozzi et al. 2006), and in the somatosensory, visual, as well
+as motor responses of their neurons (Rozzi et al. 2008).
+
+© The Author 2013. Published by Oxford University Press. All rights reserved. For Permissions, please e-mail: journals.permissions@oup.com
+
+However, despite this extensive characterization, their poss-
+ible homologs in humans are still unclear.
+
+In humans, a different perspective may shed new light on this
+old problem: Not only cyto- or myeloarchitecture, but also con-
+nectivity patterns can structurally (and therefore, also function-
+ally) characterize cortical areas. Diffusion-weighted magnetic
+resonance imaging (dMRI), combined with probabilistic tracto-
+graphy, elegantly measures such connectivity patterns noninva-
+sively in living participants
+(Johansen-Berg et al. 2004;
+Anwander et al. 2007). This technique can be used to compute
+connectivity ﬁngerprints that characterize the connectivity of a
+brain area under investigation with a collection of preselected
+target areas. For example, Behrens et al. (2003) parcellated the
+human thalamus, according to its connectivity to a number of
+macroanatomically deﬁned cortical regions. More recently, Rush-
+worth et al. (2006) used probabilistic tractography to character-
+ize the connectivity proﬁle of 6 predeﬁned target regions in the
+lateral parietal cortex with 3 predeﬁned regions elsewhere in the
+brain (superior colliculus, parahippocampal gyrus, and ventral
+premotor cortex), which are known to project differentially to 3
+distinct regions in macaque parietal cortex. They provide a de-
+tailed comparison of the connection pathways between these
+areas to corresponding pathways in the macaque brain.
+
+A different, less hypothesis driven, approach exploits the fact
+that probabilistic tractography is able to estimate the connec-
+tivity proﬁle of each point in a region of interest (ROI; here the
+IPCC) to the rest of the brain. With an automatic clustering
+algorithm, cortical regions can then be identiﬁed, which feature
+internally coherent but mutually distinct connectivity (Anwan-
+der et al. 2007). This approach has been successfully applied to
+parcellate the medial premotor cortex into supplementary and
+presupplementary motor areas (Johansen-Berg et al. 2004), the
+lateral premotor cortex into its dorsal and ventral subregions
+(Tomassini et al. 2007; Schubotz et al. 2010), Broca’s area into
+Brodmann areas (BA) 44 and 45 (Anwander et al. 2007; Klein
+et al. 2007), and the cingulate cortex into anterior, midcingu-
+late, and posterior subregions (Beckmann et al. 2009). Very
+recently, Mars et al. (2011) investigated the right parietal cortex,
+including the IPCC, using mixed anatomical criteria: Areas had
+to be both compact and similarly connected as measured with
+diffusion MRI. An ROI that included the anterior parts of the
+occipital lobe and the parietal operculum was subdivided into 5
+areas, arranged along the rostral–caudal axis. Additionally, they
+investigated functional connectivity from parietal cortex to
+some frontal and medio-temporal target areas using functional
+magnetic resonance imaging (fMRI) resting-state activity in
+both macaque monkeys and humans.
+
+If human and macaque IPCC are indeed homologous brain
+regions, their long-range connectivity (The term “long-rang
+connectivity” here refers to ﬁber connections that run through
+the white matter, as opposed to “short-range” intracortical
+connections.) patterns should be similar. This has been de-
+monstrated recently by Caspers et al. (2011), who compared
+tract-tracing results from macaques with probabilistic tracto-
+grams of cytoarchitectonically predeﬁned areas in humans.
+
+Here, in contrast to the work of Caspers et al. (2011), we
+used dMRI probabilistic tractography, not only to characterize
+the connectivity proﬁles of IPCC subareas, but also to deﬁne
+these subareas in the ﬁrst place. In extension to the work of
+Mars et al. (2011), we aimed at studying interhemispherical
+differences and similarities in IPCC structural organization in
+the light of the known strong functional lateralization (see
+
+2 Tractography-Based Parcellation of the IPC • Ruschel et al.
+
+above), at directly comparing the anatomical parcellation and
+connectivity of IPCC with the connectional architecture of
+macaque IPCC (based on classical tract tracing), and at asses-
+sing the interindividual variance of the parcellation results
+and the associated connectivity patterns. The results will help
+to resolve the question of whether or not there is a ﬁne-
+grained homology between human and macaque IPCC.
+
+Materials and Methods
+
+Participants
+Twenty right-handed volunteers (10 males and 10 females, age
+25.5 ± 3.5 years) participated in the study. All participants gave
+written informed consent before being included in the experiment.
+The participants had no history of neurologic, psychiatric, or other
+major medical disorders and did not take any medication at the time
+of data acquisition. The experimental set-up was approved by the
+local ethics committee of the University of Leipzig, Germany. Data
+were handled anonymously.
+
+Data Acquisition and Preprocessing
+We acquired diffusion-weighted and high-resolution 3-dimensional (3D)
+T1-weighted images on a Siemens 3-T Trio scanner with an 8-channel
+array head coil and maximum gradient strength of 40 mT/m. For the
+dMRIs, we employed a spin-echo echo-planar imaging sequence (rep-
+etition time, TR = 12 s, echo time, TE = 100 ms, 72 axial slices, resolution
+1.7 × 1.7 × 1.7 mm, no cardiac gating, 60 diffusion directions evenly dis-
+tributed over the hemisphere, b-value = 1000 s/mm2). In addition, we
+acquired 7 data sets with no diffusion weighting, ﬁrst at the beginning
+and then after each block of 10 diffusion-weighted images, to serve as
+anatomical
+reference for motion correction. To increase the
+signal-to-noise ratio, we repeated the measurement 3 times, resulting
+in a total scan time of approximately 45 min. For the high-resolution
+T1-weighted images, we employed a 3D magnetization-prepared rapid
+acquisition with gradient echo sequence (TR = 1300 ms,
+time to
+inversion = 650 ms, TE = 3.97 ms, ﬂip angle 10°, 176 sagittal slices, res-
+olution 1.0 × 1.0 × 1.0 mm, 2 repetitions, total scan time 12 min).
+
+We reoriented the T1-weighted images to the sagittal plane through
+the anterior and posterior commissures and used the images without
+diffusion weighting to estimate motion correction parameters using
+rigid-body transformations (Jenkinson et al. 2002), implemented in
+FSL (http://www.fmrib.ox.ac.uk/fsl; FMRIB Software Library, Univer-
+sity of Oxford). We combined the motion correction for dMRI data
+with global registration to the T1 anatomy, corrected the gradient di-
+rections of each volume with the rotation parameters, interpolated the
+registered images to an isotropic voxel resolution of 1 mm, and aver-
+aged each subject’s 3 acquisitions. Finally, we computed the diffusion
+tensor, the 3 eigenvectors, and the fractional anisotropy (FA) value
+for each voxel (Basser et al. 1994). The FA image was used to create a
+mask for the tractography, including brain white matter and neigh-
+boring gray matter (threshold: FA >0.08). By rigid mapping of the dif-
+fusion images and the gradient directions to the standardized
+anatomical space, we were able to perform tractography in a common
+anatomical space. The rigid registration of all dMRIs to the slightly
+rotated T1 space introduces the same amount of smoothing (caused
+by the interpolation) to all dMRIs. This reduces a potential directional
+bias, which might be caused by a varying amount of interpolation for
+the different dMRIs in the motion correction procedure. Additionally,
+the registration to the T1 space circumvented additional alignment
+steps after the preprocessing, without altering the tractography results
+compared with a tracking procedure in the native diffusion space.
+This was conﬁrmed by computing the cross-correlation between the
+tractograms computed in the 2 different spaces, quantiﬁed by a high
+correlation value (mean correlation in a single ROI = 0.85, SD 0.02).
+
+Deﬁnition of the Region of Interest
+Initially, the ROIs for tractography and parcellation were manually
+deﬁned simultaneously on the pial and inﬂated white matter surfaces
+(Fischl et al. 1999) as generated by FreeSurfer (http://surfer.nmr.mgh.
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+harvard.edu; Martinos Center for Biomedical Imaging, Boston, USA).
+Since we focused our analysis on the convexity of the inferior parietal
+cortex, we excluded areas lying in the depth of the intraparietal sulcus
+(IPS), postcentral sulcus, and parietal operculum. Hence, we chose
+macroanatomical landmarks on or close to the exposed cortical surface
+as borders of the ROI: The lateral lip of the IPS (1 in Fig. 1A), the caudal
+lip of the postcentral sulcus (2 in Fig. 1A), the dorsal lip of the lateral
+ﬁssure (3 in Fig. 1A), and the caudal shoulder of the angular gyrus (4 in
+Fig. 1A). The neighboring 2 cytoarchitonically and functional different
+areas called the human intraparietal area 1 and the human intraparietal
+area 2, in the IPS (Choi et al. 2006), which extend up to the shoulder of
+the sulcus were assured not to be part of the ROI. For the correct identi-
+ﬁcation of the sulci, we used the “Atlas of the Cerebral Sulci” (Ono et al.
+1990) to analyze the sulcal variability.
+
+As a second step, we transformed the deﬁned surface labels into
+the voxel space and used them as template to interactively mark all
+voxels within this ROI that are located at the gray-white matter inter-
+face (derived from the coregistered FA images with FA > 0.15) using
+the software Anatomist (http://anatomist.info, Service Hospitalier Fré-
+déric Joliot, CEA, Orsay, France) (1 in Fig. 1B). These voxels were
+used as seed points for subsequent diffusion tractography (2 in
+Fig. 1B). Voxels in the fundus of the bordering sulci were excluded to
+prevent connections with deep white matter structures in the parietal
+lobe like the long segment of the arcuate fascicle (Catani et al. 2005).
+
+Tractography and Connectivity-Based Parcellation
+We used the probabilistic tractography method and the connectivity-
+based parcellation scheme similar to the one proposed by Anwander
+et al. (2007). The underlying concept of connectivity-based parcellation
+is that cortical areas with similar anatomical connectivity are combined
+into a region, which is segregated from neighboring regions with differ-
+ent connectivities. The connectivity pattern of a cortical voxel
+is
+approximated by the tractogram associated with its immediately under-
+lying white matter voxel. Figure 1B illustrates the general principle of
+the parcellation technique. For each seed voxel within the ROI (1 in
+Fig. 1B), we computed a probabilistic tractogram (2 in Fig. 1B) and ar-
+ranged the correlation values between any 2 of these tractograms in a
+connectivity correlation matrix. In contrast to Anwander et al. (2007),
+who used a k-means clustering approach in order to deﬁne the groups
+
+of voxels with similar connectivity (3 in Fig. 1B), we applied a cluster
+algorithm based on a Gaussian Mixture Model (as implemented in
+MatLab™) to the columns of the connectivity correlation matrix. This
+technique is better suited to cope with clusters, showing differences in
+intracluster homogeneity (Gorbach et al. 2011).
+
+A challenge for any clustering method is the trade-off between
+model consistency (how well does the clustering describe the struc-
+ture of the data) and model complexity (preference of a simple model
+that describes the relevant features and ignores noise). Here, the clus-
+ters had to be deﬁned a priori. We tested the different numbers of
+clusters (2 ≤ n ≤ 7), but accepted only those solutions that were con-
+sistent across hemispheres and participants, that is, the principal ar-
+rangement of cortical areas (e.g., from inferior to superior or from
+anterior to posterior) associated with the clusters had to be the same.
+As a second requirement, each area had to represent a single topolo-
+gically compact region of the cortex. Additionally, we characterized
+each area by its tractographic signature (i.e. its average tractogram).
+As a ﬁnal step, we mapped the resulting clusters back onto the corti-
+cal surface of each individual brain (4 in Fig. 1B). The fact that this
+clustering approach yields neuroanatomically meaningful results has
+been substantiated in recent publications (Johansen-Berg et al. 2005;
+Anwander et al. 2007; Beckmann et al. 2009; Schubotz et al. 2010).
+
+For interpretation of the parcellation results, we ﬁrst assessed the
+positions (computed as center-of-mass, in Talairach coordinates) and
+sizes (by voxel counting) of all IPCC subareas in all participants and
+hemispheres. We computed the mean and standard deviation (SD) of
+these values for all participants.
+
+To assess each area’s topographical variability, we computed for
+each cluster a population overlap map. Therefore, we dilated the clus-
+ters (voxels at the gray-white matter interface) by 3 mm orthogonally
+to the surface and normalized all individual brains and clusters to the
+Montreal Neurological Institute (MNI) single-subject brain (known as
+“colin27”), superimposed them in 3D space, and computed the popu-
+lation maps (Fig. 5). This map shows, for each cluster and each voxel
+in MNI space, how many brains (0 ≤ n ≤ 20) have a representation of
+this cluster in the particular voxel.
+
+Connectivity Analysis
+We qualitatively assessed the global connectivity proﬁle of each IPCC
+subarea by mapping the values of its tractographic signature. The
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Figure 1. (A) Inferior parietal cortex ROI on a representative subject. (1) IPS/lateral lip; (2) postcentral sulcus/caudal lip; (3) lateral ﬁssure/dorsal lip; (4) angular gyrus/caudal shoulder;
+cs, central sulcus; lf, lateral ﬁssure. (B) General methodology of connectivity-based cortex parcellation. (1) Seed voxels for probabilistic tractography are placed in white matter at the
+gray-white matter interface of the IPCC. (2) For each of these voxels, a probabilistic tractogram is computed. (3) The matrix containing the correlations between all these tractograms is
+divided into clusters of voxels with similar correlation to the tractograms of other voxels. (4) Each of these clusters corresponds to a certain area on the cortical surface.
+
+Cerebral Cortex 3
+
+seed regions for the tractography were derived from the population
+map with a minimum overlap of 5 participants. Seed voxels within
+overlapping areas were assigned to the subarea with the maximum
+probability value. For tractography, the seed regions were morphed
+to the single-subject brains. The connectivity was computed using a
+total of 100 000 random walks (cf. Anwander et al. 2007) per seed
+region. The single-subject connectivity patterns were normalized to
+the MNI brain and averaged over all participants. The average connec-
+tivity values in the gray-white matter interface were visualized on an
+inﬂated cortex representation of the MNI brain (Fig. 6). To quantitat-
+ively compare the connectivity patterns between the subareas, and
+thereby establish signiﬁcant differences between these areas in terms
+of
+long-range connectivity, we analyzed each area’s connectivity
+strength with speciﬁc target regions for all participants separately. For
+this purpose, we interactively deﬁned 10 gyrus-based target ROIs (on
+the average brain over 20 participants; see Fig. 2).
+
+These target ROIs were deﬁned by macroanatomical landmarks
+(sulci) on the inﬂated brain surface by manual reﬁnement of the auto-
+matic gyrus labeling computed by FreeSurfer (Martinos Center for
+Biomedical Imaging). The labeled cortical regions were mapped onto
+the brain volume and warped by nonlinear registration of the mean
+brain to the individual T1 anatomy of the 20 participants. The correct
+warping of the target regions were manually validated in every indi-
+vidual subject. Analog to the seed ROI deﬁnition, we labeled all
+voxels at the gray-white matter interface within each region as target
+voxels. On a single participant basis (and separately for each hemi-
+sphere), we computed how many of the random walks starting in
+each IPCC subarea reached each target. For statistical analysis of these
+connectivity values, which cannot assumed to follow a normal distri-
+bution, we used the nonparametric Friedman repeated-measures
+analysis of variance model (factor 1: IPCC area, factor 2: target; each
+hemisphere treated separately) and a Wilcoxon signed-rank test for
+post hoc pairwise comparisons between the levels of factor 1 (i.e.,
+IPCC areas). All P-values were Bonferroni corrected for multiple com-
+parisons. For testing connectivity differences between the hemi-
+spheres, the same procedure was used.
+
+Results
+We varied the number of clusters between 2 and 7 and found
+3 to be the maximum number, for which the clusters were
+compact with a consistent principal spatial arrangement across
+
+participants (see Materials and Methods). More speciﬁcally, in
+37 of the 40 tested hemispheres, we found 3 compact, and
+approximately equal-sized regions, in a roughly rostral–caudal
+arrangement, referred to as inferior parietal cortex anterior
+(IPCa), IPC middle (IPCm), and IPC posterior (IPCp; Fig. 3).
+Figure 3 also shows the morphometric characterization of the
+areas in 4 typical participants (for all participants, see Sup-
+plementary Fig. 1a,b in the Supplementary data).
+
+The variability and reproducibility of the parcellation results
+of all participants are represented by the centers of mass of
+subareas (Fig. 4). From Figure 4, one can see that IPCa mainly
+coincides with the supramarginal gyrus (roughly BA 40),
+while IPCp maps onto the angular gyrus (BA 39). Area IPCm
+is located in the transition area between the 2 gyri. The IPCCs
+of the left and right hemispheres (as well as the corresponding
+subareas) were found to have similar sizes (Fig. 4). Comparing
+the sizes of the subareas across hemispheres, we found similar
+sized IPCm and IPCp and a slightly bigger IPCa. The size of
+the subareas was measured by counting the number of bound-
+ary voxels at the gray-white matter interface. This number was
+converted into cm2 representing the size of each areas folded
+surface. The centers of mass of the subareas show a consistent
+rostro-caudal arrangement across participants. In the right
+hemisphere, the regions are located slightly more anteriorly.
+The variability of the spatial location across participants is
+comparable for all subareas (see SDs in Fig. 4).
+
+Figure 5 shows the population maps, illustrating that the
+variability of the computed IPCC subareas over participants
+displayed on the single-subject MNI standard brain. The
+strong overlap of the population map across subjects shows
+the consistency of the subdivision into 3 areas. The agreement
+was best for the IPCa area. Left and right hemispheres show
+similar results. The full 3D population maps in the MNI space
+of all IPCC areas are publicly available (http://openscience.
+cbs.mpg.de/ipcc) and additionally provided in Supplementary
+data (Supplementary ﬁle 3), which can be used with func-
+tional imaging software packages, such as FSLView or SPM.
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Figure 2. Gyrus-based target ROIs superimposed on the mean brain of all 20 participants in the MNI space. SFG, superior frontal gyrus; MFG, middle frontal gyrus; IFG, inferior
+frontal gyrus; PrCG, precentral gyrus; PoCG, postcentral gyrus; SPL, superior parietal lobe; STG, superior temporal gyrus; MTG, middle temporal gyrus; ITG, inferior temporal gyrus;
+OCC, occipital lobe.
+
+4 Tractography-Based Parcellation of the IPC • Ruschel et al.
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Figure 3. Parcellations of the left and right IPCC of 4 representative participants into IPCa (red), IPCm (yellow), and IPCp (green) superimposed on a 3D reconstruction of the
+pial surface; cs, central sulcus; lf, lateral ﬁssure.
+
+Figure 6 shows, for each IPCC subarea, the group average
+of the connectivity, as quantiﬁed by the tractographic signa-
+ture value in the gray-white matter interface. This represen-
+tation provides a high-resolution overview on the connectivity
+proﬁles of the areas. The connectivity patterns show a strong
+overlap between areas, but there are also some substantial
+differences. For example, connections to the ventral premotor
+cortex are stronger for anterior when compared with posterior
+regions, and connections to the temporal lobe are stronger in
+the left hemisphere than that in the right. This illustration of
+the mean tractogram on the inﬂated brain surface (Fig. 6)
+allows a precise localization of areas connected to the IPCC.
+Beside local connections to the neighboring parietal and tem-
+poral areas, all IPCC areas show a long-range connection to
+
+the precentral gyrus (PrCG) via the superior longitudinal fas-
+cicle (SLF). Additionally, a ventral connection to the anterior
+inferior frontal gyrus (IFG) via the extreme capsule ﬁber
+bundle was found for the left IPCp. A slice view of the ﬁber
+bundle showing the precise location of
+the connections
+within the white matter is provided in Supplementary data
+(Supplementary Fig. 2).
+
+The connection strengths between the IPCC subareas and
+the cortical target regions are depicted in Figure 7A. Table 1
+summarizes the results of the statistical tests. The strongest
+connections of the areas IPCa, IPCm, and IPCp were found to
+the lateral temporal cortex (superior temporal gyrus, STG;
+middle temporal gyrus, MTG; and inferior temporal gyrus,
+ITG), the SPL, the pre- and postcentral gyri (PrCG and PoCG),
+
+Cerebral Cortex 5
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Figure 4. Top: Illustrating the centers of mass of IPCa (red), IPCm (yellow), and IPCp (green) in the left (left) and right (right) hemispheres superimposed on the Talairach
+coordinate system. Small symbols represent the center of mass of each individual subject, and large symbols are the mean center of mass across all participants. Bottom: Size
+(in cm2 with SD) and locations (in Talairach coordinates) of the different IPC subareas.
+
+and the ventro-lateral prefrontal cortex (IFG and middle
+frontal gyrus, MFG; only in the right hemisphere). Connec-
+tions with the occipital cortex, the dorso-lateral prefrontal
+cortex (in both hemispheres), and the ventro-lateral prefrontal
+cortex (in the left hemisphere) are weaker. There is a signiﬁ-
+cant rostro-caudal (i.e., IPCa-to-IPCp) decrease in connectivity
+strength to the superior temporal and inferior frontal cortex
+in the right hemisphere. Moreover, we identiﬁed a similar
+rostral–caudal decrease in connectivity to the superior tem-
+poral cortex, and an increase in connectivity to the superior
+parietal cortex in the left hemisphere (Fig. 7A).
+
+In the left hemisphere, we found strong connections to
+both the lateral temporal cortex and the superior parietal
+cortex and weaker connections to both the occipital cortex
+and the lateral frontal cortex. The right hemisphere shows
+strongest connections to the lateral temporal cortex, superior
+parietal cortex, and lateral frontal cortex. Only sparse connec-
+tivity exists to the occipital cortex. Additionally, both hemi-
+spheres show relatively strong connectivity to the pre- and
+postcentral gyri.
+
+To test for signiﬁcance, we performed a 2-way repeated-
+measures Friedmann analysis of variance on ranks (factor 1:
+IPC region and factor 2: target region), followed by a Wilcox-
+on signed-rank test for post hoc pairwise comparisons. The
+test results show signiﬁcant differences between IPCa, IPCm,
+and IPCp in their connectivity strength to both the superior
+temporal cortex and superior parietal cortex. In the right
+hemisphere, signiﬁcant differences were also found in the
+connection strength to the superior temporal cortex and fur-
+thermore to the inferior frontal cortex (Fig. 7A and Table 1).
+
+Figure 7B shows the comparison between the connectivity
+patterns of the corresponding areas in the 2 hemispheres. In
+
+6 Tractography-Based Parcellation of the IPC • Ruschel et al.
+
+IPCa, the left area has more connections to the MTG, while
+the right area connects stronger to the STG, SFG, and IFG. For
+the middle area IPCm, the right side has stronger connections
+to the SFG and IFG. Finally, IPCp shows a stronger right-side
+connectivity for the PrCG.
+
+Discussion
+In this study, we show that the human IPCC can be divided
+into 3 subareas, arranged in a rostral–caudal direction, with
+distinct connectivity patterns to the rest of the brain. In
+addition, the principal topological arrangement and the con-
+nectivity patterns of these subareas are relatively consistent
+across participants. The variability between subjects is com-
+parable for all regions and both hemispheres (Fig. 4). More-
+over, the connectivity patterns are in principal agreement
+with previous dMRI-based studies of the parietal lobe. For
+example, connections between rostral IPCC and IFG, as well
+as ventral premotor and somatosensory areas, have been de-
+monstrated by Rushworth et al. (2006), Mars et al. (2011), and
+Caspers et al. (2011). While we consistently found for all sub-
+areas strongest connections to the lateral
+temporal and
+superior parietal cortices, there were also striking differences
+between subareas: A rostral–caudal decrease in connection
+strength to the inferior frontal (only for the right hemisphere)
+and superior temporal regions (both hemispheres), and a
+rostral–caudal increase in connection strength to the superior
+parietal cortex (only for the left hemisphere). Note that it
+could be argued that the rostral–caudal decreases in connec-
+tivity are due to the distance bias associated with probabilistic
+tractography (Jones 2010). However, as can be seen in
+Figure 7A,B, the decrease in IFG connectivity from IPCa to
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Figure 5. Population maps (n = 20 brains, cf. color bar) of areas IPCa (top), IPCm (middle), and IPCp (bottom) superimposed on the MNI single-subject brain; cs, central sulcus;
+lf, lateral ﬁssure. Voxels that belong to the respective area in <5 participants are not shown.
+
+IPCp amounts to about a factor between 3 and 5. The upper
+bound of the distance bias (if ﬁbers spread completely uni-
+formly into all directions) in probabilistic tractography is pro-
+portional to the square of the distance. If the diffusion is
+constrained by coherent structure, this exponent is much lower.
+Simulations show that it is in the order of 1, which has been
+used, for example, by Greenberg et al. (2012) and Anwander
+et al. (2007). As the distance from IFG to IPCp is less than twice
+the one from IFG to IPCa (Fig. 8), the difference in connection
+strength cannot be purely an effect of distance bias.
+
+What is the Most Appropriate Subdivision of the IPCC?
+As with other cortical areas, the exact subdivision of human
+IPCC has been a matter of debate. For example, Brodmann
+(1909), on the basis of postmortem cytoarchitectonics, postu-
+lated a subdivision into 2 areas, while later researchers, even
+when using the same principal methodology, concluded that
+there should be a higher number of subareas (von Economo
+and Koskinas 1925; Gerhardt 1940; Sarkissov et al. 1955;
+Caspers et al. 2006). Recently Caspers et al. (2013) used re-
+ceptor mapping to suggest that the 7 cytoarchitectonically
+deﬁned IPCC subareas (Caspers et al. 2006) can be clustered
+into 3 larger rostro-caudally arranged regions. Moreover,
+
+using postmortem myeloarchitecture as a structural criterion
+leads to more than 2 subareas of IPCC (Vogt 1911; Batsch
+1956).
+
+The rostral–caudal arrangement found in this study is in
+agreement with a number of previous studies using cytoarchi-
+tecture (e.g., von Economo and Koskinas 1925; Sarkissov
+et al. 1955; Caspers et al. 2006) and dMRI connectivity (Mars
+et al. 2011). Concerning the number of distinguishable areas,
+however, there are differences. Mars et al. (2011) subdivided,
+at least, the right IPCC into 5 rostro-caudally arranged areas,
+consistently over several participants. Here, we must consider
+2 facts. First, these authors used a large ROI that included
+both the parietal operculum (indeed, 1 of the 5 clusters was
+mainly located there) and anterior parts of the occipital lobe.
+Secondly, Mars and colleagues did not only rely on anatomical
+connectivity for parcellation, but additionally asked for
+compact clusters. This additional assumption might have
+stabilized the parcellation and allowed for a higher number of
+subareas to be consistent across participants. Caspers et al.
+(2006) found 7 cytoarchitectonically deﬁned rostro-caudally
+arranged areas altogether. However, they also acknowledge
+that neighboring areas tend to be similar and can be com-
+bined (cytoarchitectonic gradient).
+
+Cerebral Cortex 7
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Figure 6. Group-averaged connectivity of the IPCC subareas displayed on an inﬂated MNI brain. The white areas characterize the average seed areas and are derived from the
+population maps (Fig. 5) with a minimum of 5 participants (no overlap between seed regions).
+
+So, it seems that the anatomical similarity structure of the
+cortex across studies in the ﬁeld does not converge to a clear
+distinction into a ﬁxed number of homogeneous and clearly
+distinguishable areas. Instead, it appears that the number,
+location, and precise boundaries of areas are a matter of:
+(1) The structural traits used as parcellation criteria (e.g., cy-
+toarchitecture or long-range connectivity) and the sensitivity
+of the methodology to extract them, and (2) the level of detail
+considered relevant for the particular researchers (i.e., the
+desired granularity of the parcellation). With respect to the
+former point, one may conclude that an exact agreement
+between the earlier results based on cortical microstructure
+and our ﬁndings based on long-range connectivity proﬁles is
+neither necessary nor likely. Concerning the latter point, the
+question remains: How many subareas of the IPCC would rep-
+resent the most appropriate parcellation? Here, we argue that
+it is sensible to choose the most detailed description (i.e., the
+largest number of areas) that still leads to a consistent pattern
+across participants. Any attempt to produce ﬁner parcellations
+would highlight interindividual differences, while any coarser
+subdivision would miss potentially relevant features. The re-
+maining variability of cluster size and location might be a
+
+8 Tractography-Based Parcellation of the IPC • Ruschel et al.
+
+source to study the individual arrangement of
+functional
+zones in the IPC. Based on these considerations, the criterion
+of long-range connectedness and using the current technol-
+ogy to characterize this connectedness, we suggest that a sub-
+division of the IPCC into 3 areas is the most appropriate.
+
+Connectivity Pattern of the Human IPCC
+This study shows strongest connections of the IPCC to the
+lateral temporal, superior parietal, and pre- and postcentral
+cortices in both hemispheres. The IPCC subareas are charac-
+terized by a signiﬁcant rostral–caudal (i.e., IPCa-to-IPCp) de-
+crease and increase in particular connectivity patterns to
+certain cortical areas. A connectivity decrease from rostral to
+caudal was identiﬁed to the superior temporal cortex in both
+hemispheres, and an increase to the superior parietal cortex
+in the left hemisphere.
+
+In agreement with the study from Caspers et al. (2011), we
+identiﬁed the strongest connections between all IPCC subar-
+eas and the temporal cortex. We also found a comparable con-
+nectivity pattern in the left and right hemispheres. On the
+other hand, some of the rostral–caudal connectivity gradients
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Figure 7. (A) Connectivity between the areas IPCa, IPCm, and IPCp and the cortical target regions (n = 20 participants). The box-and-whisker diagrams show the median
+values, the lower and upper quartiles (boxes), and upper and lower bound (whiskers). (B) Statistical comparison of connectivity ﬁngerprints of IPCC subareas between
+hemispheres. The mean values are indicated by colored lines for the left areas and black lines for the right areas. An asterisk marks those connections that are signiﬁcantly
+different between the hemispheres (P < 0.01, based on the Wilcoxon test; see Materials and Methods for details).
+
+of the current work differ from the study of Caspers and col-
+leagues, in which, for example, rostral areas are more con-
+nected to somatosensory and superior parietal areas, while
+caudal areas are predominantly connected to the auditory,
+anterior temporal and occipital cortex. The connections pat-
+terns are not directly comparable due to differences in the
+methodology to compute the connectivity values from diffu-
+sion tractography. However, the main difference consists in
+the deﬁnition of seed and target regions. While we used the
+voxels at the gray-white matter interface in the entire IPCC
+subareas as seed region, Caspers et al. (2008) used a small
+area representing the top 10% of the maximum probability
+map and computed the connectivity values to a small target
+zones within the target areas. Further on, their measures are
+based on the connection likelihood and not on the connection
+strength computed by probabilistic tractography.
+
+Methodological Considerations
+The measured diffusion signal is only an indirect measure of
+the brain microstructure and, therefore, the derived tractogra-
+phy does not directly reﬂect the ﬁne details of anatomical con-
+nectivity (Jones et al. 2013). Some of the computed connections
+might not exist in the brain (false-positive connections) and the
+method cannot capture the full connectivity of the brain (false-
+negative connections). The estimated connectivity values do not
+represent the true axonal ﬁber-count in the living brain and are
+only a relative measure of linkage between regions. Neverthe-
+less, the computed estimation of the long-range connectivity is
+a powerful criterion to separate cortical areas with different
+
+connectivities, even if deﬁnite connectivity remains unknown.
+Despite these limitations, diffusion tractography provides rel-
+evant information of the white matter connectivity as shown in
+numerous studies (e.g. Assaf and Pasternak 2008).
+
+Homology—Comparison with Monkey data
+Besides having optimal consistency across participants, the
+proposed subdivision of human IPCC into 3 subareas ar-
+ranged in rostral–caudal direction is also supported by its
+similarity to the subdivision of the macaque IPCC (areas PF,
+PFG, and PG), according to studies of cytoarchitecture (Gre-
+goriou et al. 2006), tract tracing (Rozzi et al. 2006), and elec-
+trophysiology (Rozzi et al. 2008). The small area Opt, the
+fourth area in the macaque IPCC, which is located on the
+boundary to the occipital
+lobe markedly differs from the
+other IPCC areas in terms of cytoarchitecture and connectivity
+(Pandya and Seltzer 1982; Rozzi et al. 2006) and is not clearly
+associated with the parietal lobe. We therefore excluded this
+area from the comparative analysis.
+
+The next question is whether the human and the macaque
+areas are comparable with respect to their connectivity pat-
+terns, and whether
+there are any important differences
+between the 2 species. In the macaque, areas PF, PFG, and
+PG are connected with the lateral premotor cortex (areas F4
+and F5) and the intraparietal and superior parietal cortices via
+the SLF II/III (Rozzi et al. 2006; Schmahmann and Pandya
+2006). Similarly, in humans, the areas IPCa, IPCm, and IPCp
+are connected with the IFG (containing BA 44, the presumed
+human homolog of macaque area F5) and the superior
+
+Cerebral Cortex 9
+
+Table 1
+Test results for differences between the connection strength of IPCC subareas
+
+SFG MFG
+
+IFG
+
+PrCG
+
+PoCG
+
+SPL
+
+STG MTG
+
+ITG
+
+OCC
+
+IPCa–IPCm
+IPCa–IPCp
+IPCm–IPCp
+Right hemisphere
+
+Friedmann
+Wilcoxon
+
+Left hemisphere
+
+Friedmann
+Wilcoxon
+
+IPCa–IPCm
+IPCa–IPCp
+IPCm–IPCp
+
+***
+
+*
+
+***
+
+**
+**
+
+**
+*
+
+***
+***
+
+***
+
+***
+***
+
+***
+
+***
+***
+(*)
+
+***
+
+***
+**
+
+***
+
+**
+***
+***
+
+***
+
+**
+***
+**
+
+**
+
+*
+***
+
+***
+
+***
+***
+***
+
+***
+
+***
+***
+***
+
+Note: Levels of signiﬁcance: (*) P < 0.1 (marginally signiﬁcant), *P < 0.05, **P < 0.01,
+***P < 0.001. The P-values are Bonferroni corrected for multiple comparisons. See text for
+details and legend of Figure 2 for the regions and abbreviations.
+
+Figure 8. Parcellation and connectivity strengths of IPCa (red), IPCm (yellow), and IPCp
+(green) with other regions in humans (top), compared with PF, PFG, and PG in macaque
+(bottom) (“classical” tract-tracing data in the macaque from Rozzi et al. 2006).
+
+parietal cortex. These similarities in parieto-frontal connec-
+tions are also corroborated in a recent study by Thiebaut de
+Schotten et al. (2011), who demonstrated a striking similarity
+between the architecture of the SLF in both macaques and
+humans.
+
+In addition to these similarities, there are also clear differ-
+ences (Fig. 8). In monkeys, only sparse connections seem to
+exist between the IPCC and the temporal cortex (see Seltzer
+and Pandya 1984; Fig. 8; Rozzi et al. 2006; Schmahmann et al.
+2007). In marked contrast to that, in humans, strong connec-
+tions exist between all 3 regions of the IPCC and the lateral
+temporal cortex. These connections follow the posterior, ver-
+tical section of the arcuate fascicle (Catani et al. 2005). [Con-
+nections to deep white matter structures (e.g.,
+the long
+segment of the arcuate fascicle) were excluded by carefully
+selecting the seed region at
+interface (see
+Materials and Methods).] Additionally, tractography revealed
+strong connectivity of all 3 regions with the pre- and postcen-
+tral gyri. These connections were not described in this extend
+in the macaque monkey.
+
+the cortical
+
+10 Tractography-Based Parcellation of the IPC • Ruschel et al.
+
+The similarity in IPCC parcellation between macaques and
+humans and the similar connections between the IPCC and
+frontal and parietal regions suggest substantial conservation
+in IPCC evolution between the 2 primate species. However, in
+humans, new structural features emerged, such as the pro-
+nounced pathway between the IPCC and temporal cortex,
+which is possibly part of a perisylvian language network of
+the human brain (Catani et al. 2005; Schmahmann et al. 2007;
+Friederici 2009).
+
+important cognitive networks,
+
+The Functional Relevance of the IPCC Parcellation
+As discussed in the Introduction, subareas of the IPCC are in-
+volved in several
+including
+those subserving language, spatial attention, and episodic
+memory. These networks have been investigated in numerous
+functional brain imaging studies. We will now discuss how
+the subareas we have found on the basis of tractography, as
+well as the associated connectional ﬁngerprints, might relate
+to these functional ﬁndings. Similar to Caspers et al. (2006),
+we consider IPCm to be a transition area between the rostral
+(IPCa) and caudal (IPCp) subregions of the IPCC, and IPCa
+and IPCp as transition area to other cortical regions.
+
+Rostral IPCC
+The subarea IPCa covers the rostral part of the IPCC and
+largely corresponds to the supramarginal gyrus. This area has
+been interpreted to be involved in phonological processing
+(Obleser et al. 2006) and, together with the dorsal part of the
+IFG, in phonological working memory (Vigneau et al. 2006).
+Similarly, the area was found active for phonology–orthogra-
+phy mapping (Graves et al. 2010), phonological decision
+(Hartwigsen et al. 2010), and subvocal articulation (Price
+2010). This phonological network comprises, besides bilateral
+IPCa and the IFG, posterior MTG and fusiform gyrus (Graves
+et al. 2010). In contrast to these phonological ﬁndings, other
+language functions seem to markedly exclude rostral IPCC
+(Vigneau et al. 2006).
+
+Furthermore, although lesions in the posterior parietal
+cortex do not usually cause gross memory deﬁcits, imaging
+studies have shown that the region is involved in episodic
+memory (Cabeza et al. 2008). In particular, familiarity-based
+episodic memory effects are primarily found in the supramar-
+ginal gyrus (Vilberg and Rugg 2008).
+
+Finally, rostral IPCC seems to store abstract somatosensory
+information associated with tool use and complex movements
+(Binder et al. 2009). Hence, it should be in close connection
+with other motor and somatosensory areas, such as on the
+pre- and postcentral gyri. Indeed, Rizzolatti and Craighero
+(2004) have shown that the rostral IPCC belongs to the mirror
+neuron network and is activated during imitation and obser-
+vation of actions (see also Caspers et al. 2010). In these
+studies, it was also shown that rostral IPCC coactivates with
+premotor and somatosensory cortices.
+
+Similar networks to the ones found by the experiments de-
+scribed above also seem to emerge from resting-state fMRI
+studies (e.g., Kelly et al. 2010).
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+In our analysis, we found substantial connections between
+IPCa and all tested target regions. However, the regions most
+strongly connected to IPCa comprise the IFG, pre- and post-
+central gyri, as well as the temporal lobe (ITG, MTG, and
+the
+STG). This network includes, but
+
+limited to,
+
+is not
+
+functionally connected areas discussed above (note that fusi-
+form gyrus was not tested here).
+
+Comparing the connection strength between the hemi-
+spheres, we ﬁrst ﬁnd a right lateralization of connections
+between IPCa and prefrontal (IFG and SFG), as well as
+superior temporal (STG) areas. While the frontal connections
+ﬁt well with a right lateralized visuo-spatial attention network
+(Umarova et al. 2011), the meaning of the strongly right later-
+alized STG and the strongly left lateralized MTG connections
+remains somewhat unclear.
+
+Caudal IPCC
+The caudal subarea of the IPCC identiﬁed in our analysis
+(IPCp) lies on the angular gyrus. The area has been discussed
+as supporting semantic processes (Humphries et al. 2007)
+and, together with parts of the IFG, to be involved in semantic
+working memory (for a review see Vigneau et al. 2006).
+
+In studies of visuo-spatial attention, besides the dorsal at-
+tention network that subserves goal-directed attention, a
+ventral bottom-up attention network has been discovered that
+underlies the direction of attention towardssalient stimuli and
+acts as a “circuit breaker” for the dorsal network (Corbetta
+and Shulman 2002). This network recruits mainly angular
+gyrus, as well as the posterior parts of MFG and IFG.
+
+More generally, it seems that the caudal part of the IPCC
+houses neuronal populations that are involved in processes of
+high-level, complex and supramodal
+integration, such as
+decision-making, planning, problem solving, and sentence
+comprehension (Binder et al. 2009).
+
+In our study, the subareas, IPCm and IPCp, are also princi-
+pally connected to all target areas. However, some areas are
+particularly strongly connected, such as left SPL. This ﬁts with
+the idea that this area has special involvement in networks of
+episodic memory and spatial attention (Corbetta and Shulman
+2002; Cabeza et al. 2008). On the other hand, IPCm and IPCp
+are also strongly connected with temporal areas of
+the
+language network, thus corroborating their involvement in
+language comprehension (Vigneau et al. 2006).
+
+Concerning the interhemispheric differences between the
+connections of caudal IPCC we ﬁnd that in the right hemisphere,
+there are stronger connections to the PrCG (more posteriorly,
+IPCp), and to IFG/SFG (more anteriorly, IPCm). This connection
+pattern bears a striking resemblance to the SLF III system (see
+Schmahmann et al. 2007), a ﬁber system whose right lateraliza-
+tion has been shown to correlate to performance in visuospatial
+attention tasks (Thiebaut de Schotten et al. 2011).
+
+Conclusions
+Our connectivity-based tripartition of the human IPCC as well
+as the associated connectivity patterns are in principal agree-
+ment with previous studies, both, based on diffusion tractogra-
+phy and invasive methods. We extend the earlier work in
+several ways. First, we provide direct insights into the inter-
+subject variability of the parcellation. These data are also pro-
+vided as an atlas in Supplementary data (Supplementary ﬁle 3).
+Secondly, we directly assess the lateralization of parcellation
+and connectivity ﬁngerprints of the subareas. While the par-
+cellation showed only slight interhemispheric differences, the
+associated connections are markedly different: In contrast to
+the left hemisphere, the right anterior IPCC features stronger
+prefrontal and superior temporal connectivities, posterior
+
+IPCC is stronger connected to the superior parietal and pre-
+frontal areas. Thirdly, we compare and extensively discuss the
+relationship between our ﬁndings in humans and previous
+tracing work in monkeys. While the rostro-caudal arrangement
+of the subareas is similar to the ﬁndings in the macaque, the
+connectivity patterns bear important differences,
+in that,
+humans in contrast to the monkeys have strong connections
+between IPCC and temporal cortex, possibly related to the
+human ability to process language. In summary, this study
+gives a more complete picture of the structure of the IPCC and
+provides a blueprint for similar investigations of other regions
+of the cortex.
+
+Supplementary Material
+Supplementary material
+oxfordjournals.org/.
+
+can be found at: http://www.cercor.
+
+Funding
+This work was supported by a University Leipzig MD grant to
+M.R. and the Future and Emerging Technologies (FET) project
+CONNECT of the European Union, under FET-Open (grant
+no. 238292): http://www.brain-connect.eu.
+
+Notes
+We thank Tania Douglas for valuable technical advice. Conﬂict of
+Interest: None declared.
+
+References
+Anwander A, Tittgemeyer M, von Cramon DY, Friederici AD, Knösche
+TR. 2007. Connectivity-based parcellation of Broca’s area. Cereb
+Cortex. 17:816–825.
+
+Assaf Y, Pasternak O. 2008. Diffusion tensor imaging (DTI)-based
+white matter mapping in brain research: a review. J Mol Neurosci.
+34:51–61.
+
+Basser PJ, Mattiello J, LeBihan D. 1994. Estimation of the effective
+self-diffusion tensor from the NMR spin echo. J Magn Reson B.
+103:247–254.
+
+Batsch E. 1956. Die myeloarchitektonische Untergliederung des Iso-
+
+cortex parietalis beim Menschen. J Hirnforsch. 2:259–270.
+
+Beckmann M, Johansen-Berg H, Rushworth MF. 2009. Connectivity-
+based parcellation of human cingulate cortex and its relation to
+functional specialization. J Neurosci. 29:1175–1190.
+
+Behrens TEJ, Johansen-Berg H, Woolrich MW, Smith SM, Wheeler-
+Kingshott CAM, Boulby PA, Barker GJ, Sillery EL, Sheehan K, Cic-
+carelli O et al. 2003. Non-invasive mapping of connections
+between human thalamus and cortex using diffusion imaging. Nat
+Neurosci. 6:750–757.
+
+Binder JR, Desai RH, Graves WW, Conant LL. 2009. Where is the se-
+mantic system? A critical review and meta-analysis of 120 func-
+tional neuroimaging studies. Cereb Cortex. 19:2767–2796.
+
+Brodmann K. 1909. Vergleichende Lokalisationslehre der Großhirnrinde.
+
+Leipzig: Barth.
+
+Cabeza R, Ciaramelli E, Olson IR, Moscovitch M. 2008. The parietal
+cortex and episodic memory: an attentional account. Nat Rev
+Neurosci. 9:613–625.
+
+Caspers S, Eickhoff SB, Geyer S, Scheperjans F, Mohlberg H, Zilles K,
+Amunts K. 2008. The human inferior parietal lobule in stereotaxic
+space. Brain Struct Funct. 212:481–495.
+
+Caspers S, Eickhoff SB, Rick T, von Kapri A, Kuhlen T, Huang R, Shah
+NJ, Zilles K. 2011. Probabilistic ﬁbre tract analysis of cytoarchitec-
+tonically deﬁned human inferior parietal lobule areas reveals simi-
+larities to macaques. Neuroimage. 58:362–380.
+
+Cerebral Cortex 11
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Caspers S, Geyer S, Schleicher A, Mohlberg H, Amunts K, Zilles K.
+2006. The human inferior parietal cortex: cytoarchitectonic parcel-
+lation and interindividual variability. Neuroimage. 33:430–448.
+
+Caspers S, Schleicher A, Bacha-Trams M, Palomero-Gallagher N, Amunts
+K, Zilles K. 2013. Organization of the human inferior parietal lobule
+based on receptor architectonics. Cereb Cortex. 23:615–628.
+
+Caspers S, Zilles K, Laird AR, Eickhoff SB. 2010. ALE meta-analysis of
+action observation and imitation in the human brain. Neuroimage.
+50:1148–1167.
+
+Catani M, Jones DK, Ffytche DH. 2005. Perisylvian language networks
+
+of the human brain. Ann Neurol. 57:8–16.
+
+Choi HJ, Zilles K, Mohlberg H, Schleicher A, Fink GR, Armstrong E,
+Amunts K. 2006. Cytoarchitectonic identiﬁcation and probabilistic
+mapping of two distinct areas within the anterior ventral bank of
+the human intraparietal sulcus. J Comp Neurol. 495:53–69.
+
+Corbetta M, Shulman GL. 2002. Control of goal-directed and stimulus-
+
+driven attention in the brain. Nat Rev Neurosci. 3:201–215.
+
+Fischl B, Sereno MI, Dale AM. 1999. Cortical surface-based analysis.
+inﬂation, ﬂattening, and a surface-based coordinate system.
+
+II:
+Neuroimage. 9:195–207.
+
+Friederici AD. 2009. Pathways to language: ﬁber tracts in the human
+
+brain. Trends Cogn Sci. 13:175–181.
+
+Gerhardt E. 1940. Die Cytoarchitektonik des Isocortex parietalis beim
+
+Menschen. J Psychol Neurol. 49:367–419.
+
+Geyer S, Luppino G, Ekamp H, Zilles K. 2005. The macaque inferior
+parietal lobule: cytoarchitecture and distribution pattern of seroto-
+nin 5-HT 1A binding sites. Anat Embryol. 210:353–362.
+
+Gorbach NS, Schutte C, Melzer C, Goldau M, Sujazow O, Jitsev J,
+Douglas T, Tittgemeyer M. 2011. Hierarchical information-based
+clustering for connectivity-based cortex parcellation. Front Neu-
+roinform. 5:18.
+
+Graves WW, Desai R, Humphries C, Seidenberg MS, Binder JR. 2010.
+Neural systems for reading aloud: a multiparametric approach.
+Cereb Cortex. 20:1799–1815.
+
+Greenberg AS, Verstynen T, Chiu YC, Yantis S, Schneider W, Behr-
+mann M. 2012. Visuotopic cortical connectivity underlying atten-
+tion revealed with white-matter
+J Neurosci.
+32:2773–2782.
+
+tractography.
+
+Gregoriou GG, Borra E, Matelli M, Luppino G. 2006. Architectonic
+organization of the inferior parietal convexity of the macaque
+monkey. J Comp Neurol. 496:422–451.
+
+Hartwigsen G, Baumgaertner A, Price CJ, Koehnke M, Ulmer S, Siebner
+HR. 2010. Phonological decisions require both the left and right su-
+pramarginal gyri. Proc Natl Acad Sci USA. 107:16494–16499.
+
+Humphries C, Binder JR, Medler DA, Liebenthal E. 2007. Time course
+of semantic processes during sentence comprehension: an fMRI
+study. Neuroimage. 36:924–932.
+
+Jenkinson M, Bannister P, Brady M, Smith S. 2002. Improved optimiz-
+ation for the robust and accurate linear registration and motion
+correction of brain images. Neuroimage. 17:825–841.
+
+Johansen-Berg H, Behrens TEJ, Robson MD, Drobnjak I, Rushworth
+MFS, Brady JM, Smith SM, Higham DJ, Matthews PM. 2004.
+Changes in connectivity proﬁles deﬁne functionally distinct
+regions in human medial frontal cortex. Proc Natl Acad Sci USA.
+101:13335–13340.
+
+Johansen-Berg H, Behrens TEJ, Sillery E, Ciccarelli O, Thompson AJ,
+Smith SM, Matthews PM. 2005. Functional-anatomical validation
+and individual variation of diffusion tractography-based segmenta-
+tion of the human thalamus. Cereb Cortex. 15:31–39.
+
+Jones DK. 2010. Challenges and limitations of quantifying brain con-
+
+nectivity in vivo with diffusion MRI. Imag Med. 2:341–355.
+
+Jones DK, Knösche TR, Turner R. 2013. White matter integrity, ﬁber
+count, and other fallacies: The do’s and don’ts of diffusion MRI.
+Neuroimage. 73:239–254.
+
+Kelly C, Uddin LQ, Shehzad Z, Margulies DS, Castellanos FX, Milham
+MP, Petrides M. 2010. Broca’s region: linking human brain func-
+tional connectivity data and non-human primate tracing anatomy
+studies. Eur J Neurosci. 32:383–398.
+
+Klein JC, Behrens TEJ, Robson MD, Mackay CE, Higham DJ,
+Johansen-Berg H. 2007. Connectivity-based parcellation of human
+
+12 Tractography-Based Parcellation of the IPC • Ruschel et al.
+
+cortex using diffusion MRI: establishing reproducibility, validity
+and observer independence in BA 44/45 and SMA/pre-SMA. Neu-
+roimage. 34:204–211.
+
+Mars RB, Jbabdi S, Sallet J, O’Reilly JX, Croxson PL, Olivier E, Noonan
+MP, Bergmann C, Mitchell AS, Baxter MG et al. 2011. Diffusion-
+weighted imaging tractography-based parcellation of the human
+parietal cortex and comparison with human and macaque resting-
+state functional connectivity. J Neurosci. 31:4087–4100.
+
+Obleser J, Boecker H, Drzezga A, Haslinger B, Hennenlotter A, Roet-
+tinger M, Eulitz C, Rauschecker JP. 2006. Vowel sound extraction in
+anterior superior temporal cortex. Hum Brain Mapp. 27:562–571.
+
+Ono M, Kubik S, Abernathey CD. 1990. Atlas of the cerebral sulci.
+
+Stuttgart: Thieme.
+
+Pandya DN, Seltzer B. 1982. Intrinsic connections and architectonics
+of posterior parietal cortex in the rhesus monkey. J Comp Neurol.
+204:196–210.
+
+Price CJ. 2010. The anatomy of language: a review of 100 fMRI
+
+studies published in 2009. Ann N Y Acad Sci. 1191:62–88.
+
+Rizzolatti G, Craighero L. 2004. The mirror-neuron system. Annu Rev
+
+Neurosci. 27:169–192.
+
+Rozzi S, Calzavara R, Belmalih A, Borra E, Gregoriou GG, Matelli M,
+Luppino G. 2006. Cortical connections of the inferior parietal corti-
+cal convexity of the macaque monkey. Cereb Cortex. 16:1389–1417.
+Rozzi S, Ferrari PF, Bonini L, Rizzolatti G, Fogassi L. 2008. Functional
+organization of inferior parietal lobule convexity in the macaque
+monkey: electrophysiological characterization of motor, sensory
+and mirror responses and their correlation with cytoarchitectonic
+areas. Eur J Neurosci. 28:1569–1588.
+
+Rushworth MFS, Behrens TEJ, Johansen-Berg H. 2006. Connection
+patterns distinguish 3 regions of human parietal cortex. Cereb
+Cortex. 16:1418–1430.
+
+Sakai KL, Hashimoto R, Homae F. 2001. Sentence processing in the
+
+cerebral cortex. Neurosci Res. 39:1–10.
+
+Sarkissov SA, Filimonoff IN, Kononowa EP, Preobraschenskaja IS,
+Kukuew LA. 1955. Atlas of the cytoarchitectonics of the human
+cerebral cortex. Moscow: Medgiz.
+
+Schleicher A, Amunts K, Geyer S, Morosan P, Zilles K. 1999.
+Observer-independent method for microstructural parcellation of
+cerebral cortex: a quantitative approach to cytoarchitectonics. Neu-
+roimage. 9:165–177.
+
+Schmahmann JD, Pandya DN. 2006. Fiber pathways of the brain.
+
+Oxford: Oxford University Press.
+
+Schmahmann JD, Pandya DN, Wang R, Dai G, D’Arceuil HE, de Cre-
+spigny AJ, Wedeen VJ. 2007. Association ﬁbre pathways of the
+brain: Parallel observations from diffusion spectrum imaging and
+autoradiography. Brain. 130:630–653.
+
+Schubotz RI, Anwander A, Knösche TR, von Cramon DY, Tittgemeyer
+M. 2010. Anatomical and functional parcellation of the human
+lateral premotor cortex. Neuroimage. 50:396–408.
+
+Seltzer B, Pandya DN. 1984. Further observations on parieto-temporal
+
+connections in the rhesus monkey. Exp Brain Res. 55:301–312.
+
+Thiebaut de Schotten M, Dell’Acqua F, Forkel SJ, Simmons A, Vergani
+F, Murphy DG, Catani M. 2011. A lateralized brain network for
+visuospatial attention. Nat Neurosci. 14:1245–1246.
+
+Tomassini V, Jbabdi S, Klein JC, Behrens TEJ, Pozzilli C, Matthews
+PM, Rushworth MFS, Johansen-Berg H. 2007. Diffusion-weighted
+imaging tractography-based parcellation of the human lateral pre-
+motor cortex identiﬁes dorsal and ventral subregions with anatom-
+ical and functional specializations. J Neurosci. 27:10259–10269.
+
+Umarova RM, Saur D, Kaller CP, Vry MS, Glauche V, Mader I, Hennig
+J, Weiller C. 2011. Acute visual neglect and extinction: distinct
+functional state of
+the visuospatial attention system. Brain.
+134:3310–3325.
+
+Vigneau M, Beaucousin V, Herve PY, Duffau H, Crivello F, Houde O,
+Mazoyer B, Tzourio-Mazoyer N. 2006. Meta-analyzing left hemi-
+sphere language areas: phonology, semantics, and sentence pro-
+cessing. Neuroimage. 30:1414–1432.
+
+Vilberg KL, Rugg MD. 2008. Memory retrieval and the parietal cortex:
+a review of evidence from a dual-process perspective. Neuropsy-
+chologia. 46:1787–1799.
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Vogt C, Vogt O. 1919. Allgemeine Ergebnisse unserer Hirnforschung.
+
+von Bonin G, Bailey P. 1947. The neocortex of Macaca Mulatta.
+
+J Psychol Neurol. 25:279–461.
+
+Urbana (IL): University of Illinois Press.
+
+Vogt O. 1911. Die Myeloarchitektonik des Isocortex parietalis.
+
+von Economo K, Koskinas G. 1925. Die Cytoarchitektonik der Hirn-
+
+J Psychol Neurol. 18:379–390.
+
+rinde des erwachsenen Menschen. Wien: Springer.
+
+D
+o
+w
+n
+l
+o
+a
+d
+e
+d
+
+ 
+
+ 
+f
+r
+o
+m
+h
+t
+t
+p
+:
+/
+/
+c
+e
+r
+c
+o
+r
+.
+
+o
+x
+f
+o
+r
+d
+j
+o
+u
+r
+n
+a
+l
+s
+.
+
+o
+r
+g
+/
+ 
+a
+t
+ 
+
+U
+n
+i
+v
+e
+r
+s
+i
+t
+y
+
+ 
+
+o
+f
+ 
+T
+e
+x
+a
+s
+ 
+a
+t
+ 
+
+A
+u
+s
+t
+i
+n
+
+ 
+
+ 
+
+o
+n
+A
+p
+r
+i
+l
+ 
+
+2
+2
+
+,
+ 
+
+2
+0
+1
+4
+
+Cerebral Cortex 13
+
+

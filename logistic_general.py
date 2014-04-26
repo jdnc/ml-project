@@ -53,9 +53,10 @@ def main():
                 if feature_dict[key] in [terms[i], terms[j]]:
                     sub_dict[key] = feature_dict[key]
             study, feat  = ex.get_intersecting_dicts(study_dict, sub_dict)
+            print "Studying "+terms[i]+" vs "+terms[j]+" size: "+len(study)
             x, y = pp.get_features_targets(study, feat, mask='data/MNI152_T1_2mm_brain.nii.gz')
             cf = classify(x, y)
-            save_name = terms[i] + '_vs_' + terms[j] + '.npy'
+            save_name = terms[i] + '_vs_' + terms[j] + '_logistic.npy'
             with open(save_name, 'wb') as f:
                 np.save(f, cf)
 

@@ -57,7 +57,7 @@ def makePlot(np_acc_matrix, order, plot_name):
   plt.clf()
   ax = fig.add_subplot(111, aspect='auto')
   #ax.set_aspect(1)
-  res = ax.imshow(np.array(np_acc_matrix), cmap=plt.cm.summer, interpolation='nearest', vmin=50.0)
+  res = ax.imshow(np.array(np_acc_matrix), cmap=plt.cm.summer, interpolation='nearest', vmin=50.0, vmax=95.0)
   width = len(np_acc_matrix)
   height = len(np_acc_matrix)
 
@@ -71,7 +71,7 @@ def makePlot(np_acc_matrix, order, plot_name):
   cb = fig.colorbar(res)
   plt.xticks(range(width), order[:width], rotation=30)
   plt.yticks(range(height), order[:height])
-  plt.savefig(plot_name, format='jpg')
+  plt.savefig(plot_name, format='jpg',bbox_inches='tight')
 
 def getAvgTermAcc(row_term_accs):
   termAcc=[]

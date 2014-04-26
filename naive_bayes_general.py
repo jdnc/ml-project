@@ -60,6 +60,20 @@ def main():
                 np.save(f, cf)
 
 
+for i in range(7,len(terms)):
+    for j in range(i+1, len(terms)):
+        sub_dict = {}
+        for key in feature_dict:
+            if feature_dict[key] in [terms[i], terms[j]]:
+                sub_dict[key] = feature_dict[key]
+        study, feat  = ex.get_intersecting_dicts(study_dict, sub_dict)
+        print "Studying "+terms[i]+" vs "+terms[j]+" size: "+str(len(study))
+        x, y = pp.get_features_targets(study, feat, mask='data/MNI152_T1_2mm_brain.nii.gz')
+        cf = classify(x, y)
+        save_name = terms[i] + '_vs_' + terms[j] + 'logistic.npy'
+        with open(save_name, 'wb') as f:
+            np.save(f, cf)
+
 if __name__ == "__main__":
     main()
 

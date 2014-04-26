@@ -23,7 +23,7 @@ def main():
     feature_dict, col_names = pp.set_targets('data/features.txt', threshold=-1)
     # consider only the terms of interest
     with open('data/terms.json', 'rb') as f:
-	terms = json.load(f)
+	    terms = json.load(f)
     for key in list(feature_dict):
 	feature_dict[key] = [x for x in terms if feature_dict[key][x] > THRESH]
 	if not feature_dict[key]:

@@ -57,8 +57,8 @@ def main():
             study, feat  = ex.get_intersecting_dicts(study_dict, sub_dict)
             x, y = pp.get_features_targets(study, feat, mask='data/MNI152_T1_2mm_brain.nii.gz')
             cf = classify(x, y)
-            curr_study='Studying '+terms[i] + '_vs_' + terms[j]+' size: '+str(len(x))
-            print curr_study
+            #curr_study='Studying '+terms[i] + '_vs_' + terms[j]+' size: '+str(len(x))
+            #print curr_study
             save_name = terms[i] + '_vs_' + terms[j] + '_svm.npy'
             with open(save_name, 'wb') as f:
                 np.save(f, cf)

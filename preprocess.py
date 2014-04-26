@@ -177,12 +177,12 @@ def get_features_targets(coordinate_dict, target_dict, labels=None, mask=None, i
     y = []
     #y = np.empty(n_samples, dtype=object)
     if labels:
-	    mapping = {}
+	mapping = {}
         labels = sorted(labels)
-	    for i in range(len(labels)):
-	        mapping[labels[i]] =  i
-	    with open('mappings.json', 'wb') as f:
-	        json.dump(mapping, f)
+	for i in range(len(labels)):
+	    mapping[labels[i]] =  i
+	with open('mappings.json', 'wb') as f:
+	    json.dump(mapping, f)
     for idx, key in enumerate(coordinate_dict):
         if labels:
             y.append([mapping[x] for x in target_dict[key]])

@@ -6,9 +6,6 @@ Initially begins with the 25 terms from the paper
 Uses Logistic regression for multi-label classification and l1 regularization.
 """
 
-import os
-import sys
-import argparse
 
 import numpy as np
 import json
@@ -52,8 +49,9 @@ def main():
     clf =  OneVsRestClassifier(LogisticRegression(penalty='l1'))
     kf = cross_validation.KFold(len(y_new), n_folds=10)
     for train, test in kf:
-        predicted  = clf.fit(x[train],y_new[train]).predict(x[test])
-        predict_prob = LogisticRegression(penalty='l1').fit(x[train],y_new[train]).predict_proba(x[test])
+        model = clf.fit(x[train],y_new[train])
+        predicted  = model.predict(x[test])
+        predict_prob = model.predict_proba(x[test])
         cls_scores = utils.score_results(y_new[test], predicted, predict_prob)
         label_scores = utils.label_scores(y_new[test], predicted, predict_prob)
         score_per_class.append(cls_scores)

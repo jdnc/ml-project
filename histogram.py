@@ -1,55 +1,54 @@
 from __future__ import print_function
 """
-A script that takes in a dict or jsonized dict of terms corresponding to any study
-and plots a  bar chart plotting frequency vs term
+Given a  dict with keys as studies and vals as list of labels corresponding to each study,
+plots the histogram of the label counts.
+
+Assumes the existence of mapping.json in the current directory, if the labels are ints rather than str.
+mapping.json is dict from str --> int
 """
 
 import json
+import pandas
 import numpy as np
 import matplotlib.pyplot as plt
+from collections import defaultdict
 
-from collections import Counter
-
-
-def plot_histogram(feature_dict):
+def plot_histogram(y):
     """
-    A function that takes a dictionary with the keys being the studies and the
-    values being all the labels for that study. Plots a bar chart showing the
-    overall counts of each label
+    Plot frequency bar plot of items from  a given numpy array/ a list of lists.
 
     Parameters
-    ----------
-    feature_dict : dict/str
-        A dict that has the studies as its keys and the labels as its values.
-        Can also be a string which is a filepath to the jsonized dict
+    -----------
+    y : numpy array/ list of lists/ string
+        either a list of list type construct or the filename of the json
+        serialized object
 
     Returns
     -------
     None
-        simply plots the bar chart if possible.
     """
-    if isinstance(feature_dict, basestring):
-        with open(feature_dict, 'rb') as f:
-            feature_dict = json.load(f)
-    # now generate the counts for each term
-    term_counts = Counter()
-    for key in feature_dict:
-        for word in feature_dict[key]:
-            term_counts[word] += 1
-    # now load the terms from the actual term file
-    with open('data/terms.json') as f:
-        terms = json.load(f)
+    # check whether json file or actual object
+    if isinstance(y, basestring):
+        y = np.load(y)
 
-    # set the parameters for the actual plot
-    # in vein with the example at matplotlib
-    # see url <http://matplotlib.org/1.3.1/examples/api/barchart_demo.html>
-    n = len(terms)
-    ind = np.arange(n)
-    width = 0.35
-    fig, ax = plt.subplots()
-    ax.set_ylabel('count')
-    ax.set_xticks(ind+width)
-    ax.set_xticklabels(terms)
-    counts = [term_counts[x] for x in terms]
-    rects = ax.bar(ind+width, counts, width, color='b')
-    plt.show()
+    # count the occurence of each label
+    count_dict = defaultdict(int)
+    for labels in y:
+        for label in labels:
+            count_dict[label] += 1
+    # tranlate the int labels back to their string form using mappings.json
+    inv_map = {}
+    map = json.load(open('mappings.json', 'rb'))
+    for key in map:
+        inv_map[map[key]] = key
+
+    # similarly map counts back to original strings
+    term_counts =  {}
+    for key in count_dict:
+        term_counts[inv_map[key]] = count_dict[key]
+
+    # plot easily by converting the count_dict to a pandas Series object
+    count_series = pandas.Series(term_counts)
+    count_series = count_series.sort_index()
+    count_series.plot(kind='bar', figsize=(8,10))
+    plt.savefig('histogram.png')

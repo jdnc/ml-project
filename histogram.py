@@ -10,6 +10,7 @@ mapping.json is dict from str --> int
 import json
 import pandas
 import numpy as np
+import matplotlib.pyplot as plt
 from collections import defaultdict
 
 def plot_histogram(y):
@@ -49,4 +50,5 @@ def plot_histogram(y):
     # plot easily by converting the count_dict to a pandas Series object
     count_series = pandas.Series(term_counts)
     count_series = count_series.sort_index()
-    count_series.plot(kind='bar')
+    count_series.plot(kind='bar', figsize=(8,10))
+    plt.savefig('histogram.png')

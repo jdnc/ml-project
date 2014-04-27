@@ -43,8 +43,6 @@ def main():
     # fit a label binarizer
     lb = preprocessing.LabelBinarizer()
     y_new = lb.fit_transform(y)
-    print(X)
-    exit(1)
     # perform the 10 fold cross_validation
     score_per_class = []
     score_per_label = []

@@ -32,9 +32,9 @@ def create2DpairAccuracy(folderLoc):
   pairwise_accuracy={} #{term1: {term2:(acc,std), t3:(), ..}..}
   allPairsFiles=getAllConfMatFiles(folderLoc)
   for pair_cv_cm_file in allPairsFiles:
-    terms=pair_cv_cm_file[:-4].split("_vs_")
+    terms=pair_cv_cm_file[:-4].split("_")
     term1=terms[0]
-    term2=terms[1]
+    term2=terms[2]
     pair_cv_confmats=np.load(folderLoc+pair_cv_cm_file)
     (accuracy,stddev)=getPairAccuracy(pair_cv_confmats)
     if pairwise_accuracy.get(term1) is None:

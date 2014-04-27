@@ -23,7 +23,7 @@ def main():
     feature_dict, col_names = pp.set_targets('data/features.txt', threshold=-1)
     # consider only the terms of interest
     with open('data/terms.json', 'rb') as f:
-	    terms = json.load(f)
+       	terms = json.load(f)
     for key in list(feature_dict):
 	feature_dict[key] = [x for x in terms if feature_dict[key][x] > THRESH]
 	if not feature_dict[key]:
@@ -43,15 +43,17 @@ def main():
     # fit a label binarizer
     lb = preprocessing.LabelBinarizer()
     y_new = lb.fit_transform(y)
+    print(X)
+    exit(1)
     # perform the 10 fold cross_validation
     score_per_class = []
     score_per_label = []
     clf =  OneVsRestClassifier(LogisticRegression(penalty='l1'))
     kf = cross_validation.KFold(len(y_new), n_folds=10)
     for train, test in kf:
-        model = clf.fit(x[train],y_new[train])
-        predicted  = model.predict(x[test])
-        predict_prob = model.predict_proba(x[test])
+        model = clf.fit(X[train], y_new[train])
+        predicted  = model.predict(X[test])
+        predict_prob = model.predict_proba(X[test])
         cls_scores = utils.score_results(y_new[test], predicted, predict_prob)
         label_scores = utils.label_scores(y_new[test], predicted, predict_prob)
         score_per_class.append(cls_scores)

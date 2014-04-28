@@ -51,4 +51,4 @@ def plot_histogram(y):
     count_series = pandas.Series(term_counts)
     count_series = count_series.sort_index()
     count_series.plot(kind='bar', figsize=(8,10))
-    plt.savefig('histogram.png')
+    plt.savefig('histogram.png', transparent=True)

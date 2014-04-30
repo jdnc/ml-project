@@ -49,6 +49,6 @@ def plot_histogram(y):
 
     # plot easily by converting the count_dict to a pandas Series object
     count_series = pandas.Series(term_counts)
-    count_series = count_series.sort_index()
-    count_series.plot(kind='bar', figsize=(8,10))
-    plt.savefig('histogram.png', transparent=True)
+    count_series.sort(axis=1)
+    count_series.plot(kind='bar', figsize=(10,10))
+    plt.savefig('histogram.png')

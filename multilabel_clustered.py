@@ -1,13 +1,14 @@
 from __future__ import print_function
 
 """
-Clustered version of Multi-label classifier for neurosynth.
-Testing phase. Requires large memory.
+Multi-label classifier for neurosynth.
+Initially begins with the 25 terms from the paper
 Uses Logistic regression for multi-label classification and l1 regularization.
 """
 
 
 import numpy as np
+import nibabel as nb
 import json
 from sklearn import cross_validation
 from sklearn import preprocessing
@@ -30,12 +31,12 @@ def classify(x, y):
     y_new = lb.fit_transform(y)
 
     # specify connectivity for clustering
-    mask = np.load('data/2mm_brain_mask.npy')
+    mask = nb.load('data/MNI152_T1_2mm_brain.nii.gz').get_data().astype('bool')
     shape = mask.shape
     connectivity = image.grid_to_graph(n_x=shape[0], n_y=shape[1], n_z=shape[2], mask=mask)
 
-    #ward = WardAgglomeration(n_clusters=N_CLUSTERS, connectivity=connectivity)
-    ward = WardAgglomeration(n_clusters=N_CLUSTERS)
+    ward = WardAgglomeration(n_clusters=N_CLUSTERS, connectivity=connectivity)
+    #ward = WardAgglomeration(n_clusters=N_CLUSTERS)
     clf =  OneVsRestClassifier(LogisticRegression(penalty='l1'))
     kf = cross_validation.KFold(len(y_new), n_folds=10)
     score_per_class = []
@@ -54,11 +55,6 @@ def classify(x, y):
         label_scores = utils.label_scores(y_new[test], predicted, predict_prob)
         score_per_class.append(cls_scores)
         score_per_label.append(label_scores)
-        if(cntr>1):
-          break
-    with open('log_clust_class_scores.json', 'wb') as f:
-        json.dump(score_per_class, f)
-    pickle.dump(score_per_label,open('log_cl_label_scores.p','wb'))
     return (score_per_class,score_per_label)
 
 
@@ -81,17 +77,17 @@ def main():
             del(coord_dict[key])
     # find intersecting dicts
     coord_dict, feature_dict = ex.get_intersecting_dicts(coord_dict, feature_dict)
-    #try for a sample
-    sub_coord_dict = {k: coord_dict[k] for k in coord_dict.keys()[0:500]}
+    # works with 3k inputs; runs out of memory beyond
+    sub_coord_dict = {k: coord_dict[k] for k in coord_dict.keys()[0:3000]}
     sub_coord_dict, sub_feature_dict = ex.get_intersecting_dicts(sub_coord_dict, feature_dict)
     X, y = pp.get_features_targets(sub_coord_dict, sub_feature_dict, labels=terms, mask='data/MNI152_T1_2mm_brain.nii.gz')
     # get the respective vectors
     #X, y = pp.get_features_targets(coord_dict, feature_dict, labels=terms, mask='data/MNI152_T1_2mm_brain.nii.gz')
     # perform clustering, cross validation and classify
     (score_per_class,score_per_label) = classify(X,y)
-    with open('log_cl_class_scores.json', 'wb') as f:
+    with open('cluster_class_scores.json', 'wb') as f:
         json.dump(score_per_class, f)
-    pickle.dump(score_per_label,open('log_cl_label_scores.p','wb'))
+    pickle.dump(score_per_label,open('cluster_label_scores.p','wb'))
     return
 
 

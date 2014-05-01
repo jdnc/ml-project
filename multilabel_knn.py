@@ -28,7 +28,7 @@ def get_predictions(knn_neighbors, y_new):
   predictions=[]
   #predicted_prob_3 = [y_new[neighbors[0]]+y_new[neighbors[1]]+y_new[neighbors[2]] for neighbors in knn_neighbors]
   predicted_proba=[]
-  for neighbors in knn_neighbours:
+  for neighbors in knn_neighbors:
     predicted_labs=np.zeros(len(y_new[0]), dtype=int)
     for i in range(0,k):
       predicted_labs+=y_new[neighbors[i]]
@@ -57,7 +57,7 @@ def main():
             del(coord_dict[key])
     # find intersecting dicts
     coord_dict, feature_dict = ex.get_intersecting_dicts(coord_dict, feature_dict)
-    # running for 4k
+    #try for a sample
     sub_coord_dict = {k: coord_dict[k] for k in coord_dict.keys()[0:4000]}
     sub_coord_dict, sub_feature_dict = ex.get_intersecting_dicts(sub_coord_dict, feature_dict)
     X, y = pp.get_features_targets(sub_coord_dict, sub_feature_dict, labels=terms, mask='data/MNI152_T1_2mm_brain.nii.gz')
@@ -85,6 +85,8 @@ def main():
 	predicted_labels.append(predicted)
         test_vals.append(y_new[test])
         cvrun+=1
+        if(cvrun>1):
+	  break
     with open('knn_class_scores.json', 'wb') as f:
         json.dump(score_per_class, f)
     pickle.dump(score_per_label, open('knn_label_scores.p', 'wb'))

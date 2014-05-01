@@ -3,19 +3,23 @@ from __future__ import print_function
 """
 Multi-label classifier for neurosynth.
 Initially begins with the 25 terms from the paper
+Do dimensionality reduction using PCA first.
 Uses Logistic regression for multi-label classification and l1 regularization.
 """
 
 
+import sys,ctypes
+_old_rtld = sys.getdlopenflags()
+sys.setdlopenflags(_old_rtld|ctypes.RTLD_GLOBAL)
+from sklearn import decomposition
+sys.setdlopenflags(_old_rtld)
 import numpy as np
 import json
+import pickle
 from sklearn import cross_validation
 from sklearn import preprocessing
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.linear_model import LogisticRegression
-#from sklearn.cluster import WardAgglomeration
-#from sklearn.feature_extraction import image
-from sklearn import decomposition
 
 import preprocess as pp
 import experiment as ex
@@ -84,8 +88,7 @@ def main():
         score_per_label.append(label_scores)
     with open('pca_class_scores.json', 'wb') as f:
         json.dump(score_per_class, f)
-    with open('pca_label_scores.json', 'wb') as f:
-        json.dump(score_per_label, f)
+    pickle.dump(score_per_label, open('pca_label_scores.p', 'wb'))
     return
 
 

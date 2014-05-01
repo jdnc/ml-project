@@ -85,8 +85,6 @@ def main():
 	predicted_labels.append(predicted)
         test_vals.append(y_new[test])
         cvrun+=1
-        if(cvrun>1):
-	  break
     with open('knn_class_scores.json', 'wb') as f:
         json.dump(score_per_class, f)
     pickle.dump(score_per_label, open('knn_label_scores.p', 'wb'))

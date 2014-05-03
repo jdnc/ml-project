@@ -8,6 +8,7 @@ Uses Logistic regression for multi-label classification and l1 regularization.
 
 
 import numpy as np
+import random
 import json
 import pickle
 from sklearn import cross_validation
@@ -39,8 +40,10 @@ def main():
             del(coord_dict[key])
     # find intersecting dicts
     coord_dict, feature_dict = ex.get_intersecting_dicts(coord_dict, feature_dict)
-    #works for 4000 elements, breaks beyond
-    sub_coord_dict = {k: coord_dict[k] for k in coord_dict.keys()[0:4000]}
+    # try for a sample
+    sample4k_coords = random.sample(range(len(coord_dict)), 4000)
+    subsample_keys = [coord_dict.keys()[i] for i in sample4k_coords]
+    sub_coord_dict = {key: coord_dict[key] for key in subsample_keys}
     sub_coord_dict, sub_feature_dict = ex.get_intersecting_dicts(sub_coord_dict, feature_dict)
     X, y = pp.get_features_targets(sub_coord_dict, sub_feature_dict, labels=terms, mask='data/MNI152_T1_2mm_brain.nii.gz')
     # get the respective vectors
@@ -67,9 +70,11 @@ def main():
 	predicted_labels.append(predicted)
         test_vals.append(y_new[test])
         cvrun+=1
-    with open('class_scores.json', 'wb') as f:
+        #if(cvrun>1):
+	#  break
+    with open('cv10_class_scores.json', 'wb') as f:
         json.dump(score_per_class, f)
-    pickle.dump(score_per_label, open('label_scores.p', 'wb'))
+    pickle.dump(score_per_label, open('cv10_label_scores.p', 'wb'))
     return
 
 

@@ -55,6 +55,11 @@ def classify(x, y):
         label_scores = utils.label_scores(y_new[test], predicted, predict_prob)
         score_per_class.append(cls_scores)
         score_per_label.append(label_scores)
+        #if(cntr>1):
+        #  break
+    #with open('log_clust_class_scores.json', 'wb') as f:
+    #    json.dump(score_per_class, f)
+    #pickle.dump(score_per_label,open('log_cl_label_scores.p','wb'))
     return (score_per_class,score_per_label)
 
 
@@ -77,17 +82,17 @@ def main():
             del(coord_dict[key])
     # find intersecting dicts
     coord_dict, feature_dict = ex.get_intersecting_dicts(coord_dict, feature_dict)
-    # works with 3k inputs; runs out of memory beyond
-    sub_coord_dict = {k: coord_dict[k] for k in coord_dict.keys()[0:3000]}
+    # try for a sample
+    sub_coord_dict = {k: coord_dict[k] for k in coord_dict.keys()[0:2500]}
     sub_coord_dict, sub_feature_dict = ex.get_intersecting_dicts(sub_coord_dict, feature_dict)
     X, y = pp.get_features_targets(sub_coord_dict, sub_feature_dict, labels=terms, mask='data/MNI152_T1_2mm_brain.nii.gz')
     # get the respective vectors
     #X, y = pp.get_features_targets(coord_dict, feature_dict, labels=terms, mask='data/MNI152_T1_2mm_brain.nii.gz')
     # perform clustering, cross validation and classify
     (score_per_class,score_per_label) = classify(X,y)
-    with open('cluster_class_scores.json', 'wb') as f:
+    with open('clustered_class_scores.json', 'wb') as f:
         json.dump(score_per_class, f)
-    pickle.dump(score_per_label,open('cluster_label_scores.p','wb'))
+    pickle.dump(score_per_label,open('clustered_label_scores.p','wb'))
     return
 
 

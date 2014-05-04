@@ -25,8 +25,8 @@ import experiment as ex
 
 def get_X_y(coordinate_file, feature_file, filter=True):
     if filter:
-        coordinate_dict = ex.filter_studies_active_voxels(coordinate_file)
-    else:
+        coordinate_dict = ex.filter_studies_active_voxels(coordinate_file, 'data/MNI152_T1_2mm_brain.nii.gz')
+    
     	with open(coordinate_file) as f:
     		coordinate_dict = json.load(f)
     target_dict = ex.filter_studies_terms(feature_file, set_unique_label=True)

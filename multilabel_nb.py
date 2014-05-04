@@ -8,11 +8,13 @@ Uses Logistic regression for multi-label classification and l1 regularization.
 
 
 import numpy as np
+import random
 import json
+import pickle
 from sklearn import cross_validation
 from sklearn import preprocessing
 from sklearn.multiclass import OneVsRestClassifier
-from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import MultinomialNB
 
 import preprocess as pp
 import experiment as ex
@@ -38,34 +40,44 @@ def main():
             del(coord_dict[key])
     # find intersecting dicts
     coord_dict, feature_dict = ex.get_intersecting_dicts(coord_dict, feature_dict)
+    # try for a sample
+    sample4k_coords = random.sample(range(len(coord_dict)), 4000)
+    subsample_keys = [coord_dict.keys()[i] for i in sample4k_coords]
+    sub_coord_dict = {key: coord_dict[key] for key in subsample_keys}
+    sub_coord_dict, sub_feature_dict = ex.get_intersecting_dicts(sub_coord_dict, feature_dict)
+    X, y = pp.get_features_targets(sub_coord_dict, sub_feature_dict, labels=terms, mask='data/MNI152_T1_2mm_brain.nii.gz')
     # get the respective vectors
-    X, y = pp.get_features_targets(coord_dict, feature_dict, labels=terms, mask='data/MNI152_T1_2mm_brain.nii.gz')
+    #X, y = pp.get_features_targets(coord_dict, feature_dict, labels=terms, mask='data/MNI152_T1_2mm_brain.nii.gz')
     # fit a label binarizer
     lb = preprocessing.LabelBinarizer()
     y_new = lb.fit_transform(y)
     # perform the 10 fold cross_validation
     score_per_class = []
     score_per_label = []
-    clf =  OneVsRestClassifier(LogisticRegression(penalty='l1'))
+    predicted_labels=[]
+    test_vals=[]
+    clf =  OneVsRestClassifier(MultinomialNB())
     kf = cross_validation.KFold(len(y_new), n_folds=10)
+    cvrun=1
     for train, test in kf:
         model = clf.fit(X[train], y_new[train])
-        predicted  = model.predict(X[test])
         predict_prob = model.predict_proba(X[test])
+        predicted  = model.predict(X[test])
         cls_scores = utils.score_results(y_new[test], predicted, predict_prob)
         label_scores = utils.label_scores(y_new[test], predicted, predict_prob)
         score_per_class.append(cls_scores)
         score_per_label.append(label_scores)
-    with open('class_scores.json', 'wb') as f:
+	predicted_labels.append(predicted)
+        test_vals.append(y_new[test])
+        cvrun+=1
+        #if(cvrun>1):
+	#  break
+    with open('nbcv10_class_scores.json', 'wb') as f:
         json.dump(score_per_class, f)
-    with open('label_scores.json', 'wb') as f:
-        json.dump(score_per_label, f)
+    pickle.dump(score_per_label, open('nbcv10_label_scores.p', 'wb'))
     return
 
 
 if __name__ == '__main__':
     main()
-
-
-
 

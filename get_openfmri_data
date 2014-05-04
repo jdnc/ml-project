@@ -32,7 +32,7 @@ def get_X(file_name):
     x = np.loadtxt(data_file)
     return x.transpose()
 
-def get_Y(file_name, mapping, terms):
+def get_Y(file_name, mapping, terms, get_dataframe=False):
     """
     Similarly form the labels corresponding to each study, returns a pandas dataframe
     that has terms as column names and frequencies as values. The file name will be
@@ -47,10 +47,14 @@ def get_Y(file_name, mapping, terms):
         file name containing study id for each of the 26 studies. e.g. 'data_key_run1.txt'
     terms : str
         file name that has the terms which are to be used  (json format)
+    get_dataframe : bool, optional
+        defines format in which to return the y values. When true returns the
+        data frame rather than actual label list. Defaults to False.
+
     Returns
     -------
-    y : dict
-        studyID -> `pandas.dataframe` that has term vs frequency.
+    y : `pandas.DataFrame`/ list of lists
+        list of list of labels associated with each study, `pandas.dataframe` that has term vs frequency.
     """
     freq_mat = np.loadtxt(os.path.join(DIR, file_name))
     lines = open(os.path.join(DIR, mapping), 'rb').readlines()
@@ -62,7 +66,7 @@ def get_Y(file_name, mapping, terms):
     lines = sorted(lines, key=lambda x: x[0])
 
     # construct dict from the terms used
-    terms = json.load('data/terms_openfmri.json')
+    terms = json.load(open('data/terms_openfmri.json'))
     row_dict = {}
     for i in range(1, 27):
         col_dict = odict()
@@ -80,6 +84,13 @@ def get_Y(file_name, mapping, terms):
 
     # construct a dataframe
     df = pandas.DataFrame.from_dict(new_row_dict, orient='index')
-    return df
+    if get_dataframe:
+        return df
+    else:
+        label_list = []
+        for idx, row in df.iterrows():
+            labels = [x for x in terms if row[x] > 0]
+            label_list.append(labels)
+        return label_list
 
 

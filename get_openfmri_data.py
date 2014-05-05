@@ -29,7 +29,7 @@ def get_X(file_name):
     `numpy.ndarray` : (n_samples x n_features) array from brain images.
     """
     data_file = os.path.join(DIR, file_name)
-    x = np.loadtxt(data_file)
+    x = np.load(data_file)
     return x.transpose()
 
 def get_Y(file_name, mapping, terms, get_dataframe=False):

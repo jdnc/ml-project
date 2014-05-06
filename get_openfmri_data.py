@@ -25,8 +25,9 @@ def get_X(file_name, mask):
     ----------
     file_name : str
         the file name that stores the numpy array, and will automatically be prefixed
-        by DIR.format
-        use the MNI -52mm-.npy
+        by DIR.
+    mask :  mask in nifti format
+        use the goodvox.nii.gz
 
     Returns
     -------
@@ -96,6 +97,6 @@ def get_Y(file_name, mapping, terms, get_dataframe=False):
         for idx, row in df.iterrows():
             labels = [x for x in terms if row[x] > 0]
             label_list.append(labels)
-        return label_list
+
 
 

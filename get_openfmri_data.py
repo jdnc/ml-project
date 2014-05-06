@@ -36,6 +36,7 @@ def get_X(file_name, mask):
     img_file = os.path.join(DIR, file_name)
     nift_masker = input_data.NiftiMasker(mask=mask)
     masked_vec = nifti_masker.fit_transform(img_file)
+    return masked_vec
 
 
 def get_Y(file_name, mapping, terms, get_dataframe=False):
@@ -97,6 +98,15 @@ def get_Y(file_name, mapping, terms, get_dataframe=False):
         for idx, row in df.iterrows():
             labels = [x for x in terms if row[x] > 0]
             label_list.append(labels)
+	    mapping_new = {}
+        terms = sorted(terms)
+        for i in range(len(terms)):
+	        mapping_new[terms[i]] =  i
+        with open('mappings.json', 'wb') as f:
+	        json.dump(mapping_new, f)
+        y = []
+        y.append([[mapping_new[x] for x in labels] for labels in label_list])
+        return y
 
 
 

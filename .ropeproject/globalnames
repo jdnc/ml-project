@@ -1,0 +1,10 @@
+€}q(Unaive_bayes_general]q(UclassifyqUmainqeU
+get_images]qU
+get_imagesqaUlogistic_clustered]q(U
+N_CLUSTERSqUclassifyq	Umainq
+eUnaive_bayes]q(UclassifyqUmainqeUget_data]q(UpatternqUget_dataqU
+store_dataqUmainqeU	histogram]qUplot_histogramqaUnb_clustered]q(U
+N_CLUSTERSqUclassifyqUmainqeU
+preprocess]q(Ufeatures_targets_from_fileqUextract_coordinatesqUpeaks_to_vectorqUis_validqUget_features_targetsqUset_targetsqeU
+experiment]q (Ufilter_studies_active_voxelsq!Uget_intersecting_dictsq"Ufilter_studies_termsq#eU
+multilabel]q$(UTHRESHq%Umainq&eUget_data_new]q'(Uget_Xq(Uget_Yq)UDIRq*eUsvm_general]q+(Uclassifyq,Umainq-eUtrst]Uextract]q.Umainq/aUensemble]q0(Uclassifyq1Umainq2eUget_openfmri_data]q3(Uget_Xq4Uget_Yq5UDIRq6eUlogistic_general]q7(Uclassifyq8Umainq9eu.

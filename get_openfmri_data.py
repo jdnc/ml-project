@@ -16,27 +16,29 @@ from nilearn import input_data
 import neurosynth.base.mask as nbm
 from collections import OrderedDict as odict
 
-def get_X(file_name, mask):
+def get_X(file_name, mask=None):
     """
     Function that simply reads in the X array from the numpy matrix already stored.
-    'zstat_run1.nii.gz' | 'zstat_run2.nii.gz'.
+    'zstat_run1.npy' | 'zstat_run2.npy'.
 
     Parameters
     ----------
     file_name : str
         the file name that stores the numpy array, and will automatically be prefixed
         by DIR.
-    mask :  mask in nifti format
+    mask :  mask in nifti format, optional
         use the goodvox.nii.gz
 
     Returns
     -------
     `numpy.ndarray` : (n_samples x n_features) array from brain images.
     """
-    img_file = os.path.join(DIR, file_name)
-    nift_masker = input_data.NiftiMasker(mask=mask)
-    masked_vec = nifti_masker.fit_transform(img_file)
-    return masked_vec
+    x = np.load('zstat_run1.npy')
+    return x.transpose()
+    #img_file = os.path.join(DIR, file_name)
+    #nift_masker = input_data.NiftiMasker(mask=mask)
+    #masked_vec = nifti_masker.fit_transform(img_file)
+    #return masked_vec
 
 
 def get_Y(file_name, mapping, terms, get_dataframe=False):

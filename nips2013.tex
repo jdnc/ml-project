@@ -3,6 +3,7 @@
 \usepackage{hyperref}
 \usepackage{url}
 \usepackage{graphicx}
+\usepackage{amsmath}
 
 
 \title{Predicting mental functions from brain activations}
@@ -188,6 +189,39 @@ not previous versions. Tweaking the style files may be grounds for rejection.
 %% Note that your submission is only valid if you get an e-mail
 %% confirmation from the server. If you do not get such an e-mail, please
 %% try uploading again. 
+
+ \subsection{Multi-Label Prediction}
+In addition to reporting the accuracy, we report precision, recall, F1 score and hamming loss. And one correct
+\begin{align*}
+ \text{Precision} &=\frac{1}{N} \sum_{n=1}^{N} \frac {|S_n \cap \mathcal{Z}_n|}{\mathcal{Z}_n} & \text{Recall}&= \frac{1}{N} \sum_{n=1}^{N} \frac {|S_n \cap \mathcal{Z}_n|}{S_n}\\
+ \text{F1 score} &=\frac{1}{N} \sum_{n=1}^{N} \frac{2.0 * Precision_n * Recall_n}{Precision_n + Recall_n} & \text{Hamming loss}&=\frac{1}{N}\sum_{n=1}^{N}\frac{1}{L} |S_n \theta \mathcal{Z}_n |  \\
+ \text{Top correct} &=\frac{1}{N} \displaystyle\sum_{n=1}^{N} \mathbb{I}(\mathcal{Z}_{n,max} \in \mathcal{L}_n)& & \\
+\end{align*}
+$\mathbb{I}$ denotes the indicator function, $S_n$ denotes the true labels  and $\mathcal{Z}_{n,max}$ denotes the label predicted with highest probability for the brain volume $n$. The top correct value is the fraction of the data points on which the model's best predicted label (with maximum probability) was present in the true label set.
+
+This table reports the results of the multilabel classification for the entire label set. Note here that there are $2^{22}$ possible label sets and accuracy is a fairly hard metric to achieve
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+ Model       & Accuracy & Precision & Recall    & F1 score  & Hamming loss & Top correct\\ \hline
+ Naive Bayes & 1.3      & \bf{22.36}& \bf{46.04}& \bf{26.63}& 0.207     & 23.7      \\ \hline
+ Logistic L1 & 3.2      & 18.92     & 14.16     & 14.53     & 0.111     & 27.9      \\ \hline
+ Logistic L2 & \bf{4.1} & 19.58     & 14.73     & 15.22     & 0.108     & \bf{30.0} \\ \hline
+ Linear SVM  & 3.7      & 20.34     & 16.40     & 16.24     & 0.115     & 22.5      \\ \hline
+ Ward Cluster& 3.4      & 17.53     & 12.99     & 13.43     & \bf{0.107}& 29.8      \\ \hline \hline
+ Unique Train$^*$& 0.8      & \bf{33.98}& 22.09     & 24.83     & 0.162     & \bf{36.0} \\ \hline
+ All Ones$^*$    & 0.0      & 9.78      & \bf{100.0}& 17.40     & 0.902     & 5.38      \\ \hline
+\end{tabular}
+\caption{Multilabel classification full tuple results. All values are reported in percentage ($\%$) except hamming loss. Again, excepting for hamming loss where lower loss is better, for all other metrics higher values are better. $^*$Unique Train and All Ones do not use cross validation.}
+\end{center}
+\end{table}
+
+Overall, while our model does quite poorly on most metrics, this was to be expected given the huge dimensional data, which is also
+very sparse. However both SVM as well as $l-2$ regularized logistic regression, do show a relatively good performance on some metrics,
+such as the Hamming loss. Most of the models beat the All Ones model on most metrics other than the recall and the Top correct, which 
+was to be expected. The model using Ward Clustering shows the best performance for the Hamming Loss metric. Also the Unique train model
+does the best on the Top Correct metric, picking out the correct label $36\%$ time.
 
 
 \subsection{Retrieval of style files}

@@ -73,10 +73,10 @@ The figure~\ref{fig:3steps} gives a high-level view of  NeuroSynth.
 \label{fig:3steps}
 \end{figure}
 
-A detailed description of NeuroSynth may be found in ~\cite{yarkoni2011large}. Here we give only a high-level view  - figure~\ref{fig:3steps}.  For reverse inference, Neurosynth performs the following three steps:
+A detailed description of NeuroSynth may be found in ~\cite{yarkoni2011large}. Here we give only a high-level view  - figure~\ref{fig:3steps}.  For reverse inference, NeuroSynth performs the following three steps:
 \begin{description}
 \item[Step 1:  Extract high frequency terms] First, a database of nearly $3000$-odd ~\footnote{The number has grown to over $8000$, since 2011 when ~\cite{yarkoni2011large} was published.} studies is scrapped to extract the most frequent terms and their frequency of occurence across these studies. Thus corresponding to each study we get a set of terms. These set of terms serve as labels for that study, during the classification.
-\item[Step 2: Extract coordinates of activation foci and synthesize sparse image] Using simple template matching, all probable activation foci mentioned in a study are extracted. Once we have a list of these coordinates, corresponding to each study, they are used to synthesize extremely sparse brain images with the corresponding brain regions activated. After some preprocessing (which we describe in detail in later sections) the vectorized image serves as the feature vector for that study.
+\item[Step 2: Extract coordinates of activation foci and synthesize sparse image] Using simple template matching, all probable activation foci mentioned in a study are extracted. Once we have a list of these coordinates, corresponding to each study, they are used to synthesize extremely sparse brain images with the corresponding brain regions activated. After some preprocessing (which we describe in detail in section~\ref{sec:preprocess}) the vectorized image serves as the feature vector for that study.
 \item[Step 3: Use classification to build a predictive model]  Use classification to train a model, give the labels and the feature vectors from steps (1) and (2). They use an extremely simple approach in which they apply a Naive Bayes classifier to make single-label predictions . They pick up $25$ of the most frequent terms arbitarily and train $25 \choose 2$ models (i.e one-vs-one) corredponding to every term pair and 10-fold cv to make the predictions.
 \end{description}
 
@@ -86,6 +86,22 @@ In another similar work~\cite{schwartz2013mapping} uses a Generalized Linear Mod
 
 Building up on these approaches,  in the following sections, we shall describe our own extensions and experiments toward building a better model for the reverse inference problem.
 
+\section{Data}
+Similar to ~\cite{yarkoni2011large}, we primarily use the repository available with NeuroSynth for our project. This has nearly $8067$ studies that are scrapped from online resources, spanning $15$ journals. For our transfer-learnign approach, we would like to use real fMRI scans, and adapt our models tuned with the synthesized data on this real data. We use data from 2 sources. We use the open source openfMRI~\footnote{\protect \url{https://openfmri.org}} project ~\cite{poldrack2013toward} to gain the training data. This has individual subject level images for $26$ contrasts, resulting in a total of $479$ data samples. Since it is always more advisable to work with group level statistics, we also consider the NeuroVault\footnote{\protect \url{http://neurovault.org}} data that has 17 studies, but with group level images. Ideally we would have liked to use this data entirely but the major issues is that it is too less to be meaningful on its own. 
+\subsection{Pre-processing}
+\label{sec:preprocess}
+Here we describe mainly the preprocessing pipe for the NeuroSynth data. The code repository for NeuroSynth already has the labels and coordinates that are extracted from the $8000$ studies. Beginning with this, we used various open source toolkits like NumPy tand existing utiliities in NeuroSynth o synthesize images corresponding to the the activated coordinates. 
+
+\begin{description}
+\item[Step 1: ] First for each $(x, y, z)$ coordinate extracted from a study, we transformed it to the MNI space - which is the standard space used for neuro-imaging. 
+\item[Step 2: ] Second, since the coordinates were extracted using simple template matching, there would likely be some spurious numbers that were mistaken as coordinates. It is also possible that the study mentioned coordinates for some different region other than the brain. To deal with such anomalies, we then applied a 2mm MNI mask on the coordinates, to validate that they indeed lay in the brain space and discarded the invalid ones. The 3D mask has the shape $(91 x 109 x 91)$ 
+\item[Step 3: ] Since each study mentions only a very few coordinates from the entre brain space, the resulting image we would get would be extremely sparse. Based on connectivity and correlation amongst the brain regions, given an activated focus, it is highly likely that the voxels in its neighbourhood would be actvated as well. Using this fact we considered all voxels in a $6$ mm radius around the activated foci to also be activated and thus get a more dense and smoother image.
+\item[Step 4: ] Once we get this synthesized image in $3$D MNI space, we reshape it to a $1$D vector, further removing all zero-columns, to end up with a $1 x 228453$ feature vector.  
+\end{description}
+
+Since the data is extracted based on simple text processing, there will likely be irrelevant data that is also included. To deal with this we apply some further steps, in which we only consider terms that have a normalized frequency count $ > 0.001$. Further we only consider those studies to be valid, that have atleast 500 activated voxels in the final feature vector. Further for single-label classification we only consider studies, that have a unique label with normalized frequency  $ > 0.001$. Studies that have multiple labels at a frequency $ > 0.001$ cannot e clearly assigned a single correct label, and we therefore do not consider them for the single-label classification problem.
+
+For the NeuroVault data we extracted various labels corresponding to each study by crawling the publication links mentioned at the online API, applying text processing with python to get the data in the required format. Similarly the preprocessing for openfMRI data was coding-intensive rather than of much value from a machine-learning perspective, so we do not further describe it here.
 
 NIPS requires electronic submissions.  The electronic submission site is  
 \begin{center}

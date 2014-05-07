@@ -53,7 +53,7 @@ For the purposes of this project, we look at enhancing a new automated framework
 \item[Reverse Inference: ] The reverse inference(a.k.a. decoding) looks at the reverse mapping. i.e. Given a signature of neural activity, reverse inference identifies the cognitive state(s) and functions that the activations correspond to.
 \end{description}
 In this project, %we build on the existing NeuroSynth framework~\footnote{\protect \url{neurosynth.org}}. NeuroSynth framework offers tools for several types of meta-analyses, 
-we primarily address the problem of Reverse Inference Figure~\ref{fig:revinf}). The scientific community typically uses fMRI scans for reporting this neural activity. Reverse inference is an extremely challenging problem since multiple cognitive states could have very similar neural signatures~\cite{yarkoni2011large} but it is also of major interest to the neourimaging community at large.
+we primarily address the problem of Reverse Inference Figure~\ref{fig:revinf}). The scientific community typically uses fMRI scans for reporting this neural activity. Reverse inference is an extremely challenging problem since multiple cognitive states could have very similar neural signatures~\cite{yarkoni2011large} but it is also of major interest to the neuro-imaging community at large.
 
 \begin{figure}[h]
 \begin{center}
@@ -66,7 +66,7 @@ we primarily address the problem of Reverse Inference Figure~\ref{fig:revinf}). 
 \end{figure}
 
 \section{Related Work}
-Forward and reverse inference problems have been addressed by several contemporary works~\cite{schwartz2013mapping, PMSKBY12, sanmi2013multi, yarkoni2011large}. Previous approaches have generally tackled the Reverse Inference problem by manually analyzing fMRI scans of subjects, collected from the laboratory. There are several limitations of such an approach - for instance, involving human subjects for fMRI scans is labor and cost intensive and the number of data samples that can be gained from such efforts is also very less. Moreover all the meta-analyses based on such data is carried on a very small-scale at individual research labs, and fails to take advantage of the vast knowledge embodied in the entire research community. We first present a detailed discussion of tje neurosynth approach before discussing other works.%In this report we will focus on neurosynth since it is most relevant to our approach. For a general discuss of other related works we request the reader to kindly refer to our proposal.
+Forward and reverse inference problems have been addressed by several contemporary works~\cite{schwartz2013mapping, PMSKBY12, sanmi2013multi, yarkoni2011large}. Previous approaches have generally tackled the Reverse Inference problem by manually analyzing fMRI scans of subjects, collected from the laboratory. There are several limitations of such an approach - for instance, involving human subjects for fMRI scans is labor and cost intensive and the number of data samples that can be gained from such efforts is also very less. Moreover all the meta-analyses based on such data is carried on a very small-scale at individual research labs, and fails to take advantage of the vast knowledge embodied in the entire research community. We first present a detailed discussion of the neurosynth approach before discussing other works.%In this report we will focus on neurosynth since it is most relevant to our approach. For a general discuss of other related works we request the reader to kindly refer to our proposal.
 
 NeuroSynth's (and therefore our) approach is unique - in that we tackle the Reverse Inference problem not by requiring actual fMRI scans, but rather by exploiting the relatively large repository of neuro-imaging publications using text-mining and machine learning techniques.  There are many motivations and benefits that lead to this. For one, while fMRI scans are very few, there has been a growing body of publications related to neuro-imaging, thus offering a much larger source of data. Further by using machine learning techniques the decoding is possible without any real training data (fMRI scans) and at the same time incorporates the knowledge base derived from several researcher. Also to the best of our knowledge, this is the first approach that is fully automated, thus making it possible to perform several meta-analyses on a much larger scale than could ever be possible by individual researchers.  In the next few paragraphs, we introduce the NeuroSynth framework and some of the techniques it utilizes.
 
@@ -151,7 +151,7 @@ In addition to the above, we did experiment with PCA and $k$-nearest neighbours 
   \item[Ward Clustering] We reuse the ward clustering model that we learn previously by first performing ward clustering [citation] on the data in the synthesized domain to cluster and map the points to different clusters. We then train an $l_2$ regularized logistic regression \textit{One-vs-All} classifier on the data. Next we reapply the same clustering transformation to the openfMRI data and use the logistic classifier to predict the labels. The number of clusters is 5000.
   \item[Logistic Regression] For the sake of comparison we train an $l_2$ regularized logistic regression model directly on the openfMRI data.
   \end{description}
-In this work we report the results for only the above two models. 
+The experimental results for all of the models described here are reported in Section~\ref{sec:expt}.
 
 \section{Data}\label{sec:data}
 Similar to ~\cite{yarkoni2011large}, we primarily use the repository available with NeuroSynth for our project. This has $8067$ studies that are scrapped from online resources, spanning $15$ journals. For our transfer-learning approach, we would like to use real fMRI scans, and adapt our models tuned with the synthesized data on this real data. We use data from 2 sources. We use the open source openfMRI~\footnote{\protect \url{https://openfmri.org}} project ~\cite{poldrack2013toward} to gain the training data. This has individual subject level images for $26$ contrasts, resulting in a total of $479$ data samples. Since it is always more advisable to work with group level statistics, we also consider the NeuroVault\footnote{\protect \url{http://neurovault.org}} data that has 17 studies, but with group level images. Ideally we would have liked to use this data entirely but the major issues is that it is too less to be meaningful on its own. 
@@ -192,17 +192,17 @@ For the purposes of transfer learning we use the openfMRI and NeuroVault reposit
 %\fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
 \includegraphics[height=10cm, width=10cm]{histo_new.png}
 \end{center}
-\caption{\textbf{Distribution of terms across studies:} The x-axis denotes eac term and the y-axis denotes the number of studies in which the term appears.}
+\caption{\textbf{Distribution of terms across studies:} The x-axis denotes each term and the y-axis denotes the number of studies (in NeuroSynth database) in which the new terms (corresponding to openfMRI labels) appears.}
 \label{fig:histo_new}
 \end{figure}
 
 For NeuroVault, the data was not available in a format similar to the openfMRI and NeuroSynth. In this case, we had a total of 17 images, that corresponded to 12 studies. Rather than having the actual labels for these studies, the API provided us with links to online publications corresponding to the study. These were in the \texttt{pdf} format, though in some cases, mutliple formats were also available. We used an approach similar to that already adopted by NeuroSynth, to derive labels for the images. First we converted the \texttt{pdf} formats to plain text using an available python tool~\footnote{http://www.unixuser.org/~euske/python/pdfminer/}. Next we considered a dictionary of terms which we were using for the Neurosynth data and counted how frequently these terms appeared in each study. The final frequency we stored for these terms was normalized by dividing it by the total word count of the document. Thus we ended up with a label representation for each study that was analogous to what was being used in NeuroSynth.
 
-\section{Experimental Results}
+\section{Experimental Results} \label{sec:expt}
 
 Our experiments for single and multilabel prediction tasks were performed on data available in the NeuroSynth~\footnote{\protect \url{www.neurosynth.org}} tool. After preprocessing and filtering our inpput feature matrix  $\mathbf{X}$ is of dimension $5463 \times 228,453$, the target label matrix $\mathbf{Y}$ is of dimension $5463 \times 22$. The transfer learning component is tested on data from the openfMRI~\footnote{\protect \url{https://openfmri.org}} project with feature dimensions $\mathbf{X}'$ ($479 \times 174,264$) and target label matrix $\mathbf{Y}'$ of dimensions $479 \times 19$. As mentioned in Section~\ref{sec:data} we the labels for the transfer learning is a different set of 19 terms. The neurosynth data features for the transfer learning had dimensions $4066 \times 174,264$.
 
-Data samples size (4000). We use 10 fold cross validation to evaluate all our models unless otherwise indicated. We evaluate the performance of our models on the metrics such as \textit{accuracy, precision, recall, hamming loss, F1 score} which are frequently applied to this task.
+We use 10 fold cross validation to evaluate all our models unless otherwise indicated. We evaluate the performance of our models on the metrics such as \textit{accuracy, precision, recall, hamming loss, F1 score} which are frequently applied to this task.
 \begin{align*}
  \text{Accuracy} &= \frac{1}{N} \displaystyle\sum_{n=1}^{N} \frac{|\mathcal{L}_n \cap \mathcal{Z}_n|}{|\mathcal{L}_n \cup \mathcal{Z}_n|} 
 \end{align*}
@@ -263,6 +263,15 @@ We note that the best performing models for the overall accuracy are the SVM ($3
 
 Our intuition for including the Top correct metric was to make a judgement on how well our individual classifiers are performing. It appears that on average for $27\%-30\%$ of the brain volumes the models is able to predict atleast one relevant label which seems very promising.
 
+\subsection{Histogram plots of the per label accuracy for multilabel classification}
+\begin{figure}[!hbt]
+\vspace{-0.5cm}
+\centering
+\subfloat[per label accuracies]{\includegraphics[width=14cm]{./figs/all_perlabel_acc.png}} 
+\caption{Comparing per label accuracy of multilabel classifiers.}
+\label{fig:perlab}
+\end{figure}
+
 
  \subsection{Transfer Learning}
 This table reports the results of the transfer learning for the entire label set. We get 0 accuracy for the full label set and hence do not report the value in the table below.
@@ -303,13 +312,13 @@ Finally we would like to thank Prof Ghosh for teaching us many practical nuances
 
 \section{Appendix}
 
-\subsection{Histogram plots of the per label accuracy for multilabel classification}
+\subsection{Histogram plots of the per label F1scores for multilabel classification}
 \begin{figure}[!hbt]
 \vspace{-0.5cm}
 \centering
-\subfloat[per label accuracies]{\includegraphics[width=14cm]{./figs/all_perlabel_acc.png}} 
-\caption{Comparing per label accuracy of multilabel classifiers.}
-\label{fig:perlab}
+\subfloat[per label accuracies]{\includegraphics[width=14cm]{./figs/all_perlabel_f1score.png}} 
+\caption{Comparing per label F1scores of multilabel classifiers.}
+\label{fig:perlab_f1}
 \end{figure}
 
 %\subsection{Histogram plots of the per label accuracy for multilabel classification}

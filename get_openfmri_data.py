@@ -12,7 +12,7 @@ import json
 import numpy as np
 import pandas
 import nibabel as nb
-from nilearn import input_data
+#from nilearn import input_data
 import neurosynth.base.mask as nbm
 from collections import OrderedDict as odict
 

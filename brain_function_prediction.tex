@@ -1,5 +1,6 @@
 \documentclass{article} % For LaTeX2e
 \usepackage{nips13submit_e,times}
+\usepackage{amsmath,amssymb,amsthm}
 \usepackage{hyperref}
 \usepackage{url}
 \usepackage{graphicx}
@@ -9,15 +10,15 @@
 
 
 \author{
-Madhura Parikh\\
+Madhura Parikh\thanks{Authors contributed equally}\\
 Department of Computer Science\\
 University of Texas, Austin\\
 \texttt{mparikh@cs.utexas.edu} \\
 \And
-Subhashini Venugopalan \\
+Subhashini Venugopalan\footnotemark[1] \\
 Department of Computer Science\\
 University of Texas, Austin\\
-\texttt{vsubhashini@utexas.edu} \\
+\texttt{vsub@cs.utexas.edu} \\
 }
 
 % The \author macro works with any number of authors. There are two commands
@@ -50,8 +51,37 @@ Although these studies have led to large amounts of literature and several disco
 \section{Related Work}
 
 \section{Methods}
+ \paragraph{Notation}: We denote matrices by boldface capital letters $\mathbf{X}$ and vectors by bold-face lower case letters $\mathbf{x}$. The set of real valued $D$ dimensional vectors are denoted by $\mathbb{R}^D$. The set of (target) labels are denoted by the letter $\mathcal{L}$, and $|\mathcal{L}|$ denotes the cardinality of the set of labels.
+
+Our input data consists of brain volume images. We denote by $\mathbf{x}_n$ the $n^{th}$ brain volume with voxels collected in a real valued $D$ dimensional vector. The total number of brain volumes is represented by $N$. Each brain volume is associated with a set of labels $\mathcal{L}_n = {l_1, \ldots, l_K}$ chosen from the full set of possible target labels $\mathcal{T} = \cup_{n=1,\ldots,N} \mathcal{L}_n$ with $|\mathcal{L}|=L$.
+
+We approach the task of predicting brain functions as a classification task and address it using the following techniques:
  \subsection{Single Label Prediction}
+  As a first step to measure the feasibility of the task we consider the task of predicting one of two labels for each brain volume. The single label prediction learns a mapping $f\ :\ \mathbf{x}_n \rightarrow \mathcal{L}_n$, such that $|\mathcal{L}_n|=1$ for all $n$, where $|\mathcal{T}| =| \cup \mathcal{L}_n| = 2$. This essentially learns a simple binary classifier for all pairs of labels. Each classifier is trained and tested on an appropriate subset of the data where the labels for the brain volume are unique. We experimented with the following binary classifiers:
+  \begin{description}
+  \item[Naive-Bayes] We built pairwise naive-bayes classifiers as a baseline to replicate the results presented in~\cite{yarkoni2011large}.
+  \item[Logistic Regression] An $l_1$ regularized logistic regression was our next model of choice for a more powerful classifier.
+  \item[Linear SVM] We use a linear SVM which scales well with the size of our features. The hyperparameter C is optimized by a grid search in the space $C = \{1, 10, 100, 1000\}$.
+  \item[Ensemble] We finally build an ensemble of the above three classifiers and consider the label that is the majority in the output of the above three classifiers.
+  \end{description}
+\begin{figure}[ht]
+\vspace{-0.5cm}
+\centering
+\includegraphics[scale=0.5]{./figs/single_pairwise.png}
+\caption{We use naive-bayes, logistic regression, SVMs and a majority ensemble for pairwise binary classification of the labels.}
+\end{figure}
+
  \subsection{Multi-Label Prediction}
+Our next approach is to perform multilabel classification to predict multiple functions for a given brain volume. This learns a mapping $f\ :\ \mathbf{x}_n \rightarrow \mathcal{L}_n$, over the full set of labels (where $|\mathcal{L}_n| \geq 1$)  and $|\mathcal{T}| =| \cup \mathcal{L}_n|$. \cite{zhang2013review} suggests several methods to perform multilabel classification which include label projection, label ranking and label decomposition. We prefer the label decomposition method for it's ease of interpretation. In particular we choose the \textit{One-vs-All} decomposition approach. This method learns multiple binary classifiers ($|\mathcal{T}|$ to be precise), one for each label to predict the presence/absence of that label. Our experiments used the following binary classifiers for the multi-label prediction task:
+  \begin{description}
+  \item[Naive-Bayes] We built pairwise naive-bayes classifiers as a baseline to replicate the results presented in~\cite{yarkoni2011large}.
+  \item[Logistic Regression] We build two models here. The first with $l_1$ regularization and the other with $l_2$ regularization. 
+  \item[Linear SVM] In a manner similar to our single label prediction, we use a linear SVM by setting the hyperparameter C via a grid search in the space $C = \{1, 10, 100, 1000\}$.
+  \item[Ward Clustering] Since the number of features in our data is extremely large, we do a dimensionality reduction of the features by first performing ward clustering [citation] and then mapping the points to different clusters. The number of clusters is 5000. We then apply a logistic regression classifier with $l_1$ regularization on the reduced data.
+  \item[Unique train] Since our data is quite sparse and there's a high possibility of noise in data with multiple labels, we build what we call a unique train model based on logistic regression. In the unique train model, we identify all brain volumes with a single unique label, and train a classifier for each label using only this data. During test, we use the One-vs-All approach to test on multilabel brain volumes.
+  \item[All ones] Another baseline we consider is the all ones baseline, which predicts ones for all labels on all input data points. Such a manipulation will give result in $100\%$ recall for the multilabel task, but very low precision values.
+  \end{description}
+
  \subsection{Transfer Learning}
 
 \section{Data}
@@ -69,11 +99,12 @@ Although these studies have led to large amounts of literature and several disco
 \section{Conclusion}
 
 \subsubsection*{Acknowledgments}
+Sanmi, Russ, tal, tacc
 
 \subsubsection*{References}
 \bibliographystyle{plain}
 \nocite{*}
-\bibliography{proposal.bib}
+\bibliography{brain_function_prediction.bib}
 
 
 \end{document}

@@ -86,11 +86,10 @@ In another similar work~\cite{schwartz2013mapping} uses a Generalized Linear Mod
 
 Building up on these approaches,  in the following sections, we shall describe our own extensions and experiments toward building a better model for the reverse inference problem.
 
-\section{Data}
 Similar to ~\cite{yarkoni2011large}, we primarily use the repository available with NeuroSynth for our project. This has nearly $8067$ studies that are scrapped from online resources, spanning $15$ journals. For our transfer-learnign approach, we would like to use real fMRI scans, and adapt our models tuned with the synthesized data on this real data. We use data from 2 sources. We use the open source openfMRI~\footnote{\protect \url{https://openfmri.org}} project ~\cite{poldrack2013toward} to gain the training data. This has individual subject level images for $26$ contrasts, resulting in a total of $479$ data samples. Since it is always more advisable to work with group level statistics, we also consider the NeuroVault\footnote{\protect \url{http://neurovault.org}} data that has 17 studies, but with group level images. Ideally we would have liked to use this data entirely but the major issues is that it is too less to be meaningful on its own. 
 \subsection{Pre-processing}
 \label{sec:preprocess}
-Here we describe mainly the preprocessing pipe for the NeuroSynth data. The code repository for NeuroSynth already has the labels and coordinates that are extracted from the $8000$ studies. Beginning with this, we used various open source toolkits like NumPy tand existing utiliities in NeuroSynth o synthesize images corresponding to the the activated coordinates. 
+Here we describe mainly the preprocessing pipe for the NeuroSynth data. The code repository for NeuroSynth already has the labels and coordinates that are extracted from the $8000$ studies. Beginning with this, we used various open source toolkits like NumPy tand existing utiliities in NeuroSynth to synthesize images corresponding to the the activated coordinates. 
 
 \begin{description}
 \item[Step 1: ] First for each $(x, y, z)$ coordinate extracted from a study, we transformed it to the MNI space - which is the standard space used for neuro-imaging. 
@@ -101,7 +100,34 @@ Here we describe mainly the preprocessing pipe for the NeuroSynth data. The code
 
 Since the data is extracted based on simple text processing, there will likely be irrelevant data that is also included. To deal with this we apply some further steps, in which we only consider terms that have a normalized frequency count $ > 0.001$. Further we only consider those studies to be valid, that have atleast 500 activated voxels in the final feature vector. Further for single-label classification we only consider studies, that have a unique label with normalized frequency  $ > 0.001$. Studies that have multiple labels at a frequency $ > 0.001$ cannot e clearly assigned a single correct label, and we therefore do not consider them for the single-label classification problem.
 
-For the NeuroVault data we extracted various labels corresponding to each study by crawling the publication links mentioned at the online API, applying text processing with python to get the data in the required format. Similarly the preprocessing for openfMRI data was coding-intensive rather than of much value from a machine-learning perspective, so we do not further describe it here.
+For the sake of comparibility, we use the same $22$ terms as labels for our experiments as~\cite{yarkoni2011large}\footnote{The paper actually considers $25$ terms however, $3$ of these were absent in the version of the data we worked with} . After we perform the filtering steps we mentioned above, we end up with a total of $2464$ studies out of the original $8067$ studies, for the single label classification task.
+
+For the multi-label classification, we perform the same filtering and pre-processing as mentioned above, the only difference being that this time we allow multiple labels per study, instead of removing the studies with conflicting labels. Thus we end up with a total of $5463$ studies from the original $8067$ studies. Similar to ~\cite{sanmi2013multi} we plot a histogram that shows the distribution of terms across studies (fig~\ref{fig:histo_old}). 
+
+\begin{figure}[h]
+\begin{center}
+%\framebox[4.0in]{$\;$}
+%\fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
+\includegraphics[height=10cm, width=10cm]{histo_old.png}
+\end{center}
+\caption{\textbf{Distribution of terms across studies:} The x-axis denotes eac term and the y-axis denotes the number of studies in which the term appears.}
+\label{fig:histo_old}
+\end{figure}
+
+For the purposes of transfer learning we use the openfMRI and NeuroVault repositories as a source of real fMRI data. The openfMRI data is also in a similar format to the NeuroSynth data.  Thus there is a study associated with an fMRI image and these have already been text-processed previously, to give a frequency count for some $19$ terms of interest.  One issue is that the labels in NeuroSynth do not overlap the labels that were extracted for openfMRI. Thus we pick out terms tha would be similar to the openfMRI terms from the NeuroSynth database. Now using these new $19$ terms, we perform a simialr preprocessing as in the multi-label case to filter out studies that would be reliable for these new terms of interest. We end up with $4066$ such studies from the NeuroSynth database. Again a distribution of different terms across the studies is presented in fig~\ref{fig:histo_new}.
+
+\begin{figure}[h]
+\begin{center}
+%\framebox[4.0in]{$\;$}
+%\fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
+\includegraphics[height=10cm, width=10cm]{histo_new.png}
+\end{center}
+\caption{\textbf{Distribution of terms across studies:} The x-axis denotes eac term and the y-axis denotes the number of studies in which the term appears.}
+\label{fig:histo_new}
+\end{figure}
+
+For NeuroVault, the data was not available in a format similar to the openfMRI and NeuroSynth. In this case, we had a total of 17 images, that corresponded to 12 studies. Rather than having the actual labels for these studies, the API provided us with links to online publications corresponding to the study. These were in the \texttt{pdf} format, though in some cases, mutliple formats were also available. We used an approach similar to that already adopted by NeuroSynth, to derive labels for the images. First we converted the \texttt{pdf} formats to plain text using an available python tool~\footnote{http://www.unixuser.org/~euske/python/pdfminer/}. Next we considered a dictionary of terms which we were using for the Neurosynth data and counted how frequently these terms appeared in each study. The final frequency we stored for these terms was normalized by dividing it by the total word count of the document. Thus we ended up with a label representation for each study that was analogous to what was being used in NeuroSynth.
+
 
 NIPS requires electronic submissions.  The electronic submission site is  
 \begin{center}

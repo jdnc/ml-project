@@ -56,7 +56,7 @@ In this project, we build on the existing NeuroSynth framework~\footnote{\protec
 \label{fig:revinf}
 \end{figure}
 
-Previous approaches have generally tackled the Reverse Inference problem by manually analyzing fMRI scans of subjects, collected from the laboratory. There are several limitations of such an approach - for instance, involving human subjects for fMRI scans is labor and cost intensive and the number of data samples that can be gained from such efforts is also very less. Moreover all the meta-analyses based on such data is carried on a very small-scale at individual research labs, and fails to take advantage of the vast knowledge embodied in the entire research community. 
+Forward and reverse inference problems have been addressed by several contemporary works~\cite{schwartz2013mapping, PMSKBY12, sanmi2013multi, yarkoni2011large}. Previous approaches have generally tackled the Reverse Inference problem by manually analyzing fMRI scans of subjects, collected from the laboratory. There are several limitations of such an approach - for instance, involving human subjects for fMRI scans is labor and cost intensive and the number of data samples that can be gained from such efforts is also very less. Moreover all the meta-analyses based on such data is carried on a very small-scale at individual research labs, and fails to take advantage of the vast knowledge embodied in the entire research community. 
 
 NeuroSynth's (and therefore our) approach is unique - in that we tackle the Reverse Inference problem not by requiring actual fMRI scans, but rather by exploiting the relatively large repository of neuro-imaging publications using text-mining and machine learning techniques.  There are many motivations and benefits that lead to this. For one, while fMRI scans are very few, there has been a growing body of publications related to neuro-imaging, thus offering a much larger source of data. Further by using machine learning techniques the decoding is possible without any real training data (fMRI scans) and at the same time incorporates the knowledge base derived from several researcher. Also to the best of our knowledge, this is the first approach that is fully automated, thus making it possible to perform several meta-analyses on a much larger scale than could ever be possible by individual researchers.  In the next few paragraphs, we introduce the NeuroSynth framework and some of the techniques it utilizes.
 
@@ -73,6 +73,18 @@ The figure~\ref{fig:3steps} gives a high-level view of  NeuroSynth.
 \label{fig:3steps}
 \end{figure}
 
+A detailed description of NeuroSynth may be found in ~\cite{yarkoni2011large}. Here we give only a high-level view  - figure~\ref{fig:3steps}.  For reverse inference, Neurosynth performs the following three steps:
+\begin{description}
+\item[Step 1:  Extract high frequency terms] First, a database of nearly $3000$-odd ~\footnote{The number has grown to over $8000$, since 2011 when ~\cite{yarkoni2011large} was published.} studies is scrapped to extract the most frequent terms and their frequency of occurence across these studies. Thus corresponding to each study we get a set of terms. These set of terms serve as labels for that study, during the classification.
+\item[Step 2: Extract coordinates of activation foci and synthesize sparse image] Using simple template matching, all probable activation foci mentioned in a study are extracted. Once we have a list of these coordinates, corresponding to each study, they are used to synthesize extremely sparse brain images with the corresponding brain regions activated. After some preprocessing (which we describe in detail in later sections) the vectorized image serves as the feature vector for that study.
+\item[Step 3: Use classification to build a predictive model]  Use classification to train a model, give the labels and the feature vectors from steps (1) and (2). They use an extremely simple approach in which they apply a Naive Bayes classifier to make single-label predictions . They pick up $25$ of the most frequent terms arbitarily and train $25 \choose 2$ models (i.e one-vs-one) corredponding to every term pair and 10-fold cv to make the predictions.
+\end{description}
+
+There have been other approaches that have further built on NeuroSynth. For instance in ~\cite{sanmi2013multi}, the authors use label decomposition techniques in a one-vs-all setting to predict multiclass labels for the reverse inference problem. They use Support Vector Machines ($l_2$ regularized), logistic regression and ridge classifier for these tasks,  comparing the outcomes based on different criteria like precision, recall and Hamming loss, to show that the multiclass approach is effective for reverse inference. They also propose to use other multiclass approaches and regularization techniques and analyze their performance as future work. 
+
+In another similar work~\cite{schwartz2013mapping} uses a Generalized Linear Model(GLM) for forward inference. For the reverse inference they use logistic regression with Ward clustering to counter the high dimensionality of the problem. 
+
+Building up on these approaches,  in the following sections, we shall describe our own extensions and experiments toward building a better model for the reverse inference problem.
 
 
 NIPS requires electronic submissions.  The electronic submission site is  

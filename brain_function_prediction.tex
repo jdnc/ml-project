@@ -209,7 +209,7 @@ Data samples size (4000). We use 10 fold cross validation to evaluate all our mo
 
  \subsection{Single Label Prediction}
  We present the accuracies of the pairwise single label predictions using all our approaches in the heat maps in Figures~\ref{fig:singlelab1} and \ref{fig:singlelab2}
-\begin{figure}[h]
+\begin{figure}[!hbt]
 \vspace{-0.5cm}
 \centering
 \subfloat[Naive Bayes]{\includegraphics[width=10cm]{./figs/nb_confmat.jpg}} \\
@@ -217,7 +217,7 @@ Data samples size (4000). We use 10 fold cross validation to evaluate all our mo
 \caption{Pairwise binary classification accuracy for single label prediction}
 \label{fig:singlelab1}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[!hbt]
 \vspace{-0.5cm}
 \centering
 \subfloat[Linear SVM]{\includegraphics[width=10cm]{./figs/svm_confmat.jpg}} \\
@@ -300,6 +300,131 @@ Finally we would like to thank Prof Ghosh for teaching us many practical nuances
 \bibliographystyle{plain}
 \nocite{*}
 \bibliography{brain_function_prediction.bib}
+
+\section{Appendix}
+
+We report statistics per label for each of our multilabel experiments:
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{ll}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ \bf{Label}  & \bf{Accuracy} & \bf{Precision} & \bf{Recall}    & \bf{F1 score} \\ \hline
+action	& 13.32	& 16.78	& 38.92	& 23.33	\\ \hline 
+attention	& 16.84	& 23.75	& 36.75	& 28.73	\\ \hline 
+auditory	& 29.47	& 38.07	& 57.13	& 45.20	\\ \hline 
+conflict	& 4.51	& 5.81	& 17.46	& 8.53	\\ \hline 
+emotion	& 14.68	& 17.26	& 50.87	& 25.52	\\ \hline 
+encoding	& 11.64	& 15.42	& 31.85	& 20.70	\\ \hline 
+episodic	& 10.38	& 12.14	& 42.52	& 18.69	\\ \hline 
+executive	& 8.11	& 10.86	& 25.49	& 14.88	\\ \hline 
+imagery	& 5.74	& 6.92	& 25.15	& 10.52	\\ \hline 
+language	& 20.68	& 26.02	& 50.14	& 34.12	\\ \hline 
+pain	& 19.37	& 21.52	& 69.06	& 32.41	\\ \hline 
+perception	& 12.88	& 17.34	& 33.30	& 22.73	\\ \hline 
+phonological	& 11.51	& 13.13	& 49.54	& 20.61	\\ \hline 
+recognition	& 11.66	& 15.12	& 33.92	& 20.75	\\ \hline 
+retrieval	& 14.13	& 17.70	& 41.00	& 24.51	\\ \hline 
+reward	& 16.18	& 18.85	& 55.01	& 27.69	\\ \hline 
+semantic	& 17.72	& 21.54	& 49.52	& 29.94	\\ \hline 
+sensory	& 14.21	& 19.00	& 35.87	& 24.73	\\ \hline 
+social	& 17.10	& 20.69	& 49.34	& 29.01	\\ \hline 
+spatial	& 19.50	& 25.37	& 45.89	& 32.55	\\ \hline 
+verbal	& 10.33	& 13.73	& 29.91	& 18.64	\\ \hline 
+visual	& 34.78	& 47.08	& 57.20	& 51.55	\\ \hline 
+\end{tabular}
+&
+\begin{tabular}{|c|c|c|c|}
+\hline
+ \bf{Accuracy} & \bf{Precision} & \bf{Recall}    & \bf{F1 score} \\ \hline
+ 3.92	& 14.86	& 5.09	& 7.37	\\ \hline 
+ 8.71	& 23.10	& 12.26	& 15.92	\\ \hline 
+ 24.05	& 52.10	& 30.70	& 38.39	\\ \hline 
+ 2.64	& 15.33	& 3.21	& 4.81	\\ \hline 
+ 8.16	& 25.92	& 10.60	& 14.78	\\ \hline 
+ 7.23	& 27.76	& 8.84	& 13.27	\\ \hline 
+ 6.91	& 23.62	& 9.17	& 12.48	\\ \hline 
+ 1.84	& 8.33	& 2.24	& 3.46	\\ \hline 
+ 1.22	& 10.00	& 1.30	& 2.30	\\ \hline 
+ 10.51	& 31.65	& 13.66	& 18.86	\\ \hline 
+ 13.01	& 40.69	& 16.07	& 22.55	\\ \hline 
+ 5.76	& 20.59	& 7.39	& 10.65	\\ \hline 
+ 7.77	& 25.56	& 10.22	& 13.80	\\ \hline 
+ 3.93	& 16.03	& 4.92	& 7.42	\\ \hline 
+ 7.56	& 24.23	& 9.56	& 13.52	\\ \hline 
+ 17.69	& 40.78	& 23.43	& 29.36	\\ \hline 
+ 8.53	& 27.02	& 10.98	& 15.53	\\ \hline 
+ 3.07	& 10.34	& 4.07	& 5.77	\\ \hline 
+ 7.89	& 23.36	& 10.77	& 14.52	\\ \hline 
+ 8.15	& 26.85	& 10.67	& 14.92	\\ \hline 
+ 2.30	& 10.50	& 2.88	& 4.45	\\ \hline 
+ 22.05	& 41.07	& 32.12	& 35.98	\\ \hline 
+\end{tabular}
+\end{tabular}
+\caption{Multilabel, per label accuracy naive bayes (left table) and logistic regression with $l_1$ penalty (right table)}
+\end{center}
+\end{table}
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{ll}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ \bf{Label}  & \bf{Accuracy} & \bf{Precision} & \bf{Recall}    & \bf{F1 score} \\ \hline
+action	& 5.00	& 19.44	& 6.29	& 9.45	\\ \hline 
+attention	& 7.27	& 20.33	& 10.24	& 13.49	\\ \hline 
+auditory	& 25.44	& 52.52	& 32.56	& 40.03	\\ \hline 
+conflict	& 0.00	& 0.00	& 0.00	& 0.00	\\ \hline 
+emotion	& 7.23	& 28.24	& 9.06	& 13.46	\\ \hline 
+encoding	& 4.45	& 21.41	& 5.47	& 8.48	\\ \hline 
+episodic	& 6.17	& 29.83	& 7.19	& 11.29	\\ \hline 
+executive	& 1.57	& 18.67	& 1.70	& 3.02	\\ \hline 
+imagery	& 0.00	& 0.00	& 0.00	& 0.00	\\ \hline 
+language	& 9.76	& 30.04	& 12.72	& 17.68	\\ \hline 
+pain	& 11.99	& 49.25	& 14.34	& 20.89	\\ \hline 
+perception	& 6.13	& 19.32	& 8.20	& 11.42	\\ \hline 
+phonological	& 6.50	& 34.88	& 7.60	& 11.54	\\ \hline 
+recognition	& 4.84	& 23.66	& 5.76	& 9.10	\\ \hline 
+retrieval	& 7.02	& 28.40	& 8.44	& 12.89	\\ \hline 
+reward	& 19.70	& 53.50	& 24.11	& 32.52	\\ \hline 
+semantic	& 8.76	& 28.81	& 11.16	& 15.96	\\ \hline 
+sensory	& 4.48	& 16.64	& 5.86	& 8.53	\\ \hline 
+social	& 7.46	& 23.98	& 9.75	& 13.75	\\ \hline 
+spatial	& 10.72	& 29.31	& 14.59	& 19.18	\\ \hline 
+verbal	& 3.35	& 22.58	& 3.85	& 6.38	\\ \hline 
+visual	& 23.92	& 42.96	& 35.03	& 38.51	\\ \hline 
+\end{tabular}
+&
+\begin{tabular}{|c|c|c|c|}
+\hline
+ \bf{Accuracy} & \bf{Precision} & \bf{Recall}    & \bf{F1 score} \\ \hline
+ 4.72	& 15.35	& 6.47	& 8.96	\\ \hline 
+ 9.94	& 22.90	& 14.96	& 17.94	\\ \hline 
+ 20.90	& 43.20	& 28.86	& 34.46	\\ \hline 
+ 1.34	& 8.33	& 1.50	& 2.51	\\ \hline 
+ 7.29	& 20.45	& 10.24	& 13.46	\\ \hline 
+ 3.44	& 10.59	& 4.94	& 6.56	\\ \hline 
+ 4.22	& 20.25	& 5.00	& 7.92	\\ \hline 
+ 4.46	& 23.87	& 5.25	& 8.38	\\ \hline 
+ 1.74	& 6.67	& 2.11	& 3.21	\\ \hline 
+ 9.81	& 25.93	& 13.74	& 17.67	\\ \hline 
+ 14.40	& 42.37	& 17.80	& 24.75	\\ \hline 
+ 8.53	& 20.85	& 12.57	& 15.52	\\ \hline 
+ 6.79	& 32.67	& 8.02	& 12.18	\\ \hline 
+ 6.36	& 19.71	& 8.59	& 11.85	\\ \hline 
+ 8.45	& 25.60	& 11.17	& 15.44	\\ \hline 
+ 19.59	& 50.98	& 24.74	& 32.16	\\ \hline 
+ 8.43	& 24.36	& 12.02	& 15.39	\\ \hline 
+ 6.70	& 19.22	& 9.27	& 12.38	\\ \hline 
+ 8.16	& 21.14	& 11.71	& 14.98	\\ \hline 
+ 10.69	& 24.34	& 16.01	& 19.23	\\ \hline 
+ 3.72	& 14.73	& 4.80	& 7.08	\\ \hline 
+ 24.40	& 42.12	& 36.82	& 39.15	\\ \hline 
+\end{tabular}
+\end{tabular}
+\caption{Multilabel, per label statistics logistic regression with $l_2$ penalty (left table)}
+\end{center}
+\end{table}
 
 %\paragraph{Time}
 %A significant chunk of our time and energy was directed towards gathering and preprocessing the data. However, we also became comfortable with many new softwares and tools: NeuroSynth, Nilearn, python pdfminer, not to mention scikit learn and several python frameworks.

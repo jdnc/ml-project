@@ -51,4 +51,5 @@ def plot_histogram(y):
     count_series = pandas.Series(term_counts)
     count_series.sort(axis=1)
     count_series.plot(kind='bar', figsize=(10,10))
+    plt.ylabel('number of studies')
     plt.savefig('histogram.png')

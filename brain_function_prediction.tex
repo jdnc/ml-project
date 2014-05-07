@@ -140,21 +140,21 @@ In addition to reporting the accuracy, we report precision, recall, F1 score and
 \end{align*}
 $\mathbb{I}$ denotes the indicator function and $\mathcal{Z}_{n,max}$ denotes the label predicted with highest probability for the brain volume $n$. The top correct value is the fraction of the data points on which the model's best predicted label (with maximum probability) was present in the true label set.
 
-This table reports the results of the multilabel classification for the entire label set.
+This table reports the results of the multilabel classification for the entire label set. Note here that there are $2^{22}$ possible label sets and accuracy is a fairly hard metric to achieve
 \begin{table}[h]
 \begin{center}
-\vspace{-0.5cm}
-\begin{tabular}{|c|c|c|c|c|}
- Model & Accuracy & Precision & Recall & Hamming loss & Top correct\\ \hline
- Naive Bayes & & & & & \\ \hline
- Logistic L1 & & & & & \\ \hline
- Logistic L2 & & & & & \\ \hline
- Linear SVM  & & & & & \\ \hline
- Ward Cluster& & & & & \\ \hline \hline
- Unique Train& & & & & \\ \hline
- All Ones    & & & & & \\ \hline
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+ Model       & Accuracy & Precision & Recall    & F1 score  & Hamming loss & Top correct\\ \hline
+ Naive Bayes & 1.3      & \bf{22.36}& \bf{46.04}& \bf{26.63}& 0.207     & 23.7      \\ \hline
+ Logistic L1 & 3.2      & 18.92     & 14.16     & 14.53     & 0.111     & 27.9      \\ \hline
+ Logistic L2 & \bf{4.1} & 19.58     & 14.73     & 15.22     & 0.108     & \bf{30.0} \\ \hline
+ Linear SVM  & 3.7      & 20.34     & 16.40     & 16.24     & 0.115     & 22.5      \\ \hline
+ Ward Cluster& 3.4      & 17.53     & 12.99     & 13.43     & \bf{0.107}& 29.8      \\ \hline \hline
+ Unique Train$^*$& 0.8      & \bf{33.98}& 22.09     & 24.83     & 0.162     & \bf{36.0} \\ \hline
+ All Ones$^*$    & 0.0      & 9.78      & \bf{100.0}& 17.40     & 0.902     & 5.38      \\ \hline
 \end{tabular}
-\caption{Multilabel classification full tuple results}
+\caption{Multilabel classification full tuple results. All values are reported in percentage ($\%$) except hamming loss. Again, excepting for hamming loss where lower loss is better, for all other metrics higher values are better. $^*$Unique Train and All Ones do not use cross validation.}
 \end{center}
 \end{table}
 

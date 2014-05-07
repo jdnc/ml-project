@@ -107,7 +107,7 @@ def get_Y(file_name, mapping, terms_file, get_dataframe=False):
         with open('mappings.json', 'wb') as f:
 	        json.dump(mapping_new, f)
         y = []
-        y.append([[mapping_new[x] for x in labels] for labels in label_list])
+        y.append([mapping_new[x] for x in labels for labels in label_list])
         return y
 
 

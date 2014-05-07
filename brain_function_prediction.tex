@@ -195,6 +195,7 @@ For the purposes of transfer learning we use the openfMRI and NeuroVault reposit
 For NeuroVault, the data was not available in a format similar to the openfMRI and NeuroSynth. In this case, we had a total of 17 images, that corresponded to 12 studies. Rather than having the actual labels for these studies, the API provided us with links to online publications corresponding to the study. These were in the \texttt{pdf} format, though in some cases, mutliple formats were also available. We used an approach similar to that already adopted by NeuroSynth, to derive labels for the images. First we converted the \texttt{pdf} formats to plain text using an available python tool~\footnote{http://www.unixuser.org/~euske/python/pdfminer/}. Next we considered a dictionary of terms which we were using for the Neurosynth data and counted how frequently these terms appeared in each study. The final frequency we stored for these terms was normalized by dividing it by the total word count of the document. Thus we ended up with a label representation for each study that was analogous to what was being used in NeuroSynth.
 
 \section{Experimental Results}
+
 Our experiments for single and multilabel prediction tasks were performed on data available in the neurosynth~\footnote{\protect \url{www.neurosynth.org}} tool. After preprocessing and filtering our inpput feature matrix  $\mathbf{X}$ is of dimension $5067 \times 228,453$, the target label matrix $\mathbf{Y}$ is of dimension $5067 \times 23$. The transfer learning component is tested on data from the openfMRI~\footnote{\protect \url{https://openfmri.org}} project with feature dimensions $\mathbf{X}'$ ($479 \times 174,264$) and targer label matrix $\mathbf{Y}'$ of dimensions $479 \times 19$.
 
 Data samples size (4000). We use 10 fold cross validation to evaluate all our models unless otherwise indicated. We evaluate the performance of our models on the metrics such as \textit{accuracy, precision, recall, hamming loss, F1 score} which are frequently applied to this task.
@@ -203,7 +204,7 @@ Data samples size (4000). We use 10 fold cross validation to evaluate all our mo
 \end{align*}
 
  \subsection{Single Label Prediction}
- We present the accuracies of the pairwise single label predictions using all our approaches in the heat maps in Figures~\ref{fid:singlelab1} and \ref{fig:singlelab2}
+ We present the accuracies of the pairwise single label predictions using all our approaches in the heat maps in Figures~\ref{fig:singlelab1} and \ref{fig:singlelab2}
 \begin{figure}[h]
 \vspace{-0.5cm}
 \centering
@@ -282,7 +283,10 @@ promising, given that the domains across which we are adapting are quite noisy.
 \section{Conclusion}
 
 \subsubsection*{Acknowledgments}
-Sanmi, Russ, tal, tacc
+We are very thankful to Tal Yarkoni and Dr Russ Poldrack, from the Image Research Centre, University of Texas at Austin, for their
+helpful suggestions and tips. We are especially grateful to  Oluwasanmi (Sanmi) Koyejo, who patiently guided us through this entire project.
+We cannot fail to mention the excellent TACC resources, without which it would have been impossible to run experiments at this scale.
+Finally we would like to thank Prof Ghosh for teaching us many practical nuances in the course that helped immensely during the project.
 
 \bibliographystyle{plain}
 \nocite{*}

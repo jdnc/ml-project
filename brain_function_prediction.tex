@@ -83,6 +83,7 @@ Our next approach is to perform multilabel classification to predict multiple fu
   \item[Unique train] Since our data is quite sparse and there's a high possibility of noise in data with multiple labels, we build what we call a unique train model based on logistic regression. In the unique train model, we identify all brain volumes with a single unique label, and train a classifier for each label using only this data. During test, we use the One-vs-All approach to test on multilabel brain volumes.
   \item[All ones] Another baseline we consider is the all ones baseline, which predicts ones for all labels on all input data points. Such a manipulation will give result in $100\%$ recall for the multilabel task, but very low precision values.
   \end{description}
+In addition to the above, we did experiment with PCA and $k$-nearest neighbours for $k \in \{2,3,4\}$ but the models were not trained similarly or performed extremely poorly and hence we do not report results for these.
 \begin{figure}[ht]
 \vspace{-0.5cm}
 \centering
@@ -104,11 +105,10 @@ Our next approach is to perform multilabel classification to predict multiple fu
 \section{Experimental Results}
 Our experiments for single and multilabel prediction tasks were performed on data available in the neurosynth~\footnote{\protect \url{www.neurosynth.org}} tool. After preprocessing and filtering our inpput feature matrix  $\mathbf{X}$ is of dimension $5067 \times 228,453$, the target label matrix $\mathbf{Y}$ is of dimension $5067 \times 23$. The transfer learning component is tested on data from the openfMRI~\footnote{\protect \url{https://openfmri.org}} project with feature dimensions $\mathbf{X}'$ ($479 \times 174,264$) and targer label matrix $\mathbf{Y}'$ of dimensions $479 \times 19$.
 
-We evaluate the performance of our models on the metrics such as \textit{accuracy, precision, recall, hamming loss, F1 score} which are frequently applied to this task.
+Data samples size (4000). We use 10 fold cross validation to evaluate all our models unless otherwise indicated. We evaluate the performance of our models on the metrics such as \textit{accuracy, precision, recall, hamming loss, F1 score} which are frequently applied to this task.
 \begin{align*}
- \text{Accuracy} &= & \text{Hamming loss}&= \\
- \text{Precision} &= & \text{Recall}&= \\
- \text{F1 score} &= & & \\
+% \text{Accuracy} &= & \text{Hamming loss}&= \\
+ \text{Accuracy} &= 
 \end{align*}
 
  \subsection{Single Label Prediction}
@@ -132,7 +132,34 @@ We evaluate the performance of our models on the metrics such as \textit{accurac
 \end{figure}
 
  \subsection{Multi-Label Prediction}
+In addition to reporting the accuracy, we report precision, recall, F1 score and hamming loss. And one correct
+\begin{align*}
+ \text{Precision} &= & \text{Recall}&= \\
+ \text{F1 score} &= & \text{Hamming loss}&= \\
+ \text{Top correct} &=\frac{1}{N} \displaystyle\sum_{n=1}^{N} \mathbb{I}(\mathcal{Z}_{n,max} \in \mathcal{L}_n)& & \\
+\end{align*}
+$\mathbb{I}$ denotes the indicator function and $\mathcal{Z}_{n,max}$ denotes the label predicted with highest probability for the brain volume $n$. The top correct value is the fraction of the data points on which the model's best predicted label (with maximum probability) was present in the true label set.
+
+This table reports the results of the multilabel classification for the entire label set.
+\begin{table}[h]
+\begin{center}
+\vspace{-0.5cm}
+\begin{tabular}{|c|c|c|c|c|}
+ Model & Accuracy & Precision & Recall & Hamming loss & Top correct\\ \hline
+ Naive Bayes & & & & & \\ \hline
+ Logistic L1 & & & & & \\ \hline
+ Logistic L2 & & & & & \\ \hline
+ Linear SVM  & & & & & \\ \hline
+ Ward Cluster& & & & & \\ \hline \hline
+ Unique Train& & & & & \\ \hline
+ All Ones    & & & & & \\ \hline
+\end{tabular}
+\caption{Multilabel classification full tuple results}
+\end{center}
+\end{table}
+
  \subsection{Transfer Learning}
+
 
 \section{Discussion}
 -- Why bad results? Or good results?

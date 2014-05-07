@@ -202,7 +202,7 @@ For NeuroVault, the data was not available in a format similar to the openfMRI a
 
 Our experiments for single and multilabel prediction tasks were performed on data available in the NeuroSynth~\footnote{\protect \url{www.neurosynth.org}} tool. After preprocessing and filtering our inpput feature matrix  $\mathbf{X}$ is of dimension $5463 \times 228,453$, the target label matrix $\mathbf{Y}$ is of dimension $5463 \times 22$. The transfer learning component is tested on data from the openfMRI~\footnote{\protect \url{https://openfmri.org}} project with feature dimensions $\mathbf{X}'$ ($479 \times 174,264$) and target label matrix $\mathbf{Y}'$ of dimensions $479 \times 19$. As mentioned in Section~\ref{sec:data} we the labels for the transfer learning is a different set of 19 terms. The neurosynth data features for the transfer learning had dimensions $4066 \times 174,264$.
 
-We use 10 fold cross validation to evaluate all our models unless otherwise indicated. We evaluate the performance of our models on the metrics such as \textit{accuracy, precision, recall, hamming loss, F1 score} which are frequently applied to this task.
+We use 10 fold cross validation to evaluate all our models unless otherwise indicated. We evaluate the performance of our models on the metrics such as \textit{accuracy, precision, recall, hamming loss, F1 score} which are frequently applied to this task. We denote by $\mathcal{Z}_n$ the set of predicted labels for the $n^{th}$ brain volume and $\mathcal{L}_n$ correspondingly for the true label set.
 \begin{align*}
  \text{Accuracy} &= \frac{1}{N} \displaystyle\sum_{n=1}^{N} \frac{|\mathcal{L}_n \cap \mathcal{Z}_n|}{|\mathcal{L}_n \cup \mathcal{Z}_n|} 
 \end{align*}
@@ -232,13 +232,13 @@ terms like phonological which had a high accuracy in Naive Bayes, show an even h
 The Linear SVM shows a trend similar to the logistic regression, improving the accuracy for the high accuracy terms from Naive Bayes as well as logistic regression. But the SVM does have a slight edge over the logistic regression model. As was expected, the ensemble model of the three is the clear winner, although it only marginally beats the SVM.
 
  \subsection{Multi-Label Prediction}
-In addition to reporting the accuracy, we report precision, recall, F1 score and hamming loss. And one correct
+In addition to reporting the accuracy, we report precision, recall, F1 score and hamming loss. As before, we denote by $\mathcal{Z}_n$ the set of predicted labels for the $n^{th}$ brain volume and $\mathcal{L}_n$ correspondingly for the true label set.
 \begin{align*}
  \text{Precision} &= {1}{N} \sum_{n=1}^{N} \frac {|\mathcal{L}_n \cap \mathcal{Z}_n|}{\mathcal{Z}_n}& \text{Recall}&= \frac{1}{N} \sum_{n=1}^{N} \frac {|\mathcal{L}_n \cap \mathcal{Z}_n|}{\mathcal{L}_n}\\
  \text{F1 score} &=\frac{1}{N} \sum_{n=1}^{N} \frac{2.0 * \text{Precision}_n * \text{Recall}_n}{\text{Precision}_n +\text{Recall}_n} & \text{Hamming loss}&=\frac{1}{N}\sum_{n=1}^{N}\frac{1}{L} |\mathcal{L}_n \ominus \mathcal{Z}_n | \\
  \text{Top correct} &=\frac{1}{N} \displaystyle\sum_{n=1}^{N} \mathbb{I}(\mathcal{Z}_{n,max} \in \mathcal{L}_n)& & \\
 \end{align*}
-$\mathbb{I}$ denotes the indicator function and $\mathcal{Z}_{n,max}$ denotes the label predicted with highest probability for the brain volume $n$. The top correct value is the fraction of the data points on which the model's best predicted label (with maximum probability) was present in the true label set.
+$\mathbb{I}$ denotes the indicator function and $\mathcal{Z}_{n,max}$ denotes the label predicted with highest probability for the brain volume $n$. The {\bf{\textit{top correct}}} value is the fraction of the data points on which the model's best predicted label (having highest probability) was present in the true label set.
 
 This table reports the results of the multilabel classification for the entire label set. Note here that there are $2^{22}$ possible label sets and accuracy is a fairly hard metric to achieve
 \begin{table}[h]
@@ -316,7 +316,7 @@ Finally we would like to thank Prof Ghosh for teaching us many practical nuances
 \begin{figure}[!hbt]
 \vspace{-0.5cm}
 \centering
-\subfloat[per label accuracies]{\includegraphics[width=14cm]{./figs/all_perlabel_f1score.png}} 
+\subfloat[per label f1score]{\includegraphics[width=14cm]{./figs/all_perlabel_f1score.png}} 
 \caption{Comparing per label F1scores of multilabel classifiers.}
 \label{fig:perlab_f1}
 \end{figure}

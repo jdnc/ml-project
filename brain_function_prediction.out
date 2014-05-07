@@ -1,12 +1,13 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}
-\BOOKMARK [2][-]{subsection.1.1}{Our Contribution}{section.1}
 \BOOKMARK [1][-]{section.2}{Related Work}{}
+\BOOKMARK [2][-]{subsection.2.1}{The NeuroSynth framework}{section.2}
+\BOOKMARK [2][-]{subsection.2.2}{Our Contribution}{section.2}
 \BOOKMARK [1][-]{section.3}{Methods}{}
 \BOOKMARK [2][-]{subsection.3.1}{Single Label Prediction}{section.3}
 \BOOKMARK [2][-]{subsection.3.2}{Multi-Label Prediction}{section.3}
 \BOOKMARK [2][-]{subsection.3.3}{Transfer Learning}{section.3}
 \BOOKMARK [1][-]{section.4}{Data}{}
-\BOOKMARK [2][-]{subsection.4.1}{Preprocessing}{section.4}
+\BOOKMARK [2][-]{subsection.4.1}{Pre-processing}{section.4}
 \BOOKMARK [1][-]{section.5}{Experimental Results}{}
 \BOOKMARK [2][-]{subsection.5.1}{Single Label Prediction}{section.5}
 \BOOKMARK [2][-]{subsection.5.2}{Multi-Label Prediction}{section.5}

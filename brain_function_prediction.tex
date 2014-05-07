@@ -303,6 +303,27 @@ Finally we would like to thank Prof Ghosh for teaching us many practical nuances
 
 \section{Appendix}
 
+\subsection{Histogram plots of the per label accuracy for multilabel classification}
+\begin{figure}[!hbt]
+\vspace{-0.5cm}
+\centering
+\subfloat[per label accuracies]{\includegraphics[width=14cm]{./figs/all_perlabel_acc.png}} 
+\caption{Comparing per label accuracy of multilabel classifiers.}
+\label{fig:perlab}
+\end{figure}
+
+%\subsection{Histogram plots of the per label accuracy for multilabel classification}
+%\begin{figure}[!hbt]
+%\vspace{-0.5cm}
+%\centering
+%\subfloat[Naive Bayes]{\includegraphics[width=10cm]{./figs/naive_bayes_perlabel_acc.png}} \\
+%\subfloat[Logistic regression ($l_1$)]{\includegraphics[width=10cm]{./figs/log_l1_perlabel_acc.png}}\\
+%\subfloat[Logistic regression ($l_2$)]{\includegraphics[width=10cm]{./figs/log_l2_perlabel_acc.png}}
+%\caption{Per label accuracy plots for naive bayes and logistic regression multilabel classification.}
+%\label{fig:singlelab2}
+%\end{figure}
+
+\subsection{Statistics per label for multilabel classification}
 We report statistics per label for each of our multilabel experiments:
 \begin{table}[h]
 \begin{center}
@@ -425,6 +446,7 @@ visual	& 23.92	& 42.96	& 35.03	& 38.51	\\ \hline
 \caption{Multilabel, per label statistics logistic regression with $l_2$ penalty (left table)}
 \end{center}
 \end{table}
+
 
 %\paragraph{Time}
 %A significant chunk of our time and energy was directed towards gathering and preprocessing the data. However, we also became comfortable with many new softwares and tools: NeuroSynth, Nilearn, python pdfminer, not to mention scikit learn and several python frameworks.

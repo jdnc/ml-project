@@ -199,8 +199,7 @@ Our experiments for single and multilabel prediction tasks were performed on dat
 
 Data samples size (4000). We use 10 fold cross validation to evaluate all our models unless otherwise indicated. We evaluate the performance of our models on the metrics such as \textit{accuracy, precision, recall, hamming loss, F1 score} which are frequently applied to this task.
 \begin{align*}
-% \text{Accuracy} &= & \text{Hamming loss}&= \\
- \text{Accuracy} &= 
+ \text{Accuracy} &= \frac{1}{N} \displaystyle\sum_{n=1}^{N} \frac{|\mathcal{L}_n \cap \mathcal{Z}_n|}{|\mathcal{L}_n \cup \mathcal{Z}_n|} 
 \end{align*}
 
  \subsection{Single Label Prediction}
@@ -225,8 +224,8 @@ Data samples size (4000). We use 10 fold cross validation to evaluate all our mo
  \subsection{Multi-Label Prediction}
 In addition to reporting the accuracy, we report precision, recall, F1 score and hamming loss. And one correct
 \begin{align*}
- \text{Precision} &= & \text{Recall}&= \\
- \text{F1 score} &= & \text{Hamming loss}&= \\
+ \text{Precision} &= {1}{N} \sum_{n=1}^{N} \frac {|\mathcal{L}_n \cap \mathcal{Z}_n|}{\mathcal{Z}_n}& \text{Recall}&= \frac{1}{N} \sum_{n=1}^{N} \frac {|\mathcal{L}_n \cap \mathcal{Z}_n|}{\mathcal{L}_n}\\
+ \text{F1 score} &=\frac{1}{N} \sum_{n=1}^{N} \frac{2.0 * \text{Precision}_n * \text{Recall}_n}{\text{Precision}_n +\text{Recall}_n} & \text{Hamming loss}&=\frac{1}{N}\sum_{n=1}^{N}\frac{1}{L} |\mathcal{L}_n \ominus \mathcal{Z}_n | \\
  \text{Top correct} &=\frac{1}{N} \displaystyle\sum_{n=1}^{N} \mathbb{I}(\mathcal{Z}_{n,max} \in \mathcal{L}_n)& & \\
 \end{align*}
 $\mathbb{I}$ denotes the indicator function and $\mathcal{Z}_{n,max}$ denotes the label predicted with highest probability for the brain volume $n$. The top correct value is the fraction of the data points on which the model's best predicted label (with maximum probability) was present in the true label set.

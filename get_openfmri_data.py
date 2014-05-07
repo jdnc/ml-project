@@ -33,7 +33,7 @@ def get_X(file_name, mask=None):
     -------
     `numpy.ndarray` : (n_samples x n_features) array from brain images.
     """
-    x = np.load('zstat_run1.npy')
+    x = np.load(os.path.join(DIR, file_name))
     return x.transpose()
     #img_file = os.path.join(DIR, file_name)
     #nift_masker = input_data.NiftiMasker(mask=mask)
@@ -41,7 +41,7 @@ def get_X(file_name, mask=None):
     #return masked_vec
 
 
-def get_Y(file_name, mapping, terms, get_dataframe=False):
+def get_Y(file_name, mapping, terms_file, get_dataframe=False):
     """
     Similarly form the labels corresponding to each study, returns a pandas dataframe
     that has terms as column names and frequencies as values. The file name will be
@@ -54,7 +54,7 @@ def get_Y(file_name, mapping, terms, get_dataframe=False):
         e.g. 'cognitive_concepts/cognitive_concepts.txt' saved as numpy txt format.
     mapping : str
         file name containing study id for each of the 26 studies. e.g. 'data_key_run1.txt'
-    terms : str
+    terms_file : str
         file name that has the terms which are to be used  (json format)
     get_dataframe : bool, optional
         defines format in which to return the y values. When true returns the
@@ -75,7 +75,7 @@ def get_Y(file_name, mapping, terms, get_dataframe=False):
     lines = sorted(lines, key=lambda x: x[0])
 
     # construct dict from the terms used
-    terms = json.load(open('data/terms_openfmri.json'))
+    terms = json.load(open(terms_file))
     row_dict = {}
     for i in range(1, 27):
         col_dict = odict()

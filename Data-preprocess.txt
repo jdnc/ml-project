@@ -20,7 +20,7 @@ For the multi-label classification, we perform the same filtering and pre-proces
 \begin{center}
 %\framebox[4.0in]{$\;$}
 %\fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
-\includegraphics[height=4cm, width=14cm]{histo_old.png}
+\includegraphics[height=10cm, width=10cm]{histo_old.png}
 \end{center}
 \caption{\textbf{Distribution of terms across studies:} The x-axis denotes eac term and the y-axis denotes the number of studies in which the term appears.}
 \label{fig:histo_old}
@@ -32,7 +32,7 @@ For the purposes of transfer learning we use the openfMRI and NeuroVault reposit
 \begin{center}
 %\framebox[4.0in]{$\;$}
 %\fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
-\includegraphics[height=4cm, width=14cm]{histo_new.png}
+\includegraphics[height=10cm, width=10cm]{histo_new.png}
 \end{center}
 \caption{\textbf{Distribution of terms across studies:} The x-axis denotes eac term and the y-axis denotes the number of studies in which the term appears.}
 \label{fig:histo_new}

@@ -1,0 +1,27 @@
+ \subsection{Single Label Prediction}
+ We present the accuracies of the pairwise single label predictions using all our approaches in the heat maps below.
+\paragraph{(b)} Plotting Correlations
+\begin{figure}[ht]
+\vspace{-0.5cm}
+\centering
+\subfloat[Naive Bayes]{\includegraphics[width=12cm]{./figs/nb_confmat.jpg}} \\
+\subfloat[Logistic Regression]{\includegraphics[width=12cm]{./figs/log_confmat.jpg}}
+\caption{Pairwise binary classification accuracy for single label prediction}
+\label{fig:singlelab1}
+\end{figure}
+Our Naive Bayes model performs similarly to the results reported in ~\cite{yarkoni2011large}. The results are quite good given the assumptions and simplicity underlying the model, as well as the large dimensions of our data.
+Terms like phonological, pain and visual have a very high accuracy. For logistic regression, we see that the model beats Naive Bayes in some cases. FOr instance
+terms like phonological which had a high accuracy in Naive Bayes, show an even higher accuracy here, improving by $5-8\%$. But in a few cases, the accuracy also dips by a factor of $2-3\%$.
+
+\begin{figure}[ht]
+\vspace{-0.5cm}
+\centering
+\subfloat[Linear SVM]{\includegraphics[width=12cm]{./figs/svm_confmat.jpg}} \\
+\subfloat[Ensemble of naive bayes, logistic regression and SVM]{\includegraphics[width=12cm]{./figs/ensemble_confmat.jpg}}
+\caption{Pairwise binary classification accuracy for single label prediction}
+\label{fig:singlelab2}
+\end{figure}
+
+The Linear SVM shows atrend similar to the logistic regression, improving the accuracy for the high accuracy terms from Naive Bayes as well as logistic regression.
+Overall the SVM has a slight edge over the logistic regression model. As was expected, the ensmeble is the clear winner, though
+again, it does only slightly better than the SVM.

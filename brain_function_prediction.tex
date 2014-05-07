@@ -66,7 +66,7 @@ we primarily address the problem of Reverse Inference Figure~\ref{fig:revinf}). 
 \end{figure}
 
 \section{Related Work}
-Forward and reverse inference problems have been addressed by several contemporary works~\cite{schwartz2013mapping, PMSKBY12, sanmi2013multi, yarkoni2011large}. Previous approaches have generally tackled the Reverse Inference problem by manually analyzing fMRI scans of subjects, collected from the laboratory. There are several limitations of such an approach - for instance, involving human subjects for fMRI scans is labor and cost intensive and the number of data samples that can be gained from such efforts is also very less. Moreover all the meta-analyses based on such data is carried on a very small-scale at individual research labs, and fails to take advantage of the vast knowledge embodied in the entire research community. In this report we will focus on neurosynth since it is most relevant to our approach. For a general discuss of other related works we request the reader to kindly refer to our proposal.
+Forward and reverse inference problems have been addressed by several contemporary works~\cite{schwartz2013mapping, PMSKBY12, sanmi2013multi, yarkoni2011large}. Previous approaches have generally tackled the Reverse Inference problem by manually analyzing fMRI scans of subjects, collected from the laboratory. There are several limitations of such an approach - for instance, involving human subjects for fMRI scans is labor and cost intensive and the number of data samples that can be gained from such efforts is also very less. Moreover all the meta-analyses based on such data is carried on a very small-scale at individual research labs, and fails to take advantage of the vast knowledge embodied in the entire research community. We first present a detailed discussion of tje neurosynth approach before discussing other works.%In this report we will focus on neurosynth since it is most relevant to our approach. For a general discuss of other related works we request the reader to kindly refer to our proposal.
 
 NeuroSynth's (and therefore our) approach is unique - in that we tackle the Reverse Inference problem not by requiring actual fMRI scans, but rather by exploiting the relatively large repository of neuro-imaging publications using text-mining and machine learning techniques.  There are many motivations and benefits that lead to this. For one, while fMRI scans are very few, there has been a growing body of publications related to neuro-imaging, thus offering a much larger source of data. Further by using machine learning techniques the decoding is possible without any real training data (fMRI scans) and at the same time incorporates the knowledge base derived from several researcher. Also to the best of our knowledge, this is the first approach that is fully automated, thus making it possible to perform several meta-analyses on a much larger scale than could ever be possible by individual researchers.  In the next few paragraphs, we introduce the NeuroSynth framework and some of the techniques it utilizes.
 
@@ -151,6 +151,7 @@ In addition to the above, we did experiment with PCA and $k$-nearest neighbours 
   \item[Logistic Regression] For the sake of comparison we train an $l_2$ regularized logistic regression model directly on the openfMRI data.
   \end{description}
 
+\section{Data}
 Similar to ~\cite{yarkoni2011large}, we primarily use the repository available with NeuroSynth for our project. This has nearly $8067$ studies that are scrapped from online resources, spanning $15$ journals. For our transfer-learnign approach, we would like to use real fMRI scans, and adapt our models tuned with the synthesized data on this real data. We use data from 2 sources. We use the open source openfMRI~\footnote{\protect \url{https://openfmri.org}} project ~\cite{poldrack2013toward} to gain the training data. This has individual subject level images for $26$ contrasts, resulting in a total of $479$ data samples. Since it is always more advisable to work with group level statistics, we also consider the NeuroVault\footnote{\protect \url{http://neurovault.org}} data that has 17 studies, but with group level images. Ideally we would have liked to use this data entirely but the major issues is that it is too less to be meaningful on its own. 
 \subsection{Pre-processing}
 \label{sec:preprocess}
@@ -173,7 +174,7 @@ For the multi-label classification, we perform the same filtering and pre-proces
 \begin{center}
 %\framebox[4.0in]{$\;$}
 %\fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
-\includegraphics[height=4cm, width=14cm]{histo_old.png}
+\includegraphics[height=10cm, width=10cm]{histo_old.png}
 \end{center}
 \caption{\textbf{Distribution of terms across studies:} The x-axis denotes eac term and the y-axis denotes the number of studies in which the term appears.}
 \label{fig:histo_old}
@@ -185,7 +186,7 @@ For the purposes of transfer learning we use the openfMRI and NeuroVault reposit
 \begin{center}
 %\framebox[4.0in]{$\;$}
 %\fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
-\includegraphics[height=4cm, width=14cm]{histo_new.png}
+\includegraphics[height=10cm, width=10cm]{histo_new.png}
 \end{center}
 \caption{\textbf{Distribution of terms across studies:} The x-axis denotes eac term and the y-axis denotes the number of studies in which the term appears.}
 \label{fig:histo_new}
@@ -203,20 +204,20 @@ Data samples size (4000). We use 10 fold cross validation to evaluate all our mo
 \end{align*}
 
  \subsection{Single Label Prediction}
- We present the accuracies of the pairwise single label predictions using all our approaches in the heat maps below.
-\begin{figure}[ht]
+ We present the accuracies of the pairwise single label predictions using all our approaches in the heat maps in Figures~\ref{fid:singlelab1} and \ref{fig:singlelab2}
+\begin{figure}[h]
 \vspace{-0.5cm}
 \centering
-\subfloat[Naive Bayes]{\includegraphics[width=12cm]{./figs/nb_confmat.jpg}} \\
-\subfloat[Logistic Regression]{\includegraphics[width=12cm]{./figs/log_confmat.jpg}}
+\subfloat[Naive Bayes]{\includegraphics[width=10cm]{./figs/nb_confmat.jpg}} \\
+\subfloat[Logistic Regression]{\includegraphics[width=10cm]{./figs/log_confmat.jpg}}
 \caption{Pairwise binary classification accuracy for single label prediction}
 \label{fig:singlelab1}
 \end{figure}
-\begin{figure}[ht]
+\begin{figure}[h]
 \vspace{-0.5cm}
 \centering
-\subfloat[Linear SVM]{\includegraphics[width=12cm]{./figs/svm_confmat.jpg}} \\
-\subfloat[Ensemble of naive bayes, logistic regression and SVM]{\includegraphics[width=12cm]{./figs/ensemble_confmat.jpg}}
+\subfloat[Linear SVM]{\includegraphics[width=10cm]{./figs/svm_confmat.jpg}} \\
+\subfloat[Ensemble of naive bayes, logistic regression and SVM]{\includegraphics[width=10cm]{./figs/ensemble_confmat.jpg}}
 \caption{Pairwise binary classification accuracy for single label prediction}
 \label{fig:singlelab2}
 \end{figure}
@@ -265,16 +266,25 @@ This table reports the results of the transfer learning for the entire label set
 
 
 \section{Discussion}
--- Why bad results? Or good results?
+\paragraph{Single Label prediction} Our Naive Bayes model performs similarly to the results reported in ~\cite{yarkoni2011large}. The results are quite good given the assumptions and simplicity underlying the model, as well as the large dimensions of our data.
+Terms like phonological, pain and visual have a very high accuracy. For logistic regression, we see that the model beats Naive Bayes in some cases. FOr instance
+terms like phonological which had a high accuracy in Naive Bayes, show an even higher accuracy here, improving by $5-8\%$. But in a few cases, the accuracy also dips by a factor of $2-3\%$.
+The Linear SVM shows atrend similar to the logistic regression, improving the accuracy for the high accuracy terms from Naive Bayes as well as logistic regression.
+Overall the SVM has a slight edge over the logistic regression model. As was expected, the ensmeble is the clear winner, though
+again, it does only slightly better than the SVM.
 
-Transfer - remove those studies where none of the terms are present
+
+\paragraph{Transfer learning}
+Similar to the multi-label case, the results that we obtain are not too encouraging. However the $l-2$ regularized logistic regression
+is clearly the best performer here, winning out on al the metrics. Again the metric on which it does the best is the Hamming Loss metric.
+In this case, though the performance on the Top Correct metric surpasses that of the Unique Train in the multi-label case, which is 
+promising, given that the domains across which we are adapting are quite noisy.
 
 \section{Conclusion}
 
 \subsubsection*{Acknowledgments}
 Sanmi, Russ, tal, tacc
 
-\subsubsection*{References}
 \bibliographystyle{plain}
 \nocite{*}
 \bibliography{brain_function_prediction.bib}

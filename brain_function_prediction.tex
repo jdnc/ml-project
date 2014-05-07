@@ -158,6 +158,19 @@ This table reports the results of the multilabel classification for the entire l
 \end{table}
 
  \subsection{Transfer Learning}
+This table reports the results of the transfer learning for the entire label set. We get 0 accuracy for the full label set and hence do not report the value in the table below.
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+ Model           & Precision & Recall    & F1 score  & Hamming loss & Top correct\\ \hline
+ Logistic L2     & \bf{24.05}& 28.04     & \bf{21.24}& \bf{0.280}   & \bf{31.57} \\ \hline
+ Ward Cluster$^*$& 13.63     & \bf{35.35}& 16.92     & 0.416        & 12.09      \\ \hline
+\end{tabular}
+\caption{Multilabel classification full tuple results. All values are reported in percentage ($\%$) except hamming loss. Again, excepting for hamming loss where lower loss is better, for all other metrics higher values are better. $^*$ Note that clustering employed actual transfer learning, and does not employ cross validation.}
+\end{center}
+\end{table}
+
 
 
 \section{Discussion}

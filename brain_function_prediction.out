@@ -8,9 +8,14 @@
 \BOOKMARK [2][-]{subsection.3.3}{Transfer Learning}{section.3}
 \BOOKMARK [1][-]{section.4}{Data}{}
 \BOOKMARK [2][-]{subsection.4.1}{Pre-processing}{section.4}
+\BOOKMARK [2][-]{subsection.4.2}{OpenfMRI and Neurovault text extraction}{section.4}
 \BOOKMARK [1][-]{section.5}{Experimental Results}{}
 \BOOKMARK [2][-]{subsection.5.1}{Single Label Prediction}{section.5}
 \BOOKMARK [2][-]{subsection.5.2}{Multi-Label Prediction}{section.5}
-\BOOKMARK [2][-]{subsection.5.3}{Transfer Learning}{section.5}
-\BOOKMARK [1][-]{section.6}{Discussion}{}
-\BOOKMARK [1][-]{section.7}{Conclusion}{}
+\BOOKMARK [2][-]{subsection.5.3}{Histogram plots of the per label accuracy for multilabel classification}{section.5}
+\BOOKMARK [2][-]{subsection.5.4}{Transfer Learning}{section.5}
+\BOOKMARK [2][-]{subsection.5.5}{We also tried ...}{section.5}
+\BOOKMARK [1][-]{section.6}{Conclusion}{}
+\BOOKMARK [1][-]{section.7}{Appendix}{}
+\BOOKMARK [2][-]{subsection.7.1}{Histogram plots of the per label F1scores for multilabel classification}{section.7}
+\BOOKMARK [2][-]{subsection.7.2}{Statistics per label for multilabel classification}{section.7}

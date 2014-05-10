@@ -36,11 +36,10 @@ def classify(x, y):
 
     ward = WardAgglomeration(n_clusters=N_CLUSTERS, connectivity=connectivity)
     clf = tree.DecisionTreeClassifier()
-    kf = cross_validation.KFold(len(y_new), n_folds=10)
+    kf = cross_validation.KFold(len(y_new), n_folds=5)
     score_per_class = []
     score_per_label = []
     for train, test in kf:
-        print(cntr)
         ward.fit(x[train])
         train_reduced = ward.transform(x[train])
         test_reduced = ward.transform(x[test])

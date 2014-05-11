@@ -40,14 +40,18 @@ def classify(x, y):
     score_per_class = []
     score_per_label = []
     for train, test in kf:
-        ward.fit(x[train])
-        train_reduced = ward.transform(x[train])
-        test_reduced = ward.transform(x[test])
-        model = clf.fit(train_reduced, y_new[train])
+        train_feat = x[train]
+        train_labels = y_new[train]
+        test_feat = x[test]
+        test_labels = y_new[test]
+        ward.fit(train_feat)
+        train_reduced = ward.transform(train_feat)
+        test_reduced = ward.transform(test_feat)
+        model = clf.fit(train_reduced, train_labels)
         predicted  = model.predict(test_reduced)
         predict_prob = model.predict_proba(test_reduced)
-        cls_scores = utils.score_results(y_new[test], predicted, predict_prob)
-        label_scores = utils.label_scores(y_new[test], predicted, predict_prob)
+        cls_scores = utils.score_results(test_labels, predicted, predict_prob)
+        label_scores = utils.label_scores(test_labels, predicted, predict_prob)
         score_per_class.append(cls_scores)
         score_per_label.append(label_scores)
     return (score_per_class,score_per_label)

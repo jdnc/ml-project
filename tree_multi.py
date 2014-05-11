@@ -4,6 +4,11 @@ from __future__ import print_function
 Multi-label classifier for neurosynth. Uses decision trees with
 multi-label output from sklearn.
 Initially begins with the 25 terms from the paper
+
+Launch
+======
+launch -s run_tree -j Analysis_Lonestar -n dec_tree -p 240 -e 1way -m mparikh@cs.utexas.edu
+
 """
 
 

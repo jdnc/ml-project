@@ -40,10 +40,10 @@ def classify(x, y):
     score_per_class = []
     score_per_label = []
     for train, test in kf:
-        train_feat = x[train]
-        train_labels = y_new[train]
-        test_feat = x[test]
-        test_labels = y_new[test]
+        train_feat = np.ascontiguousarray(x[train])
+        train_labels = np.ascontiguousarray(y_new[train])
+        test_feat = np.ascontiguousarray(x[test])
+        test_labels = np.ascontiguousarray(y_new[test])
         ward.fit(train_feat)
         train_reduced = ward.transform(train_feat)
         test_reduced = ward.transform(test_feat)

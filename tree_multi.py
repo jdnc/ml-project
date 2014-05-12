@@ -36,7 +36,7 @@ def classify(x, y):
     #connectivity = image.grid_to_graph(n_x=shape[0], n_y=shape[1], n_z=shape[2], mask=mask)
     #ward = WardAgglomeration(n_clusters=N_CLUSTERS, connectivity=connectivity)
     clf = tree.DecisionTreeClassifier()
-    kf = cross_validation.stratifiedFold(len(y_new), n_folds=5)
+    kf = cross_validation.StratifiedKFold(len(y_new), n_folds=5)
     score_per_class = []
     score_per_label = []
     for train, test in kf:

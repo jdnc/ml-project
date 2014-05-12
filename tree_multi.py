@@ -3,7 +3,9 @@ from __future__ import print_function
 """
 Multi-label classifier for neurosynth. Uses decision trees with
 multi-label output from sklearn.
-Initially begins with the 25 terms from the paper
+Initially begins with the 22 terms from the paper
+
+launch -s run_tree -j Analysis_Lonestar -n dec_tree -p 240 -e 1way -m mparikh@cs.utexas.edu
 """
 
 
@@ -28,13 +30,11 @@ def classify(x, y):
     # fit a label binarizer
     lb = preprocessing.LabelBinarizer()
     y_new = lb.fit_transform(y)
-
     # specify connectivity for clustering
-    mask = nb.load('data/MNI152_T1_2mm_brain.nii.gz').get_data().astype('bool')
-    shape = mask.shape
-    connectivity = image.grid_to_graph(n_x=shape[0], n_y=shape[1], n_z=shape[2], mask=mask)
-
-    ward = WardAgglomeration(n_clusters=N_CLUSTERS, connectivity=connectivity)
+    #mask = nb.load('data/MNI152_T1_2mm_brain.nii.gz').get_data().astype('bool')
+    #shape = mask.shape
+    #connectivity = image.grid_to_graph(n_x=shape[0], n_y=shape[1], n_z=shape[2], mask=mask)
+    #ward = WardAgglomeration(n_clusters=N_CLUSTERS, connectivity=connectivity)
     clf = tree.DecisionTreeClassifier()
     kf = cross_validation.stratifiedFold(len(y_new), n_folds=5)
     score_per_class = []
@@ -44,12 +44,12 @@ def classify(x, y):
         train_labels = np.ascontiguousarray(y_new[train])
         test_feat = np.ascontiguousarray(x[test])
         test_labels = np.ascontiguousarray(y_new[test])
-        ward.fit(train_feat)
-        train_reduced = ward.transform(train_feat)
-        test_reduced = ward.transform(test_feat)
-        model = clf.fit(train_reduced, train_labels)
-        predicted  = model.predict(test_reduced)
-        predict_prob = model.predict_proba(test_reduced)
+        #ward.fit(train_feat)
+        #train_reduced = ward.transform(train_feat)
+        #test_reduced = ward.transform(test_feat)
+        model = clf.fit(train_feat, train_labels)
+        predicted  = model.predict(test_feat)
+        predict_prob = model.predict_proba(test_feat)
         cls_scores = utils.score_results(test_labels, predicted, predict_prob)
         label_scores = utils.label_scores(test_labels, predicted, predict_prob)
         score_per_class.append(cls_scores)

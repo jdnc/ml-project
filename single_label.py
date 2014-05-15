@@ -25,7 +25,7 @@ from sklearn.metrics import confusion_matrix
 
 import preprocess as pp
 import experiment as ex
-
+N_CLUSTERS = 10000
 # ------------------- define basic checks ----------
 
 def validate_classifier(func):

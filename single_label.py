@@ -78,7 +78,7 @@ def classify(x, y, classifier='naive_bayes', clustering=True, n_folds=10):
     
     # choose and assign appropriate classifier
     classifier_dict = { 'naive_bayes' : MultinomialNB(),
-                        'logistic_regression' : LogisticRegression(penalty='l2')
+                        'logistic_regression' : LogisticRegression(penalty='l2'),
                         'svm' : GridSearchCV(LinearSVC(), [{'C': [1, 10, 100, 1000]}])  
                        }
     if classifier == 'ensemble':

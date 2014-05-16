@@ -7,10 +7,11 @@ Classifiers = MultinomialNB, LogisticRegression, LinearSVM, Ensemble of these th
 Configurable = Parameters for each classifier
 Clustering(Ward) = True/False
 """
-
+import pickle
 import json
 import numpy as np
 
+import nibabel
 from sklearn.naive_bayes import MultinomialNB  # ---------------------- Naive Bayes
 from sklearn.svm import LinearSVC # ----------------------------------- Linear SVM
 from sklearn.grid_search import GridSearchCV

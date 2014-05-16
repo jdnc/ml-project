@@ -33,5 +33,7 @@ Blog : http://ml-glob.blogspot.com
 Bugs
 ----
 If any bugs please open an issue on this github repo or shoot a mail:
-Maintainer : Madhura Parikh (@jdnc)
-Contact: madhuraparikh@gmail.com
+  
+  Maintainer : Madhura Parikh (@jdnc)
+  
+  Contact: madhuraparikh@gmail.com

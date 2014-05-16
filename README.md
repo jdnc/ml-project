@@ -24,5 +24,14 @@ References
 ----------
 - Tal Yarkoni, Russell A Poldrack, Thomas E Nichols, David C Van Essen, and Tor D Wager. Large-scale automated synthesis of human functional neuroimaging data. Nature methods, 8(8):665–670, 2011
 - Koyejo Oluwasanmi and Russell A Poldrack. Decoding cognitive processes from functional mri. NIPS workshop on Machine Learning and Interpretation in Neuroimaging, 2013
--Sinno Jialin Pan and Qiang Yang. A survey on transfer learning. Knowledge and Data Engi- neering, IEEE Transactions on, 22(10):1345–1359, 2010.
+- Sinno Jialin Pan and Qiang Yang. A survey on transfer learning. Knowledge and Data Engineering, IEEE Transactions on, 22(10):1345–1359, 2010.
 
+Other links
+------------
+Blog : http://ml-glob.blogspot.com
+
+Bugs
+----
+If any bugs please open an issue on this github repo or shoot a mail:
+Maintainer : Madhura Parikh (@jdnc)
+Contact: madhuraparikh@gmail.com

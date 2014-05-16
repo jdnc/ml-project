@@ -36,7 +36,7 @@ def validate_classifier(func, list_of_classifiers):
     def wrapper(*args, **kwargs):
         classifier = kwargs.get('classifier')
         if not classifier in list_of_classifiers:
-            throw ValueError("Supported classifiers are 'naive_bayes', 'svm', 'logistic_regression', 'ensemble'")
+            throw ValueError("Supported classifiers are " list_of_classifiers)
         else:
             return func(*args, **kwargs)
     return wrapper  

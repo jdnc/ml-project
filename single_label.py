@@ -29,13 +29,13 @@ import experiment as ex
 N_CLUSTERS = 10000
 # ------------------- define basic checks ----------
 
-def validate_classifier(func):
+def validate_classifier(func, list_of_classifiers):
     """
     Helper function decorator to check if user passes the right classifier
     """
     def wrapper(*args, **kwargs):
         classifier = kwargs.get('classifier')
-        if not classifier in ['naive_bayes', 'svm', 'logistic_regression', 'ensemble']:
+        if not classifier in list_of_classifiers:
             throw ValueError("Supported classifiers are 'naive_bayes', 'svm', 'logistic_regression', 'ensemble'")
         else:
             return func(*args, **kwargs)
@@ -43,7 +43,7 @@ def validate_classifier(func):
 
 # --------------------------------------------------
 
-@validate_classifier
+@validate_classifier(['naive_bayes', 'svm', 'logistic_regression', 'ensemble'])
 def classify(x, y, classifier='naive_bayes', clustering=True, n_folds=10):
     """
     Given the predictors and labels, performs single-class

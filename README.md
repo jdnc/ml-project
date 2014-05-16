@@ -1,4 +1,4 @@
-The master branch has all the code for the single-label and multi-label case. Thus all the branches dealing with them - efficiency, multi may be safely ignored.
+The master branch- https://github.com/jdnc/ml-project/ has all the code for the single-label and multi-label case. Thus all the branches dealing with them - efficiency, multi may be safely ignored.
 
 For the data and experiments for the transfer learning case, please look at the branch transfer.
 

@@ -7,10 +7,11 @@ Clustering(Ward) : yes/no
 Uses One vs Rest models for multilabel
 Also added : Decision tree, classifier chains
 """
-
+import pickle
 
 import numpy as np
 import json
+import nibabel as nb
 from sklearn import cross_validation
 from sklearn import preprocessing
 from sklearn.multiclass import OneVsRestClassifier
@@ -19,16 +20,17 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.neighbors import NearestNeighbors
 from sklearn.cluster import WardAgglomeration
 from sklearn.feature_extraction import image
-
+from sklearn import tree
 
 import preprocess as pp
 import experiment as ex
 import utils
+from single_label import validate_classifier
 
 THRESH = 0.001
 N_CLUSTERS = 10000
 
-
+@validate_classifier(['naive_bayes', 'decision_tree', 'logistic_regression'])
 def classify(x, y, classifier='naive_bayes', clustering=True, n_folds=10):
     """
     Given the predictors and labels, performs multi-label 
@@ -42,7 +44,7 @@ def classify(x, y, classifier='naive_bayes', clustering=True, n_folds=10):
     y : `numpy.ndarray`
         (n_samples x n_labels) array of labels
     classifier : str, optional
-        which classifier model to use. Must be one of 'naive_bayes'| 'knn' | 'logistic_regression' | 'unique_train'.
+        which classifier model to use. Must be one of 'naive_bayes'| 'decision_tree' | 'logistic_regression'.
         Defaults to the original naive_bayes.
     clustering : bool, optional
         whether to do Ward clustering or not. Uses n_clusters = 10,000. Change global N_CLUSTERS for different
@@ -57,55 +59,44 @@ def classify(x, y, classifier='naive_bayes', clustering=True, n_folds=10):
     """
     clf = None
     ward = None
+    
     lb = preprocessing.LabelBinarizer()
     y_new = lb.fit_transform(y)
-    
-    score_per_class = []
-    score_per_label = []
+    #specify connectivity for clustering
+    mask = nb.load('data/MNI152_T1_2mm_brain.nii.gz').get_data().astype('bool')
+    shape = mask.shape
+    connectivity = image.grid_to_graph(n_x=shape[0], n_y=shape[1], n_z=shape[2], mask=mask)
+    ward = WardAgglomeration(n_clusters=N_CLUSTERS, connectivity=connectivity)
     
     # choose and assign appropriate classifier
-    classifier_dict = { 'naive_bayes' : MultinomialNB(),
-                        'logistic_regression' : LogisticRegression(penalty='l2'),
-                        'unique_train' : 
-                        
+    classifier_dict = { 'naive_bayes' : OneVsRestClassifier(MultinomialNB()),
+                        'logistic_regression' : OneVsRestClassifier(LogisticRegression(penalty='l2')),
+	                'decision_tree' : tree.DecisionTreeClassifier()                     
                        }
-    if classifier == 'ensemble':
-      clf_nb = classifier_dict['naive_bayes']
-      clf_svm = classifier_dict['svm']
-      clf_lr = classifier_dict['logistic_regression']
-    else:
-        clf = classifier_dict[classifier]
-        
-    # perform ward clustering if specified    
-    if clustering:
-        mask = np.load('data/2mm_brain_mask.npy')
-        shape = mask.shape
-        connectivity = image.grid_to_graph(n_x=shape[0], n_y=shape[1], n_z=shape[2], mask=mask)
-        ward = WardAgglomeration(n_clusters=N_CLUSTERS, connectivity=connectivity)
     
-    # actual cross validation    
+    clf = classifier_dict[classifier]
     kf = cross_validation.KFold(len(y_new), n_folds=n_folds)
-    accuracy = []
+    score_per_class = []
+    score_per_label = []
     for train, test in kf:
-        x_train = x[train]
-        y_train  = y_new[train]
-        x_test = x[test]
-        y_test = y_new[test] 
-        if clustering:
+        x_train = np.ascontiguousarray(x[train])
+        y_train = np.ascontiguousarray(y_new[train])
+        x_test = np.ascontiguousarray(x[test])
+        y_test = np.ascontiguousarray(y_new[test])
+        if clustering: 
             ward.fit(x_train)
             x_train = ward.transform(x_train)
             x_test = ward.transform(x_test)
-        if classifier != 'ensemble':        
-            predicted = clf.fit(x_train, y_train).predict(x_test)
-        else:
-            predicted_nb = clf_nb.fit(x_train, y_train).predict(x_test)
-            predicted_lr = clf_lr.fit(x_train, y_train).predict(x_test)
-            predicted_svm = clf_svm.fit(x_train, y_train).predict(x_test)
-            predicted = predicted_nb + predicted_lr + predicted_svm
-            predicted = np.array(predicted >= 2, dtype=int)
-        conf_mat =  confusion_matrix(y_test, predicted, labels=[0,1])
-        accuracy.append(conf_mat)
-    return accuracy
+        model = clf.fit(x_train, y_train)
+        predicted  = model.predict(x_test)
+        predict_prob = model.predict_proba(x_test)
+        if isinstance(predict_prob, list):
+            predict_prob = np.array(predict_prob)
+        cls_scores = utils.score_results(y_test, predicted, predict_prob)
+        label_scores = utils.label_scores(y_test, predicted, predict_prob)
+        score_per_class.append(cls_scores)
+        score_per_label.append(label_scores)
+    return (score_per_class,score_per_label)
 
 
 def main():
@@ -129,22 +120,7 @@ def main():
     coord_dict, feature_dict = ex.get_intersecting_dicts(coord_dict, feature_dict)
     # get the respective vectors
     X, y = pp.get_features_targets(coord_dict, feature_dict, labels=terms, mask='data/MNI152_T1_2mm_brain.nii.gz')
-    # fit a label binarizer
-    lb = preprocessing.LabelBinarizer()
-    y_new = lb.fit_transform(y)
-    # perform the 10 fold cross_validation
-    score_per_class = []
-    score_per_label = []
-    clf =  OneVsRestClassifier(LogisticRegression(penalty='l1'))
-    kf = cross_validation.KFold(len(y_new), n_folds=10)
-    for train, test in kf:
-        model = clf.fit(X[train], y_new[train])
-        predicted  = model.predict(X[test])
-        predict_prob = model.predict_proba(X[test])
-        cls_scores = utils.score_results(y_new[test], predicted, predict_prob)
-        label_scores = utils.label_scores(y_new[test], predicted, predict_prob)
-        score_per_class.append(cls_scores)
-        score_per_label.append(label_scores)
+    score_per_class, score_per_label = classify(X, y)
     with open('class_scores.json', 'wb') as f:
         json.dump(score_per_class, f)
     with open('label_scores.json', 'wb') as f:

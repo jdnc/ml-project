@@ -5,7 +5,7 @@ import json
 
 import preprocess as pp
 
-def filter_studies_active_voxels(study_dict, threshold=5000):
+def filter_studies_active_voxels(study_dict, mask, threshold=500, radius=6):
     """
     Takes the studies with coordinates, and considers only those studies that
     have number of activated voxels >= threshold. Returns the dict containing
@@ -14,11 +14,14 @@ def filter_studies_active_voxels(study_dict, threshold=5000):
     Parameters
     ----------
     study_dict  :  dict/str 
-	filename  to json stored dict or the dict of all the studies with 
-	coordinates.     
+	      filename  to json stored dict or the dict of all the studies with coordinates.     
+    mask : mask in nifti format
     threshold : int, optional
         the number of activated voxels in the study, for it to be included.
         Defaults to 5000, as was used in the original study.
+    radius : int, optional
+	the radius of the sphere in mm to expand around the actual coordinates. Defaults
+	to 10 mm.
 
     Returns
     -------
@@ -29,12 +32,12 @@ def filter_studies_active_voxels(study_dict, threshold=5000):
         with open(study_dict, 'rb') as f:
             study_dict = json.load(f)
     for key in list(study_dict.keys()):
-        if len(study_dict[key]) < 4: # study has fewer than 4 reported foci
+        if len(study_dict[key]) < 0: # study has fewer than 4 reported foci
             del(study_dict[key])
         else:  # study has less than 5000 activated foci 
-            voxels = pp.peaks_to_vector(study_dict[key], radius=10)
+            voxels = pp.peaks_to_vector(study_dict[key], mask, radius=radius)
             num_activated = (voxels > 0).sum()
-            if num_activated < 5000:
+            if num_activated < threshold:
                 del(study_dict[key])
     return study_dict
 
@@ -47,7 +50,7 @@ def filter_studies_terms(feature_file, terms=None, threshold=0.001,
 
     Parameters
     ----------
-    feature_dict : str
+    feature_file : str
         the file with the raw features.
     terms : list of str, optional 
         the terms that are being considered as labels. If not specified,
@@ -142,4 +145,3 @@ def get_intersecting_dicts(coordinate_dict, target_dict):
         # much simpler to directly use dict comprehensions
         # not using to remain python 2.x compatible.
     return new_coordinate_dict, new_target_dict
-

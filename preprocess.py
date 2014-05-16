@@ -2,6 +2,7 @@ from __future__ import print_function
 import os
 import re
 
+import json
 import pandas
 import numpy as np
 from collections import defaultdict
@@ -12,7 +13,7 @@ import neurosynth.base.mask as nbm
 import neurosynth.base.transformations as nbt
 
 
-def extract_coordinates(filename):
+def extract_coordinates(filename, mask):
     """
     Takes in the raw database file and extracts coordinates corresponding
     to each document.
@@ -21,6 +22,7 @@ def extract_coordinates(filename):
     ----------
     filename : str
         complete path to file that has the raw data
+    mask : mask object in nifti format
 
     Returns
     -------
@@ -34,15 +36,15 @@ def extract_coordinates(filename):
         x = row['x']
         y = row['y']
         z = row['z']
-        if is_valid([x,y,z]):
-            doc_dict[row['ID']].append([x,y,z])
+        if is_valid([x,y,z], mask):
+            doc_dict[int(row['id'])].append([x,y,z])
     for key in list(doc_dict.keys()):
         if not doc_dict[key]:
             del(doc_dict[key])
     return doc_dict
 
 
-def is_valid(coordinates, mask='/scratch/02863/mparikh/data/2mm_brain_mask.npy'):
+def is_valid(coordinates, mask):
     """
     Validates that the given x/y/z tuple is valid
     for the given mask
@@ -66,11 +68,9 @@ def is_valid(coordinates, mask='/scratch/02863/mparikh/data/2mm_brain_mask.npy')
         return False
 
 
-def peaks_to_vector(coordinates, mask=
-                    '/scratch/02863/mparikh/data/MNI152_T1_2mm_brain.nii.gz', 
-                    radius=10):
+def peaks_to_vector(coordinates, mask, radius=6):
     """
-    Takes in a list of valid peak coordinates and 
+    Takes in a list of valid peak coordinates and
     returns a vector of the corresponding image
     Parameters
     ----------
@@ -102,9 +102,9 @@ def peaks_to_vector(coordinates, mask=
 
 def set_targets(filename, threshold=0):
     """
-    Given the feature file, return the target vector showing 
+    Given the feature file, return the target vector showing
     the presence/absence of terms for a document
-    
+
     Parameters
     ----------
     filename : str
@@ -126,15 +126,17 @@ def set_targets(filename, threshold=0):
     if threshold == -1:
         target_dict = {}
         for idx, row in feature_table.iterrows():
-            target_dict[row['Doi']] = row[1:]
+            target_dict[int(row['pmid'])] = row[1:]
     else:
         for idx, row in feature_table.iterrows():
-            target_dict[row['Doi']] = [int(x > threshold) for x in row[1:]]
+            target_dict[int(row['pmid'])] = [int(x > threshold) for x in row[1:]]
+        for key in list(target_dict):
+            if not target_dict[key]:
+                del(target_dict[key])
     return (target_dict, target_names)
 
 
-def get_features_targets(coordinate_dict, target_dict,
-                         mask='/scratch/02863/mparikh/data/MNI152_T1_2mm_brain.nii.gz'):
+def get_features_targets(coordinate_dict, target_dict, labels=None, mask=None, is_voxels=False):
     """
     Given the dicts that have the list of coordinates and the list of targets
     corresponding to each study, returns the numpy arrays as expected by
@@ -145,30 +147,51 @@ def get_features_targets(coordinate_dict, target_dict,
     coordinate_dict : dict
         a dict having the studies as the keys and the list of coordinates for
         that study as the values. The coordinates are the raw coordinates from
-        the text without any transformation to the matrix space
+        the text without any transformation to the matrix space. Alternately
+        this may be the list of voxels corresponding to the study, rather than
+        the raw coordinates, 'is_voxels' must be set to true.
     target_dict : dict
         the dict that has the study as the key and the presence absence of
         terms as values
-    mask: mask in Nifti format, optional
+    labels : iterable, optional
+	a list of all the unique labels for the learner. Default is None.
+	If specified, it will generate a mapping from the labels to numeric values.
+	Not specifying may lead to erros later on. The mapping is stored in
+	current working dict as 'mapping.json', is a python dict.
+    mask: mask in Nifti format
         fits the X array to be within the bounds of the mask.
+    is_voxels : bool, optional
+        defines the format of the coordinate_dict. When true, the values
+        in coordinate_dict are the voxels, rather than the raw coordinates.
+        Defaults to false.
 
     Returns
     -------
     (X, y) : X is the n_samples x n_features array for the data input to
         scikit-learn. y is the n_samples x n_classes array of targets.
-    """  
+    """
     n_samples = len(coordinate_dict)
-    n_classes = len(target_dict.values()[0])
+    #n_classes = len(target_dict.values()[0]) don't know what this means - has no use
     n_features = 228453 # 91 * 109 * 91 now reduced!
     X = np.zeros((n_samples, n_features), dtype=int)
-    y = np.empty(n_samples, dtype=object)
-    dir_name = os.path.join(os.path.dirname(__file__), 'images')
+    y = []
+    #y = np.empty(n_samples, dtype=object)
+    if labels:
+	mapping = {}
+        labels = sorted(labels)
+	for i in range(len(labels)):
+	    mapping[labels[i]] =  i
+	with open('mappings.json', 'wb') as f:
+	    json.dump(mapping, f)
     for idx, key in enumerate(coordinate_dict):
-        y[idx] = target_dict[key]
-        X[idx] = peaks_to_vector(coordinate_dict[key])
+        if labels:
+            y.append([mapping[x] for x in target_dict[key]])
+        else:
+            y.append(target_dict[key])
+        X[idx] = coordinate_dict[key] if is_voxels else peaks_to_vector(coordinate_dict[key], mask)
     return X, y
 
-def features_targets_from_file(db_file, feature_file, threshold=0):
+def features_targets_from_file(db_file, feature_file, mask, threshold=0):
     """
     Takes the absolute filenames of the data and feature files and returns the
     numpy arrays expected by scikit learn algorithms
@@ -180,6 +203,8 @@ def features_targets_from_file(db_file, feature_file, threshold=0):
     feature_file : str
         absolute path to the file that has the features and term frequencies
         corresponding to each study
+    mask : mask in nifti format, optional
+        may not be specified if giving the coordinate dict values as voxels.
     threshold : real, optional
         term present only if frequency > threshold, defaults to 0
     Returns
@@ -188,10 +213,9 @@ def features_targets_from_file(db_file, feature_file, threshold=0):
         scikit-learn. y is the n_samples x n_classes array of targets.
     """
 
-    coordinate_dict = extract_coordinates(db_file)
+    coordinate_dict = extract_coordinates(db_file, mask)
     target_dict, target_names = set_targets(feature_file, threshold=threshold)
-    X, y = get_features_targets(coordinate_dict, target_dict)
+    X, y = get_features_targets(coordinate_dict, target_dict, 'data/MNI152_T1_2mm_brain.nii.gz')
     return (X, y)
-
 
 

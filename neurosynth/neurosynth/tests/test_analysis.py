@@ -1,10 +1,10 @@
 import unittest
 import numpy as np
-
+import os
 from neurosynth.analysis import classify
+from neurosynth.analysis import cluster
 from neurosynth.analysis import reduce
 from neurosynth.tests.utils import get_test_dataset, get_test_data_path
-
 
 
 class TestAnalysis(unittest.TestCase):
@@ -39,17 +39,21 @@ class TestAnalysis(unittest.TestCase):
         n_studies = self.dataset.image_table.data.shape[1]
         self.assertEqual(rand_vox.shape, (n_vox, n_studies))
 
-    def test_classify_regions(self):
-        # score = classify.classify_regions(self.dataset,['data/regions/medial_motor.nii.gz', 'data/regions/vmPFC.nii.gz'], cross_val='4-Fold')['score']
-        # self.assertEqual(score, 0.84600313479623823)
+    def test_apply_grid_to_image(self):
+        data, grid = reduce.apply_grid(self.dataset, scale=6)
+        self.assertEquals(data.shape, (1435, 5))
+        sums = np.sum(data, 0)
+        self.assertGreater(sums[2], sums[3])
+        self.assertGreater(sums[4], sums[0])
 
-        # score = classify.classify_regions(self.dataset,['data/regions/medial_motor.nii.gz', 'data/regions/vmPFC.nii.gz'])['score']
-        # self.assertEqual(score, 0.87813479623824453)
+    # def test_clustering(self):
+    #     clstr = cluster.Clusterer(self.dataset, grid_scale=20)
+    #     clstr.cluster(algorithm='ward', n_clusters=3)
+    #     t = 'ClusterImages/Cluster_k3.nii.gz'
+    #     self.assertTrue(os.path.exists(t))
+    #     os.unlink(t)
+    #     os.rmdir('ClusterImages')
 
-#     result = decode.classify_regions(self.dataset, masks=[get_test_data_path() + 'sgacc_mask.nii.gz'])
-#     self.assertEquals(len(result['features']), 525)
-#     self.assertEquals(result['scores'].shape = (3,525))
-        pass
 
 suite = unittest.TestLoader().loadTestsFromTestCase(TestAnalysis)
 

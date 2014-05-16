@@ -5,7 +5,7 @@ Multi-label classifier for neurosynth. Uses decision trees with
 multi-label output from sklearn.
 Initially begins with the 22 terms from the paper
 
-launch -s run_tree -j Analysis_Lonestar -n dec_tree -p 240 -e 1way -m mparikh@cs.utexas.edu
+launch -s run_tree -j Analysis_Lonestar -n dec_tree -q largemem -p 24 -m mparikh@cs.utexas.edu
 """
 
 
